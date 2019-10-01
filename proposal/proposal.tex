@@ -1,0 +1,39 @@
+\documentclass[11pt, letterpaper]{article}
+
+\usepackage{mathptmx} % This is Times font
+\usepackage[hmarginratio=1:1,top=32mm]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{hyperref} % For hyperlinks in the PDF
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{1em}
+
+\newcommand{\paragraphbe}[1]{\vspace{.75ex}\noindent{\textbf{\textit{ #1}}} }
+
+%------------------------------------------------------------------------------
+%	TITLE SECTION
+%------------------------------------------------------------------------------
+
+\title{\vspace{-15mm}\huge\textbf{ Software compute virtualization - priority, performance, and programmability }}
+
+\author{\large\textsc{Amogh Akshintala}}
+\date{}
+
+%------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Insert title
+
+\input{abstract}
+\input{introduction}
+\input{chapters}
+
+\bibliographystyle{plain}
+\bibliography{ref}
+
+\end{document}

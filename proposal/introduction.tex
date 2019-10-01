@@ -1,0 +1,43 @@
+% !TeX root = proposal.tex
+\section{Introduction}
+\label{sec:intro}
+
+Virtualization, defined broadly, is a means to an end: fair, isolated, and
+efficient sharing of resources among mutually distrustful entities.
+Virtualization is vital to achieving high utilization of available physical
+resources in large computing installations such as clusters and data centers.
+Virtualization is the main technical force behind cloud computing.
+
+Virtualizing a compute resource, such as a CPU, typically involves mediating
+access to said resource either by exposing an interface that is identical to
+that of the encapsulated resource (full-virtualization), or by
+exposing an alternative abstract interface, accesses to which are in-turn
+synthesized to the native interface (para-virtualization).
+The exposed interface is \emph{virtual}, in that it is not directly exposed by
+the physical underlying hardware, and instead is entirely under the control of
+supervisory virtualization software, the \emph{hypervisor} (also known as the \emph{Virtual Machine Monitor}). The hypervisor is responsible for ensuring
+
+Despite nearly four decades of attention from both the academic community and
+industry, efficient virtualization of compute resources remains poorly
+understood. As new compute devices emerge (e.g., GPGPUs, TPUs, IPUs, IO
+accelerators), virtualization developers find themselves once again balancing
+the essential characteristics of a good virtualization scheme---compatibility,
+interposition, sharing, isolation---with the need to preserve the raw
+performance these emerging compute resources provide.
+
+\noindent Concretely, the proposed dissertation will evaluate the following
+hypotheses:
+\begin{itemize}[noitemsep,topsep=0pt,leftmargin=1em,labelwidth=*,align=left]
+\item Priority among instructions in an ISA, in the context of binary
+translation, can be automatically inferred from user preferences.
+\item ISA virtualization is untenable for performant virtualization of compute
+accelerators.
+\item Hypervisor-mediated API-remoting is a low-overhead virtualization scheme
+for API-controlled compute accelerators.
+\item The characteristics of a virtualization technique can be succinctly
+described by a scheme that explicitly captures the \textit{Interface}
+interposed, the \textit{Endpoints} interposed on, the \textit{Mechanism} of
+interposition, the \textit{Transport} used to connect the interposed
+endpoints, and the mechanism used to \textit{Synthesize} the interposed
+operation on the host.
+\end{itemize}
