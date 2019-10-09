@@ -4,40 +4,148 @@
 
 Virtualization, defined broadly, is a means to an end: fair, isolated, and
 efficient sharing of resources among mutually distrustful entities.
-Virtualization is vital to achieving high utilization of available physical
-resources in large computing installations such as clusters and data centers.
-Virtualization is the main technical force behind cloud computing.
+Virtualization is vital to high utilization of available physical resources in
+large computing installations. Illustratively, virtualization is foundational
+to the cloud computing paradigm.
+
+Virtualization has a long and glorious history. Virtual memory was first
+described by German physicist Fritz-Rudolf Güntsch in his doctoral
+dissertation in 1956~\cite{virtual-memory} and commercialized~\cite{atlas-vm}
+in the Cambridge University/Ferranti Inc. Atlas computer. The idea of
+virtualizing the entire computer was invented not longer thereafter, in 1962,
+by IBM~\cite{cp40} and commercialized as the IBM VM-370~\cite{vm370} hypervisor
+for the IBM 370 computer. Virtualization was briefly forgotten through the
+1980s and 1990s, as the mainframe computer was all but forgotten during the
+Personal Computer (PC) revolution. Intel's x86 Instruction Set Architecture
+(ISA), which came to dominate the PCs that transplanted the mainframes, was not
+designed to be traditionally virtualizable~\cite{popek-goldberg}, and was
+widely considered unvirtualizable, even by Intel engineers themselves
+\aak{track down Pat Gelsinger note.}.
 
 Virtualizing a compute resource, such as a CPU, typically involves mediating
-access to said resource either by exposing an interface that is identical to
-that of the encapsulated resource (full-virtualization), or by
-exposing an alternative abstract interface, accesses to which are in-turn
-synthesized to the native interface (para-virtualization).
+access to the physical resource either by exposing an interface that is
+identical to that of the physical resource (\emph{full-virtualization}), or by
+exposing an alternative interface, operations on which are in-turn synthesized
+to the native interface (\emph{para-virtualization}).
 The exposed interface is \emph{virtual}, in that it is not directly exposed by
 the physical underlying hardware, and instead is entirely under the control of
-supervisory virtualization software, the \emph{hypervisor} (also known as the \emph{Virtual Machine Monitor}). The hypervisor is responsible for ensuring
+supervisory virtualization software, the \emph{hypervisor} (also known as the
+\emph{Virtual Machine Monitor}). A \emph{virtual machine} is, thus, a machine
+that is entirely under the control of the hypervisor, as opposed to being a
+physical machine. While operations in the virtual machine may be directly
+executed on the physical hardware for performance reasons, as in the case of
+hardware-assisted virtualization schemes like AMD-V and Intel VT-x, all
+privileged operations still trap to the hypervisor.
+The interface interposed may be a hardware interface (ISA, Memory, I/O
+Protocols, etc.) or a software interface (Syscalls, APIs, etc.).
+In either case, the hypervisor is responsible for ensuring fair, isolated,
+efficient sharing of the virtualized resource.
 
-Despite nearly four decades of attention from both the academic community and
-industry, efficient virtualization of compute resources remains poorly
-understood. As new compute devices emerge (e.g., GPGPUs, TPUs, IPUs, IO
-accelerators), virtualization developers find themselves once again balancing
-the essential characteristics of a good virtualization scheme---compatibility,
-interposition, sharing, isolation---with the need to preserve the raw
-performance these emerging compute resources provide.
+
+\subsection{CPU virtualization}
+
+Four decades of attention from both the academic community and industry has
+given rise to a large body of techniques that enable efficient virtualization
+of CPUs: software techniques such as binary translation and device emulation,
+are well established. While dominant ISAs, such as x86 and ARM, even provide
+extensions to enable low-overhead virtualization, binary translation results
+in lower overhead for sequences of sensitive instructions that need to be
+emulated~\cite{vmwareESX-paper}.
+
+However, when implementing a new binary translator~\cite{HVX} or developing a
+secure virtual instruction set, \aak{what was 3rd?}, the developer is left to
+their own devices to ascertain development priority or to understand the need
+to maintain compatibility. Understandably, developers typically adopt ad-hoc
+methodologies to get over this challenge. This dissertation will present a
+principled approach to discriminate between different parts of a given ISA,
+based on the frequency of occurrence of instructions weighted by the
+popularity of the applications they occur in. We will present a methodology (and the resulting data) that leverages user preference to systematically answer such questions in Chapter 1. This is completed work~\cite{x86-systor}.
+
+\subsection{Accelerator virtualization}
+Compute heavy and data parallel workloads such as graph processing and machine
+learning have precipitated a Cambrian explosion of specialized processors.
+These emerging compute devices (e.g., GPGPUs, TPUs, IPUs, IO accelerators),
+however, pose a challenge to virtualization developers, who once again find
+themselves balancing the essential characteristics of a virtualization
+scheme---compatibility, interposition, sharing, isolation---with the need to
+preserve the raw performance these processors provide. Virtualization
+techniques developed for I/O devices, such as NICs, are untenable for
+specialized compute devices because they all sacrifice one or more of the
+essential characteristics listed above.
+Full-virtualization based schemes, such as GPUvm~\cite{suzuki2014gpuvm},
+suffer from massive overheads that essentially negate the speedup that makes
+the specialized compute unit attractive in the first place.
+Para-virtual systems, such as SVGA~\cite{vmware-virtual-gpu} that interpose on
+low-level interfaces, such as the kernel driver, introduce much lower overhead
+than full-virtualization based schemes but have poor compatibility, i.e., the
+introduction of an artificial abstract interface constructed expressly for the
+purpose of interposition necessitates massive engineering effort to support
+new hardware in the host and new software frameworks in the guest.
+User-space API-remoting solutions~\cite{vmCUDA,rCUDA,rCUDAnew} interpose on
+the user-space API in the guest and forward the interposed operation to the
+host as an RPC. This approach introduces very low overhead and can evolve with
+the hardware easily, but has traditionally eschewed hypervisor interposition,
+thereby making it difficult to enforce safety and isolation among guests.
+
+Virtualizing a Graphics Processing Unit (GPU) for the purposes of graphics
+rendering is a well studied problem, with existing commercial solutions, e.g.,
+VMware’s SVGA~\cite{dowty2009gpu}. Over the last decade, GPUs have been
+re-purposed for parallel general purpose compute (commonly known as GPGPU).
+Chapter 2 will present our findings from attempting to extend the SVGA model
+of GPU virtualization to cover GPGPU virtualization as well. We find that the
+tight coupling between ISA virtualization and device virtualization in SVGA
+leads to poor performance for GPGPU compute. We propose a new virtualization
+scheme, Trillium, that doesn’t rely on ISA virtualization and show that
+Trillium outperforms all other traditional virtualization schemes while
+retaining hypervisor interposition. Material presented in Chapter 2 will be
+drawn from a published paper~\cite{trillium}.
+
+Specialized compute units (e.g., Google TPU, Intel QAT, etc.) are
+typically exposed to developers via a user-space API. The API is typically
+implemented by a combination of proprietary software that interacts with the
+hardware through opaque interfaces.
+Chapters 3, 4 and 5 will explore the performance implications of
+virtualizing the user-space API for specialized compute accelerators.
+Chapter 3 will present an overview of AvA, a framework that enables automated
+virtualization of accelerator APIs. Chapter 4 will focus on the performance
+implications of API-remoting based virtualization of a single specialized
+accelerator. Chapter 5 will explore performance issues that arise when an
+application uses multiple API-remoted virtual accelerators in a pipelined
+fashion. Chapters 3 and 4 will draw on material that appeared in a HotOS
+workshop paper~\cite{ava-hotos} and a full paper that is currently under
+submission. Chapter 5 is proposed work.
+
+Virtualization schemes are traditionally taxonomized according to the core
+techniques employed (e.g. emulation, full- or para-virtualization, API
+remoting, etc.), and evaluated in a property trade-off space comprising
+performance, compatibility, interposition, and isolation. We argue that both
+the de facto taxonomy and the property trade-off space are illustrative but
+not informative for GPGPU virtualization: there is a large body of research
+that has had little influence on practice. We suggest an alternative framework
+called \texttt{IEMTS} that teases apart design axes that are implicitly and
+unnecessarily intertwined in much of the literature. By focusing on the
+\textbf{I}nterface interposed, the interposition \textbf{E}ndpoints, the
+\textbf{M}echanism of interposition, the \textbf{T}ransport used to move the
+interposed operations between the guest and the host, and the mechanism used
+to \textbf{S}ynthesize the interposed interface, \texttt{IEMTS} enables a
+clearer understanding of trade-offs in prior designs and provides a model for
+comparison of alternative designs. \texttt{IEMTS} will be presented in Chapter
+6, along with analysis of traditional virtualization techniques in the context
+of GPGPUs.
 
 \noindent Concretely, the proposed dissertation will evaluate the following
 hypotheses:
-\begin{itemize}[noitemsep,topsep=0pt,leftmargin=1em,labelwidth=*,align=left]
+\begin{enumerate}[noitemsep, topsep=0pt, leftmargin=1em, labelwidth=*, align=left, label=\textbf{H \arabic*:}]
 \item Priority among instructions in an ISA, in the context of binary
-translation, can be automatically inferred from user preferences.
+translation, can be automatically inferred from user preferences. (Chapter 1)
 \item ISA virtualization is untenable for performant virtualization of compute
-accelerators.
+accelerators. (Chapter 2)
 \item Hypervisor-mediated API-remoting is a low-overhead virtualization scheme
-for API-controlled compute accelerators.
+for API-controlled compute accelerators. (Chapters 3, 4, and 5)
 \item The characteristics of a virtualization technique can be succinctly
 described by a scheme that explicitly captures the \textit{Interface}
 interposed, the \textit{Endpoints} interposed on, the \textit{Mechanism} of
 interposition, the \textit{Transport} used to connect the interposed
 endpoints, and the mechanism used to \textit{Synthesize} the interposed
-operation on the host.
-\end{itemize}
+operation on the host. (Chapter 6)
+\end{enumerate}

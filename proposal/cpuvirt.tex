@@ -1,0 +1,14 @@
+% !TeX root = proposal.tex
+\section{CPU virtualization}
+\label{sec:cpuvirt}
+
+CPU virtualization as a technique was first considered for the IBM 360 in 1970~
+\cite{meyer-virtual-machines}. The idea then, as it is today is, was to provide
+each user with the illusion of having a dedicated machine to themselves, by
+simultaneously running multiple operating systems on the same machine.
+The IBM~370 was specifically designed to be
+\emph{virtualizable}~\cite{popek-goldberg}.
+
+The PC revolution, in the 1980s, saw new ISAs establish their dominance in
+computing. These new ISAs were not explicitly designed to be virtualizable; on
+the contrary, Intel x86 is considered classically unvirtualizable. Intel's CTO at the time, Pat Gelsinger is

@@ -1,6 +1,8 @@
 \documentclass[11pt, letterpaper]{article}
 
 \usepackage{mathptmx} % This is Times font
+\usepackage{ifthen}
+\usepackage{color}
 \usepackage[hmarginratio=1:1,top=32mm]{geometry} % Document margins
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
@@ -14,11 +16,26 @@
 
 \newcommand{\paragraphbe}[1]{\vspace{.75ex}\noindent{\textbf{\textit{ #1}}} }
 
+\newboolean{publicversion}
+\setboolean{publicversion}{false}
+% \setboolean{publicversion}{true}
+
+\ifthenelse{\boolean{publicversion}}{
+	\newcommand{\grumbler}[3]{}
+}{
+	\newcommand{\grumbler}[3]{\textcolor{#3}{\bf #1: #2}}
+}
+
+% Add your own...
+\newcommand{\aak}[1]{\grumbler{AA}{#1}{blue}}
+\newcommand{\don}[1]{\grumbler{DP}{#1}{red}}
+\newcommand{\cjr}[1]{\grumbler{CJR}{#1}{purple}}
+
 %------------------------------------------------------------------------------
 %	TITLE SECTION
 %------------------------------------------------------------------------------
 
-\title{\vspace{-15mm}\huge\textbf{ Software compute virtualization - priority, performance, and programmability }}
+\title{\vspace{-15mm}\huge\textbf{ Software compute virtualization - realizability, performance, and programmability }}
 
 \author{\large\textsc{Amogh Akshintala}}
 \date{}
@@ -31,7 +48,12 @@
 
 \input{abstract}
 \input{introduction}
-\input{chapters}
+\input{cpuvirt}
+\input{trillium}
+\input{ava}
+\input{iemts}
+\input{vtask}
+\input{plan}
 
 \bibliographystyle{plain}
 \bibliography{ref}

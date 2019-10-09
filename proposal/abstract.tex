@@ -1,6 +1,26 @@
 % !TeX root = proposal.tex
 \begin{abstract}
-The proposed dissertation will explore developer effort and compatibility in software virtualization of CPU ISAs, as well as, questions of performance and programmability in software virtualization of specialized compute devices (e.g., GPUs, TPUs, etc.) that are programmed through an API.
-Although binary translation is a well-established software ISA virtualization technique, given the size and complexity of today's dominant ISAs, developers are routinely forced to adopt ad-hoc techniques to prioritize development effort. The proposed dissertation will present a principled approach to determine priority among different parts of the ISA.
-Specialized compute accelerators, such as GPUs and TPUs, are usually controlled through a user-space API. The proposed dissertation will explore the implications of ISA virtualization for these devices, the performance and programmability implications of a novel hypervisor-mediated API-remoting virtualization technique, and present a novel nomenclature for cleanly understanding the design space for virtualizing compute accelerators.
+The proposed dissertation will focus on developer effort and compatibility in
+software virtualization of CPU ISAs, and software virtualization of
+specialized compute devices (e.g., GPUs, TPUs) that are programmed through an
+API.
+
+Although binary translation is a well-established software ISA virtualization
+technique, given the size and complexity of today's dominant ISAs, developers
+are routinely forced to adopt ad-hoc techniques to prioritize development
+effort. The proposed dissertation will present a principled approach to
+determine priority among different parts of the ISA. We believe this data will
+be useful to designers of virtual ISAs and \aak{what was the other thing?} as
+well.
+
+Specialized compute accelerators, such as GPUs and TPUs, are usually
+controlled through a user-space API.
+The proposed dissertation will show that unlike with CPUs, where the ISA is
+the canonical interface provided to the programmer, ISA virtualization is
+untenable for specialized compute accelerators. Further, the proposed
+dissertation will present a present a novel taxonomy, \emph{IEMTS} for cleanly
+understanding the design space for virtualizing compute accelerators.
+Based on insights from this taxonomy, the proposed dissertation will
+present a novel virtualization technique, \emph{hypervisor-mediated
+API-remoting}, that is at once realizable and performant.
 \end{abstract}
