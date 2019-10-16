@@ -1,23 +1,54 @@
 \documentclass[11pt, letterpaper]{article}
 
+\usepackage{balance}
+\setlength{\paperheight}{11in}
 \usepackage{mathptmx} % This is Times font
 \usepackage[T1]{fontenc} % This is needed to get symbols like ~ correct
+\usepackage[hmarginratio=1:1,top=32mm]{geometry} % Document margins
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption}
+\usepackage{graphicx}
+\usepackage{multirow}
 \usepackage{ifthen}
 \usepackage{color}
-\usepackage[hmarginratio=1:1,top=32mm]{geometry} % Document margins
-\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
-\usepackage{booktabs} % Horizontal rules in tables
-\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
-\usepackage{hyperref} % For hyperlinks in the PDF
-\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage[normalem]{ulem}
+\usepackage[hyphens]{url}
+\usepackage{hhline}
+\usepackage{xcolor,colortbl}
+\usepackage{colortbl}
+\usepackage{paralist}
+\usepackage{alltt}
+\usepackage{amssymb}
+\usepackage{paralist}
+\usepackage{times}
 \usepackage{subcaption}
+\usepackage{breakcites}
+\usepackage{microtype}
+\usepackage{flushend}
+\usepackage{xspace}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{rotating}
+\usepackage{natbib}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{dcolumn}
+\usepackage{textcomp}
+\usepackage{tabulary}
+\usepackage{leading}
 \usepackage{enumitem}
-\usepackage{multirow}
 
 \setlength{\parindent}{1em}
 \setlength{\parskip}{1em}
 
+\newcommand\T{\rule{0pt}{2.0ex}}
+\newcommand\B{\rule[-0.9ex]{0pt}{0pt}}
 \newcommand{\paragraphbe}[1]{\vspace{.75ex}\noindent{\textbf{\textit{ #1}}} }
+
+\newcommand{\fs}[1]{\footnotesize{#1}}
+\newcommand{\bfs}[1]{\textbf{\footnotesize{#1}}}
+\newcommand{\mrot}[1]{\begin{rotate}{55}{\bfs{#1}}\end{rotate}}
+\newcommand{\rot}[1]{\begin{rotate}{90}{\bfs{#1}}\end{rotate}}
 
 \newboolean{publicversion}
 \setboolean{publicversion}{false}
@@ -62,6 +93,7 @@
 \input{plan}
 \input{related}
 
+\clearpage % Make sure bibliography is on its own page
 \bibliographystyle{plain}
 \bibliography{ref}
 
