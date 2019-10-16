@@ -1,6 +1,7 @@
 \documentclass[11pt, letterpaper]{article}
 
 \usepackage{mathptmx} % This is Times font
+\usepackage[T1]{fontenc} % This is needed to get symbols like ~ correct
 \usepackage{ifthen}
 \usepackage{color}
 \usepackage[hmarginratio=1:1,top=32mm]{geometry} % Document margins
@@ -9,6 +10,7 @@
 \usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
 \usepackage{hyperref} % For hyperlinks in the PDF
 \usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage{enumitem}
 
 \setlength{\parindent}{1em}
@@ -31,11 +33,14 @@
 \newcommand{\don}[1]{\grumbler{DP}{#1}{red}}
 \newcommand{\cjr}[1]{\grumbler{CJR}{#1}{purple}}
 
+\def\longconferencenames{}
+\input{./conferences}
+
 %------------------------------------------------------------------------------
 %	TITLE SECTION
 %------------------------------------------------------------------------------
 
-\title{\vspace{-15mm}\huge\textbf{ Software compute virtualization - realizability, performance, and programmability }}
+\title{\vspace{-15mm}\huge\textbf{ Toward Efficient and Realizable Hardware Virtualization} \vspace{-5mm}}
 
 \author{\large\textsc{Amogh Akshintala}}
 \date{}

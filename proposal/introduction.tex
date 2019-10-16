@@ -2,45 +2,76 @@
 \section{Introduction}
 \label{sec:intro}
 
-Virtualization, defined broadly, is a means to an end: fair, isolated, and
-efficient sharing of resources among mutually distrustful entities.
-Virtualization is vital to high utilization of available physical resources in
-large computing installations. Illustratively, virtualization is foundational
-to the cloud computing paradigm.
-
-Virtualization has a long and glorious history. Virtual memory was first
+Virtualization has a long and tumultuous history. Virtual memory was first
 described by German physicist Fritz-Rudolf Güntsch in his doctoral
 dissertation in 1956~\cite{virtual-memory} and commercialized~\cite{atlas-vm}
-in the Cambridge University/Ferranti Inc. Atlas computer. The idea of
-virtualizing the entire computer was invented not longer thereafter, in 1962,
-by IBM~\cite{cp40} and commercialized as the IBM VM-370~\cite{vm370} hypervisor
-for the IBM 370 computer. Virtualization was briefly forgotten through the
-1980s and 1990s, as the mainframe computer was all but forgotten during the
-Personal Computer (PC) revolution. Intel's x86 Instruction Set Architecture
-(ISA), which came to dominate the PCs that transplanted the mainframes, was not
-designed to be traditionally virtualizable~\cite{popek-goldberg}, and was
-widely considered unvirtualizable, even by Intel engineers themselves
-\aak{track down Pat Gelsinger note.}.
+in the Cambridge University/Ferranti Inc. Atlas computer. Virtually all
+computers since then support virtual memory, with most providing hardware
+units---\emph{Memory Management Unit (MMU)}---to accelerate the virtualization
+of memory.
 
-Virtualizing a compute resource, such as a CPU, typically involves mediating
-access to the physical resource either by exposing an interface that is
-identical to that of the physical resource (\emph{full-virtualization}), or by
-exposing an alternative interface, operations on which are in-turn synthesized
-to the native interface (\emph{para-virtualization}).
+\emph{Hardware virtualization}~\cite{cp40}---the idea of virtualizing the
+entire computer to enable the simultaneous execution of multiple Operating
+Systems (OS)---was invented in 1962, and commercialized as the IBM
+VM-370~\cite{vm370} hypervisor for the IBM 370 computer.
+Virtualization was briefly forgotten through the 1980s and 1990s, as the
+mainframe computer became all but obsolete during the Personal Computer (PC)
+revolution. Intel's x86 Instruction Set Architecture (ISA), which came to
+dominate the PCs that transplanted the mainframes, was not designed to be
+traditionally virtualizable~\cite{popek-goldberg}, and was widely considered
+unvirtualizable~\aak{track down Pat Gelsinger note.}. Multiple vendors
+introduced \emph{software emulation} based solutions to enable the execution
+of one OS on top of another (e.g., Insignia SoftPC, Connectix VirtualPC,
+VMware Workstation). Over time, better techniques have been devised to the
+problem of virtualizing the x86 ISA, including ISA extensions
+(e.g., AMD-V and Intel VT-x) to enable the execution of virtualized
+applications at native speed, only trapping to the hypervisor when
+the application attempts to perform sensitive operations.
+
+Several other forms of virtualization have also been considered.
+Sun Microsystems popularized \emph{application virtualization} in the 1990s
+with the Java programming language: applications are written to an abstract
+machine---the \emph{Java Virtual Machine (JVM)}---which is backed by a runtime
+system that ensures the program can execute on any platform.
+This scheme eschews \emph{compatibility}---the ability to execute unmodified
+legacy applications---for \emph{portability}.
+\emph{Operating system-level virtualization} (e.g., Library OSes, Containers)
+virtualizes yet another layer in the software stack: the operating system's
+interfaces (e.g., system calls, kernel name-spaces). This style of
+virtualization preserves compatibility by transparently modifying the
+interfaces the application uses to access system resources, and results in
+low overhead execution.
+
+The proposed dissertation is primarily concerned with hardware virtualization.
+Hardware virtualization is vital to high utilization of available physical
+resources in large computing installations, e.g., hardware virtualization is
+foundational to \textit{cloud computing}.
+There have been many attempts to define hardware virtualization, from Popek
+and Goldberg's classical virtualization properties---\emph{equivalence,
+performance, and safety} to Bugnion, Nieh and
+Tsafrir's~\cite{bugnion-nieh-tsafrir} definition of virtualization---%
+\textit{``the application of the layering principle with
+enforced modularity such that the exposed resource is identical to the
+underlying resource''}. While technically correct, all of these defintions are
+too contrite to be useful. Instead, for the purposes of this dissertation, we
+concern ourselves with the following overarching goal---\emph{realizable,
+fair, isolated, and efficient sharing of hardware resources among mutually
+distrustful entities.}
+
+Hardware virtualization typically involves mediating access to the shared
+resource either by exposing an interface that is identical to that of the
+physical resource (\emph{full-virtualization}), or by exposing an alternative
+interface, operations on which are in-turn synthesized to the native interface
+(\emph{para-virtualization}).
 The exposed interface is \emph{virtual}, in that it is not directly exposed by
 the physical underlying hardware, and instead is entirely under the control of
 supervisory virtualization software, the \emph{hypervisor} (also known as the
-\emph{Virtual Machine Monitor}). A \emph{virtual machine} is, thus, a machine
-that is entirely under the control of the hypervisor, as opposed to being a
-physical machine. While operations in the virtual machine may be directly
-executed on the physical hardware for performance reasons, as in the case of
-hardware-assisted virtualization schemes like AMD-V and Intel VT-x, all
-privileged operations still trap to the hypervisor.
-The interface interposed may be a hardware interface (ISA, Memory, I/O
-Protocols, etc.) or a software interface (Syscalls, APIs, etc.).
-In either case, the hypervisor is responsible for ensuring fair, isolated,
-efficient sharing of the virtualized resource.
-
+\emph{Virtual Machine Monitor}). While operations in the resulting \emph{
+virtual machine} may be directly executed on the physical hardware for
+performance reasons, as in the case of hardware-assisted virtualization
+schemes like AMD-V and Intel VT-x, all privileged operations still trap to the
+hypervisor. The interface interposed may be a hardware interface (ISA, Memory,
+I/O Protocols, etc.) or a software interface (Syscalls, APIs, etc.).
 
 \subsection{CPU virtualization}
 
@@ -50,16 +81,22 @@ of CPUs: software techniques such as binary translation and device emulation,
 are well established. While dominant ISAs, such as x86 and ARM, even provide
 extensions to enable low-overhead virtualization, binary translation results
 in lower overhead for sequences of sensitive instructions that need to be
-emulated~\cite{vmwareESX-paper}.
+emulated~\cite{vmware-esx-bt-plus-vtx}.
 
-However, when implementing a new binary translator~\cite{HVX} or developing a
+When implementing a new binary translator~\cite{HVX} or developing a
 secure virtual instruction set, \aak{what was 3rd?}, the developer is left to
-their own devices to ascertain development priority or to understand the need
-to maintain compatibility. Understandably, developers typically adopt ad-hoc
-methodologies to get over this challenge. This dissertation will present a
-principled approach to discriminate between different parts of a given ISA,
-based on the frequency of occurrence of instructions weighted by the
-popularity of the applications they occur in. We will present a methodology (and the resulting data) that leverages user preference to systematically answer such questions in Chapter 1. This is completed work~\cite{x86-systor}.
+their own devices to answer questions regarding \emph{realizability}, e.g., to
+prioritize different parts of the ISA during development or to understand the
+relative value of different parts of the ISA to backwards compatibility.
+Predictably, developers have typically adopt ad-hoc methodologies to overcome
+this challenge~\cite{bugnion-workstation}. We hypothesize that a principled
+approach to answering these questions lies in understanding the distribution
+of importance, to users, in the ISA being virtualized. Chapter 1 will present
+a methodology for determining user preference, and the resulting dataset.
+Briefly, we estimate the importance of an instruction in the ISA by measuring
+its frequency of occurrence in applications, and then weighting the frequency
+data with the likelihood of users installing those applications. This is
+completed work~\cite{x86-systor}.
 
 \subsection{Accelerator virtualization}
 Compute heavy and data parallel workloads such as graph processing and machine
@@ -69,9 +106,12 @@ however, pose a challenge to virtualization developers, who once again find
 themselves balancing the essential characteristics of a virtualization
 scheme---compatibility, interposition, sharing, isolation---with the need to
 preserve the raw performance these processors provide. Virtualization
-techniques developed for I/O devices, such as NICs, are untenable for
-specialized compute devices because they all sacrifice one or more of the
-essential characteristics listed above.
+techniques developed for CPUs (ISA virtualization) are not applicable to these
+specialized accelerators: their control interfaces are closer to those of I/O
+devices than the ISAs of CPUs.
+Techniques developed for I/O devices, such as NICs, are also untenable for
+specialized compute devices as they result in the sacrifice of one or more of
+the essential characteristics listed above.
 Full-virtualization based schemes, such as GPUvm~\cite{suzuki2014gpuvm},
 suffer from massive overheads that essentially negate the speedup that makes
 the specialized compute unit attractive in the first place.
@@ -109,11 +149,11 @@ virtualizing the user-space API for specialized compute accelerators.
 Chapter 3 will present an overview of AvA, a framework that enables automated
 virtualization of accelerator APIs. Chapter 4 will focus on the performance
 implications of API-remoting based virtualization of a single specialized
-accelerator. Chapter 5 will explore performance issues that arise when an
-application uses multiple API-remoted virtual accelerators in a pipelined
-fashion. Chapters 3 and 4 will draw on material that appeared in a HotOS
+accelerator. Chapters 3 and 4 will draw on material that appeared in a HotOS
 workshop paper~\cite{ava-hotos} and a full paper that is currently under
-submission. Chapter 5 is proposed work.
+submission. Chapter 5 (proposed work) will explore performance issues that
+arise when an application uses multiple API-remoted virtual accelerators in a
+pipelined fashion.
 
 Virtualization schemes are traditionally taxonomized according to the core
 techniques employed (e.g. emulation, full- or para-virtualization, API
