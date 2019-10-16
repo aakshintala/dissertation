@@ -40,11 +40,55 @@ changes in guest applications or libraries.
 We argue that the current \emph{de facto} taxonomy and property trade-off space
 are illustrative but not informative for GPUs:
 there is a large body of research that has had little influence on practice.
-We suggest an alternative framework called \textsc{IEMTS} that teases apart design
-axes that are implicitly and unnecessarily intertwined in much of the literature.
-\textsc{IEMTS} enables clearer understanding of trade-offs in prior designs
-and provides a model for comparison of alternative designs.
-While we hypothesize that our findings generalize to a broad array of accelerators
-we focus on GPGPUs because they are easily available and have rich research literature.
+First, Classifying virtualization designs as API-remoting vs. full vs.
+para-virtual captures important concepts, and emergent properties compactly,
+but doesn't explain their correlation to properties like performance.
+Second, virtualization properties such as compatibility, isolation, and
+interposition have highly context-dependent meaning and their relative value
+to system designers can be hard to quantify.
+Consider compatibility: there are many dimensions to compatibility (library,
+hardware, OS, etc.), and each of those are commonly achieved by separate
+technical, and non-technical means (e.g., TGSI is the common vISA for both the
+VMware and GNU/Linux graphics stacks; this is \emph{not a lucky coincidence}).
 
-\aak{add the table and some discussion of what IEMTS actually is.}
+We argue that practical design goals, such as providing a virtualization layer
+with specific characteristics, get obscured when these properties are
+considered as a set of constraints that must be preserved, without first
+refining for context.
+Further, production systems, such as VMware SVGA~\cite{dowty2009gpu},
+compose multiple virtualization techniques in order to leverage the best
+properties of each technique, especially in the presence of multiple
+interfaces.
+
+To enable a cleaner separation of concerns, we draw on the observation that
+\textit{all} virtualization relies on encapsulation and interposition, and
+note that a design can be clearly understood by identifying:
+\begin{itemize}[nosep,leftmargin=1em,labelwidth=*,align=left]
+\item the \textbf{I}nterface that is interposed,
+\item the \textbf{E}nd-points (source and destination) the interposed event is transported between,
+\item the \textbf{M}echanism used to interpose,
+\item the \textbf{T}ransport mechanism used to communicate between endpoints,
+\item the mechanisms used to \textbf{S}ynthesize or implement the desired functionality at the destination. We call this the \textbf{\texttt{IEMTS}} framework.
+\end{itemize}
+
+\begin{table*}[tt!]
+\centering
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}p{0.25\linewidth}|p{0.18\linewidth}|p{0.18\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}@{}}
+\toprule
+\multirow{2}{*}{}         & \multirow{2}{*}{GPUvm} & \multicolumn{2}{c|}{VMware SVGA}             & \multirow{2}{*}{rCUDA} \\
+                          &                        & Control Interface & GPU ABI             &                        \\ \midrule
+Interposed Interface      & MMIO/BAR               & DirectX APIs      & Device ISA              & Userspace API          \\
+Interposition Source      & Trap handler           & Guest driver/libs      & Guest Driver            & Guest Library           \\
+Interposition Destination & Host driver            & Host framework        & Host Driver             & Host/Server Daemon     \\
+Interposition Mechanism   & Trap                   & Guest library          & Compilation to vISA                    & Guest Library Shim     \\
+Transport                 & Fault                  & Hypervisor FIFOs   & Hypervisor FIFOs    & RPC                    \\
+Synthesis                 & Emulation              & Call host API     & Binary translation   & Call Server API        \\ \bottomrule
+\end{tabular}
+}
+\caption{Comparing virtualization designs using the \texttt{IEMTS} framework.}
+\label{tab:new-dims}
+\end{table*}
+
+\aak{Add discussion of the Table.}
