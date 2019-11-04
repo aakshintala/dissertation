@@ -6,22 +6,21 @@ The previous chapters in the proposed dissertation showed that
 hypervisor-mediation API-remoting is the only effective mechanism for sharing
 API-controlled compute devices among mutually distrustful tenants, e.g., in a
 cloud computing environment. Virtualization vendors, such as VMware, have
-begun adopting API-remoting based solutions for accelerator virtualization
-\aak{cite BitFusion acquisition}.
+begun adopting API-remoting based solutions for accelerator virtualization~\cite{bitfusion-acquisition}.
 
 API-remoting works by interposing on API calls invoked by the application in
 the guest OS, and executing them in a surrogate, the API-server, in the host.
 Typically, API-servers are associated with a single API framework (for
 modularity and failure isolation between APIs/accelerators, and in order to be
 able to use remote resources) and each API-server is a surrogate for a single
-guest (to preserve memory isolation between guests). Applications that use
-multiple accelerator API frameworks will be associated with multiple
+guest (to preserve isolation between guests). Applications that use multiple
+accelerator API frameworks will, therefore, be associated with multiple
 API-servers, one per framework.
 
 \begin{figure}[ht!]
 \centering
 \captionsetup{justification=centering,width=\linewidth}
-\includegraphics[width=0.5\linewidth]{figures/overview.png}
+\includegraphics[width=\linewidth]{figures/vtask-overview.pdf}
 \caption{Data processed by two API stacks must pass through the guest application}
 \label{fig:overview}
 \end{figure}
@@ -34,6 +33,6 @@ We propose to build vTask, an application-transparent data orchestration system 
 
 We will prototype vTask in AvA, a state-of-the-art para-virtual API-remoting system for KVM. vTask will rely on device-side buffer allocation and deallocation API calls, and special annotations provided by LAPIS, AvA’s API description language, to determine buffer lifetime. Further, vTask will implement a simple MESI-style coherence protocol to track spatial validity of data (i.e., to track where the latest data is present). vTask will leverage optimizations such as shared memory, Unified Virtual Memory, and PCIe Peer-to-Peer (P2P) data transfer where available, but does not make assumptions about their universal availability.
 
-vTask can handle data movement between both local and remote devices. When API-remoting to a remote system, the devices used by the guest application may be present on separate machines. We hypothesize that vTask will be able to eliminate costly data transfers over the network by adhering to the principle of lazy loading wherever possible, i.e., data is not moved until a demand fault occurs.
+With vTask, AvA will be able to handle data movement between both local and remote devices. When API-remoting to a remote system, the devices used by the guest application may be present on separate machines. We hypothesize that vTask will be able to eliminate costly data transfers over the network by adhering to the principle of lazy loading wherever possible, i.e., data is not moved until a demand fault occurs.
 
 \aak{needed: a deeper explanation of design (breaking it down into the pieces that need to be built along with an estimation of how long each will take), a better evaluation strategy (with applications that we intend to run and how the machines will be setup, etc.)}

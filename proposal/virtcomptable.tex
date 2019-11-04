@@ -415,25 +415,6 @@ isolation (policies such as RR Round-Robin, XC XenoCredit, HW hardware-managed, 
 The \textbf{\mobility} shows support for VM migration.
 \textbf{I/D} indicates it supports either integrated or discrete GPU.
 
-\item The table
-includes performance entries for each system including the
-geometric-mean slowdown (execution time relative to native
-execution) across all reported benchmarks. %where papers
-%reported sufficient details to enable us to extract this data.
-We additionally include the benchmarks used, and where
-possible, a report (or estimate) of the geometric-mean speedup
-one should \emph{expect} for using GPUs over CPUs using
-hardware similar to that used in this paper. %Where possible,
-%these numbers are measured by running the benchmark suites on
-%real hardware.
- The final column is the expected geometric-mean
-speedup for the given benchmarks running in
-the virtual GPGPU system over running on native CPUs.
-The column is
-computed as the expected speedup from GPUs
-divided by the slowdown induced by
-virtualization.
-
 \item Entries where overheads eclipse GPU-based
 performance gains are marked in \textcolor{red}{red}; performance profitable
 entries are \textcolor{blue}{blue}.
@@ -442,6 +423,6 @@ meaningless for that design. \textcolor{gray}{Light grey cells} mean the data
 is unavailable.
 \end{itemize}
 }
-\vspace*{-6pt}
 \label{tab:virt-comp}
+\vspace*{-6pt}
 \end{table*}

@@ -63,7 +63,7 @@ interfaces.
 To enable a cleaner separation of concerns, we draw on the observation that
 \textit{all} virtualization relies on encapsulation and interposition, and
 note that a design can be clearly understood by identifying:
-\begin{itemize}[nosep,leftmargin=1em,labelwidth=*,align=left]
+\begin{itemize}[nosep, topsep=0em, leftmargin=1em,labelwidth=*,align=left]
 \item the \textbf{I}nterface that is interposed,
 \item the \textbf{E}nd-points (source and destination) the interposed event is transported between,
 \item the \textbf{M}echanism used to interpose,
@@ -91,4 +91,4 @@ Synthesis                 & Emulation              & Call host API     & Binary 
 \label{tab:new-dims}
 \end{table*}
 
-\aak{Add discussion of the Table.}
+Table~\ref{tab:new-dims} presents analysis of three prior GPU virtualization systems under the \texttt{IEMTS} framework. \aak{What is the takeaway? Does this framework really make a difference?}

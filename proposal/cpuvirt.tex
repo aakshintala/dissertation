@@ -67,6 +67,13 @@ application~\cite{vmware-esx-bt-plus-vtx}. On the other hand, naive
 application of the hardware support of virtualization led to worse performance
 than when executing the application a software-emulated virtual machine~\cite{Adams2006-qw}.
 
+\begin{figure}[t!]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figures/WCvMnem.pdf}
+	\caption{ Instruction Importance (top): Distribution of instructions by percent of packages that need the instruction. Weighted completeness(bottom): What percent of packages can execute on a system that follows a greedy implementation strategy?}
+	\label{fig:WCvMnem}
+\end{figure}
+
 Binary translation of a gargantuan ISA like Intel x86-64, which has
 \textasciitilde{}3800 instructions, requires prioritizing development effort
 on the most ``important'' instructions---trading completeness for simplicity
@@ -110,6 +117,13 @@ specifically, \textit{instruction importance} --- the relative importance of
 a given instruction, and \textit{weighted completeness} --- the completeness
 of a system that implements a subset of the ISA.
 
+Figure~\ref{fig:WCvMnem} is illustrative of the kinds of analysis our dataset
+is useful for. The data presented in the figure shows that a small number of
+instructions, about 30, are indispensable to all applications. The top 100
+most important instructions are used by \texttildelow{}88\% of all packages.
+Importance drops to 10\% by the 200~\textsuperscript{th} instruction, and 1\%
+by the 240~\textsuperscript{th} instruction.
+
 \noindent This chapter will present:
 \begin{itemize}[noitemsep, topsep=0pt, leftmargin=1em, labelwidth=*, align=left]
 \item An instruction occurrence dataset gathered using static analysis of
@@ -123,5 +137,4 @@ of a system that implements a subset of the ISA.
 \end{itemize}
 
 This chapter will be drawn from joint work~\cite{x86-systor} with Bhushan
-Jain, Chia-che Tsai, Michael Ferdman and Donald E. Porter.\aak{Add some
-results here from this work.}
+Jain, Chia-che Tsai, Michael Ferdman and Donald E. Porter.

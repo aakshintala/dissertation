@@ -2,4 +2,437 @@
 \section{Related Work}
 \label{sec:related}
 
-\input{virtcomptable}
+\def\libnomod{lib unmod\xspace}
+\def\osnomod{OS unmod\xspace}
+\def\sharing{sharing\xspace}
+\def\isolation{isolation\xspace}
+\def\scheduling{sched. policy\xspace}
+\def\perf{performance\xspace}
+\def\libflex{lib-compat\xspace}
+\def\hwflex{hw-compat\xspace}
+\def\mobility{migration\xspace}
+\def\gfx{graphics\xspace}
+\def\gpgpu{GPGPU\xspace}
+\def\id{I/D}
+\def\discrete{\emph{D}}
+\def\integrated{\emph{I}}
+% \def\poor{--}
+% \def\good{+}
+% \def\ok{+/-}
+% \def\verygood{++}
+% \def\verybad{-- --}
+\def\poor{\textbf{poor}\xspace}
+\def\good{\textbf{good}\xspace}
+\def\ok{\textbf{ok}\xspace}
+\def\verygood{\textbf{excellent}\xspace}
+\def\verybad{\textbf{bad}\xspace}
+%\def\chk{$\times$}
+\def\chk{\checkmark}
+\def\cross{$\times$\xspace}
+\def\gr{\cellcolor[gray]{0.9}}
+\def\redc{\cellcolor[gray]{0.4}}
+\def\bluec{\cellcolor[gray]{0.1}}
+
+%\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\definecolor{Gray}{gray}{0.6}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+%\newcolumntype{a}{>{\columncolor{Gray}}c}
+\def\FV{\textbf{FV}}
+\def\PT{\textbf{PT}}
+\def\PV{\textbf{PV}}
+\def\APIR{\textbf{API-R}}
+\def\unmodlib{\textbf{UL}}
+\def\unmodos{\textbf{UOS}}
+\def\safe{\textbf{I}}
+\def\fair{\textbf{F}}
+\def\mob{\textbf{M}}
+
+\setlength{\aboverulesep}{0pt}
+\setlength{\belowrulesep}{0pt}
+
+\begin{table*}[ht!]
+\centering
+\footnotesize{
+\resizebox{\textwidth}{!}{
+\begin{tabular}{r|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+%\hline
+\T\B {\textbf{Technique}}       &
+\T\B {\textbf{System}}          &
+\rot{\textbf{\libnomod}}        &
+\rot{\textbf{\osnomod}}         &
+\rot{\textbf{\libflex}}         &
+\rot{\textbf{\hwflex}}          &
+\rot{\textbf{\sharing}}         &
+\rot{\textbf{\isolation}}       &
+\rot{\textbf{\mobility}}        &
+\rot{\textbf{\parbox{4cm}{sched. \\policy}\xspace}}      &
+\rot{\textbf{\gfx}}             &
+\rot{\textbf{\gpgpu}}           &
+\rot{\textbf{\id}}              &
+\rot{\textbf{benchmark}}        &
+\rot{\textbf{slowdown$^{\mathrm{b}}$}}         &
+\rot{\textbf{\parbox{4cm}{native\\speedup}}}    &
+\rot{\textbf{\parbox{4cm}{virtual\\speedup}}}
+\\   \hline
+
+\T\B \multirow{2}{*}{\textbf{Full-virtual}}     &
+     \T\B \textbf{GPUvm~\cite{GPUvm}}           &
+     \T\B \chk                                  &  % unmodified guest libraries
+     \T\B                                       &  % unmodified guest OS
+     \T\B \chk                                  &  % lib-compatibility
+     \T\B                                       &  % hw-compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+                                                &  % VM migration
+     \T\B XC, BAND                              &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B Rodinia                               &  % benchmark
+     \T\B 141$\times$                           &  % base slowdown
+     \T\B 11.4$\times$                          &  % native speedup
+     \T\B {\textcolor{red}{0.08$\times$$^{\mathrm{c}}$}}          % virtualized speedup
+     \\ \cline{2-17}
+                                                &
+     \T\B \textbf{gVirt~\cite{gVirt}}           &
+     \T\B \chk                                  &  % unmodified guest libraries
+     \T\B                                       &  % unmodified guest OS
+     \T\B \chk                                  &  % compatibility
+     \T\B                                       &  % compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+     \T\B \chk                                  &  % VM migration
+     \T\B QoS                                   &  % fairness
+     \T\B \chk                                  &  % graphics support
+     \T\B                                       &  % GPGPU support
+     \T\B \integrated                           &  % integrated-discrete
+     \T\B 2D~\cite{phoronix}, 3D~\cite{cairoperf}& % benchmark
+     \T\B 1.6$\times$                           &  % base slowdown
+     \T\B N/A                                   &  % native speedup
+     \T\B N/A                                      % virtualized speedup
+     \\ \hline
+
+\T\B \textbf{PCIe Pass-thru}                    &
+     \T\B \textbf{AWS GPU~\cite{amazongpu}}     &
+     \T\B \chk                                  & % unmodified guest lib
+     \T\B \chk                                  & % unmodified guest OS
+     \T\B \cellcolor{gray!25}                   & % compatibility
+     \T\B \cellcolor{gray!25}                   & % compatibility
+     \T\B \cellcolor{gray!25}                   & % sharing
+     \T\B \cellcolor{gray!25}                   & % isolation
+     \T\B \cellcolor{gray!25}                   & % mobility
+     \T\B \cellcolor{gray!25}                   & % fairness
+     \T\B \chk                                  & % graphics
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B Any                                   &  % benchmark
+     \T\B 1$\times$                             &  % base slowdown
+     \T\B \cellcolor{gray!25}                   &  % natice speedup
+     \T\B \cellcolor{gray!25}                      % virtualized speedup
+     \\ \hline
+
+\T\B \multirow{4}{*}{\bf API remoting}          &
+     \T\B {\bf GViM~\cite{gupta2009gvim}}       &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B                                       &  % unmodified guest OS
+     \T\B                                       &  % lib-compatibility
+     \T\B \chk                                  &  % hw-compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+                                                &  % VM migration
+     \T\B RR, XC                                &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B CUDA 1.1 SDK                          &  % benchmark
+     \T\B 1.16$\times$                          &  % base slowdown
+     \T\B 22$\times$                            &  % native speedup
+     \T\B {\textcolor{blue}{19$\times$}}           % virtualized speedup
+     \\ \cline{2-17}
+
+
+                                                &
+     \T\B {\bf gVirtuS~\cite{gVirtuS}}          &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B                                       &  % unmodified guest OS
+     \T\B                                       &  % lib-compatibility
+     \T\B \chk                                  &  % hw-compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+                                                &  % VM migration
+     \T\B RR                                    &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B CUDA 2.3 MM                           &  % benchmark
+     \T\B 3.1$\times$                           &  % base slowdown
+     \T\B 11.1$\times$                          &  % native speedup
+%     \T\B 3.6$\times$                              % virtualized speedup
+     \T\B {\textcolor{blue}{3.6$\times$}}          % virtualized speedup
+     \\ \cline{2-17}
+
+                                                &
+     \T\B \T\B {\bf vCUDA~\cite{shi2012vcuda}}         &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B \chk                                  &  % unmodified guest OS
+     \T\B                                       &  % lib-compatibility
+     \T\B \chk                                  &  % hw-compatibility
+     \T\B                                       &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+     \T\B \chk                                  &  % VM migration
+     \T\B HW                                    &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B CUDA 4.0 SDK                          &  % benchmark
+     \T\B 1.91$\times$                          &  % base slowdown
+     \T\B 6$\times$                            &  % native speedup
+     \T\B {\textcolor{blue}{3.1$\times$}}          % virtualized speedup
+     \\ \cline{2-17}
+
+                                                &
+     \T\B {\bf vmCUDA~\cite{vmCUDA}}            &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B \chk                                  &  % unmodified guest OS
+     \T\B                                       &  % lib-compatibility
+     \T\B \chk                                  &  % hw-compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+     \T\B                                       &  % VM migration
+     \T\B HW                                    &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B CUDA 5.0 SDK                          &  % benchmark
+     \T\B 1.04$\times$                          &  % base slowdown
+     \T\B 33$\times$                            &  % native speedup
+     \T\B {\textcolor{blue}{31.7$\times$}}         % virtualized speedup
+     \\ \hline
+
+
+\T\B \multirow{4}{*}{\bf \shortstack[r]{Distributed\\API remoting}}  &
+    \T\B {\bf rCUDA~\cite{rCUDA, rCUDAnew}}     &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B \chk                                  &  % unmodified guest OS
+     \T\B                                       &  % lib-compatibility
+     \T\B \chk                                  &  % hw-compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+     \T\B                                       &  % VM migration
+     \T\B RR                                    &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B CUDA 3.1 SDK                          &  % benchmark
+     \T\B 1.83$\times$                          &  % base slowdown
+     \T\B 49.8$\times$                          &  % native speedup
+     \T\B {\textcolor{blue}{27.2$\times$}}         % virtualized speedup
+     \\ \cmidrule{2-17}
+
+                                                &
+    \T\B {\bf GridCuda~\cite{GridCuda}}         &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B \chk                                  &  % unmodified guest OS
+     \T\B                                       &  % lib-compatibility
+     \T\B \chk                                  &  % hw-compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+     \T\B                                       &  % VM migration
+     \T\B FIFO                                  &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B CUDA MM, SOR                          &  % benchmark
+     \T\B 1.23$\times$                          &  % base slowdown
+     \T\B \cellcolor{gray!10}                   &  % native speedup
+     \T\B \cellcolor{gray!10}                      % virtualized speedup
+     \\ \cmidrule{2-17}
+
+                                                &
+    \T\B {\bf SnuCL~\cite{kim2012snucl}}        &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B \chk                                  &  % unmodified guest OS
+     \T\B                                       &  % compatibility
+     \T\B                                       &  % compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+     \T\B                                       &  % VM migration
+     \T\B \cellcolor{gray!25}                   &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B SNU NPB~\cite{seo2011performance}     &  % benchmark
+     \T\B \cellcolor{gray!25}                   &  % base slowdown
+     \T\B \cellcolor{gray!10}                   &  % native speedup
+     \T\B \cellcolor{gray!25}                      % virtualized speedup
+     \\ \cmidrule{2-17}
+
+                                                &
+    \T\B {\bf VCL~\cite{VCL}}                   &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B \chk                                  &  % unmodified guest OS
+     \T\B                                       &  % lib-compatibility
+     \T\B \chk                                  &  % hw-compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+     \T\B                                       &  % VM migration
+     \T\B \cellcolor{gray!25}                   &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B Stencil2D~\cite{danalis2010scalable}  &  % benchmark
+     \T\B \cellcolor{gray!25}                   &  % base slowdown
+     \T\B \cellcolor{gray!10}                   &  % native speedup
+     \T\B \cellcolor{gray!25}                      % virtualized speedup
+%     \T\B {\textcolor{blue}{3.4$\times$}}          % virtualized speedup
+     \\ \hline
+
+\T\B \multirow{7}{*}{\textbf{Para-virtual}} &
+     \T\B \textbf{GPUvm~\cite{GPUvm}}           &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B                                       &  % unmodified guest OS
+     \T\B                                       &  % compatibility
+     \T\B                                       &  % compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+                                                &  % VM migration
+     \T\B XC, BAND                              &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B Rodinia                               &  % benchmark
+     \T\B 5.9$\times$                           &  % base slowdown
+     \T\B 11.4$\times$                          &  % native speedup
+     \T\B {\textcolor{blue}{1.9$\times$}}          % virtualized speedup
+     \\ \cmidrule{2-17}
+
+                                               &
+    \T\B {\bf HSA-KVM~\cite{kaveri16vee}}      &
+    \T\B \chk                                  &  % unmodified guest libraries
+    \T\B                                       &  % unmodified guest OS
+    \T\B                                       &  % compatibility
+    \T\B                                       &  % compatibility
+    \T\B \chk                                  &  % cross-VM sharing
+    \T\B \chk                                  &  % cross-VM isolation
+                                               &  % VM migration
+    \T\B HW                                    &  % fairness
+    &  % graphics support
+    \T\B \chk                                  &  % GPGPU support
+    \T\B \integrated                           &  % integrated-discrete
+    \T\B AMD OCL SDK                           &  % benchmark
+    \T\B 1.1$\times$                           &  % base slowdown
+    \T\B \cellcolor{gray!10}                   &  % native speedup
+    \T\B \cellcolor{gray!10}                      % virtualized speedup
+    \\ \cline{2-17}
+                                                &
+     \T\B {\bf LoGV~\cite{logv}}                &
+     \T\B \chk                                  &  % unmodified guest libraries
+     \T\B                                       &  % unmodified guest OS
+     \T\B \chk                                  &  % compatibility
+     \T\B                                       &  % compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+     \T\B \chk                                  &  % VM migration
+     \T\B RR                                    &  % fairness
+     \T\B                                       &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B Rodinia                               &  % benchmark
+     \T\B 1.01$\times$                          &  % base slowdown
+     \T\B 11.4$\times$                          &  % native speedup
+     \T\B {\textcolor{blue}{11.3$\times$}}         % virtualized speedup
+     \\ \cmidrule{2-17}
+
+                                                &
+     \T\B \textbf{SVGA2~\cite{dowty2009gpu}} &
+     \T\B \chk                                  &  % unmodified guest libraries
+     \T\B                                       &  % unmodified guest OS
+     \T\B                                       &  % compatibility
+     \T\B                                       &  % compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+     \T\B \chk                                  &  % VM migration
+     \T\B \cellcolor{gray!25}                   &  % fairness
+     \T\B \chk                                  &  % graphics support
+                                                &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B 2D, gaming                            &  % benchmark
+     \T\B 3.9$\times$                           &  % base slowdown
+     \T\B \cellcolor{gray!25}                   &  % native speedup
+     \T\B \cellcolor{gray!25}                      % virtualized speedup
+     \\ \cmidrule{2-17}
+
+                                                &
+     \T\B \textbf{Paradice~\cite{paradice}}     &
+     \T\B \chk                                  &  % unmodified guest libraries
+     \T\B                                       &  % unmodified guest OS
+     \T\B \chk                                  &  % compatibility
+     \T\B                                       &  % compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+                                                &  % VM migration
+     \T\B HW, QoS                               &  % fairness
+     \T\B \chk                                  &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B OpenGL, OpenCL                        &  % benchmark
+     \T\B 1.1$\times$                           &  % base slowdown
+     \T\B \cellcolor{gray!10}                   &  % native speedup
+     \T\B \cellcolor{gray!10}                      % virtualized speedup
+     \\ \cmidrule{2-17}
+
+                                                &
+     \T\B \textbf{VGVM~\cite{vasila-gvm16}}     &
+     \T\B                                       &  % unmodified guest libraries
+     \T\B                                       &  % unmodified guest OS
+     \T\B                                       &  % compatibility
+     \T\B \chk                                  &  % compatibility
+     \T\B \chk                                  &  % cross-VM sharing
+     \T\B \chk                                  &  % cross-VM isolation
+                                                &  % VM migration
+     \T\B HW                                    &  % fairness
+                                                &  % graphics support
+     \T\B \chk                                  &  % GPGPU support
+     \T\B \discrete                             &  % integrated-discrete
+     \T\B CUDA 5.0 SDK                          &  % benchmark
+     \T\B 1.02$\times$                          &  % base slowdown
+     \T\B 33$\times$                            &  % native speedup
+     \T\B {\textcolor{blue}{32.3$\times$}}         % virtualized speedup
+     \\ \hline
+
+\end{tabular}
+}
+}
+\caption{Existing GPU virtualization proposals, grouped by approach. This table was previously published in the Trillium paper~\cite{trillium}.}
+\label{tab:virt-comp}
+\vspace*{-6pt}
+\end{table*}
+
+
+Table~\ref{tab:virt-comp} presents a comprehensive overview of prior
+accelerator virtualization techniques in terms of traditional virtualization
+properties. The \textbf{\libnomod} and \textbf{\osnomod}
+columns indicate ability to support unmodified guest libraries and OS/driver.
+The \textbf{\libflex} and \textbf{\hwflex} indicate the ability
+(compatibility) to support a GPU device abstraction that is independent of
+\textit{framework} or \textit{hardware} actually present on the host.
+\textbf{\sharing}, \textbf{\isolation}
+and \textbf{\scheduling} indicate cross-domain sharing, isolation and
+some attempt to support fairness or performance isolation
+(policies such as RR Round-Robin, XC XenoCredit, HW hardware-managed, etc.).
+The \textbf{\mobility} shows support for VM migration.
+\textbf{I/D} indicates it supports either integrated or discrete GPU. The
+table also includes performance entries for each system including the
+geometric-mean slowdown (execution time relative to native execution) across
+all reported benchmarks. We additionally include the benchmarks used, and
+where possible, a report (or estimate) of the geometric-mean speedup one
+should \emph{expect} for using GPUs over CPUs using hardware similar to that
+used in this paper. The final column is the expected geometric-mean speedup
+for the given benchmarks running in the virtual GPGPU system over running on
+native CPUs. Values in this column were computed by dividing the expected
+speedup from using a GPU by the slowdown introduced by virtualization.
+Entries where overheads eclipse GPU-based performance gains are marked in
+\textcolor{red}{red}. Performance profitable entries are
+\textcolor{blue}{blue}. \textcolor{darkgray}{Greyed out cells} indicate the
+metric is meaningless for that design. \textcolor{gray}{Light grey cells}
+indicate that the data was not available.
