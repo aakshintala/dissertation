@@ -1,5 +1,4 @@
 % !TeX root = proposal.tex
-
 \def\libnomod{lib unmod\xspace}
 \def\osnomod{OS unmod\xspace}
 \def\sharing{sharing\xspace}
@@ -68,7 +67,7 @@
 \rot{\textbf{\gpgpu}}           &
 \rot{\textbf{\id}}              &
 \rot{\textbf{benchmark}}        &
-\rot{\textbf{slowdown$^{\mathrm{b}}$}}         &
+\rot{\textbf{slowdown}}         &
 \rot{\textbf{\parbox{4cm}{native\\speedup}}}    &
 \rot{\textbf{\parbox{4cm}{virtual\\speedup}}}
 \\   \hline
@@ -89,7 +88,7 @@
      \T\B Rodinia                               &  % benchmark
      \T\B 141$\times$                           &  % base slowdown
      \T\B 11.4$\times$                          &  % native speedup
-     \T\B {\textcolor{red}{0.08$\times$$^{\mathrm{c}}$}}          % virtualized speedup
+     \T\B {\textcolor{red}{0.08$\times$}}          % virtualized speedup
      \\ \cline{2-17}
                                                 &
      \T\B \textbf{gVirt~\cite{gVirt}}           &
@@ -400,29 +399,36 @@
 
 \end{tabular}
 }
-\caption{Existing GPU virtualization proposals, grouped by approach. Drawn from published work~\cite{trillium}}
-\raggedright
-\begin{itemize}[nosep,leftmargin=1em,labelwidth=*,align=left]
-\item The \textbf{\libnomod} and \textbf{\osnomod}
-columns indicate ability to support unmodified guest libraries
-and OS/driver.
-The \textbf{\libflex} and \textbf{\hwflex} indicate the ability (compatibility) to support a GPU device abstraction
-that is independent of \textit{framework} or \textit{hardware} actually present on the host.
+}
+\caption{Existing GPU virtualization proposals, grouped by approach. This table was previously published in the Trillium paper~\cite{trillium}.}
+\label{tab:virt-comp}
+% \vspace*{-6pt}
+\end{table*}
+
+Table~\ref{tab:virt-comp} presents a comprehensive overview of prior
+accelerator virtualization techniques in terms of traditional virtualization
+properties. The \textbf{\libnomod} and \textbf{\osnomod}
+columns indicate ability to support unmodified guest libraries and OS/driver.
+The \textbf{\libflex} and \textbf{\hwflex} indicate the ability
+(compatibility) to support a GPU device abstraction that is independent of
+\textit{framework} or \textit{hardware} actually present on the host.
 \textbf{\sharing}, \textbf{\isolation}
 and \textbf{\scheduling} indicate cross-domain sharing, isolation and
-some attempt to support fairness or performance
-isolation (policies such as RR Round-Robin, XC XenoCredit, HW hardware-managed, etc.).
+some attempt to support fairness or performance isolation
+(policies such as RR Round-Robin, XC XenoCredit, HW hardware-managed, etc.).
 The \textbf{\mobility} shows support for VM migration.
-\textbf{I/D} indicates it supports either integrated or discrete GPU.
-
-\item Entries where overheads eclipse GPU-based
-performance gains are marked in \textcolor{red}{red}; performance profitable
-entries are \textcolor{blue}{blue}.
-The \textcolor{darkgray}{greyed out cells} indicate the metric is
-meaningless for that design. \textcolor{gray}{Light grey cells} mean the data
-is unavailable.
-\end{itemize}
-}
-\label{tab:virt-comp}
-\vspace*{-6pt}
-\end{table*}
+\textbf{I/D} indicates it supports either integrated or discrete GPU. The
+table also includes performance entries for each system including the
+geometric-mean slowdown (execution time relative to native execution) across
+all reported benchmarks. We additionally include the benchmarks used, and
+where possible, a report (or estimate) of the geometric-mean speedup one
+should \emph{expect} for using GPUs over CPUs using hardware similar to that
+used in this paper. The final column is the expected geometric-mean speedup
+for the given benchmarks running in the virtual GPGPU system over running on
+native CPUs. Values in this column were computed by dividing the expected
+speedup from using a GPU by the slowdown introduced by virtualization.
+Entries where overheads eclipse GPU-based performance gains are marked in
+\textcolor{red}{red}. Performance profitable entries are
+\textcolor{blue}{blue}. \textcolor{darkgray}{Greyed out cells} indicate the
+metric is meaningless for that design. \textcolor{gray}{Light grey cells}
+indicate that the data was not available.
