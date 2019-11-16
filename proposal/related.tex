@@ -23,12 +23,122 @@ some CPUs do integrate GPUs). These devices are not typically integrated into
 the CPU ISA; instead, they appear to system software as I/O devices with
 memory-mapped command-queues and I/O registers. I/O virtualization is well
 understood~\cite{waldspurger12cacm,paradice,Kuperman_undated-io,Sig2010-ml,
-zeng2013improved,abramson2006intel}, but
+zeng2013improved,abramson2006intel}, but these techniques aren't enough to
+virtualize programmable accelerators. Although programmable accelerators look
+like I/O devices, they are also general computing platforms, i.e., they load
+binaries, have their own memory, and are typically exposed to the application
+programmer via an API.
 
+\subsection{GPU Virtualization}
 
 \input{virtcomptable}
 
+{\noindent \bf \large Full Virtualization}
 
+\paragraphbe{GPUvm}~\cite{suzuki2014gpuvm} virtualizes CUDA on Kepler and
+Fermi (NVIDIA) GPUs for Xen. GPUvm presents a GPU device model to each VM.
+Attempts to access the GPU from all VMs are routed through a GPU Aggregator.
+The aggregator maintains shadow page tables, shadow channels, implements a
+``fair share scheduler'', and modifies requests to enforce isolation. GPUvm
+interposes on communication between guest device driver and the GPU device
+model, by trapping and forwarding MMIO writes. The authors also explore a
+number of optimizations: lazy shadowing, bar remap, para-virtualization, and
+multi-call batching. Despite these optimizations, GPUvm remains non-viable due to its high overhead---the most optimal configuration of GPUvm induces a 6~$\times$ slowdown on average.
 
+\paragraphbe{gVirt}~\cite{tian2014full} is a \emph{graphics}-only
+virtualization technique for Intel GPUs. The GPU is multiplexed among multiple
+VMs via pass-through for access to performance critical resources (command
+buffer and frame buffer), and trap-emulate for resources generally accessed
+off the critical path (PTEs, I/O Registers). Initialization and power
+management are done by the native driver in DOM0. Memory is multiplexed with a
+combination of partitioning and `` ballooning''. gVirtus is geared toward
+graphics and can't be easily extened to support GPGPU computing.
 
-\aak{Discuss AmorphOS, HPVM, HSA-KVM, PTask, Dandelion, TornadoVM. Add details about the GPU virtualization stuff in the table above. }
+{\noindent \bf \large API Remoting}
+
+\paragraphbe{GViM}~\cite{gupta2009gvim} supports a straightforward
+split-driver API remoting approach to virtualization of CUDA in Xen.
+CUDA API calls made by applications in the Guest VM are interposed through a
+front-end driver (using Xen event channels) and forwarded to a back-end driver
+in DOM0, which exercises the CUDA driver and runtime. While GViM's
+split-driver design is very similar to AvA's HIRA, AvA presents an
+accelerator-agnostic framework that can be used to implement
+hypervisor-mediated API-remoting for arbitrary devices, can enforce flexible
+policies via callbacks and tackles the compatibility issues inherent in
+API-remoting.
+
+\paragraphbe{vCUDA}~\cite{vCUDA} is another CUDA API-remoting system.
+CUDA API calls are redirected through an interposer library (``vCUDA'') to a
+stub in the host OS, which interacts with the device using pass through. RPC
+turns out to be the primary performance term. The authors explores RPC
+batching as an optimization. The system has no support for interposition.
+
+\paragraphbe{vmCUDA}~\cite{vmCUDA} observes that while pass-through is
+performant, it precludes sharing, and VM migration.
+vmCUDA employs a split-driver model with a front-end driver in the guest that
+provides an interposition point, and a back-end driver in the control domain
+which interacts with the CUDA runtime and driver. CUDA applications in the
+guest are linked against an interposer library which forward calls and data to
+the appliance VM. As with vCUDA, the system guarantees no isolation among VMs.
+
+\paragraphbe{gVirtuS}~\cite{gVirtuS} is an API remoting framework that claims
+to provide transparent support for CUDA, OpenCL, and OpenGL on Xen, KVM, and
+VMware ESXi, using a split-driver design to provide a formal abstraction layer
+for GPUs that is independent of VMM.
+
+\paragraphbe{rCUDA}~\cite{rCUDA, rCUDAnew},
+\textbf{\textit{GridCuda}}~\cite{GridCuda},
+\textbf{\textit{SnuCL}}~\cite{kim2012snucl} and
+\textbf{\textit{VCL}}~\cite{VCL} are all user-mode middle-ware systems for
+multiplexing GPUs and CUDA/OpenCL across a cluster. A client library
+encapsulates access to a (potentially) remote GPU. While the basic design is
+isomorphic to the API remoting design, virtual machines need not be present.
+
+{\noindent \bf \large Para-virtualization}
+
+\paragraphbe{LoGV}~\cite{logv} describes an approach to GPGPU virtualization
+that uses GPU protection hardware in the hypervisor to enforce cross-VM
+isolation. This strategy has two important consequences. First, cross-VM
+isolation is easy to enforce, and the overheads of virtualization induced by
+the hypervisor component is minimal. Second, guests are left with no hardware
+mechanism to enforce cross-process isolation, which pushes the responsibility
+on the guest driver, which may be forced to use high overhead techniques to
+provide such guarantees. We classify LoGV as a para-virtualization technique
+because it ultimately forces change on the guest OS in the form of changes to
+support process isolation. The virtualization overheads reported in the paper
+are exceptionally rosy (indeed, the virtualized solution is faster than native
+in 3 of 4 reported benchmarks). However, the evaluation prototype makes no
+effort to enforce isolation in guests, which ultimately hides a significant
+cost and makes the reported numbers meaningless.
+
+\paragraphbe{HSA-KVM}~\cite{kaveri16vee} is a para-virtual system for
+Heterogeneous System Architecture (HSA) compliant systems. HSA has the CPU and
+GPU integrated into the same physical address space. The GPU exposes multiple
+Architected Queues (Command Queues) that can be allocated to different guests.
+HSA-KVM comes closest to the flexibility, compatibility and performance of CPU
+virtualization. However, the design espoused requires high levels of
+co-operation from the accelerator hardware, and as alluded earlier, this level
+of hardware support is still missing in most accelerators.
+
+\paragraphbe{SVGA2}~\cite{dowty2009gpu} is VMware's \emph{graphics-only} GPU
+virtualization scheme. SVGA2 employs a para-virtual split-driver design with a
+custom GPU ISA for shader programs (TGSI). SVGA2 supports multiple front-end
+libraries (OpenGL, DirectX, etc.) via a common driver that is shipped with
+most mainstream operating systems. SVGA2 uses DirectX as an internal transport
+mechanism, effectively realizing API-remoting through the split-driver design.
+Trillium attempts to extend the SVGA2 model to GPGPU computing. We find that
+the SVGA2 model is a poor fit for general purpose accelerators due to
+drastically different constraints. As an example, consider performance. SVGA2
+has a much lower target to hit: frames per second (fps), while GPGPU
+virtualization must preserve the raw speedup over computing with a CPU.
+This makes the multiple translations needed to implement the many-to-many
+multiplexing viable for graphics rendering but not for general purpose
+computation.
+
+\subsection{Language-level Virtualization}
+\paragraphbe{PTask}~\cite{rossbach2011ptask}
+and \textbf{\textit{Dandelion}}~\cite{dandelion} were
+
+\paragraphbe{HPVM}
+
+\paragraphbe{TornadoVM}

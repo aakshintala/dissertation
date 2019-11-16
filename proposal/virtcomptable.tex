@@ -48,6 +48,7 @@
 \setlength{\belowrulesep}{0pt}
 
 \begin{table*}[ht!]
+\vspace*{2em}
 \centering
 \footnotesize{
 \resizebox{\textwidth}{!}{
@@ -175,7 +176,7 @@
      \T\B                                       &  % lib-compatibility
      \T\B \chk                                  &  % hw-compatibility
      \T\B                                       &  % cross-VM sharing
-     \T\B \chk                                  &  % cross-VM isolation
+     \T\B                                       &  % cross-VM isolation
      \T\B \chk                                  &  % VM migration
      \T\B HW                                    &  % fairness
                                                 &  % graphics support
@@ -194,7 +195,7 @@
      \T\B                                       &  % lib-compatibility
      \T\B \chk                                  &  % hw-compatibility
      \T\B \chk                                  &  % cross-VM sharing
-     \T\B \chk                                  &  % cross-VM isolation
+     \T\B                                       &  % cross-VM isolation
      \T\B                                       &  % VM migration
      \T\B HW                                    &  % fairness
                                                 &  % graphics support
@@ -400,11 +401,13 @@
 \end{tabular}
 }
 }
-\caption{Existing GPU virtualization proposals, grouped by approach. This table was previously published in the Trillium paper~\cite{trillium}.}
+\caption{Existing GPU virtualization proposals, grouped by approach. Previously published in the Trillium paper~\cite{trillium}.}
 \label{tab:virt-comp}
 % \vspace*{-6pt}
 \end{table*}
 
+GPU virtualization has received a lot of attention since the late 2000s. This
+section presents an overview of all prior work.
 Table~\ref{tab:virt-comp} presents a comprehensive overview of prior
 accelerator virtualization techniques in terms of traditional virtualization
 properties. The \textbf{\libnomod} and \textbf{\osnomod}
