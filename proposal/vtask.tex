@@ -3,7 +3,7 @@
 \label{sec:vTask}
 
 The previous chapters in the proposed dissertation showed that
-hypervisor-mediation API-remoting is the only effective mechanism for sharing
+hypervisor-mediation API-remoting is an effective mechanism for sharing
 API-controlled compute devices among mutually distrustful tenants, e.g., in a
 cloud computing environment. Virtualization vendors, such as VMware, have
 begun adopting API-remoting based solutions for accelerator virtualization~\cite{bitfusion-acquisition}.
@@ -82,5 +82,3 @@ guest application may be present on separate machines. We hypothesize that
 vTask will be able to eliminate costly data transfers over the network by
 adhering to the principle of lazy loading wherever possible, i.e., data is not
 moved until a demand fault occurs.
-
-\aak{needed: a deeper explanation of design (breaking it down into the pieces that need to be built along with an estimation of how long each will take), a better evaluation strategy (with applications that we intend to run and how the machines will be setup, etc.)}

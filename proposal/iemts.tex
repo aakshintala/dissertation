@@ -3,19 +3,18 @@
 \label{sec:iemts}
 
 Traditionally, virtualization designs have been taxonomized
-according to the core techniques employed (e.g. emulation, full- or para-virtualization,
-API remoting, etc.), and evaluated
+according to the core techniques employed (e.g. emulation, full- or
+para-virtualization, API remoting, etc.), and evaluated
 in a property trade-off space comprising performance,
-compatibility, interposition, and isolation. \emph{Isolation} ensures that mutually distrustful
-guests cannot access each other's data or harm each other's performance. \emph{Compatibility},
-characterizes how well a design preserves the freedom of
-hardware and software components to evolve independently: e.g. changes in the hypervisor
-should not force changes to guest software.
-Virtualization provides an indirection layer between
-logical and physical resources by \emph{interposing} a well-defined
-interface. The quality of
-interposition determines the nature of benefits (e.g. extent of consolidation) afforded by a
-virtualized system~\cite{waldspurger12cacm}.
+compatibility, interposition, and isolation. \emph{Isolation} ensures that
+mutually distrustful guests cannot access each other's data or harm each
+other's performance. \emph{Compatibility}, characterizes how well a design
+preserves the freedom of hardware and software components to evolve
+independently: e.g. changes in the hypervisor should not force changes to
+guest software. Virtualization provides an indirection layer between
+logical and physical resources by \emph{interposing} a well-defined interface.
+The quality of interposition determines the nature of benefits (e.g. extent of
+consolidation) afforded by a virtualized system~\cite{waldspurger12cacm}.
 
 Virtualization techniques are well explored, yielding conventional
 wisdom about their fundamental trade-offs. For example,
@@ -95,6 +94,14 @@ Synthesis                 & Emulation              & Call host API      & Binary
 
 Table~\ref{tab:new-dims} presents analysis of three prior GPU virtualization
 systems under the \texttt{IEMTS} framework. A quick glance at the table
-tells us that GPUvm~\cite{suzuki2014gpuvm} will have bad performance because it
-relies on trapping and emulating the guest's MMIO accesses. These are really
-\aak{What is the takeaway? Does this framework really make a difference?}
+tells us that GPUvm's~\cite{suzuki2014gpuvm} performance woes arise from its
+realiance on trapping and emulating the guest's MMIO accesses. VMware's SVGA
+has two entries in the table because there are two interfaces being
+virtualized: the control interface (the DirectX/OpenGL API) and the shader ISA.
+Explicitly separating the two interfaces helped us realize that
+ISA-virtualization is not necessary for accelerator virtualization in the
+Trillium project. Further, it became obvious to us that the control interface
+virtualization in SVGA and the API-remoting in rCUDA look almost the same
+under IEMTS with the exception of the transport. This observation led us
+to design AvA's hypervisor-mediated API-remoting scheme, and shift our
+attention to solving the compatibility effort via automation.

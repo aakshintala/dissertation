@@ -136,9 +136,15 @@ multiplexing viable for graphics rendering but not for general purpose
 computation.
 
 \subsection{Language-level Virtualization}
-\paragraphbe{PTask}~\cite{rossbach2011ptask}
-and \textbf{\textit{Dandelion}}~\cite{dandelion} were
-
-\paragraphbe{HPVM}
-
-\paragraphbe{TornadoVM}
+\textbf{\textit{Dandelion}}~\cite{dandelion} abstracts accelerators at the
+language runtime by compiling sequential .Net code to the accelerator
+(GPU or FPGA). vTask draws inspiration from the buffer management in Dandelion
+and PTask~\cite{rossbach2011ptask}, the underlying accelerator abstraction
+layer.
+\textbf{\textit{HPVM}}~\cite{HPVM} explores the design of a virtual ISA
+(vISA) for abstracting heterogeneous compute devices. The HPVM vISA serves as
+a portable compilation target for managed language run-times built on top of
+the LLVM compiler infrastructure. HPVM can serve as a replacement for LLVM in
+Trillium. HPVM, however, doesn't absolve the language run-time implementation
+from interacting with the accelerator silo. \textbf{\textit{TornadoVM}} is an
+example of such a managed language runtime implementation (Graal VM).
