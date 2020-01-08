@@ -1,0 +1,171 @@
+\documentclass[11pt,letterpaper,twoside]{report}
+
+% Layout
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{titlesec}
+\usepackage{tocloft}
+\usepackage[hang,flushmargin]{footmisc}
+
+% Citation style
+\usepackage{harvard}
+
+% Figures
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{subcaption}
+\usepackage{epsfig}
+\usepackage{multicol}
+\usepackage{listings}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{stackengine}
+\usepackage{tablefootnote}
+
+% Algorithms
+\usepackage[boxed,longend]{algorithm2e}
+
+% Math
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% Typography
+\usepackage{times}
+\usepackage{microtype}
+\usepackage{textcomp}
+
+% Macro support
+\usepackage{xspace}
+\usepackage{color}
+\usepackage{ntheorem}
+
+% Diagrams
+\usepackage{pgf}
+\usepackage{tikz} % extensive form game trees
+\usetikzlibrary{calc} % calculating TikZ coordinates
+\usetikzlibrary{arrows.meta} % arrows for theory diagrams
+\usetikzlibrary{trees}
+
+% PDF links
+\usepackage[hidelinks]{hyperref} % backref=page
+
+% Use proper margins.
+\geometry{letterpaper,left=1.25in,top=1in,right=1.25in,bottom=1in,nohead}
+
+% double-space text
+\doublespacing
+
+% Center chapter titles
+% Place chapter title, number, and name on same line
+% Make chapter headings all uppercase, standard font size
+% Omit page numbers
+\titleformat{\chapter}[hang]{\normalfont\fillast\bfseries}{\MakeUppercase{\chaptertitlename} \thechapter: }{0em}{\MakeUppercase}[\thispagestyle{empty}]
+
+% Make section headings normal font size, bold
+\titleformat*{\section}{\normalfont\bfseries}
+\titleformat*{\subsection}{\normalfont\bfseries}
+\titleformat*{\subsubsection}{\normalfont\bfseries}
+
+% Extend to 2in top margins for chapter headings
+\titlespacing{\chapter}{0in}{0.62in}{11pt}
+
+% Indent paragraphs four spaces throughout the thesis/dissertation.
+\setlength{\parindent}{4ex}
+
+% Tweak spacing of paragraph labels.
+\titlespacing{\paragraph}{0in}{0.08in}{0.07in}
+
+% We want numbered subsubsections
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% We need to double-space between footnotes.
+\setlength{\footnotesep}{13pt}
+
+% Footnotes only one point smaller than text
+\renewcommand{\footnotesize}{\small}
+
+% We don't want crazy vertical spacing.
+\raggedbottom
+
+% We don't want abandoned words.
+\clubpenalty=10000
+\widowpenalty=10000
+
+% Prevent awkward hyphenations.
+\hyphenation{Raj-kumar}
+
+%% Flush words right at end of paragraph.
+%% From: http://tex.stackexchange.com/questions/16330/hfill-after-linebreak
+\newcommand\rightparend[1]{{%
+      \unskip\nobreak\hfil\penalty50
+      \hskip2em\hbox{}\nobreak\hfil\textbf{#1}%
+      \parfillskip=0pt \finalhyphendemerits=0 \par}}
+
+% Indented hypothesis environment, subhypotheses
+\theoremindent1\parindent
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{prop}{Proposition}
+\makeatletter
+\newcounter{subhyp}
+\let\savedc@hyp\c@hyp
+\newenvironment{subhyp}
+{%
+	\setcounter{subhyp}{0}%
+	\stepcounter{hyp}%
+	\edef\saved@hyp{\thehyp}% Save the current value of hyp
+	\let\c@hyp\c@subhyp     % Now hyp is subhyp
+	\renewcommand{\thehyp}{\saved@hyp\alph{hyp}}%
+}
+{}
+\newcommand{\normhyp}{%
+	\let\c@hyp\savedc@hyp % revert to the old one
+	\renewcommand\thehyp{\arabic{hyp}}%
+}
+\makeatother
+
+% Use for commenting
+\newcommand{\aak}[1]{{\textcolor{blue}{\textsc{\textbf{[#1 --YN]}}}}}
+
+\begin{document}
+
+% Title page, TOC, etc.
+\input{frontmatter/pages}
+
+\input{intro}
+
+% % Appendices
+% \appendix
+
+% % Switch to 1" title margins for appendices
+% \titlespacing{\chapter}{0in}{-.38in}{11pt}
+
+% % Appendix 1
+% \input{ap1}
+
+% % Appendix 2
+% \input{ap2}
+
+% References
+\clearpage
+\phantomsection
+
+{
+\def\chapter*#1{} % suppress bibliograph header.
+\begin{singlespace}
+\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
+\begin{center}
+\normalfont \textbf{BIBLIOGRAPHY}
+\vspace{17pt}
+\end{center}
+
+\bibliographystyle{plain}
+\bibliography{ref}
+\end{singlespace}
+}
+
+\end{document}
