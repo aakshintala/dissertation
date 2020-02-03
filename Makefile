@@ -24,7 +24,7 @@ oclean:
 # Source files.  Edit these variables for each new paper.
 #----------------------------------------------------------------------
 
-name = diss
+name = dissertation
 
 latex_files = $(name).tex
 

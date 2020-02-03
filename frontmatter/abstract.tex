@@ -1,22 +1,22 @@
-%The word “Abstract” should be centered 2? below the top of the page. 
-%Skip one line, then center your name followed by the title of the 
-%thesis/dissertation. Use as many lines as necessary. Centered below the 
-%title include the phrase, in parentheses, “(Under the direction of  
-%_________)” and include the name(s) of the dissertation advisor(s).
-%Skip one line and begin the content of the abstract. It should be 
-%double-spaced and conform to margin guidelines. An abstract should not 
-%exceed 150 words for a thesis and 350 words for a dissertation. The 
-%latter is a requirement of both the Graduate School and UMI's 
+%The word Abstract should be centered 2? below the top of the page.
+%Skip one line, then center your name followed by the title of the
+%thesis/dissertation. Use as many lines as necessary. Centered below the
+%title include the phrase, in parentheses, (Under the direction of
+%_________) and include the name(s) of the dissertation advisor(s).
+%Skip one line and begin the content of the abstract. It should be
+%double-spaced and conform to margin guidelines. An abstract should not
+%exceed 150 words for a thesis and 350 words for a dissertation. The
+%latter is a requirement of both the Graduate School and UMI's
 %Dissertation Abstracts International.
-%Because your dissertation abstract will be published, please prepare and 
-%proofread it carefully. Print all symbols and foreign words clearly and 
-%accurately to avoid errors or delays. Make sure that the title given at 
-%the top of the abstract has the same wording as the title shown on your 
-%title page. Avoid mathematical formulas, diagrams, and other 
-%illustrative materials, and only offer the briefest possible description 
-%of your thesis/dissertation and a concise summary of its conclusions. Do 
+%Because your dissertation abstract will be published, please prepare and
+%proofread it carefully. Print all symbols and foreign words clearly and
+%accurately to avoid errors or delays. Make sure that the title given at
+%the top of the abstract has the same wording as the title shown on your
+%title page. Avoid mathematical formulas, diagrams, and other
+%illustrative materials, and only offer the briefest possible description
+%of your thesis/dissertation and a concise summary of its conclusions. Do
 %not include lengthy explanations and opinions.
-%The abstract should bear the lower case Roman number ii (if you did not 
+%The abstract should bear the lower case Roman number ii (if you did not
 %include a copyright page) or iii (if you include a copyright page).
 
 \begin{center}
@@ -25,11 +25,32 @@
 \vspace{11pt}
 
 \begin{singlespace}
-Amogh Akshintala: Your Title in Title Font, but not in all Caps \\
-(Under the direction of Donald E. Porter)
+Amogh Akshintala: Toward Efficient and Realizable Virtualization of Compute Accelerators \\
+(Under the direction of Donald E. Porter, and Christopher J. Rossbach)
 \end{singlespace}
 \end{center}
 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+The proposed dissertation will focus on developer effort and compatibility in
+software virtualization of CPU ISAs, and software virtualization of
+specialized compute devices (e.g., GPUs, TPUs) that are programmed through an
+API.
+
+Although binary translation is a well-established software ISA virtualization
+technique, given the size and complexity of today's dominant ISAs, developers
+are routinely forced to adopt ad-hoc techniques to prioritize development
+effort. The proposed dissertation will present a principled approach to
+determine priority among different parts of the ISA. We believe this data will
+be useful to designers of virtual ISAs as well.
+
+Specialized compute accelerators, such as GPUs and TPUs, are usually
+controlled through a user-space API.
+The proposed dissertation will show that unlike with CPUs, where the ISA is
+the canonical interface provided to the programmer, ISA virtualization is
+untenable for specialized compute accelerators. Further, the proposed
+dissertation will present a present a novel taxonomy, \emph{IEMTS} for cleanly
+understanding the design space for virtualizing compute accelerators.
+Based on insights from this taxonomy, the proposed dissertation will
+present a novel virtualization technique, \emph{hypervisor-mediated
+API-remoting}, that is at once realizable and performant.
 
 \clearpage

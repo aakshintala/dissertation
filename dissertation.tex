@@ -6,9 +6,14 @@
 \usepackage{titlesec}
 \usepackage{tocloft}
 \usepackage[hang,flushmargin]{footmisc}
+\usepackage[T1]{fontenc} % This is needed to get symbols like ~ correct
 
 % Citation style
-\usepackage{harvard}
+\usepackage{natbib}
+% \usepackage{harvard}
+
+% List styles
+\usepackage{enumitem}
 
 % Figures
 \usepackage{graphicx}
@@ -20,11 +25,13 @@
 
 % Tables
 \usepackage{booktabs}
+\usepackage{rotating}
 \usepackage{dcolumn}
 \usepackage{multirow}
 \usepackage{hhline}
 \usepackage{stackengine}
 \usepackage{tablefootnote}
+\usepackage{tabulary}
 
 % Algorithms
 \usepackage[boxed,longend]{algorithm2e}
@@ -40,7 +47,7 @@
 
 % Macro support
 \usepackage{xspace}
-\usepackage{color}
+\usepackage{xcolor,colortbl}
 \usepackage{ntheorem}
 
 % Diagrams
@@ -51,7 +58,13 @@
 \usetikzlibrary{trees}
 
 % PDF links
-\usepackage[hidelinks]{hyperref} % backref=page
+\usepackage{hyperref} % backref=page [hidelinks]
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = black, %Colour of internal links
+  citecolor   = violet %Colour of citations
+}
 
 % Use proper margins.
 \geometry{letterpaper,left=1.25in,top=1in,right=1.25in,bottom=1in,nohead}
@@ -126,6 +139,20 @@
 	\let\c@hyp\savedc@hyp % revert to the old one
 	\renewcommand\thehyp{\arabic{hyp}}%
 }
+
+% Shortcut MACROs for virtcomptable
+\newcommand\T{\rule{0pt}{2.0ex}}
+\newcommand\B{\rule[-0.9ex]{0pt}{0pt}}
+\newcommand{\paragraphbe}[1]{\vspace{.75ex}\noindent{\textbf{\textit{ #1}}}\xspace}
+
+\newcommand{\fs}[1]{\footnotesize{#1}}
+\newcommand{\bfs}[1]{\textbf{\footnotesize{#1}}}
+\newcommand{\mrot}[1]{\begin{rotate}{55}{\bfs{#1}}\end{rotate}}
+\newcommand{\rot}[1]{\begin{rotate}{90}{\bfs{#1}}\end{rotate}}
+
+\def\longconferencenames{}
+\input{./conferences}
+
 \makeatother
 
 % Use for commenting
@@ -137,6 +164,12 @@
 \input{frontmatter/pages}
 
 \input{intro}
+\input{cpuvirt}
+\input{trillium}
+\input{ava}
+\input{iemts}
+\input{vtask}
+\input{related}
 
 % % Appendices
 % \appendix
@@ -146,9 +179,6 @@
 
 % % Appendix 1
 % \input{ap1}
-
-% % Appendix 2
-% \input{ap2}
 
 % References
 \clearpage
