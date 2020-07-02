@@ -1,0 +1,152 @@
+++ ./run -p 0 -d 0
+Init: 221.820999
+MemAlloc: 0.073000
+HtoD: 0.000000
+Exec: 1840.669189
+DtoH: 1.135657
+Close: 0.169000
+Total: 2065.550049
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 239.218994
+MemAlloc: 0.094000
+HtoD: 0.000000
+Exec: 1843.916138
+DtoH: 1.109046
+Close: 0.188000
+Total: 2086.293945
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 195.352997
+MemAlloc: 0.068000
+HtoD: 0.000000
+Exec: 1847.270020
+DtoH: 1.529095
+Close: 0.153000
+Total: 2046.082031
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 236.722000
+MemAlloc: 0.066000
+HtoD: 0.000000
+Exec: 1846.463623
+DtoH: 1.137587
+Close: 0.196000
+Total: 2086.230957
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 257.260010
+MemAlloc: 0.072000
+HtoD: 0.000000
+Exec: 1848.417480
+DtoH: 1.172984
+Close: 0.217000
+Total: 2108.798096
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 235.334000
+MemAlloc: 0.069000
+HtoD: 0.000000
+Exec: 1833.387329
+DtoH: 1.079056
+Close: 0.199000
+Total: 2071.677002
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 194.626999
+MemAlloc: 0.078000
+HtoD: 0.000000
+Exec: 1850.458862
+DtoH: 1.145222
+Close: 0.223000
+Total: 2048.204102
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 261.529999
+MemAlloc: 0.074000
+HtoD: 0.000000
+Exec: 1838.496094
+DtoH: 1.518670
+Close: 0.205000
+Total: 2103.571045
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 197.410995
+MemAlloc: 0.072000
+HtoD: 0.000000
+Exec: 1852.602173
+DtoH: 1.195096
+Close: 0.224000
+Total: 2053.168945
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 193.688004
+MemAlloc: 0.067000
+HtoD: 0.000000
+Exec: 1834.779419
+DtoH: 1.119134
+Close: 0.196000
+Total: 2031.522949
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 253.218994
+MemAlloc: 0.068000
+HtoD: 0.000000
+Exec: 1856.977783
+DtoH: 1.141240
+Close: 0.164000
+Total: 2113.202881
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 190.537994
+MemAlloc: 0.068000
+HtoD: 0.000000
+Exec: 1842.512329
+DtoH: 1.166476
+Close: 0.191000
+Total: 2036.125977
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 243.373993
+MemAlloc: 0.072000
+HtoD: 0.000000
+Exec: 1855.999268
+DtoH: 1.109612
+Close: 0.139000
+Total: 2102.365967
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 230.091995
+MemAlloc: 0.076000
+HtoD: 0.000000
+Exec: 1845.717285
+DtoH: 1.083114
+Close: 0.150000
+Total: 2078.800049
+++ echo
+
+++ ./run -p 0 -d 0
+Init: 175.953995
+MemAlloc: 0.067000
+HtoD: 0.000000
+Exec: 1851.858032
+DtoH: 1.130593
+Close: 0.201000
+Total: 2030.854980
+++ echo
+
+++ echo
+

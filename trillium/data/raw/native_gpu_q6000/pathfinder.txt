@@ -1,0 +1,152 @@
+++ ./run -p 0 -d 1
+Init: 96.930000
+MemAlloc: 32.976002
+HtoD: 0.000000
+Exec: 795.822144
+DtoH: 1.259264
+Close: 8.693000
+Total: 1003.812012
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 106.751999
+MemAlloc: 36.416000
+HtoD: 0.000000
+Exec: 795.562866
+DtoH: 1.917888
+Close: 8.978000
+Total: 1017.260010
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 101.452003
+MemAlloc: 33.323002
+HtoD: 0.000000
+Exec: 796.127197
+DtoH: 1.200544
+Close: 8.889000
+Total: 1008.963989
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 96.219002
+MemAlloc: 41.511002
+HtoD: 0.000000
+Exec: 796.026367
+DtoH: 1.392000
+Close: 8.938000
+Total: 1012.283997
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 106.126999
+MemAlloc: 39.980999
+HtoD: 0.000000
+Exec: 795.535767
+DtoH: 1.772128
+Close: 9.177000
+Total: 1020.517029
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 94.894997
+MemAlloc: 18.360001
+HtoD: 0.000000
+Exec: 795.333618
+DtoH: 1.233248
+Close: 7.985000
+Total: 984.823975
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 105.019997
+MemAlloc: 41.658001
+HtoD: 0.000000
+Exec: 795.025757
+DtoH: 1.535584
+Close: 8.985000
+Total: 1020.679993
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 103.656998
+MemAlloc: 36.249001
+HtoD: 0.000000
+Exec: 795.908264
+DtoH: 1.863712
+Close: 8.784000
+Total: 1014.067017
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 107.652000
+MemAlloc: 36.941002
+HtoD: 0.000000
+Exec: 796.274536
+DtoH: 1.900640
+Close: 8.888000
+Total: 1019.211975
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 98.273003
+MemAlloc: 29.841000
+HtoD: 0.000000
+Exec: 796.278076
+DtoH: 1.597856
+Close: 8.836000
+Total: 1002.153992
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 104.577003
+MemAlloc: 35.187000
+HtoD: 0.000000
+Exec: 796.690552
+DtoH: 1.825824
+Close: 8.816999
+Total: 1014.846008
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 105.232002
+MemAlloc: 36.590000
+HtoD: 0.000000
+Exec: 796.186096
+DtoH: 1.683712
+Close: 8.816999
+Total: 1016.203979
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 99.776001
+MemAlloc: 36.505001
+HtoD: 0.000000
+Exec: 796.093811
+DtoH: 1.811392
+Close: 8.650000
+Total: 1010.604980
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 102.608002
+MemAlloc: 45.242001
+HtoD: 0.000000
+Exec: 795.577393
+DtoH: 1.239968
+Close: 10.939000
+Total: 1025.271973
+++ echo
+
+++ ./run -p 0 -d 1
+Init: 101.936996
+MemAlloc: 31.635000
+HtoD: 0.000000
+Exec: 795.874084
+DtoH: 1.455520
+Close: 8.851000
+Total: 1007.414978
+++ echo
+
+++ echo
+

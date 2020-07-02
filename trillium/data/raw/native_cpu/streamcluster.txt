@@ -1,0 +1,242 @@
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 247.953003
+MemAlloc: 0.111000
+HtoD: 478.658752
+Exec: 4619.558594
+DtoH: 332.548248
+Close: 0.732000
+Total: 8793.756836
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 240.020996
+MemAlloc: 0.134000
+HtoD: 472.548889
+Exec: 4451.773438
+DtoH: 329.194000
+Close: 0.716000
+Total: 8614.129883
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 271.322998
+MemAlloc: 0.144000
+HtoD: 470.765930
+Exec: 4436.112305
+DtoH: 330.054260
+Close: 0.744000
+Total: 8646.872070
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 293.127991
+MemAlloc: 0.114000
+HtoD: 474.575592
+Exec: 4281.454102
+DtoH: 330.825134
+Close: 0.789000
+Total: 8592.007812
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 273.316010
+MemAlloc: 0.112000
+HtoD: 467.829102
+Exec: 4605.960449
+DtoH: 327.004089
+Close: 0.798000
+Total: 8776.161133
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 245.072998
+MemAlloc: 0.136000
+HtoD: 469.393555
+Exec: 4611.616211
+DtoH: 327.913269
+Close: 0.902000
+Total: 8798.728516
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 253.421997
+MemAlloc: 0.152000
+HtoD: 470.334534
+Exec: 4618.240723
+DtoH: 328.099792
+Close: 0.700000
+Total: 8839.753906
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 290.803009
+MemAlloc: 0.111000
+HtoD: 478.367126
+Exec: 4477.715820
+DtoH: 334.988770
+Close: 0.845000
+Total: 8802.521484
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 295.151001
+MemAlloc: 0.111000
+HtoD: 470.787567
+Exec: 4421.335938
+DtoH: 328.057343
+Close: 0.779000
+Total: 8633.791992
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 225.854996
+MemAlloc: 0.149000
+HtoD: 467.714050
+Exec: 4781.447266
+DtoH: 328.599426
+Close: 0.715000
+Total: 8960.295898
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 241.600006
+MemAlloc: 0.146000
+HtoD: 463.655762
+Exec: 4650.081055
+DtoH: 327.725220
+Close: 0.790000
+Total: 8804.554688
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 258.023010
+MemAlloc: 0.150000
+HtoD: 470.843567
+Exec: 4666.791016
+DtoH: 327.824097
+Close: 0.828000
+Total: 8828.893555
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 256.385986
+MemAlloc: 0.151000
+HtoD: 470.977173
+Exec: 4648.166992
+DtoH: 326.714630
+Close: 0.711000
+Total: 8844.735352
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 264.614014
+MemAlloc: 0.156000
+HtoD: 467.590454
+Exec: 4749.895508
+DtoH: 332.458862
+Close: 0.766000
+Total: 9041.244141
+++ echo
+
+++ ./run -p 0 -d 0
+PARSEC Benchmark Suite
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 337.782990
+MemAlloc: 0.115000
+HtoD: 465.254608
+Exec: 4727.528320
+DtoH: 330.079590
+Close: 0.742000
+Total: 8955.740234
+++ echo
+
+++ echo
+

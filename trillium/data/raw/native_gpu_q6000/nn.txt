@@ -1,0 +1,347 @@
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	924.073364	0.000030 [0.17MB]	0.924137
+
+Init: 361.066010
+MemAlloc: 0.007000
+HtoD: 0.058112
+Exec: 924.073364
+DtoH: 0.029728
+Close: 0.239000
+Total: 1537.548950
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	1002.321899	0.000030 [0.17MB]	1.002427
+
+Init: 354.893005
+MemAlloc: 0.006000
+HtoD: 0.058304
+Exec: 1002.321899
+DtoH: 0.029728
+Close: 0.259000
+Total: 1622.732056
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	965.856384	0.000030 [0.17MB]	0.965945
+
+Init: 343.026001
+MemAlloc: 0.007000
+HtoD: 0.058080
+Exec: 965.856384
+DtoH: 0.029728
+Close: 0.278000
+Total: 1586.198975
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	995.180115	0.000030 [0.17MB]	0.995274
+
+Init: 339.817993
+MemAlloc: 0.006000
+HtoD: 0.058208
+Exec: 995.180115
+DtoH: 0.029696
+Close: 0.240000
+Total: 1589.178955
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	1027.187866	0.000030 [0.17MB]	1.027314
+
+Init: 344.342010
+MemAlloc: 0.006000
+HtoD: 0.058368
+Exec: 1027.187866
+DtoH: 0.029760
+Close: 0.289000
+Total: 1648.656982
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	942.357727	0.000030 [0.17MB]	0.942423
+
+Init: 300.446014
+MemAlloc: 0.005000
+HtoD: 0.058304
+Exec: 942.357727
+DtoH: 0.029760
+Close: 0.302000
+Total: 1517.160034
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	1019.695557	0.000030 [0.17MB]	1.019828
+
+Init: 331.048004
+MemAlloc: 0.003000
+HtoD: 0.058368
+Exec: 1019.695557
+DtoH: 0.029728
+Close: 0.287000
+Total: 1595.260010
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	1062.791626	0.000030 [0.17MB]	1.062899
+
+Init: 353.286011
+MemAlloc: 0.006000
+HtoD: 0.058432
+Exec: 1062.791626
+DtoH: 0.029760
+Close: 0.293000
+Total: 1704.566040
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	1002.543762	0.000030 [0.17MB]	1.002654
+
+Init: 347.233002
+MemAlloc: 0.007000
+HtoD: 0.058368
+Exec: 1002.543762
+DtoH: 0.029760
+Close: 0.288000
+Total: 1667.011963
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	962.808350	0.000030 [0.17MB]	0.962895
+
+Init: 370.977997
+MemAlloc: 0.007000
+HtoD: 0.058176
+Exec: 962.808350
+DtoH: 0.029760
+Close: 0.274000
+Total: 1611.379028
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	981.859314	0.000030 [0.17MB]	0.981954
+
+Init: 351.692993
+MemAlloc: 0.007000
+HtoD: 0.058112
+Exec: 981.859314
+DtoH: 0.029728
+Close: 0.298000
+Total: 1609.046997
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000059 [0.34MB]	1049.972778	0.000030 [0.17MB]	1.050108
+
+Init: 358.701996
+MemAlloc: 0.006000
+HtoD: 0.058528
+Exec: 1049.972778
+DtoH: 0.029760
+Close: 0.269000
+Total: 1691.012939
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	943.526367	0.000030 [0.17MB]	0.943591
+
+Init: 338.816010
+MemAlloc: 0.004000
+HtoD: 0.058368
+Exec: 943.526367
+DtoH: 0.029792
+Close: 0.303000
+Total: 1556.968018
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	909.745728	0.000030 [0.17MB]	0.909792
+
+Init: 344.377991
+MemAlloc: 0.005000
+HtoD: 0.058176
+Exec: 909.745728
+DtoH: 0.029728
+Close: 0.246000
+Total: 1474.462036
+++ echo
+
+++ ./run -p 0 -d 1
+Number of platforms detected:2
+Platform 0:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro M2000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Quadro 6000
+Platform 1:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000058 [0.34MB]	1056.575806	0.000030 [0.17MB]	1.056697
+
+Init: 337.029999
+MemAlloc: 0.006000
+HtoD: 0.058336
+Exec: 1056.575806
+DtoH: 0.029760
+Close: 0.274000
+Total: 1674.706055
+++ echo
+
+++ echo
+

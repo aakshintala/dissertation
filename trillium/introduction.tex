@@ -1,0 +1,161 @@
+% !TeX root = ../dissertation.tex
+
+\section{Introduction}
+
+In many parallel computing domains, compute density and
+programmability~\cite{nvidia_cuda, stone2010opencl, gregory2014c++} have
+made GPUs the clear choice for efficiency and performance~\cite{gpu_apps}.
+Popular machine learning frameworks such as Caffe~\cite{jia2014caffe},
+Tensorflow~\cite{abadi2016tensorflow}, Microsoft
+CNTK~\cite{yu2014introduction}, and Torch7~\cite{collobert2011torch7}
+rely on GPU acceleration heavily. GPUs have made significant inroads in HPC as well:
+five of the top seven supercomputers in the world are powered by GPUs~\cite{top500-Nov2018}.
+
+% As application domains move inexorably toward the cloud,
+% The lack of production-ready virtualization support for GPGPUs,
+Despite much prior research~\cite{rossbach16vee, kaveri16vee, cc-numa-gpu-hpca15, abhishek-ispass16}
+on GPGPU virtualization, practical options currently available to providers of
+virtual infrastructure all involve bypassing the hypervisor.
+The most commonly adopted technique is to dedicate GPUs to single VM instances via
+PCIe pass-through~\cite{AWS-gpu,gVirt},
+% on the benefits of virtualization,
+% unable to leverage the
+thereby giving up the consolidation and fault tolerance benefits of virtualization.
+% , which are key to their business.
+% Application-level demand for GPUs is increasing~\cite{gpu_apps}
+% but GPGPU virtualization remains an open research problem
+% As infrastructure deployers :
+% \emph{expose}, rather than \emph{virtualize}
+% GPGPU compute using
+More recently, industry players such as VMware, Dell and BitFusion have introduced
+user-space API-remoting~\cite{bitfusion-whitepaper,kim2012snucl,rCUDAnew,
+vmCUDA,rCUDA} based solutions as an alternative to pass-through.
+API-remoting recovers the consolidation and encapsulation benefits
+of virtualization but bypasses hypervisor interposition.
+ % choose the only virtualization technique that incurs acceptably low overheads:
+The absence of hypervisor interposition results in multiple disjoint resource managers
+(the remote user-space API executor and the hypervisor) with no insight into
+each others' decisions, thereby leading to poor decision making,
+and priority-inversion problems~\cite{rossbach2011ptask}.
+
+% This paper describes our experience realizing practical support for
+% GPGPU workloads on PCIe-attached GPUs in a hosted hypervisor.
+
+% We approached the problem initially as one of literature search, assuming
+% that the aggregate literature on the subject would suffice to inform a viable
+% design and implementation. Prior work includes prototypes for hypervisors (
+% such as Xen~\cite{GPUvm,tian2014full},
+% KVM~\cite{huang2016building,intel_kvmgt}, VMware ESX~\cite{vmCUDA},
+% VMware Workstation and Fusion~\cite{svga}), and API remoting systems
+% (such as rCUDA~\cite{rCUDA} and vmCUDA~\cite{vmCUDA}), all of which claim some
+% degree of GPU virtualization support.  The design space features fundamental
+% trade-offs between performance and several key virtualization properties:
+% compatibility, fidelity, interposition, and isolation.
+% For example, device emulation~\cite{bellard2005qemu} is capable of full
+% fidelity to the hardware, but sacrifices performance.
+% \emph{Full virtualization} provides a high-fidelity virtual view of the
+% underlying hardware, enables guests to run unmodified OS and
+% application binaries, and has a minor cost to compatibility, but at a hefty
+% performance cost, due to its page-fault-based interposition~\cite{tian2014full,
+% intel_kvmgt,kindratenko2009gpu,montella2012general}.
+% \emph{API remoting (or forwarding)}~\cite{gupta2009gvim, svga,
+% giunta2010gpgpu, shi2012vcuda} aggregates high-level API calls
+% issued in VMs, running them on the host or in a dedicated appliance VM,
+% effectively giving up interposition and compatibility for performance.
+% \emph{Mediated pass-through}~\cite{tian2014full} avoids costly interposition
+% on common case interactions by interposing only
+% security critical interactions, but as a pass-through technique,
+% gives up on sharing and consolidation.
+% % because VMs monopolize physical GPUs.
+% \emph{Para-virtual} designs introduce knowledge of the hypervisor into the guest, losing compatibility to improve performance.
+
+% We argue that \emph{ad hoc} taxonomies that classify
+% designs as full-virtual, para-virtual, API-remoting or emulation,
+% front-end or back-end, are illustrative but not informative.
+% We suggest an alternative framework called \vframework that teases apart many
+% axes which are implicitly and unnecessarily intertwined in much of
+% the literature. We found this framework useful to understand trade-offs and
+% alternatives used in prior designs, and to understand the performance of our
+% own design. The \vframework framework is especially helpful to reason about
+% our new virtualization design called \Trillium.
+% \aak{Choppy flow; might be better to outright claim SVGA is an API-remoting design here}
+To recover hypervisor interposition while maintaining low-overhead,
+we retrofit GPGPU support into a virtual GPU device:
+We added support for OpenCL to an implementation of the SVGA~\cite{svga} (see \S~\ref{sec:svga}) design in Xen,
+% We extended the Mesa graphics stack
+by implementing the key missing component---%
+a compiler for SVGA's TGSI virtual ISA.
+This effort helped us realize that because GPUs already support vendor-specific
+virtual ISAs (vISAs), the additional vISA
+% in Mesa
+provides little benefit.
+In fact, we found that it harms performance by necessitating a translation layer that obscures the program's semantic information from the final vendor-provided compiler.
+Drawing on this lesson, we adapted \Trillium to take a more flexible approach to ISA virtualization: eliding it entirely when the host GPU stack bundles a compiler (most do), and using LLVM IR, when necessary, to provide a common target for GPGPU drivers.
+
+
+\Trillium represents an unexplored point in the GPGPU virtualization design space:
+hypervisor-mediated API-remoting.
+\Trillium is an existence proof of a viable alternative design that preserves desirable
+virtualization properties such as consolidation, hypervisor interposition, isolation,
+encapsulation, etc., without requiring full hardware virtualization.
+% \Trillium interposes one of the lowest layers in the guest GPGPU stack: the Gallium3D pipe-driver.
+% Typically, this results in a single OpenCL call being broken into multiple pipe-driver
+% calls.
+\Trillium outperforms a full virtualization system from the literature
+by up to 14$\times$ (5.5$\times$ on average) and outperforms the para-virtual
+SVGA-like design by as much as 7.3$\times$ (5.4$\times$ on average).
+% \hyu{Should mention the slowdown compared with pure user-space API remoting?}
+
+% This enables efficient interposition through a low-overhead communication channel to the hypervisor --- shared memory.
+% Since the SVGA design uses a virtual ISA (vISA),
+
+% It also requires that compilers that implement these
+%translations be competitive with GPU vendor compilers.  The missing
+%ISA must be replaced by something: we consider variants that treat the
+%front end code as IR, refactoring compilation to the hypervisor, and a
+%variant that uses LLVM IR as the virtual ISA.  The emerging Vulkan
+%framework~\cite{Vulkanspec} suggests an ISA called SPIR-V as a replacement; we do not
+%evaluate a variant that uses SPIR-V.
+
+%We consider variants of the design that address the now absent TGSI
+%At a minimum,
+%induced by the need to translate a guest GPU ISA
+%to a single hypervisor-supported virtual ISA, and subsequently re-translate it
+% to the ISA of the system's physical GPU.
+
+% Flexible interposition and strong isolation mechanisms
+% are critical for device management: a virtualization layer's
+% primary goal is to enable isolated sharing across VMs. However, virtualization
+% of the GPU ISA serves only compatibility, and often does so redundantly
+% as GPGPU frameworks like OpenCL and CUDA subsume compilers
+% into the device driver. Recognizing this redundancy,
+% Trillium elides GPU ISA virtualization, relegating the translation from GPU
+% source code to physical GPU ISA to the hypervisor-resident driver. While the separation of
+% concerns requires a compiler in host or hypervisor, it vastly reduces
+% complexity, eliminates a redundant translation layer, and ensures that the
+% GPU compiler has a high-fidelity view of the target hardware, restoring
+% optimization opportunities sacrificed by a design that relies on multiple translations.
+%Moreover, raising the level of abstraction for the GPU ABI from an ISA to
+%source code is not as heretical as one might think: OpenCL drivers are generally
+%expected to ship with an integrated source-level compiler.
+
+% We evaluated a \Trillium prototype against systems %from the literature
+% representative of full virtualization, API remoting, and VMware's SVGA.
+
+
+% \noindent This paper make the following contributions:
+% \begin{compactitem}
+% \item We show that API-remoting does not have to be done entirely in user-space
+%   and that it can be hypervisor-mediated with minimal loss of performance.
+%   % \hyu{With tolerable loss? Compared with native run, this statement is not true. At least the impl\&measurement in this paper don't prove this point.}
+% \item We implement GPGPU support for an SVGA-like design in the Xen
+%   hypervisor, by completing a long-missing element---the TGSI compiler---%
+%   in order to leverage OpenCL support provided by the Mesa/Gallium graphics
+%   stack for Linux, via the Clover~\cite{GalliumCompute-web} project.
+% \item We propose an improved design called \Trillium that
+%   removes the necessity for the vISA defined by SVGA resulting in dramatic
+%   performance improvements.
+% \item We provide the first (to our knowledge) comprehensive empirical and
+%   qualitative comparison of a wide range of fundamental virtualization
+%   techniques from the literature.
+% \end{compactitem}

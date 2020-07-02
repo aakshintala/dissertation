@@ -1,0 +1,257 @@
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 229.643997
+MemAlloc: 0.051000
+HtoD: 173.761475
+Exec: 2063.512939
+DtoH: 38.673660
+Close: 2.675000
+Total: 2679.447021
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 235.464996
+MemAlloc: 0.050000
+HtoD: 191.775055
+Exec: 2077.908203
+DtoH: 38.002151
+Close: 2.768000
+Total: 2727.330078
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 184.914993
+MemAlloc: 0.052000
+HtoD: 192.754532
+Exec: 2056.550537
+DtoH: 38.363659
+Close: 2.800000
+Total: 2657.114990
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 202.522995
+MemAlloc: 0.054000
+HtoD: 174.029358
+Exec: 2066.354736
+DtoH: 38.963459
+Close: 2.722000
+Total: 2655.283936
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 216.770996
+MemAlloc: 0.050000
+HtoD: 174.809692
+Exec: 2070.103516
+DtoH: 38.605251
+Close: 2.732000
+Total: 2683.930908
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 272.497986
+MemAlloc: 0.051000
+HtoD: 174.425720
+Exec: 2085.050537
+DtoH: 38.792431
+Close: 2.707000
+Total: 2749.749023
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 169.216995
+MemAlloc: 0.050000
+HtoD: 173.268585
+Exec: 2065.606934
+DtoH: 38.098236
+Close: 2.755000
+Total: 2625.009033
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 227.201004
+MemAlloc: 0.052000
+HtoD: 174.647476
+Exec: 2064.040527
+DtoH: 38.392529
+Close: 2.765000
+Total: 2678.555908
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 250.589005
+MemAlloc: 0.053000
+HtoD: 174.481522
+Exec: 2071.788574
+DtoH: 38.019680
+Close: 2.739000
+Total: 2708.877930
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 187.231995
+MemAlloc: 0.051000
+HtoD: 174.236847
+Exec: 2055.714355
+DtoH: 38.360374
+Close: 2.759000
+Total: 2629.688965
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 224.149002
+MemAlloc: 0.051000
+HtoD: 174.457458
+Exec: 2048.648438
+DtoH: 38.409531
+Close: 2.789000
+Total: 2660.208984
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 267.183990
+MemAlloc: 0.051000
+HtoD: 192.665009
+Exec: 2059.481934
+DtoH: 38.611168
+Close: 2.795000
+Total: 2738.407959
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 265.734009
+MemAlloc: 0.050000
+HtoD: 174.414368
+Exec: 2062.434814
+DtoH: 38.923275
+Close: 2.790000
+Total: 2716.028076
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 178.865005
+MemAlloc: 0.049000
+HtoD: 173.542282
+Exec: 2060.493408
+DtoH: 38.487465
+Close: 2.790000
+Total: 2623.680908
+
+Finish the training for one iteration
+++ echo
+
+++ ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 4194304
+Starting training kernel
+num_devices = 1
+Performing CPU computation
+Init: 199.522003
+MemAlloc: 0.049000
+HtoD: 174.121155
+Exec: 2055.468506
+DtoH: 38.316154
+Close: 2.748000
+Total: 2640.933105
+
+Finish the training for one iteration
+++ echo
+
+++ echo
+

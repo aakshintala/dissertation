@@ -1,0 +1,227 @@
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 89.431000
+MemAlloc: 0.006000
+HtoD: 4.199744
+Exec: 1585.428833
+DtoH: 2.930944
+Close: 45.180000
+Total: 1787.014038
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 109.973999
+MemAlloc: 0.011000
+HtoD: 5.129344
+Exec: 1594.644653
+DtoH: 2.900512
+Close: 46.036999
+Total: 1834.871948
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 102.084999
+MemAlloc: 0.009000
+HtoD: 4.375392
+Exec: 1588.675903
+DtoH: 3.048736
+Close: 36.588001
+Total: 1802.974976
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 102.635002
+MemAlloc: 0.009000
+HtoD: 4.424416
+Exec: 1588.042358
+DtoH: 2.995872
+Close: 36.327000
+Total: 1802.996948
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 101.509003
+MemAlloc: 0.010000
+HtoD: 4.410400
+Exec: 1592.796387
+DtoH: 3.302976
+Close: 45.226002
+Total: 1821.489990
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 111.586998
+MemAlloc: 0.010000
+HtoD: 4.658528
+Exec: 1589.514282
+DtoH: 3.559520
+Close: 39.726002
+Total: 1820.630981
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 110.872002
+MemAlloc: 0.011000
+HtoD: 4.793568
+Exec: 1591.173828
+DtoH: 2.941312
+Close: 45.782001
+Total: 1828.265991
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 94.361000
+MemAlloc: 0.006000
+HtoD: 4.237344
+Exec: 1591.291626
+DtoH: 3.324736
+Close: 49.049000
+Total: 1813.630981
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 102.847000
+MemAlloc: 0.010000
+HtoD: 4.426112
+Exec: 1588.827515
+DtoH: 3.059904
+Close: 36.533001
+Total: 1803.670044
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 105.985001
+MemAlloc: 0.009000
+HtoD: 4.745888
+Exec: 1589.103638
+DtoH: 2.895904
+Close: 45.971001
+Total: 1816.743042
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 106.655998
+MemAlloc: 0.010000
+HtoD: 4.779552
+Exec: 1594.457886
+DtoH: 2.835008
+Close: 34.710999
+Total: 1819.422974
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 101.754997
+MemAlloc: 0.009000
+HtoD: 4.369760
+Exec: 1596.605713
+DtoH: 3.172992
+Close: 45.646999
+Total: 1832.615967
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 108.528999
+MemAlloc: 0.011000
+HtoD: 5.376480
+Exec: 1591.769775
+DtoH: 3.128256
+Close: 46.396000
+Total: 1827.626953
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 107.069000
+MemAlloc: 0.010000
+HtoD: 5.072672
+Exec: 1593.902344
+DtoH: 2.569440
+Close: 36.327999
+Total: 1820.412964
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 1
+num_devices = 2
+ 
+ Device is  Quadro 6000 
+ NVIDIA Corporation 
+Init: 106.057999
+MemAlloc: 0.009000
+HtoD: 4.357504
+Exec: 1586.932495
+DtoH: 3.161120
+Close: 38.902000
+Total: 1807.314941
+Accuracy: 1.364655e-04
+++ echo
+
+++ echo
+

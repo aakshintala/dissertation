@@ -1,0 +1,512 @@
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.643 
+Bucket Count Kernel Time: 48.032 
+Bucket Prefix Kernel Time: 2.744 
+Bucket Sort Kernel Time: 95.486 
+Merge First Kernel Time: 2.070 
+Merge Pass Kernel Iteration Time: 3.045 
+Merge Pass Kernel Iteration Time: 7.306 
+Merge Pass Kernel Iteration Time: 11.585 
+Merge Pass Kernel Iteration Time: 20.863 
+Merge Pass Kernel Iteration Time: 28.217 
+Merge Pass Kernel Iteration Time: 46.438 
+Merge Pass Kernel Iteration Time: 45.731 
+Merge Pass Kernel Iteration Time: 45.069 
+Merge Pass Kernel Iteration Time: 45.754 
+Merge Pass Kernel Iteration Time: 45.068 
+Merge Pass Kernel Iteration Time: 40.728 
+Merge Pass Kernel Iteration Time: 18.062 
+Merge Pass Kernel Iteration Time: 11.549 
+Merge Pass Kernel Iteration Time: 14.718 
+Merge Pass Kernel Iteration Time: 15.338 
+Merge Pass Kernel Time: 399.472 
+Merge Pack Kernel Time: 2.491 
+Init: 1785.315063
+MemAlloc: 0.070000
+HtoD: 1681.791870
+Exec: 557.938049
+DtoH: 747.559021
+Close: 4.750000
+Total: 4884.536133
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.650 
+Bucket Count Kernel Time: 48.077 
+Bucket Prefix Kernel Time: 2.757 
+Bucket Sort Kernel Time: 95.621 
+Merge First Kernel Time: 2.073 
+Merge Pass Kernel Iteration Time: 3.033 
+Merge Pass Kernel Iteration Time: 7.221 
+Merge Pass Kernel Iteration Time: 11.465 
+Merge Pass Kernel Iteration Time: 20.229 
+Merge Pass Kernel Iteration Time: 28.141 
+Merge Pass Kernel Iteration Time: 46.469 
+Merge Pass Kernel Iteration Time: 46.178 
+Merge Pass Kernel Iteration Time: 45.212 
+Merge Pass Kernel Iteration Time: 46.504 
+Merge Pass Kernel Iteration Time: 44.660 
+Merge Pass Kernel Iteration Time: 40.321 
+Merge Pass Kernel Iteration Time: 17.970 
+Merge Pass Kernel Iteration Time: 11.581 
+Merge Pass Kernel Iteration Time: 14.801 
+Merge Pass Kernel Iteration Time: 15.351 
+Merge Pass Kernel Time: 399.134 
+Merge Pack Kernel Time: 2.503 
+Init: 1265.880005
+MemAlloc: 0.043000
+HtoD: 1692.344971
+Exec: 557.815002
+DtoH: 696.504395
+Close: 4.568000
+Total: 4322.125977
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.651 
+Bucket Count Kernel Time: 48.152 
+Bucket Prefix Kernel Time: 2.770 
+Bucket Sort Kernel Time: 95.519 
+Merge First Kernel Time: 2.069 
+Merge Pass Kernel Iteration Time: 3.031 
+Merge Pass Kernel Iteration Time: 7.267 
+Merge Pass Kernel Iteration Time: 11.508 
+Merge Pass Kernel Iteration Time: 20.504 
+Merge Pass Kernel Iteration Time: 28.194 
+Merge Pass Kernel Iteration Time: 46.648 
+Merge Pass Kernel Iteration Time: 45.872 
+Merge Pass Kernel Iteration Time: 45.497 
+Merge Pass Kernel Iteration Time: 46.057 
+Merge Pass Kernel Iteration Time: 44.753 
+Merge Pass Kernel Iteration Time: 40.201 
+Merge Pass Kernel Iteration Time: 17.822 
+Merge Pass Kernel Iteration Time: 11.599 
+Merge Pass Kernel Iteration Time: 14.703 
+Merge Pass Kernel Iteration Time: 15.302 
+Merge Pass Kernel Time: 398.957 
+Merge Pack Kernel Time: 2.486 
+Init: 1376.066040
+MemAlloc: 0.059000
+HtoD: 1721.758667
+Exec: 557.604431
+DtoH: 752.452515
+Close: 5.006000
+Total: 4522.918945
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.100 
+Bucket Count Kernel Time: 43.613 
+Bucket Prefix Kernel Time: 2.738 
+Bucket Sort Kernel Time: 95.442 
+Merge First Kernel Time: 2.075 
+Merge Pass Kernel Iteration Time: 3.038 
+Merge Pass Kernel Iteration Time: 7.313 
+Merge Pass Kernel Iteration Time: 11.344 
+Merge Pass Kernel Iteration Time: 20.689 
+Merge Pass Kernel Iteration Time: 28.131 
+Merge Pass Kernel Iteration Time: 46.398 
+Merge Pass Kernel Iteration Time: 46.099 
+Merge Pass Kernel Iteration Time: 45.343 
+Merge Pass Kernel Iteration Time: 45.177 
+Merge Pass Kernel Iteration Time: 45.237 
+Merge Pass Kernel Iteration Time: 40.568 
+Merge Pass Kernel Iteration Time: 17.995 
+Merge Pass Kernel Iteration Time: 11.605 
+Merge Pass Kernel Iteration Time: 14.788 
+Merge Pass Kernel Iteration Time: 15.360 
+Merge Pass Kernel Time: 399.086 
+Merge Pack Kernel Time: 2.488 
+Init: 1353.933960
+MemAlloc: 0.069000
+HtoD: 1707.744751
+Exec: 552.542053
+DtoH: 748.045715
+Close: 4.984000
+Total: 4478.331055
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.648 
+Bucket Count Kernel Time: 48.143 
+Bucket Prefix Kernel Time: 2.759 
+Bucket Sort Kernel Time: 95.395 
+Merge First Kernel Time: 2.074 
+Merge Pass Kernel Iteration Time: 3.028 
+Merge Pass Kernel Iteration Time: 7.308 
+Merge Pass Kernel Iteration Time: 11.542 
+Merge Pass Kernel Iteration Time: 20.383 
+Merge Pass Kernel Iteration Time: 28.239 
+Merge Pass Kernel Iteration Time: 46.416 
+Merge Pass Kernel Iteration Time: 46.047 
+Merge Pass Kernel Iteration Time: 45.337 
+Merge Pass Kernel Iteration Time: 46.062 
+Merge Pass Kernel Iteration Time: 44.722 
+Merge Pass Kernel Iteration Time: 40.725 
+Merge Pass Kernel Iteration Time: 18.085 
+Merge Pass Kernel Iteration Time: 11.582 
+Merge Pass Kernel Iteration Time: 14.838 
+Merge Pass Kernel Iteration Time: 15.351 
+Merge Pass Kernel Time: 399.664 
+Merge Pack Kernel Time: 2.487 
+Init: 1377.966064
+MemAlloc: 0.058000
+HtoD: 1726.218262
+Exec: 558.171143
+DtoH: 751.663635
+Close: 5.096000
+Total: 4530.642090
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.651 
+Bucket Count Kernel Time: 48.157 
+Bucket Prefix Kernel Time: 2.865 
+Bucket Sort Kernel Time: 95.545 
+Merge First Kernel Time: 2.071 
+Merge Pass Kernel Iteration Time: 3.035 
+Merge Pass Kernel Iteration Time: 7.358 
+Merge Pass Kernel Iteration Time: 11.171 
+Merge Pass Kernel Iteration Time: 20.676 
+Merge Pass Kernel Iteration Time: 28.168 
+Merge Pass Kernel Iteration Time: 46.683 
+Merge Pass Kernel Iteration Time: 45.691 
+Merge Pass Kernel Iteration Time: 45.692 
+Merge Pass Kernel Iteration Time: 45.642 
+Merge Pass Kernel Iteration Time: 44.810 
+Merge Pass Kernel Iteration Time: 40.060 
+Merge Pass Kernel Iteration Time: 17.790 
+Merge Pass Kernel Iteration Time: 11.593 
+Merge Pass Kernel Iteration Time: 14.801 
+Merge Pass Kernel Iteration Time: 15.364 
+Merge Pass Kernel Time: 398.533 
+Merge Pack Kernel Time: 2.487 
+Init: 1384.888062
+MemAlloc: 0.089000
+HtoD: 1714.291138
+Exec: 557.309326
+DtoH: 750.978516
+Close: 5.037000
+Total: 4523.676758
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.099 
+Bucket Count Kernel Time: 43.615 
+Bucket Prefix Kernel Time: 2.766 
+Bucket Sort Kernel Time: 95.513 
+Merge First Kernel Time: 2.075 
+Merge Pass Kernel Iteration Time: 3.034 
+Merge Pass Kernel Iteration Time: 7.256 
+Merge Pass Kernel Iteration Time: 11.400 
+Merge Pass Kernel Iteration Time: 20.120 
+Merge Pass Kernel Iteration Time: 28.122 
+Merge Pass Kernel Iteration Time: 46.592 
+Merge Pass Kernel Iteration Time: 45.881 
+Merge Pass Kernel Iteration Time: 45.497 
+Merge Pass Kernel Iteration Time: 45.826 
+Merge Pass Kernel Iteration Time: 45.074 
+Merge Pass Kernel Iteration Time: 40.210 
+Merge Pass Kernel Iteration Time: 17.889 
+Merge Pass Kernel Iteration Time: 11.633 
+Merge Pass Kernel Iteration Time: 14.795 
+Merge Pass Kernel Iteration Time: 15.361 
+Merge Pass Kernel Time: 398.691 
+Merge Pack Kernel Time: 2.504 
+Init: 1351.572998
+MemAlloc: 0.058000
+HtoD: 1718.249390
+Exec: 552.263000
+DtoH: 750.332031
+Close: 5.090000
+Total: 4487.748047
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.654 
+Bucket Count Kernel Time: 48.150 
+Bucket Prefix Kernel Time: 2.728 
+Bucket Sort Kernel Time: 95.527 
+Merge First Kernel Time: 2.074 
+Merge Pass Kernel Iteration Time: 3.077 
+Merge Pass Kernel Iteration Time: 7.257 
+Merge Pass Kernel Iteration Time: 11.354 
+Merge Pass Kernel Iteration Time: 20.096 
+Merge Pass Kernel Iteration Time: 28.171 
+Merge Pass Kernel Iteration Time: 46.599 
+Merge Pass Kernel Iteration Time: 46.026 
+Merge Pass Kernel Iteration Time: 45.066 
+Merge Pass Kernel Iteration Time: 45.659 
+Merge Pass Kernel Iteration Time: 45.017 
+Merge Pass Kernel Iteration Time: 40.453 
+Merge Pass Kernel Iteration Time: 18.105 
+Merge Pass Kernel Iteration Time: 11.591 
+Merge Pass Kernel Iteration Time: 14.828 
+Merge Pass Kernel Iteration Time: 15.355 
+Merge Pass Kernel Time: 398.654 
+Merge Pack Kernel Time: 2.491 
+Init: 1370.927979
+MemAlloc: 0.073000
+HtoD: 1708.188477
+Exec: 557.279602
+DtoH: 751.191711
+Close: 5.020000
+Total: 4503.248047
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.650 
+Bucket Count Kernel Time: 48.159 
+Bucket Prefix Kernel Time: 2.755 
+Bucket Sort Kernel Time: 95.530 
+Merge First Kernel Time: 2.113 
+Merge Pass Kernel Iteration Time: 3.040 
+Merge Pass Kernel Iteration Time: 7.278 
+Merge Pass Kernel Iteration Time: 11.410 
+Merge Pass Kernel Iteration Time: 20.332 
+Merge Pass Kernel Iteration Time: 28.164 
+Merge Pass Kernel Iteration Time: 46.633 
+Merge Pass Kernel Iteration Time: 46.105 
+Merge Pass Kernel Iteration Time: 45.207 
+Merge Pass Kernel Iteration Time: 45.640 
+Merge Pass Kernel Iteration Time: 44.708 
+Merge Pass Kernel Iteration Time: 40.482 
+Merge Pass Kernel Iteration Time: 18.049 
+Merge Pass Kernel Iteration Time: 11.554 
+Merge Pass Kernel Iteration Time: 14.872 
+Merge Pass Kernel Iteration Time: 15.360 
+Merge Pass Kernel Time: 398.833 
+Merge Pack Kernel Time: 2.489 
+Init: 1346.109009
+MemAlloc: 0.044000
+HtoD: 1702.629639
+Exec: 557.529785
+DtoH: 697.000488
+Close: 4.635000
+Total: 4413.479004
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.097 
+Bucket Count Kernel Time: 43.631 
+Bucket Prefix Kernel Time: 2.756 
+Bucket Sort Kernel Time: 95.523 
+Merge First Kernel Time: 2.074 
+Merge Pass Kernel Iteration Time: 3.050 
+Merge Pass Kernel Iteration Time: 7.292 
+Merge Pass Kernel Iteration Time: 11.404 
+Merge Pass Kernel Iteration Time: 20.245 
+Merge Pass Kernel Iteration Time: 28.106 
+Merge Pass Kernel Iteration Time: 46.419 
+Merge Pass Kernel Iteration Time: 45.774 
+Merge Pass Kernel Iteration Time: 45.637 
+Merge Pass Kernel Iteration Time: 45.866 
+Merge Pass Kernel Iteration Time: 45.102 
+Merge Pass Kernel Iteration Time: 40.357 
+Merge Pass Kernel Iteration Time: 17.790 
+Merge Pass Kernel Iteration Time: 11.679 
+Merge Pass Kernel Iteration Time: 14.810 
+Merge Pass Kernel Iteration Time: 15.364 
+Merge Pass Kernel Time: 398.894 
+Merge Pack Kernel Time: 2.490 
+Init: 1356.238037
+MemAlloc: 0.059000
+HtoD: 1699.264648
+Exec: 552.463989
+DtoH: 747.726074
+Close: 4.816000
+Total: 4470.471191
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.654 
+Bucket Count Kernel Time: 46.436 
+Bucket Prefix Kernel Time: 2.780 
+Bucket Sort Kernel Time: 95.455 
+Merge First Kernel Time: 2.074 
+Merge Pass Kernel Iteration Time: 3.032 
+Merge Pass Kernel Iteration Time: 7.285 
+Merge Pass Kernel Iteration Time: 11.431 
+Merge Pass Kernel Iteration Time: 19.675 
+Merge Pass Kernel Iteration Time: 28.163 
+Merge Pass Kernel Iteration Time: 46.451 
+Merge Pass Kernel Iteration Time: 45.977 
+Merge Pass Kernel Iteration Time: 45.037 
+Merge Pass Kernel Iteration Time: 45.859 
+Merge Pass Kernel Iteration Time: 45.117 
+Merge Pass Kernel Iteration Time: 40.180 
+Merge Pass Kernel Iteration Time: 17.924 
+Merge Pass Kernel Iteration Time: 11.613 
+Merge Pass Kernel Iteration Time: 14.796 
+Merge Pass Kernel Iteration Time: 15.357 
+Merge Pass Kernel Time: 397.896 
+Merge Pack Kernel Time: 2.500 
+Init: 1363.563965
+MemAlloc: 0.058000
+HtoD: 1697.884644
+Exec: 554.795349
+DtoH: 746.185120
+Close: 4.852000
+Total: 4477.225098
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.648 
+Bucket Count Kernel Time: 43.613 
+Bucket Prefix Kernel Time: 2.751 
+Bucket Sort Kernel Time: 95.541 
+Merge First Kernel Time: 2.073 
+Merge Pass Kernel Iteration Time: 3.074 
+Merge Pass Kernel Iteration Time: 7.287 
+Merge Pass Kernel Iteration Time: 11.428 
+Merge Pass Kernel Iteration Time: 20.219 
+Merge Pass Kernel Iteration Time: 28.169 
+Merge Pass Kernel Iteration Time: 46.421 
+Merge Pass Kernel Iteration Time: 46.122 
+Merge Pass Kernel Iteration Time: 45.407 
+Merge Pass Kernel Iteration Time: 45.524 
+Merge Pass Kernel Iteration Time: 44.947 
+Merge Pass Kernel Iteration Time: 40.035 
+Merge Pass Kernel Iteration Time: 17.925 
+Merge Pass Kernel Iteration Time: 11.603 
+Merge Pass Kernel Iteration Time: 14.797 
+Merge Pass Kernel Iteration Time: 15.351 
+Merge Pass Kernel Time: 398.309 
+Merge Pack Kernel Time: 2.505 
+Init: 1383.140991
+MemAlloc: 0.062000
+HtoD: 1703.987183
+Exec: 552.440735
+DtoH: 731.117310
+Close: 4.537000
+Total: 4483.463867
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.651 
+Bucket Count Kernel Time: 48.136 
+Bucket Prefix Kernel Time: 2.733 
+Bucket Sort Kernel Time: 95.592 
+Merge First Kernel Time: 2.071 
+Merge Pass Kernel Iteration Time: 3.042 
+Merge Pass Kernel Iteration Time: 7.325 
+Merge Pass Kernel Iteration Time: 11.441 
+Merge Pass Kernel Iteration Time: 20.644 
+Merge Pass Kernel Iteration Time: 28.154 
+Merge Pass Kernel Iteration Time: 46.540 
+Merge Pass Kernel Iteration Time: 45.661 
+Merge Pass Kernel Iteration Time: 45.633 
+Merge Pass Kernel Iteration Time: 45.504 
+Merge Pass Kernel Iteration Time: 44.910 
+Merge Pass Kernel Iteration Time: 40.547 
+Merge Pass Kernel Iteration Time: 17.736 
+Merge Pass Kernel Iteration Time: 11.578 
+Merge Pass Kernel Iteration Time: 14.858 
+Merge Pass Kernel Iteration Time: 15.363 
+Merge Pass Kernel Time: 398.935 
+Merge Pack Kernel Time: 2.487 
+Init: 1282.302979
+MemAlloc: 0.051000
+HtoD: 1682.072998
+Exec: 557.605774
+DtoH: 703.243164
+Close: 4.451000
+Total: 4331.706055
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.650 
+Bucket Count Kernel Time: 48.146 
+Bucket Prefix Kernel Time: 2.765 
+Bucket Sort Kernel Time: 95.633 
+Merge First Kernel Time: 2.074 
+Merge Pass Kernel Iteration Time: 3.034 
+Merge Pass Kernel Iteration Time: 7.309 
+Merge Pass Kernel Iteration Time: 11.504 
+Merge Pass Kernel Iteration Time: 20.123 
+Merge Pass Kernel Iteration Time: 28.167 
+Merge Pass Kernel Iteration Time: 46.795 
+Merge Pass Kernel Iteration Time: 46.094 
+Merge Pass Kernel Iteration Time: 45.485 
+Merge Pass Kernel Iteration Time: 46.355 
+Merge Pass Kernel Iteration Time: 44.790 
+Merge Pass Kernel Iteration Time: 40.656 
+Merge Pass Kernel Iteration Time: 17.933 
+Merge Pass Kernel Iteration Time: 11.613 
+Merge Pass Kernel Iteration Time: 14.764 
+Merge Pass Kernel Iteration Time: 15.368 
+Merge Pass Kernel Time: 399.991 
+Merge Pack Kernel Time: 2.487 
+Init: 1407.348022
+MemAlloc: 0.058000
+HtoD: 1716.844849
+Exec: 558.746521
+DtoH: 760.980652
+Close: 5.083000
+Total: 4560.688965
+++ echo
+
+++ ./run -p 1 -d 0
+Sorting list of 100000000 floats.
+Quadro P6000 
+Histogram Kernel Time: 7.093 
+Bucket Count Kernel Time: 43.631 
+Bucket Prefix Kernel Time: 2.715 
+Bucket Sort Kernel Time: 95.447 
+Merge First Kernel Time: 2.113 
+Merge Pass Kernel Iteration Time: 3.034 
+Merge Pass Kernel Iteration Time: 7.341 
+Merge Pass Kernel Iteration Time: 11.622 
+Merge Pass Kernel Iteration Time: 20.601 
+Merge Pass Kernel Iteration Time: 28.210 
+Merge Pass Kernel Iteration Time: 46.490 
+Merge Pass Kernel Iteration Time: 45.984 
+Merge Pass Kernel Iteration Time: 45.385 
+Merge Pass Kernel Iteration Time: 45.778 
+Merge Pass Kernel Iteration Time: 45.090 
+Merge Pass Kernel Iteration Time: 40.088 
+Merge Pass Kernel Iteration Time: 17.819 
+Merge Pass Kernel Iteration Time: 11.589 
+Merge Pass Kernel Iteration Time: 14.823 
+Merge Pass Kernel Iteration Time: 15.357 
+Merge Pass Kernel Time: 399.209 
+Merge Pack Kernel Time: 2.487 
+Init: 1352.808960
+MemAlloc: 0.060000
+HtoD: 1689.563232
+Exec: 552.694580
+DtoH: 749.300720
+Close: 5.109000
+Total: 4459.002930
+++ echo
+
+++ echo
+

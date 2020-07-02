@@ -1,0 +1,272 @@
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.372002
+MemAlloc: 0.150000
+HtoD: 20.625999
+Exec: 0.103000
+DtoH: 13.579000
+Close: 2.722000
+Total: 73.552002
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.747002
+MemAlloc: 0.144000
+HtoD: 20.792999
+Exec: 0.121000
+DtoH: 13.549000
+Close: 2.698000
+Total: 74.052002
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.326000
+MemAlloc: 0.149000
+HtoD: 20.671000
+Exec: 0.104000
+DtoH: 13.539000
+Close: 2.651000
+Total: 73.440002
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 39.502998
+MemAlloc: 0.210000
+HtoD: 23.618999
+Exec: 0.104000
+DtoH: 13.628000
+Close: 2.712000
+Total: 79.776001
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 37.805000
+MemAlloc: 0.191000
+HtoD: 23.629999
+Exec: 0.102000
+DtoH: 13.602000
+Close: 2.702000
+Total: 78.031998
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.194000
+MemAlloc: 0.189000
+HtoD: 20.481001
+Exec: 0.104000
+DtoH: 13.557000
+Close: 2.738000
+Total: 73.263000
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.637001
+MemAlloc: 0.157000
+HtoD: 20.764000
+Exec: 0.123000
+DtoH: 13.612000
+Close: 2.802000
+Total: 74.095001
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 38.915001
+MemAlloc: 0.179000
+HtoD: 23.714001
+Exec: 0.098000
+DtoH: 13.634000
+Close: 2.478000
+Total: 79.017998
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 39.764000
+MemAlloc: 0.148000
+HtoD: 21.223000
+Exec: 0.103000
+DtoH: 13.560000
+Close: 2.693000
+Total: 77.490997
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.384998
+MemAlloc: 0.150000
+HtoD: 20.492001
+Exec: 0.106000
+DtoH: 13.565000
+Close: 2.798000
+Total: 73.496002
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.404999
+MemAlloc: 0.135000
+HtoD: 20.743999
+Exec: 0.101000
+DtoH: 13.565000
+Close: 2.761000
+Total: 73.710999
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.841000
+MemAlloc: 0.158000
+HtoD: 20.862000
+Exec: 0.121000
+DtoH: 13.629000
+Close: 2.845000
+Total: 74.456001
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 38.028999
+MemAlloc: 0.209000
+HtoD: 23.777000
+Exec: 0.137000
+DtoH: 13.588000
+Close: 2.620000
+Total: 78.360001
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.675999
+MemAlloc: 0.156000
+HtoD: 20.868000
+Exec: 0.121000
+DtoH: 13.603000
+Close: 2.804000
+Total: 74.227997
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+pyramidHeight: 20
+gridSize: [100000]
+border:[20]
+blockSize: 256
+blockGrid:[463]
+targetBlock:[216]
+Init: 36.591999
+MemAlloc: 0.158000
+HtoD: 20.849001
+Exec: 0.124000
+DtoH: 13.602000
+Close: 2.899000
+Total: 74.223999
+++ echo
+
+++ echo
+

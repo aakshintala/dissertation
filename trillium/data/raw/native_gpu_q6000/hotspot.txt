@@ -1,0 +1,227 @@
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 373.100006
+MemAlloc: 0.007000
+HtoD: 3.176000
+Exec: 4130.298340
+DtoH: 0.650912
+Close: 1.189000
+Total: 4998.776855
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 346.260986
+MemAlloc: 0.006000
+HtoD: 2.618000
+Exec: 4129.630371
+DtoH: 0.651136
+Close: 1.145000
+Total: 4981.028809
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 346.990997
+MemAlloc: 0.006000
+HtoD: 3.137000
+Exec: 4129.744141
+DtoH: 0.651040
+Close: 1.244000
+Total: 4979.563965
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 341.623993
+MemAlloc: 0.005000
+HtoD: 3.197000
+Exec: 4128.441406
+DtoH: 0.650752
+Close: 1.336000
+Total: 4973.979980
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 340.597992
+MemAlloc: 0.005000
+HtoD: 2.682000
+Exec: 4129.466797
+DtoH: 0.651104
+Close: 1.257000
+Total: 4973.582031
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 349.381989
+MemAlloc: 0.006000
+HtoD: 3.163000
+Exec: 4129.618164
+DtoH: 0.651008
+Close: 1.257000
+Total: 4980.370117
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 336.343994
+MemAlloc: 0.005000
+HtoD: 2.339000
+Exec: 4135.956055
+DtoH: 0.652640
+Close: 1.031000
+Total: 4967.924805
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 334.427002
+MemAlloc: 0.005000
+HtoD: 2.618000
+Exec: 4130.354980
+DtoH: 0.651712
+Close: 1.100000
+Total: 4960.668945
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 348.445007
+MemAlloc: 0.005000
+HtoD: 3.174000
+Exec: 4130.264160
+DtoH: 0.650976
+Close: 1.178000
+Total: 4975.173828
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 346.841003
+MemAlloc: 0.005000
+HtoD: 2.589000
+Exec: 4130.879883
+DtoH: 0.652192
+Close: 1.012000
+Total: 4975.728027
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 337.057007
+MemAlloc: 0.005000
+HtoD: 2.365000
+Exec: 4128.125000
+DtoH: 0.652800
+Close: 1.027000
+Total: 4961.085938
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 306.903992
+MemAlloc: 0.003000
+HtoD: 1.593000
+Exec: 4130.257812
+DtoH: 0.651552
+Close: 1.157000
+Total: 4932.266113
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 347.868988
+MemAlloc: 0.005000
+HtoD: 2.659000
+Exec: 4128.246094
+DtoH: 0.651040
+Close: 1.246000
+Total: 4980.567871
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 339.742004
+MemAlloc: 0.004000
+HtoD: 2.226000
+Exec: 4128.906250
+DtoH: 0.650720
+Close: 1.103000
+Total: 4969.282227
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Platform: NVIDIA Corporation
+num_devices = 2
+Device: Quadro 6000
+Use GPU device
+Init: 341.567993
+MemAlloc: 0.006000
+HtoD: 2.617000
+Exec: 4129.971191
+DtoH: 0.650912
+Close: 1.172000
+Total: 4967.946777
+++ echo
+
+++ echo
+

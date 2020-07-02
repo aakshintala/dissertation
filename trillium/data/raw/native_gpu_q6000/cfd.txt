@@ -1,0 +1,287 @@
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 327.040985
+MemAlloc: 0.034000
+HtoD: 2.614624
+DtoD: 171.580887
+Exec: 18862.734375
+DtoH: 1.827904
+Close: 0.764000
+Total: 21811.376953
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 314.513000
+MemAlloc: 0.033000
+HtoD: 2.614528
+DtoD: 171.334030
+Exec: 18861.152344
+DtoH: 1.403744
+Close: 0.760000
+Total: 21807.527344
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 328.441010
+MemAlloc: 0.033000
+HtoD: 2.641280
+DtoD: 171.312927
+Exec: 18867.828125
+DtoH: 1.547648
+Close: 0.703000
+Total: 21865.585938
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 354.584991
+MemAlloc: 0.031000
+HtoD: 2.624768
+DtoD: 173.875565
+Exec: 18913.759766
+DtoH: 1.678656
+Close: 0.728000
+Total: 22127.062500
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 338.601013
+MemAlloc: 0.029000
+HtoD: 2.624480
+DtoD: 174.047897
+Exec: 18916.453125
+DtoH: 1.562976
+Close: 0.691000
+Total: 21955.451172
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 349.877014
+MemAlloc: 0.031000
+HtoD: 2.614752
+DtoD: 171.451477
+Exec: 18862.369141
+DtoH: 1.844064
+Close: 0.752000
+Total: 21860.710938
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 361.466003
+MemAlloc: 0.031000
+HtoD: 2.613600
+DtoD: 171.328461
+Exec: 18858.599609
+DtoH: 1.650752
+Close: 0.768000
+Total: 21866.320312
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 340.381989
+MemAlloc: 0.053000
+HtoD: 2.771008
+DtoD: 171.836151
+Exec: 18866.845703
+DtoH: 1.799040
+Close: 0.803000
+Total: 21881.351562
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 339.364014
+MemAlloc: 0.031000
+HtoD: 2.614208
+DtoD: 171.392166
+Exec: 18858.759766
+DtoH: 1.626656
+Close: 0.750000
+Total: 21844.982422
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 348.632996
+MemAlloc: 0.033000
+HtoD: 2.637248
+DtoD: 173.115952
+Exec: 18897.470703
+DtoH: 2.840768
+Close: 0.763000
+Total: 22064.505859
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 341.230988
+MemAlloc: 0.029000
+HtoD: 2.614560
+DtoD: 171.853012
+Exec: 18858.031250
+DtoH: 1.669472
+Close: 0.835000
+Total: 21843.917969
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 359.519012
+MemAlloc: 0.033000
+HtoD: 2.643776
+DtoD: 171.685165
+Exec: 18865.431641
+DtoH: 1.696800
+Close: 0.821000
+Total: 21919.087891
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 333.524994
+MemAlloc: 0.031000
+HtoD: 2.642656
+DtoD: 173.090973
+Exec: 18894.837891
+DtoH: 1.900576
+Close: 0.720000
+Total: 21936.308594
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 357.809998
+MemAlloc: 0.035000
+HtoD: 2.611776
+DtoD: 172.635132
+Exec: 18890.615234
+DtoH: 1.745184
+Close: 1.315000
+Total: 21941.292969
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Quadro 6000
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 323.234985
+MemAlloc: 0.031000
+HtoD: 2.642368
+DtoD: 174.697479
+Exec: 18916.578125
+DtoH: 1.863008
+Close: 1.343000
+Total: 21915.763672
+++ echo
+
+++ echo
+

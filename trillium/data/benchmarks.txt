@@ -1,0 +1,53 @@
+# Hardware
+Quadro 6000 (why old GPU? Compare with GPUvm; the only one works with
+Gdev, GPUvm, Clover, ...; wlog)
+
+Clover does not work with Quadro P6000. We may use 750Ti (???) if we
+need a modern GPU.
+
+GPUvm is supposed to have ~100x overheads, and TGSI should have 2-10x.
+So it is fair to have kernels run for 200 ms on native devices.
+
+Instead of using "Init, MemAlloc, HtoD, Exec, DtoH, Close" as metrics,
+we care more about "Init, HtoD, Exec, DtoH" in our case.
+
+SetKernelArg time needs to be removed from kernel execution time in some
+benchmarks.
+
+RPC data copy time needs to be factored out in final analysis. So we
+need to measure this part of time separately.
+
+It will be good to use the same data size on GPUvm. Gdev has some
+restrictions for data size.
+
+Data size and iteration times need to be confirmed.
+
+# backprop
+Run the kernel once
+Data size = 4194304 ==> 524288
+Local workgroup size = 128
+
+# bfs
+Run the kernel once
+Use data file graph65536.txt
+
+# gaussian
+Run kernel once
+Matrix size = 2048 ==> 1024
+
+# hotspot
+Iterations = 10,000 ==> 500
+Layer size = 1024x4 ==> 512x2
+
+# lud
+Run kernel once
+Matrix size = 8192 ==> 2048
+
+# nn
+Run kernel 10,000 times ==> 1,000
+
+# pathfinder
+Run 100,000 iterations ==> 102,400
+
+# srad
+Run 2,500 iterations ==> 200

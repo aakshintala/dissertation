@@ -2,17 +2,73 @@
 \chapter{Introduction}
 \label{sec:intro}
 
-Virtualization has a long and tumultuous history. Virtual memory was first
-described by German physicist Fritz-Rudolf Güntsch in his doctoral
-dissertation in 1956~\cite{virtual-memory} and commercialized~\cite{atlas-vm}
-in the Cambridge University/Ferranti Inc. Atlas computer. Virtually all
-computers since then support virtual memory, with most providing hardware
-units---\emph{Memory Management Unit (MMU)}---to accelerate the virtualization
-of memory.
+This dissertation is concerned with fair, efficient and safe sharing of
+domain specific accelerators between mutually distrustful users.
 
+Domain Specific Accelerators (DSAs) are programmable compute units that are
+specialized to a particular class of computation in order to improve
+performance, or to optimize energy usage (or both) for that class of
+computation.
+Domain Specific Accelerators are seeing wide adoption in  data centers as they afford
+the data center provider a very low cost/performance on the specific
+computation they are specialized for. For example, a 2013 projection by Google
+showed that they would need to double the installed CPU compute capacity in
+in order to support just three minutes of Google Voice Search per user per
+day, using speech recognition DNNs~\cite{TPU-CACM}.
+This realization led Google to design and adopt the Tensorflow Processing
+Unit (TPU), a DSA specialized for the Tensor-based computation popular in
+Neural Networks. The very first generation of TPUs, which were deployed to
+Google data centers in 2015, were empirically found to have 200$\times$ and
+79$\times$ higher Performance/Watt respectively over the CPUs and Nvidia k80
+GPUs that were prevalent in their data centers at the time~\cite{TPU-ISCA}.
+
+Data centers themselves are proliferating rapidly: a recent report by
+Synergy Research~\cite{datacentergrowth-src} found that there were more than
+500 hyperscale data centers operational across the world at the end of 2019.
+This proliferation of data centers is primarily motivated by the increased
+need for computation resulting from the unquestionable permeation of digital
+services into every facet of our lives (e.g., Google Maps, video streaming,
+digital communication). Data centers leverage the cost efficiency of
+centralized computing, while using techniques such as virtualization to
+provide the flexibility of dedicated/distributed computing.
+
+Virtualization is a cornerstone technology in our current computing landscape.
+Unlike physical compute, virtualized compute resources can be securely
+multiplexed among many users, which allows for high utilization of the
+installed compute capacity. Further, virtualization provides customers with
+the ability to scale elastically: when the demand for a digital service is
+high, the customer may request and utilize a large number of machines; when
+the spike in demand subsides, the customer can just release the excess compute
+resources, thereby only paying for what they are actively using.
+
+Virtualization of domain specific accelerators remains an open problem:
+DSAs are dedicated to single users instead of being multiplexed in today's
+data centers. Cloud providers such as Amazon expose Graphical Processing Units
+(GPU) and Field Programmable Gate Arrays (FPGA) to individual VMs via
+PCIe-passthrough, thereby bypassing the hypervisor, and giving up the
+consolidation and fault tolerance benefits of virtualization.
+This dissertation explores the trade-offs in the design space for
+software-based virtualization schemes for DSAs and proposes a low-overhead
+novel virtualization scheme that interposes the user-facing Application
+Programmer's Interface (API) while using automation to compensate for the
+resulting development complexity.
+
+\section{History of Virtualization}
+The story of virtualization is long and tumultuous, stretching from the very
+early days of computing, right to today.
+Memory was the first resource to be virtualized:
+German physicist Fritz-Rudolf Güntsch described the basic idea of
+virtual memory in his doctoral dissertation in 1956~\cite{virtual-memory}.
+The Cambridge University/Ferranti Inc. Atlas~\cite{atlas-vm} computer was the
+first to openly commercialize virtual memory. Virtually all computers since
+then have supported virtual memory, with most providing hardware units---\emph{
+Memory Management Unit (MMU)}---to accelerate the virtualization of memory.
+
+The next era dealt with the virtualization of the individual machine with it's
+processor and peripherals.
 \emph{Hardware virtualization}~\cite{cp40}---the idea of virtualizing the
 entire computer to enable the simultaneous execution of multiple Operating
-Systems (OS)---was invented in 1962, and commercialized as the IBM
+Systems (OS)---was invented in 1962, and commercialized in the IBM
 VM-370~\cite{vm370} hypervisor for the IBM 370 computer.
 Virtualization was briefly forgotten through the 1980s and 1990s, as the
 mainframe computer became all but obsolete during the Personal Computer (PC)
@@ -27,7 +83,9 @@ the x86 ISA, including ISA extensions (e.g., AMD-V and Intel VT-x) to enable
 native execution of virtualized applications, only trapping to the hypervisor
 when the application attempts to perform sensitive operations.
 
-Several other forms of virtualization have also been considered.
+Hardware interfaces weren't the only ones virtualized, and in fact, most
+computing environments today rely on hardware virtualization and one or more
+of the following \emph{software virtualization} schemes working in tandem.
 Sun Microsystems popularized \emph{application virtualization} in the 1990s
 with the Java programming language: applications are written to an abstract
 machine---the \emph{Java Virtual Machine (JVM)}---which is backed by a runtime
@@ -41,83 +99,62 @@ virtualization preserves compatibility by transparently modifying the
 interfaces the application uses to access system resources, and results in
 low overhead execution.
 
-The proposed dissertation is primarily concerned with hardware virtualization.
-Hardware virtualization is vital to high utilization of available physical
-resources in large computing installations, e.g., hardware virtualization is
-foundational to \textit{cloud computing}.
-There have been many attempts to define hardware virtualization, from Popek
-and Goldberg's classical virtualization properties---\emph{equivalence,
-performance, and safety} to Bugnion, Nieh and
-Tsafrir's~\cite{bugnion-nieh-tsafrir} definition of virtualization---%
-\textit{``the application of the layering principle with
-enforced modularity such that the exposed resource is identical to the
-underlying resource''}. While technically correct, all of these defintions are
-too contrite to be useful. Instead, for the purposes of this dissertation, we
-concern ourselves with the following overarching goal---\emph{realizable,
-fair, isolated, and efficient sharing of hardware resources among mutually
-distrustful entities.}
+\section{Hardware Virtualization}
+This dissertation is primarily concerned with hardware virtualization of
+domain specific accelerators. Hardware virtualization is vital to high
+utilization of available physical resources in large computing installations,
+e.g., hardware virtualization is foundational to \textit{cloud computing}.
+There have been many attempts to define the fundamental characteristics of
+hardware virtualization: Popek and Goldberg came up with three properties that
+a virtualization scheme must exhibit---\emph{equivalence, performance, and
+safety}, while Bugnion, Nieh and Tsafrir~\cite{ bugnion-nieh-tsafrir} provided
+a more succinct definition---\textit{``the application of the layering
+principle with enforced modularity such that the exposed resource is identical
+to the underlying resource''}. For the purposes of this dissertation, we
+concern ourselves with \emph{realizable, fair, isolated, and efficient sharing
+of domain specific accelerators among mutually distrustful entities.}
 
 Hardware virtualization typically involves mediating access to the shared
 resource either by exposing an interface that is identical to that of the
 physical resource (\emph{full-virtualization}), or by exposing an alternative
 interface, operations on which are in-turn synthesized to the native interface
 (\emph{para-virtualization}).
-The exposed interface is \emph{virtual}, in that it is not directly exposed by
+The exposed interface is considered \emph{virtual}, as it is not controlled by
 the physical underlying hardware, and instead is entirely under the control of
 supervisory virtualization software, the \emph{hypervisor} (also known as the
 \emph{Virtual Machine Monitor}). While operations in the resulting \emph{
 virtual machine} may be directly executed on the physical hardware for
-performance reasons, as in the case of hardware-assisted virtualization
-schemes like AMD-V and Intel VT-x, all privileged operations still trap to the
-hypervisor. The interface interposed may be a hardware interface (ISA, Memory,
-I/O Protocols, etc.) or a software interface (Syscalls, APIs, etc.).
-
-\section{CPU virtualization}
+improved performance, as in the case of hardware-assisted virtualization
+schemes like AMD-V and Intel VT-x, all privileged operations must still trap
+to the hypervisor.
+% The interface interposed may be a hardware interface (ISA,
+% Memory, I/O Protocols, etc.) or a software interface (Syscalls, APIs, etc.).
 
 Four decades of attention from both the academic community and industry has
 given rise to a large body of techniques that enable efficient virtualization
-of CPUs: software techniques such as binary translation and device emulation,
-are well established. While dominant ISAs, such as x86 and ARM, even provide
-extensions to enable low-overhead virtualization, binary translation results
-in lower overhead for sequences of sensitive instructions that need to be
-emulated~\cite{vmware-esx-bt-plus-vtx}.
+of CPUs. Software techniques, such as binary translation and device emulation,
+are well established, and are still used in practice due to lower overhead for
+sequences of sensitive instructions that need to be emulated~\cite{
+vmware-esx-bt-plus-vtx}. Dominant ISAs (e.g., x86 and ARM) provide extensions
+to enable low-overhead virtualization (e.g.,Intel VT-x, AMD-V). Both of these
+are foundational building blocks for cloud computing~\cite{amazon_ec2}.
 
-When implementing a new binary translator~\cite{HVX} or developing a
-secure virtual instruction set, the developer is left to
-their own devices to answer questions regarding \emph{realizability}, e.g., to
-prioritize different parts of the ISA during development or to understand the
-relative value of different parts of the ISA to backwards compatibility.
-Predictably, developers have typically adopt ad-hoc methodologies to overcome
-this challenge~\cite{bugnion-workstation}. We hypothesize that a principled
-approach to answering these questions lies in understanding the distribution
-of importance, to users, in the ISA being virtualized. Chapter 1 of the
-dissertation will present a methodology for determining user preference, and
-the resulting dataset.
-Briefly, we estimate the importance of an instruction in the ISA by measuring
-its frequency of occurrence in applications, and then weighting the frequency
-data with the likelihood of users installing those applications. This is
-completed work~\cite{x86-systor}.
-
-\section{Accelerator virtualization}
-Compute heavy and data parallel workloads such as graph processing and machine
-learning have precipitated a Cambrian explosion of specialized processors.
-These emerging compute devices (e.g., GPGPUs, TPUs, IPUs, IO accelerators),
-however, pose a challenge to virtualization developers, who once again find
-themselves balancing the essential characteristics of a virtualization
-scheme---compatibility, interposition, sharing, isolation---with the need to
-preserve the raw performance these processors provide. Virtualization
-techniques developed for CPUs (ISA virtualization) are not applicable to these
-specialized accelerators: their control interfaces are closer to those of I/O
-devices than the ISAs of CPUs.
-Techniques developed for I/O devices, such as NICs, are also untenable for
-specialized compute devices as they result in the sacrifice of one or more of
-the essential characteristics listed above.
-Full-virtualization based schemes, such as GPUvm~\cite{suzuki2014gpuvm},
-suffer from massive overheads that essentially negate the speedup that makes
-the specialized compute unit attractive in the first place.
-Para-virtual systems, such as SVGA~\cite{dowty2009gpu} that interpose on
-low-level interfaces, such as the kernel driver, introduce much lower overhead
-than full-virtualization based schemes but have poor compatibility, i.e., the
+\section{Domain Specific Accelerator Virtualization}
+Virtualizing Domain Specific Accelerators is a delicate act of balancing the
+essential characteristics of a virtualization scheme---compatibility,
+interposition, sharing, isolation---with the need to preserve the raw
+performance these processors provide.
+Virtualization techniques developed for CPUs (ISA virtualization) can not be
+applied to these accelerators: their control interfaces are closer to those of
+I/O devices than the ISAs of CPUs. Techniques developed for I/O devices, such
+as NICs, are also untenable for DSAs as they sacrifice of one or more
+essential virtualization characteristics.
+Full-virtualization based schemes (e.g.,GPUvm~\cite{suzuki2014gpuvm}) suffer
+from massive overheads that essentially negate the speedup that makes the
+domain specific accelerator attractive in the first place.
+Para-virtual systems that interpose on low-level interfaces such as the kernel
+driver (e.g., SVGA~\cite{dowty2009gpu}), introduce much lower overhead than
+full-virtualization based schemes but have poor compatibility. The
 introduction of an artificial abstract interface constructed expressly for the
 purpose of interposition necessitates massive engineering effort to support
 new hardware in the host and new software frameworks in the guest.
@@ -128,33 +165,48 @@ the hardware easily, but has traditionally eschewed hypervisor interposition,
 thereby making it difficult to enforce safety and isolation among guests.
 
 Virtualizing a Graphics Processing Unit (GPU) for the purposes of graphics
-rendering is a well studied problem, with existing commercial solutions, e.g.,
-VMware’s SVGA~\cite{dowty2009gpu}. Over the last decade, GPUs have been
-re-purposed for parallel general purpose compute (commonly known as GPGPU).
-Chapter 2 of the proposed dissertation will present our findings from
-attempting to extend the SVGA model of GPU virtualization to cover GPGPU
-virtualization as well. We find that the tight coupling between ISA
-virtualization and device virtualization in SVGA leads to poor performance for
-GPGPU compute. We propose a new virtualization scheme, Trillium, that doesn’t
-rely on ISA virtualization and show that Trillium outperforms all other
-traditional virtualization schemes while retaining hypervisor interposition.
-Material presented in Chapter 2 will be drawn from a published paper~\cite{trillium}.
+rendering is a well studied problem, with existing commercial solutions (e.g.,
+VMware’s SVGA~\cite{dowty2009gpu}). Over the last decade, GPUs have also been
+re-purposed for general purpose compute (commonly known as GPGPU).
+Chapter 2 of this dissertation presents background on domain specific
+accelerators, how their software stacks are different from those of CPUs and
+I/O devices, and how and why previous software virtualization solutions do not
+fare well for DSAs. In order to understand the trade-offs with each of the
+canonical virtualization techniques when applied to GPGPU virtualization, we
+present an end-to-end evaluation of representative systems. Chapter 2 also
+considers the notion of the modern DSA stack being a proprietary silo, i.e.,
+that it's only stable and publicly available interfaces are at the top and the
+bottom. Later chapters build on this notion of silo-ed DSA software stacks to
+design an effective virtualization scheme.
 
-Specialized compute units (e.g., Google TPU, Intel QAT, etc.) are
+Chapter 3 of this dissertation presents our findings from attempting to extend
+the SVGA model of GPU virtualization to virtualize GPGPUs. We find that the
+tight coupling between ISA virtualization and device  virtualization in SVGA
+leads to poor performance for GPGPU compute. Eliding ISA virtualization
+enables the resulting prototype, Trillium~\cite{trillium}, to outperform all
+other traditional virtualization schemes that retaining hypervisor
+interposition. However, Trillium is still 2---3$\times$ slower than RPC-style
+API forwarding.
+
+Domain Specific Accelerators (e.g., Google TPU, Intel QAT, etc.) are
 typically exposed to developers via a user-space API. The API is typically
-implemented by a combination of proprietary software that interacts with the
-hardware through opaque interfaces.
-Chapters 3, 4 and 5 of the proposed dissertation will explore the performance
-implications of virtualizing the user-space API for specialized compute
-accelerators.
-Chapter 3 will present an overview of AvA, a framework that enables automated
-virtualization of accelerator APIs. Chapter 4 will focus on the performance
-implications of API-remoting based virtualization of a single specialized
-accelerator. Chapters 3 and 4 will draw on material that appeared in a HotOS
-workshop paper~\cite{ava-hotos} and a full paper that will appear at
-ASPLOS'20. Chapter 5 will explore performance issues that arise when an
-application uses multiple API-remoted virtual accelerators in a pipelined
-fashion, and is proposed work.
+implemented by proprietary software that interacts with the hardware through
+opaque interfaces.
+Chapters 4, 5 and 6 generalize the lessons learned for GPGPUs to all
+API-controlled domain specific accelerators by interposing their user-space
+APIs.
+Chapter 4 presents an overview of AvA, a framework that enables automated
+virtualization of accelerator APIs. AvA combines on a novel virtualization
+scheme called Hypervisor Interposed Remote Acceleration (HIRA), with
+automation based on a Domain Specific Language, LAPIS, which is used to
+capture semantic information of the interposed APIs. This dissertation is
+primarily concerned with the HIRA virtualization scheme.
+Chapter 5 focuses on the performance implications of API-remoting based
+virtualization of a single specialized accelerator.
+Chapters 4 and 5 draw on material that appeared in a HotOS workshop
+paper~\cite{ava-hotos} and an ASPLOS'20 paper~\cite{ava-asplos}.
+Chapter 6 explores performance issues that arise when an application uses
+multiple API-remoted virtual accelerators in a pipelined fashion.
 
 Virtualization schemes are traditionally taxonomized according to the core
 techniques employed (e.g. emulation, full- or para-virtualization, API
@@ -171,22 +223,5 @@ interposed operations between the guest and the host, and the mechanism used
 to \textbf{S}ynthesize the interposed interface, \texttt{IEMTS} enables a
 clearer understanding of trade-offs in prior designs and provides a model for
 comparison of alternative designs. \texttt{IEMTS} will be presented in Chapter
-6 of the proposed dissertation, along with analysis of traditional
+7 of the proposed dissertation, along with analysis of traditional
 virtualization techniques in the context of GPGPUs.
-
-\noindent Concretely, the proposed dissertation will evaluate the following
-hypotheses:
-\begin{enumerate}[noitemsep, topsep=0pt, leftmargin=1em, labelwidth=*, align=left, label=\textbf{H \arabic*:}]
-\item Development priority among instructions in an ISA, in the context of binary translation, can be automatically inferred from user preferences. (Dissertation Chapter 1)
-\item ISA virtualization is unnecessary for performant virtualization of compute accelerators. (Dissertation Chapter 2)
-\item Hypervisor-mediated API-remoting is a low-overhead virtualization scheme for API-controlled compute accelerators. (Dissertation Chapters 3, 4, and 5)
-\item A virtualization technique can be succinctly characterized by a scheme
-that explicitly captures the \textit{Interface} interposed,
-the \textit{Endpoints} interposed on, the \textit{Mechanism} of
-interposition, the \textit{Transport} used to connect the interposed
-endpoints, and the mechanism used to \textit{Synthesize} the interposed
-operation on the host. (Dissertation Chapter 6)
-\end{enumerate}
-
-The proposed dissertation will draw from prior work that was carried out as a
-team effort, as is common when building large systems.

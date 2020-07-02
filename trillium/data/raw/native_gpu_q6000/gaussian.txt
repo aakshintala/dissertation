@@ -1,0 +1,482 @@
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	22.917152 [134.23MB]	31689.382812	22.583393 [134.23MB]	31734.884766
+
+Init: 367.433990
+MemAlloc: 0.014000
+HtoD: 22.917152
+Exec: 31689.382812
+DtoH: 22.583393
+Close: 0.723000
+Total: 32270.132812
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	27.186146 [134.23MB]	31686.320312	20.774815 [134.23MB]	31734.281250
+
+Init: 368.209015
+MemAlloc: 0.007000
+HtoD: 27.186146
+Exec: 31686.320312
+DtoH: 20.774815
+Close: 0.485000
+Total: 32277.501953
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	22.941984 [134.23MB]	31692.689453	20.769472 [134.23MB]	31736.400391
+
+Init: 363.938995
+MemAlloc: 0.008000
+HtoD: 22.941984
+Exec: 31692.689453
+DtoH: 20.769472
+Close: 0.448000
+Total: 32275.818359
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	22.342752 [134.23MB]	31685.640625	20.762753 [134.23MB]	31728.746094
+
+Init: 349.580994
+MemAlloc: 0.006000
+HtoD: 22.342752
+Exec: 31685.640625
+DtoH: 20.762753
+Close: 0.408000
+Total: 32234.185547
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	24.535681 [134.23MB]	31683.566406	20.762081 [134.23MB]	31728.863281
+
+Init: 364.330994
+MemAlloc: 0.016000
+HtoD: 24.535681
+Exec: 31683.566406
+DtoH: 20.762081
+Close: 0.451000
+Total: 32258.740234
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	24.159073 [134.23MB]	31685.972656	20.812897 [134.23MB]	31730.943359
+
+Init: 355.563995
+MemAlloc: 0.008000
+HtoD: 24.159073
+Exec: 31685.972656
+DtoH: 20.812897
+Close: 0.451000
+Total: 32251.212891
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	23.267967 [134.23MB]	31691.281250	20.891743 [134.23MB]	31735.441406
+
+Init: 359.764008
+MemAlloc: 0.017000
+HtoD: 23.267967
+Exec: 31691.281250
+DtoH: 20.891743
+Close: 0.381000
+Total: 32260.464844
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	25.469376 [134.23MB]	31684.207031	20.887840 [134.23MB]	31730.564453
+
+Init: 351.967987
+MemAlloc: 0.008000
+HtoD: 25.469376
+Exec: 31684.207031
+DtoH: 20.887840
+Close: 0.474000
+Total: 32247.621094
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	24.640991 [134.23MB]	31685.818359	20.760929 [134.23MB]	31731.220703
+
+Init: 371.287994
+MemAlloc: 0.008000
+HtoD: 24.640991
+Exec: 31685.818359
+DtoH: 20.760929
+Close: 0.495000
+Total: 32273.423828
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	23.122593 [134.23MB]	31684.357422	20.831104 [134.23MB]	31728.312500
+
+Init: 352.888000
+MemAlloc: 0.008000
+HtoD: 23.122593
+Exec: 31684.357422
+DtoH: 20.831104
+Close: 0.407000
+Total: 32249.718750
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	25.192768 [134.23MB]	31685.589844	20.781601 [134.23MB]	31731.564453
+
+Init: 333.859985
+MemAlloc: 0.007000
+HtoD: 25.192768
+Exec: 31685.589844
+DtoH: 20.781601
+Close: 0.458000
+Total: 32234.533203
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	23.358177 [134.23MB]	31694.283203	20.895329 [134.23MB]	31738.535156
+
+Init: 346.691986
+MemAlloc: 0.007000
+HtoD: 23.358177
+Exec: 31694.283203
+DtoH: 20.895329
+Close: 0.398000
+Total: 32249.910156
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	22.607712 [134.23MB]	31691.273438	20.890720 [134.23MB]	31734.771484
+
+Init: 351.738007
+MemAlloc: 0.013000
+HtoD: 22.607712
+Exec: 31691.273438
+DtoH: 20.890720
+Close: 0.381000
+Total: 32245.400391
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	25.286720 [134.23MB]	31684.707031	20.782240 [134.23MB]	31730.777344
+
+Init: 351.950989
+MemAlloc: 0.008000
+HtoD: 25.286720
+Exec: 31684.707031
+DtoH: 20.782240
+Close: 0.486000
+Total: 32255.044922
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 2
+	device 0: NVIDIA Corporation Quadro M2000
+	device 1: NVIDIA Corporation Quadro 6000
+Platform 1
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2643 v4 @ 3.40GHz
+
+Using Platform 0 Device 1 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	25.269056 [134.23MB]	31685.292969	20.770880 [134.23MB]	31731.333984
+
+Init: 338.122009
+MemAlloc: 0.018000
+HtoD: 25.269056
+Exec: 31685.292969
+DtoH: 20.770880
+Close: 0.464000
+Total: 32239.769531
+++ echo
+
+++ echo
+

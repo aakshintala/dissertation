@@ -1,0 +1,227 @@
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 505.036987
+MemAlloc: 0.029000
+HtoD: 76.107658
+Exec: 5498.382324
+DtoH: 29.347445
+Close: 0.578000
+Total: 6140.844238
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 366.273010
+MemAlloc: 0.018000
+HtoD: 62.687351
+Exec: 5480.433594
+DtoH: 30.613443
+Close: 0.586000
+Total: 5971.668945
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 401.960999
+MemAlloc: 0.019000
+HtoD: 63.301373
+Exec: 5482.356934
+DtoH: 29.858240
+Close: 0.584000
+Total: 6009.411133
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 446.326996
+MemAlloc: 0.020000
+HtoD: 64.827522
+Exec: 5475.234375
+DtoH: 30.186140
+Close: 0.591000
+Total: 6047.397949
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 480.809998
+MemAlloc: 0.021000
+HtoD: 65.787827
+Exec: 5487.796387
+DtoH: 29.993299
+Close: 0.586000
+Total: 6096.679199
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 450.971985
+MemAlloc: 0.017000
+HtoD: 63.655567
+Exec: 5483.238281
+DtoH: 30.018852
+Close: 0.660000
+Total: 6060.362793
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 456.101990
+MemAlloc: 0.019000
+HtoD: 65.949028
+Exec: 5494.726562
+DtoH: 30.147003
+Close: 0.656000
+Total: 6078.627930
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 461.332001
+MemAlloc: 0.018000
+HtoD: 62.131207
+Exec: 5484.446289
+DtoH: 29.166466
+Close: 0.581000
+Total: 6068.123047
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 464.119995
+MemAlloc: 0.018000
+HtoD: 64.694244
+Exec: 5485.169922
+DtoH: 29.134245
+Close: 0.597000
+Total: 6075.580078
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 416.869995
+MemAlloc: 0.020000
+HtoD: 63.129890
+Exec: 5485.600098
+DtoH: 29.677162
+Close: 0.592000
+Total: 6026.375977
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 442.856995
+MemAlloc: 0.020000
+HtoD: 63.933559
+Exec: 5485.258301
+DtoH: 30.455687
+Close: 0.593000
+Total: 6053.071777
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 419.497986
+MemAlloc: 0.023000
+HtoD: 62.086632
+Exec: 5481.767090
+DtoH: 29.455837
+Close: 0.583000
+Total: 6025.022949
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 373.003998
+MemAlloc: 0.017000
+HtoD: 62.705822
+Exec: 5483.268066
+DtoH: 30.369932
+Close: 0.580000
+Total: 5979.770020
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 441.937988
+MemAlloc: 0.020000
+HtoD: 62.450115
+Exec: 5479.717285
+DtoH: 29.511557
+Close: 0.653000
+Total: 6046.929199
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 1
+Create CPU context
+Init: 415.592987
+MemAlloc: 0.021000
+HtoD: 64.287254
+Exec: 5487.777832
+DtoH: 29.510559
+Close: 0.579000
+Total: 6028.498047
+++ echo
+
+++ echo
+

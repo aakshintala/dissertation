@@ -1,0 +1,242 @@
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 451.746002
+MemAlloc: 0.020000
+HtoD: 1970.632812
+Exec: 1025.027954
+DtoH: 986.082581
+Close: 17.009001
+Total: 4471.837891
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 486.674988
+MemAlloc: 0.022000
+HtoD: 1977.150635
+Exec: 1023.118713
+DtoH: 1010.103760
+Close: 17.316000
+Total: 4536.668945
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 451.557007
+MemAlloc: 0.023000
+HtoD: 1993.514893
+Exec: 1020.980713
+DtoH: 1050.692871
+Close: 16.907000
+Total: 4555.264160
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 500.457001
+MemAlloc: 0.035000
+HtoD: 1957.686035
+Exec: 1023.636292
+DtoH: 1036.917114
+Close: 17.054001
+Total: 4558.783203
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 469.739014
+MemAlloc: 0.021000
+HtoD: 1997.538330
+Exec: 1021.416138
+DtoH: 1012.761414
+Close: 16.952999
+Total: 4541.296875
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 444.652008
+MemAlloc: 0.020000
+HtoD: 1958.260254
+Exec: 1022.334412
+DtoH: 1026.941650
+Close: 17.003000
+Total: 4491.344238
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 519.078003
+MemAlloc: 0.023000
+HtoD: 2000.509033
+Exec: 1024.485840
+DtoH: 1016.019836
+Close: 16.973000
+Total: 4600.077148
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 485.459015
+MemAlloc: 0.028000
+HtoD: 1958.973877
+Exec: 1022.362732
+DtoH: 1043.409790
+Close: 17.004000
+Total: 4549.865234
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 460.924011
+MemAlloc: 0.025000
+HtoD: 1967.248657
+Exec: 1024.848511
+DtoH: 1045.197388
+Close: 16.930000
+Total: 4536.815918
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 484.565002
+MemAlloc: 0.028000
+HtoD: 2110.278564
+Exec: 1017.004395
+DtoH: 999.814270
+Close: 17.023001
+Total: 4650.496094
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 421.239014
+MemAlloc: 0.020000
+HtoD: 2002.889282
+Exec: 1022.981384
+DtoH: 1007.625854
+Close: 17.184000
+Total: 4495.221191
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 441.141998
+MemAlloc: 0.022000
+HtoD: 1994.651733
+Exec: 1023.588440
+DtoH: 1047.707764
+Close: 16.889999
+Total: 4545.700195
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 445.410004
+MemAlloc: 0.022000
+HtoD: 1996.785400
+Exec: 1022.082764
+DtoH: 1008.818848
+Close: 17.035000
+Total: 4513.318848
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 432.727997
+MemAlloc: 0.025000
+HtoD: 1969.556763
+Exec: 1022.287781
+DtoH: 1055.236206
+Close: 16.938000
+Total: 4519.651855
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+worksize = 32768
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 494.917999
+MemAlloc: 0.024000
+HtoD: 1970.978394
+Exec: 1025.237671
+DtoH: 1014.801697
+Close: 16.979000
+Total: 4544.786133
+++ echo
+
+++ echo
+

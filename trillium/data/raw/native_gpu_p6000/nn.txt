@@ -1,0 +1,377 @@
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	491.726776	0.000015 [0.17MB]	0.491520
+
+Init: 974.807983
+MemAlloc: 0.007000
+HtoD: 0.030688
+Exec: 491.726776
+DtoH: 0.014528
+Close: 0.298000
+Total: 2317.985107
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	507.900940	0.000014 [0.17MB]	0.507674
+
+Init: 984.893005
+MemAlloc: 0.005000
+HtoD: 0.031136
+Exec: 507.900940
+DtoH: 0.014432
+Close: 0.295000
+Total: 2086.672119
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	502.364746	0.000014 [0.17MB]	0.502177
+
+Init: 979.083008
+MemAlloc: 0.006000
+HtoD: 0.031424
+Exec: 502.364746
+DtoH: 0.014368
+Close: 0.294000
+Total: 2074.068115
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	501.275513	0.000014 [0.17MB]	0.501102
+
+Init: 983.536011
+MemAlloc: 0.005000
+HtoD: 0.031136
+Exec: 501.275513
+DtoH: 0.014464
+Close: 0.298000
+Total: 2084.301025
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	492.530945	0.000014 [0.17MB]	0.492352
+
+Init: 968.046997
+MemAlloc: 0.003000
+HtoD: 0.030880
+Exec: 492.530945
+DtoH: 0.014432
+Close: 0.298000
+Total: 2021.541992
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	536.427063	0.000014 [0.17MB]	0.536276
+
+Init: 977.023010
+MemAlloc: 0.006000
+HtoD: 0.031328
+Exec: 536.427063
+DtoH: 0.014464
+Close: 0.282000
+Total: 2188.725098
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	540.521179	0.000014 [0.17MB]	0.540377
+
+Init: 986.783020
+MemAlloc: 0.007000
+HtoD: 0.031392
+Exec: 540.521179
+DtoH: 0.014432
+Close: 0.300000
+Total: 2211.239990
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	505.187714	0.000015 [0.17MB]	0.504983
+
+Init: 975.315002
+MemAlloc: 0.005000
+HtoD: 0.030976
+Exec: 505.187714
+DtoH: 0.014528
+Close: 0.288000
+Total: 2073.541992
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000032 [0.34MB]	545.171326	0.000015 [0.17MB]	0.545034
+
+Init: 972.885010
+MemAlloc: 0.005000
+HtoD: 0.031744
+Exec: 545.171326
+DtoH: 0.014528
+Close: 0.295000
+Total: 2210.413086
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	554.183716	0.000014 [0.17MB]	0.554127
+
+Init: 981.307007
+MemAlloc: 0.007000
+HtoD: 0.031136
+Exec: 554.183716
+DtoH: 0.014400
+Close: 0.288000
+Total: 2264.372070
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000032 [0.34MB]	545.630127	0.000014 [0.17MB]	0.545496
+
+Init: 980.315979
+MemAlloc: 0.005000
+HtoD: 0.031776
+Exec: 545.630127
+DtoH: 0.014464
+Close: 0.287000
+Total: 2210.467041
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000032 [0.34MB]	541.472534	0.000014 [0.17MB]	0.541321
+
+Init: 980.458984
+MemAlloc: 0.006000
+HtoD: 0.031616
+Exec: 541.472534
+DtoH: 0.014400
+Close: 0.292000
+Total: 2200.837891
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000032 [0.34MB]	544.801697	0.000014 [0.17MB]	0.544654
+
+Init: 999.166992
+MemAlloc: 0.006000
+HtoD: 0.031552
+Exec: 544.801697
+DtoH: 0.014464
+Close: 0.286000
+Total: 2248.752930
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	501.348511	0.000014 [0.17MB]	0.501163
+
+Init: 871.676025
+MemAlloc: 0.005000
+HtoD: 0.031392
+Exec: 501.348511
+DtoH: 0.014368
+Close: 0.298000
+Total: 1966.944946
+++ echo
+
+++ ./run -p 1 -d 0
+Number of platforms detected:2
+Platform 0:	Vendor: Intel(R) Corporation
+	Device: 0	Vendor: Intel(R) Corporation
+		Name: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1:	Vendor: NVIDIA Corporation
+	Device: 0	Vendor: NVIDIA Corporation
+		Name: Quadro P6000
+	Device: 1	Vendor: NVIDIA Corporation
+		Name: Tesla C2075
+	Device: 2	Vendor: NVIDIA Corporation
+		Name: Tesla K40c
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.000031 [0.34MB]	504.970062	0.000014 [0.17MB]	0.504772
+
+Init: 975.557007
+MemAlloc: 0.006000
+HtoD: 0.031200
+Exec: 504.970062
+DtoH: 0.014432
+Close: 0.276000
+Total: 2070.336914
+++ echo
+
+++ echo
+

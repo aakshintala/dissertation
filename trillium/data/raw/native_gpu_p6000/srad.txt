@@ -1,0 +1,272 @@
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 1168.495972
+MemAlloc: 0.011000
+HtoD: 0.083488
+Exec: 216.371170
+DtoH: 2.281866
+Close: 424.610992
+Total: 2044.365967
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 975.747009
+MemAlloc: 0.023000
+HtoD: 0.084544
+Exec: 228.732773
+DtoH: 2.358116
+Close: 446.411987
+Total: 1945.840942
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 843.642029
+MemAlloc: 0.021000
+HtoD: 0.082848
+Exec: 220.899689
+DtoH: 2.280877
+Close: 428.487000
+Total: 1754.379028
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 918.804993
+MemAlloc: 0.021000
+HtoD: 0.083072
+Exec: 220.485916
+DtoH: 2.280078
+Close: 446.313995
+Total: 1843.245972
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 944.895020
+MemAlloc: 0.020000
+HtoD: 0.083328
+Exec: 220.358368
+DtoH: 2.283180
+Close: 427.813995
+Total: 1847.965942
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 974.315979
+MemAlloc: 0.023000
+HtoD: 0.084896
+Exec: 221.225967
+DtoH: 2.289929
+Close: 450.183990
+Total: 1911.863037
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 971.570984
+MemAlloc: 0.021000
+HtoD: 0.083328
+Exec: 223.270844
+DtoH: 2.291627
+Close: 426.730011
+Total: 1885.681030
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 875.908997
+MemAlloc: 0.020000
+HtoD: 0.082976
+Exec: 220.187531
+DtoH: 2.273130
+Close: 428.812988
+Total: 1774.135986
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 952.106018
+MemAlloc: 0.021000
+HtoD: 0.082880
+Exec: 221.532104
+DtoH: 2.288940
+Close: 428.902008
+Total: 1863.838989
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 969.984009
+MemAlloc: 0.025000
+HtoD: 0.085536
+Exec: 231.343475
+DtoH: 2.363110
+Close: 452.989014
+Total: 1951.026978
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 966.460999
+MemAlloc: 0.021000
+HtoD: 0.082784
+Exec: 221.185211
+DtoH: 2.294761
+Close: 427.667999
+Total: 1877.421997
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 961.924988
+MemAlloc: 0.022000
+HtoD: 0.081856
+Exec: 221.063431
+DtoH: 2.286731
+Close: 426.636993
+Total: 1875.125000
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 852.323975
+MemAlloc: 0.021000
+HtoD: 0.082560
+Exec: 222.278854
+DtoH: 2.283372
+Close: 426.496002
+Total: 1765.806030
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 949.119995
+MemAlloc: 0.022000
+HtoD: 0.084128
+Exec: 219.835129
+DtoH: 2.281803
+Close: 426.712006
+Total: 1852.328003
+++ echo
+
+++ ./run -p 1 -d 0
+WG size of kernel = 256 
+Platform: NVIDIA Corporation
+Device: Quadro P6000
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 958.544983
+MemAlloc: 0.022000
+HtoD: 0.082464
+Exec: 222.019791
+DtoH: 2.289643
+Close: 428.178009
+Total: 1875.157959
+++ echo
+
+++ echo
+

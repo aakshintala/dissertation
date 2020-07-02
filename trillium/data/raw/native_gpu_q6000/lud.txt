@@ -1,0 +1,227 @@
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 344.519012
+MemAlloc: 0.005000
+HtoD: 56.312286
+Exec: 2665.304199
+DtoH: 41.640095
+Close: 0.366000
+Total: 3128.839111
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 333.966003
+MemAlloc: 0.005000
+HtoD: 55.512672
+Exec: 2665.373291
+DtoH: 41.504833
+Close: 0.369000
+Total: 3117.506104
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 348.506012
+MemAlloc: 0.005000
+HtoD: 58.717823
+Exec: 2665.607178
+DtoH: 77.036545
+Close: 0.320000
+Total: 3171.114990
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 337.635986
+MemAlloc: 0.005000
+HtoD: 56.013023
+Exec: 2667.578125
+DtoH: 86.672829
+Close: 0.338000
+Total: 3174.031006
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 335.148010
+MemAlloc: 0.005000
+HtoD: 46.635777
+Exec: 2665.495850
+DtoH: 41.657536
+Close: 0.307000
+Total: 3109.606934
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 325.157013
+MemAlloc: 0.004000
+HtoD: 55.999073
+Exec: 2665.619141
+DtoH: 76.649246
+Close: 0.319000
+Total: 3144.683105
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 333.753998
+MemAlloc: 0.005000
+HtoD: 50.885536
+Exec: 2667.003906
+DtoH: 78.226524
+Close: 0.322000
+Total: 3152.802002
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 333.845001
+MemAlloc: 0.005000
+HtoD: 56.158016
+Exec: 2666.548828
+DtoH: 74.251968
+Close: 0.283000
+Total: 3150.525879
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 335.278015
+MemAlloc: 0.004000
+HtoD: 51.470848
+Exec: 2665.491943
+DtoH: 76.257980
+Close: 0.319000
+Total: 3149.084961
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 333.673004
+MemAlloc: 0.006000
+HtoD: 53.218208
+Exec: 2668.836670
+DtoH: 41.798306
+Close: 0.338000
+Total: 3120.668945
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 287.226013
+MemAlloc: 0.004000
+HtoD: 44.663937
+Exec: 2665.226562
+DtoH: 77.969696
+Close: 0.325000
+Total: 3095.043945
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 328.830994
+MemAlloc: 0.003000
+HtoD: 48.129951
+Exec: 2668.317139
+DtoH: 72.985535
+Close: 0.285000
+Total: 3140.257080
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 324.972992
+MemAlloc: 0.006000
+HtoD: 58.041794
+Exec: 2665.619385
+DtoH: 41.669983
+Close: 0.377000
+Total: 3111.397949
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 342.226990
+MemAlloc: 0.004000
+HtoD: 57.135586
+Exec: 2665.212891
+DtoH: 41.540607
+Close: 0.374000
+Total: 3127.273926
+++ echo
+
+++ ./run -p 0 -d 1
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =8192
+Creating matrix internally size=8192
+num_devices = 2
+Create GPU context
+Init: 310.291992
+MemAlloc: 0.005000
+HtoD: 46.725922
+Exec: 2667.783936
+DtoH: 41.608063
+Close: 0.299000
+Total: 3090.253906
+++ echo
+
+++ echo
+

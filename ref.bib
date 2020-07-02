@@ -1770,7 +1770,7 @@ keywords = {StarPU}
  keywords = {CUDA, GPGPU, high performance computing, virtual machine, virtualization},
 }
 
-@inproceedings{Duato:2009:EIG:1884795.1884840,
+@inproceedings{Duato2009,
  author = {Duato, Jos{\'e} and Igual, Francisco D. and Mayo, Rafael and Pe\~{n}a, Antonio J. and Quintana-Ort\'{\i}, Enrique S. and Silla, Federico},
  title = {An Efficient Implementation of GPU Virtualization in High Performance Clusters},
  booktitle = {Proceedings of the 2009 International Conference on Parallel Processing},
@@ -1787,7 +1787,7 @@ keywords = {StarPU}
  keywords = {clusters, graphics processors (GPUs), grid, high performance computing, virtualization},
 }
 
-@inproceedings{Li:2011:GRS:2066302.2066933,
+@inproceedings{Li2011,
  author = {Li, Teng and Narayana, Vikram K. and El-Araby, Esam and El-Ghazawi, Tarek},
  title = {GPU Resource Sharing and Virtualization on High Performance Computing Systems},
  booktitle = {Proceedings of the 2011 International Conference on Parallel Processing},
@@ -7964,4 +7964,524 @@ isbn = {978-1-4799-4394-4},
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {i/o, isolation, paravirtualization, virtualization},
+}
+
+@article{TPU-CACM,
+author = {Jouppi, Norman P. and Young, Cliff and Patil, Nishant and Patterson, David},
+title = {A Domain-Specific Architecture for Deep Neural Networks},
+year = {2018},
+issue_date = {August 2018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {61},
+number = {9},
+issn = {0001-0782},
+url = {https://doi.org/10.1145/3154484},
+doi = {10.1145/3154484},
+journal = {Commun. ACM},
+month = aug,
+pages = {50–59},
+numpages = {10}
+}
+
+@article{TPU-ISCA,
+author = {Jouppi, Norman P. and Young, Cliff and Patil, Nishant and Patterson, David and Agrawal, Gaurav and Bajwa, Raminder and Bates, Sarah and Bhatia, Suresh and Boden, Nan and Borchers, Al and et al.},
+title = {In-Datacenter Performance Analysis of a Tensor Processing Unit},
+year = {2017},
+issue_date = {September 2017},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {45},
+number = {2},
+issn = {0163-5964},
+url = {https://doi.org/10.1145/3140659.3080246},
+doi = {10.1145/3140659.3080246},
+journal = {SIGARCH Comput. Archit. News},
+month = jun,
+pages = {1–12},
+numpages = {12},
+keywords = {LSTM, deep learning, domain-specific architecture, MLP, CNN, GPU, TPU, accelerator, TensorFlow, RNN, DNN, neural network}
+}
+
+
+@MISC{datacentergrowth-src,
+  title        = "{Hyperscale Data Center Count Passed the 500 Milestone in Q3}",
+  booktitle    = "{Synergy Research Group}",
+  author       = "{Synergy Research Group} and {Reno} and {NV}",
+  month        =  oct,
+  year         =  2019,
+  url          = "https://www.srgresearch.com/articles/hyperscale-data-center-count-passed-500-milestone-q3",
+  howpublished = "\url{https://www.srgresearch.com/articles/hyperscale-data-center-count-passed-500-milestone-q3}",
+  note         = "Accessed: 2020-6-9"
+}
+
+@MISC{GalliumCompute-web,
+  title        = "{GalliumCompute}",
+  url          = "https://dri.freedesktop.org/wiki/GalliumCompute/",
+  howpublished = "\url{https://dri.freedesktop.org/wiki/GalliumCompute/}",
+  note         = "Accessed: 2018-2-6"
+}
+
+@misc{old_llvm_tgsi1,
+  title = {{Francisco Jerez's TGSI back-end}},
+  howpublished = {\url{https://github.com/curro/llvm}},
+  note = {Jan. 2018}
+}
+
+@misc{old_llvm_tgsi2,
+  title = {{Hans de Goede's TGSI back-end}},
+  howpublished = {\url{https://cgit.freedesktop.org/~jwrdegoede/llvm}},
+  note = {Jan. 2018}
+}
+
+@inproceedings{Dong:2008:SNX:1855865.1855875,
+ author = {Dong, Yaozu and Yu, Zhao and Rose, Greg},
+ title = {SR-IOV Networking in Xen: Architecture, Design and Implementation},
+ booktitle = {Proceedings of the First Conference on I/O Virtualization},
+ series = {WIOV'08},
+ year = {2008},
+ location = {San Diego, California},
+ pages = {10--10},
+ numpages = {1},
+ url = {http://dl.acm.org/citation.cfm?id=1855865.1855875},
+ acmid = {1855875},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+
+
+@inproceedings{exitless-paravirtual-io,
+ author = {Gordon, Abel and Har'El, Nadav and Landau, Alex and Ben-Yehuda, Muli and Traeger, Avishay},
+ title = {Towards Exitless and Efficient Paravirtual I/O},
+ booktitle = {Proceedings of the 5th Annual International Systems and Storage Conference},
+ series = {SYSTOR '12},
+ year = {2012},
+ isbn = {978-1-4503-1448-0},
+ location = {Haifa, Israel},
+ pages = {10:1--10:6},
+ articleno = {10},
+ numpages = {6},
+ url = {http://doi.acm.org/10.1145/2367589.2367593},
+ doi = {10.1145/2367589.2367593},
+ acmid = {2367593},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+}
+
+@inproceedings{harel-efficient13atc,
+ author = {Har'El, Nadav and Gordon, Abel and Landau, Alex and Ben-Yehuda, Muli and Traeger, Avishay and Ladelsky, Razya},
+ title = {Efficient and Scalable Paravirtual I/O System},
+ booktitle = {Proceedings of the 2013 USENIX Conference on Annual Technical Conference},
+ series = {USENIX ATC'13},
+ year = {2013},
+ location = {San Jose, CA},
+ pages = {231--242},
+ numpages = {12},
+ url = {http://dl.acm.org/citation.cfm?id=2535461.2535490},
+ acmid = {2535490},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+
+@inproceedings{vmm-independent-gfx-vee07,
+ author = {Lagar-Cavilla, H. Andres and Tolia, Niraj and Satyanarayanan, M. and de Lara, Eyal},
+ title = {VMM-independent Graphics Acceleration},
+ booktitle = {Proceedings of the 3rd International Conference on Virtual Execution Environments},
+ series = {VEE '07},
+ year = {2007},
+ isbn = {978-1-59593-630-1},
+ location = {San Diego, California, USA},
+ pages = {33--43},
+ numpages = {11},
+ url = {http://doi.acm.org/10.1145/1254810.1254816},
+ doi = {10.1145/1254810.1254816},
+ acmid = {1254816},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {VMM-independence, graphics, hardware acceleration, portability, virtualization},
+}
+
+@inproceedings{vmm-bypass-atc06,
+ author = {Liu, Jiuxing and Huang, Wei and Abali, Bulent and Panda, Dhabaleswar K.},
+ title = {High Performance VMM-bypass I/O in Virtual Machines},
+ booktitle = {Proceedings of the Annual Conference on USENIX '06 Annual Technical Conference},
+ series = {ATEC '06},
+ year = {2006},
+ location = {Boston, MA},
+ pages = {3--3},
+ numpages = {1},
+ url = {http://dl.acm.org/citation.cfm?id=1267359.1267362},
+ acmid = {1267362},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+
+@inproceedings{self-virt-hpdc07,
+ author = {Raj, Himanshu and Schwan, Karsten},
+ title = {High Performance and Scalable I/O Virtualization via Self-virtualized Devices},
+ booktitle = {Proceedings of the 16th International Symposium on High Performance Distributed Computing},
+ series = {HPDC '07},
+ year = {2007},
+ isbn = {978-1-59593-673-8},
+ location = {Monterey, California, USA},
+ pages = {179--188},
+ numpages = {10},
+ url = {http://doi.acm.org/10.1145/1272366.1272390},
+ doi = {10.1145/1272366.1272390},
+ acmid = {1272390},
+ publisher = {ACM},
+ address = {New York, NY, USA},
+ keywords = {virtual devices, virtualization},
+}
+
+
+@inproceedings{direct-access-virt-io-atc08,
+ author = {Willmann, Paul and Rixner, Scott and Cox, Alan L.},
+ title = {Protection Strategies for Direct Access to Virtualized I/O Devices},
+ booktitle = {USENIX 2008 Annual Technical Conference},
+ series = {ATC'08},
+ year = {2008},
+ location = {Boston, Massachusetts},
+ pages = {15--28},
+ numpages = {14},
+ url = {http://dl.acm.org/citation.cfm?id=1404014.1404016},
+ acmid = {1404016},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+
+@inproceedings{vmware-hosted-io-atc01,
+ author = {Sugerman, Jeremy and Venkitachalam, Ganesh and Lim, Beng-Hong},
+ title = {Virtualizing I/O Devices on VMware Workstation's Hosted Virtual Machine Monitor},
+ booktitle = {Proceedings of the General Track: 2001 USENIX Annual Technical Conference},
+ year = {2001},
+ isbn = {1-880446-09-X},
+ pages = {1--14},
+ numpages = {14},
+ url = {http://dl.acm.org/citation.cfm?id=647055.715774},
+ acmid = {715774},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+
+@inproceedings{chu1996zero,
+  title={Zero-copy TCP in Solaris},
+  author={Chu, Hsiao-keng Jerry},
+  booktitle={Proceedings of the 1996 annual conference on USENIX Annual Technical Conference},
+  pages={21--21},
+  year={1996},
+  organization={Usenix Association}
+}
+
+@inproceedings{tezuka1998pin,
+  title={Pin-down cache: A virtual memory management technique for zero-copy communication},
+  author={Tezuka, Hiroshi and O'Carroll, Francis and Hori, Atsushi and Ishikawa, Yutaka},
+  booktitle={Parallel Processing Symposium, 1998. IPPS/SPDP 1998. Proceedings of the First Merged International... and Symposium on Parallel and Distributed Processing 1998},
+  pages={308--314},
+  year={1998},
+  organization={IEEE}
+}
+
+@inproceedings{ram2010redesigning,
+  title={Redesigning Xen’s memory sharing mechanism for safe and efficient I/O virtualization},
+  author={Ram, Kaushik Kumar and Santos, Jose Renato and Turner, Yoshio},
+  booktitle={Proceedings of the 2nd conference on I/O virtualization},
+  pages={1--1},
+  year={2010},
+  organization={USENIX Association}
+}
+
+@inproceedings{ava-asplos,
+author = {Yu, Hangchen and Peters, Arthur Michener and Akshintala, Amogh and Rossbach, Christopher J.},
+title = {AvA: Accelerated Virtualization of Accelerators},
+year = {2020},
+isbn = {9781450371025},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3373376.3378466},
+doi = {10.1145/3373376.3378466},
+booktitle = {Proceedings of the Twenty-Fifth International Conference on Architectural Support for Programming Languages and Operating Systems},
+pages = {807–825},
+numpages = {19},
+keywords = {virtualization, code generation},
+location = {Lausanne, Switzerland},
+series = {ASPLOS ’20}
+}
+
+@misc{mps,
+  title = {{Multi-Process Service}},
+  howpublished = {\url{https://docs.nvidia.com/deploy/pdf/CUDA_Multi_Process_Service_Overview.pdf}},
+  note = "Accessed: 2019-08"
+}
+
+@inproceedings{XenSRIOV,
+ author = {Dong, Yaozu and Yu, Zhao and Rose, Greg},
+ title = {SR-IOV Networking in Xen: Architecture, Design and Implementation},
+ booktitle = {Proceedings of the First Conference on I/O Virtualization},
+ series = {WIOV'08},
+ year = {2008},
+ location = {San Diego, California},
+ pages = {10--10},
+ numpages = {1},
+ url = {http://dl.acm.org/citation.cfm?id=1855865.1855875},
+ acmid = {1855875},
+ publisher = {USENIX Association},
+ address = {Berkeley, CA, USA},
+}
+
+@misc{underutilizingcloud,
+  howpublished =
+  {\url{https://www.gigenet.com/blog/underutilizing-cloud-computing-resources/}},
+  note =          {Published: 2017-11},
+  title =         {{Underutilizing Cloud Computing Resources}},
+}
+
+@inproceedings{simultaneous_multikernel,
+  author =        {Wang, Zhenning and Yang, Jun and Melhem, Rami and
+                   Childers, Bruce and Zhang, Youtao and Guo, Minyi},
+  booktitle =     {2016 IEEE International Symposium on High Performance
+                   Computer Architecture (HPCA)},
+  organization =  {IEEE},
+  pages =         {358--369},
+  title =         {Simultaneous Multikernel GPU: Multi-tasking
+                   Throughput Processors via Fine-Grained Sharing},
+  year =          {2016},
+}
+
+@inproceedings{improving_gpu,
+  author =        {Narasiman, Veynu and Shebanow, Michael and
+                   Lee, Chang Joo and Miftakhutdinov, Rustam and
+                   Mutlu, Onur and Patt, Yale N},
+  booktitle =     {Proceedings of the 44th Annual IEEE/ACM International
+                   Symposium on Microarchitecture},
+  organization =  {ACM},
+  pages =         {308--317},
+  title =         {Improving GPU Performance via Large Warps and
+                   Two-Level Warp Scheduling},
+  year =          {2011},
+}
+
+@inproceedings{gpl,
+  author =        {Paul, Johns and He, Jiong and He, Bingsheng},
+  booktitle =     {Proceedings of the 2016 International Conference on
+                   Management of Data},
+  organization =  {ACM},
+  pages =         {1935--1950},
+  title =         {GPL: A GPU-Based Pipelined Query Processing Engine},
+  year =          {2016},
+}
+
+@misc{fiddle,
+  howpublished =
+  {\url{https://www.microsoft.com/en-us/research/project/fiddle}},
+  note =          {Accessed: 2019-04},
+  title =         {{Project Fiddle: Fast and Efficient Infrastructure
+                   for Distributed Deep Learning}},
+}
+
+@inproceedings{zhang2018g,
+  author =        {Zhang, Kai and He, Bingsheng and Hu, Jiayu and
+                   Wang, Zeke and Hua, Bei and Meng, Jiayi and
+                   Yang, Lishan},
+  booktitle =     {15th USENIX Symposium on Networked Systems Design and
+                   Implementation (NSDI 18)},
+  organization =  {USENIX Association},
+  title =         {G-NET: Effective GPU Sharing in NFV Systems},
+  year =          {2018},
+}
+
+@inproceedings{yeh2017pagoda,
+  author =        {Yeh, Tsung Tai and Sabne, Amit and Sakdhnagool, Putt and
+                   Eigenmann, Rudolf and Rogers, Timothy G},
+  booktitle =     {ACM SIGPLAN Notices},
+  number =        {8},
+  organization =  {ACM},
+  pages =         {221--234},
+  title =         {Pagoda: Fine-grained GPU Resource Virtualization for
+                   Narrow Tasks},
+  volume =        {52},
+  year =          {2017},
+}
+
+@inproceedings{mdev-mvme,
+  author =        {Peng, Bo and Zhang, Haozhong and Yao, Jianguo and
+                   Dong, Yaozu and Xu, Yu and Guan, Haibing},
+  booktitle =     {2018 USENIX Annual Technical Conference
+                   (USENIX ATC'18)},
+  pages =         {665--676},
+  title =         {MDev-NVMe: A NVMe Storage Virtualization Solution
+                   with Mediated Pass-Through},
+  year =          {2018},
+}
+
+@article{vpio,
+  author =        {Xia, Lei and Lange, Jack and Dinda, Peter and
+                   Bae, Chang},
+  journal =       {ACM SIGOPS Operating Systems Review},
+  number =        {3},
+  pages =         {83--94},
+  publisher =     {ACM},
+  title =         {Investigating Virtual Passthrough I/O on Commodity
+                   Devices},
+  volume =        {43},
+  year =          {2009},
+}
+
+@misc{vmware_version,
+  howpublished =
+  {\url{https://en.wikipedia.org/wiki/VMware_Workstation\#Version_history}},
+  note =          {Accessed: 2019-08},
+  title =         {{VMware Workstation Version History}},
+}
+
+@misc{svga_guest,
+  howpublished =  {\url{https://www.mesa3d.org/vmware-guest.html}},
+  note =          {Accessed: 2019-08},
+  title =         {{VMware SVGA3D Guest Driver}},
+}
+
+@misc{directx_version,
+  howpublished =
+  {\url{https://en.wikipedia.org/wiki/DirectX\#Version_history}},
+  note =          {Accessed: 2019-08},
+  title =         {{DirectX} Version History},
+}
+
+@article{sriov,
+  author =        {Kutch, Patrick},
+  journal =       {Intel application note},
+  pages =         {321211--002},
+  title =         {{PCI-SIG SR-IOV} Primer: An introduction to {SR-IOV}
+                   Technology},
+  year =          {2011},
+}
+
+@inproceedings{nooks,
+  author =        {Swift, Michael M and Bershad, Brian N and
+                   Levy, Henry M},
+  booktitle =     {ACM SIGOPS operating systems review},
+  number =        {5},
+  organization =  {ACM},
+  pages =         {207--222},
+  title =         {Improving the Reliability of Commodity Operating
+                   Systems},
+  volume =        {37},
+  year =          {2003},
+}
+
+@inproceedings{rio,
+  author =        {Amiri Sani, Ardalan and Boos, Kevin and Yun, Min Hong and
+                   Zhong, Lin},
+  booktitle =     {Proceedings of the 12th annual international
+                   conference on Mobile systems, applications, and
+                   services},
+  organization =  {ACM},
+  pages =         {259--272},
+  title =         {Rio: A System Solution for Sharing I/O between Mobile
+                   Systems},
+  year =          {2014},
+}
+
+@inproceedings{vrio,
+  author =        {Kuperman, Yossi and Moscovici, Eyal and Nider, Joel and
+                   Ladelsky, Razya and Gordon, Abel and Tsafrir, Dan},
+  booktitle =     {ACM SIGARCH Computer Architecture News},
+  number =        {2},
+  organization =  {ACM},
+  pages =         {49--65},
+  title =         {Paravirtual Remote I/O},
+  volume =        {44},
+  year =          {2016},
+}
+
+@misc{cloud-tpu,
+  howpublished =  {\url{https://cloud.google.com/tpu}},
+  note =          {Accessed: 2019-04},
+  title =         {{Google Cloud TPU}},
+}
+
+@misc{deplyrcuda,
+  howpublished =
+  {\url{http://www.rcuda.net/pub/white_paper_cloud_v2.pdf}},
+  note =          {Published: 2016-12},
+  title =         {Deploying {rCUDA} in Cloud Computing Environments},
+}
+
+@article{dong2012high,
+  author =        {Dong, Yaozu and Yang, Xiaowei and Li, Jianhui and
+                   Liao, Guangdeng and Tian, Kun and Guan, Haibing},
+  journal =       {Journal of Parallel and Distributed Computing},
+  number =        {11},
+  pages =         {1471--1480},
+  publisher =     {Elsevier},
+  title =         {High Performance Network Virtualization with
+                   {SR-IOV}},
+  volume =        {72},
+  year =          {2012},
+}
+
+@misc{amdfirepro,
+  howpublished =
+  {\url{http://www.amd.com/Documents/Multiuser-GPU-White-Paper.pdf}},
+  note =          {Accessed: 2018-07},
+  title =         {{AMD Multi-user GPU}},
+}
+
+@article{nvidiagrid,
+  author =        {Herrera, Alex},
+  journal =       {Nvidia Corp},
+  title =         {NVIDIA GRID: Graphics Accelerated VDI with the Visual
+                   Performance of a Workstation},
+  year =          {2014},
+}
+
+@inproceedings{vu2014enabling,
+  author =        {Vu, Duy Viet and Sander, Oliver and Sandmann, Timo and
+                   Baehr, Steffen and Heidelberger, Jan and
+                   Becker, Juergen},
+  booktitle =     {ReConFigurable Computing and FPGAs (ReConFig), 2014
+                   International Conference on},
+  organization =  {IEEE},
+  pages =         {1--6},
+  title =         {{Enabling Partial Reconfiguration for Coprocessors in
+                   Mixed Criticality Multicore Systems using PCI Express
+                   Single-Root I/O Virtualization}},
+  year =          {2014},
+}
+
+@inproceedings{zazo2015pcie,
+  author =        {Zazo, Jose Fernando and Lopez-Buedo, Sergio and
+                   Audzevich, Yury and Moore, Andrew W},
+  booktitle =     {ReConFigurable Computing and FPGAs (ReConFig), 2015
+                   International Conference on},
+  organization =  {IEEE},
+  pages =         {1--6},
+  title =         {{A PCIe DMA Engine to Support the Virtualization of
+                   40 Gbps FPGA-accelerated Network Appliances}},
+  year =          {2015},
+}
+
+@inproceedings{vfpgamanager,
+  author =        {Pinneterre, S{\'e}bastien and Chiotakis, Spyros and
+                   Paolino, Michele and Raho, Daniel},
+  booktitle =     {2018 IEEE International Symposium on Broadband
+                   Multimedia Systems and Broadcasting (BMSB)},
+  organization =  {IEEE},
+  pages =         {1--5},
+  title =         {vFPGAmanager: A Virtualization Framework for
+                   Orchestrated FGPA Accelerator Sharing in 5G Cloud
+                   Environments},
+  year =          {2018},
+}
+
+@article{huang2009fpgavirt,
+  author =        {Huang, Chun-Hsian and Hsiung, Pao-Ann},
+  journal =       {IEEE Embedded Systems Letters},
+  number =        {1},
+  pages =         {19--23},
+  publisher =     {IEEE},
+  title =         {Hardware Resource Virtualization for Dynamically
+                   Partially Reconfigurable Systems},
+  volume =        {1},
+  year =          {2009},
 }

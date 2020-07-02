@@ -1,0 +1,287 @@
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 544.518982
+MemAlloc: 0.112000
+HtoD: 7.321908
+DtoD: 940.473816
+Exec: 15781.008789
+DtoH: 1.301633
+Close: 0.560000
+Total: 19996.837891
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 504.454010
+MemAlloc: 0.132000
+HtoD: 5.262491
+DtoD: 933.274841
+Exec: 15787.735352
+DtoH: 0.959059
+Close: 0.793000
+Total: 20077.042969
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 490.231995
+MemAlloc: 0.127000
+HtoD: 7.359715
+DtoD: 936.456482
+Exec: 15795.882812
+DtoH: 1.284183
+Close: 0.884000
+Total: 19986.183594
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 495.454010
+MemAlloc: 0.118000
+HtoD: 7.401769
+DtoD: 936.188660
+Exec: 15809.791016
+DtoH: 1.262726
+Close: 0.631000
+Total: 19990.605469
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 496.330994
+MemAlloc: 0.110000
+HtoD: 7.360115
+DtoD: 937.279907
+Exec: 15752.513672
+DtoH: 1.311008
+Close: 0.605000
+Total: 19924.447266
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 525.651001
+MemAlloc: 0.130000
+HtoD: 6.327720
+DtoD: 935.230896
+Exec: 15727.854492
+DtoH: 1.280247
+Close: 0.561000
+Total: 19986.552734
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 504.946991
+MemAlloc: 0.115000
+HtoD: 5.752109
+DtoD: 936.653992
+Exec: 15887.803711
+DtoH: 1.335947
+Close: 0.813000
+Total: 20114.796875
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 583.580017
+MemAlloc: 0.119000
+HtoD: 7.273214
+DtoD: 939.164062
+Exec: 15693.376953
+DtoH: 0.953274
+Close: 0.702000
+Total: 20034.957031
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 524.783997
+MemAlloc: 0.090000
+HtoD: 5.141586
+DtoD: 933.020630
+Exec: 15816.282227
+DtoH: 1.302492
+Close: 0.762000
+Total: 20011.955078
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 452.526001
+MemAlloc: 0.111000
+HtoD: 5.152116
+DtoD: 934.866272
+Exec: 15911.731445
+DtoH: 0.931079
+Close: 0.809000
+Total: 20108.642578
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 502.768005
+MemAlloc: 0.113000
+HtoD: 7.316406
+DtoD: 932.269226
+Exec: 15723.598633
+DtoH: 1.270933
+Close: 0.609000
+Total: 19866.611328
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 547.453979
+MemAlloc: 0.114000
+HtoD: 5.549027
+DtoD: 926.636658
+Exec: 15822.104492
+DtoH: 0.932009
+Close: 0.724000
+Total: 19992.312500
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 496.085999
+MemAlloc: 0.110000
+HtoD: 7.137657
+DtoD: 937.329529
+Exec: 15807.832031
+DtoH: 1.283568
+Close: 0.779000
+Total: 20004.500000
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 495.483002
+MemAlloc: 0.107000
+HtoD: 7.370664
+DtoD: 931.110535
+Exec: 15760.813477
+DtoH: 0.916296
+Close: 0.662000
+Total: 19895.794922
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel:initialize = 192, WG size of kernel:compute_step_factor = 192, WG size of kernel:compute_flux = 192, WG size of kernel:time_step = 192
+--cambine: device name=Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+--cambine: nel=232536, nelr=232704
+Starting...
+Saving solution...
+Saved solution...
+Cleaning up...
+Done...
+Init: 543.609985
+MemAlloc: 0.129000
+HtoD: 7.380660
+DtoD: 929.529480
+Exec: 15768.957031
+DtoH: 1.309347
+Close: 0.721000
+Total: 19983.578125
+++ echo
+
+++ echo
+

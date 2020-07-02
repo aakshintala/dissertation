@@ -1,0 +1,497 @@
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	43.924271 [134.23MB]	2582.741211	14.864867 [134.23MB]	2641.530273
+
+Init: 194.531006
+MemAlloc: 0.027000
+HtoD: 43.924271
+Exec: 2582.741211
+DtoH: 14.864867
+Close: 0.347000
+Total: 3082.429932
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	36.495953 [134.23MB]	2542.125732	14.900867 [134.23MB]	2593.522461
+
+Init: 135.839005
+MemAlloc: 0.022000
+HtoD: 36.495953
+Exec: 2542.125732
+DtoH: 14.900867
+Close: 0.474000
+Total: 2959.406006
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	32.456413 [134.23MB]	2582.174072	14.633901 [134.23MB]	2629.264160
+
+Init: 105.053001
+MemAlloc: 0.025000
+HtoD: 32.456413
+Exec: 2582.174072
+DtoH: 14.633901
+Close: 0.423000
+Total: 2965.966064
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	38.699081 [134.23MB]	2583.279297	14.615380 [134.23MB]	2636.593750
+
+Init: 117.012001
+MemAlloc: 0.022000
+HtoD: 38.699081
+Exec: 2583.279297
+DtoH: 14.615380
+Close: 0.486000
+Total: 2980.560059
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	32.351219 [134.23MB]	2538.840576	14.673742 [134.23MB]	2585.865723
+
+Init: 153.307007
+MemAlloc: 0.022000
+HtoD: 32.351219
+Exec: 2538.840576
+DtoH: 14.673742
+Close: 0.481000
+Total: 2976.093994
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	38.639160 [134.23MB]	2587.971191	15.032138 [134.23MB]	2641.642578
+
+Init: 87.231003
+MemAlloc: 0.023000
+HtoD: 38.639160
+Exec: 2587.971191
+DtoH: 15.032138
+Close: 0.340000
+Total: 2956.605957
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	34.987305 [134.23MB]	2539.580322	14.731142 [134.23MB]	2589.298828
+
+Init: 107.876999
+MemAlloc: 0.021000
+HtoD: 34.987305
+Exec: 2539.580322
+DtoH: 14.731142
+Close: 0.474000
+Total: 2932.969971
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	34.000076 [134.23MB]	2560.845703	14.978426 [134.23MB]	2609.824219
+
+Init: 103.560997
+MemAlloc: 0.023000
+HtoD: 34.000076
+Exec: 2560.845703
+DtoH: 14.978426
+Close: 0.349000
+Total: 2940.795898
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	38.993034 [134.23MB]	2591.148926	14.707909 [134.23MB]	2644.849854
+
+Init: 139.738007
+MemAlloc: 0.022000
+HtoD: 38.993034
+Exec: 2591.148926
+DtoH: 14.707909
+Close: 0.435000
+Total: 3019.080078
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	39.385139 [134.23MB]	2563.025635	14.547052 [134.23MB]	2616.958008
+
+Init: 161.684006
+MemAlloc: 0.023000
+HtoD: 39.385139
+Exec: 2563.025635
+DtoH: 14.547052
+Close: 0.440000
+Total: 3006.343994
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	36.897671 [134.23MB]	2575.178467	14.704742 [134.23MB]	2626.781006
+
+Init: 123.942001
+MemAlloc: 0.023000
+HtoD: 36.897671
+Exec: 2575.178467
+DtoH: 14.704742
+Close: 0.421000
+Total: 2988.894043
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	32.124508 [134.23MB]	2585.219971	14.652076 [134.23MB]	2631.996582
+
+Init: 107.945999
+MemAlloc: 0.022000
+HtoD: 32.124508
+Exec: 2585.219971
+DtoH: 14.652076
+Close: 0.430000
+Total: 2972.821045
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	36.894951 [134.23MB]	2590.183838	15.100037 [134.23MB]	2642.178955
+
+Init: 103.762001
+MemAlloc: 0.023000
+HtoD: 36.894951
+Exec: 2590.183838
+DtoH: 15.100037
+Close: 0.340000
+Total: 2976.483887
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	38.291702 [134.23MB]	2574.545410	14.692750 [134.23MB]	2627.530029
+
+Init: 112.707001
+MemAlloc: 0.023000
+HtoD: 38.291702
+Exec: 2574.545410
+DtoH: 14.692750
+Close: 0.482000
+Total: 2968.655029
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel 1 = 0, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 4096 
+Number of platforms detected:2
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Intel(R) Corporation
+no of devices: 1
+	device 0: Intel(R) Corporation Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Platform 1
+vendor: NVIDIA Corporation
+no of devices: 3
+	device 0: NVIDIA Corporation Quadro P6000
+	device 1: NVIDIA Corporation Tesla C2075
+	device 2: NVIDIA Corporation Tesla K40c
+
+Using Platform 0 Device 0 
+Creating CPU Context
+Profiling enabled
+create input internally before create, size = 4096 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+4096x4096      	34.962704 [134.23MB]	2563.104492	14.769394 [134.23MB]	2612.836426
+
+Init: 140.957001
+MemAlloc: 0.023000
+HtoD: 34.962704
+Exec: 2563.104492
+DtoH: 14.769394
+Close: 0.427000
+Total: 2979.059082
+++ echo
+
+++ echo
+

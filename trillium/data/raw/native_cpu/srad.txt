@@ -1,0 +1,272 @@
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 464.593994
+MemAlloc: 0.070000
+HtoD: 0.368572
+Exec: 1651.712646
+DtoH: 1.918600
+Close: 15.372000
+Total: 2452.205078
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 385.095001
+MemAlloc: 0.071000
+HtoD: 0.388197
+Exec: 1664.882568
+DtoH: 2.064084
+Close: 15.092000
+Total: 2408.742920
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 419.570007
+MemAlloc: 0.068000
+HtoD: 0.405730
+Exec: 1646.308838
+DtoH: 2.133463
+Close: 15.538000
+Total: 2413.954102
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 438.618988
+MemAlloc: 0.071000
+HtoD: 0.399197
+Exec: 1658.054932
+DtoH: 2.081642
+Close: 15.660000
+Total: 2454.352051
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 401.919006
+MemAlloc: 0.076000
+HtoD: 0.379788
+Exec: 1658.768433
+DtoH: 2.058215
+Close: 15.516000
+Total: 2412.368896
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 429.427002
+MemAlloc: 0.074000
+HtoD: 0.357816
+Exec: 1660.096680
+DtoH: 2.145389
+Close: 15.650000
+Total: 2449.048096
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 443.566010
+MemAlloc: 0.070000
+HtoD: 0.390661
+Exec: 1682.255737
+DtoH: 2.153715
+Close: 15.481000
+Total: 2497.600098
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 422.040985
+MemAlloc: 0.071000
+HtoD: 0.404230
+Exec: 1665.812622
+DtoH: 2.307038
+Close: 15.486000
+Total: 2445.560059
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 458.161011
+MemAlloc: 0.072000
+HtoD: 0.388060
+Exec: 1644.675903
+DtoH: 1.982068
+Close: 15.579000
+Total: 2458.697998
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 449.980011
+MemAlloc: 0.076000
+HtoD: 0.355565
+Exec: 1647.459229
+DtoH: 1.973999
+Close: 15.683000
+Total: 2444.335938
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 383.312988
+MemAlloc: 0.070000
+HtoD: 0.371449
+Exec: 1645.243042
+DtoH: 1.929724
+Close: 15.438000
+Total: 2364.350098
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 406.256012
+MemAlloc: 0.073000
+HtoD: 0.390213
+Exec: 1661.945435
+DtoH: 2.000254
+Close: 15.531000
+Total: 2425.185059
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 412.356995
+MemAlloc: 0.071000
+HtoD: 0.379337
+Exec: 1668.704224
+DtoH: 2.434556
+Close: 15.352000
+Total: 2442.347900
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 372.263000
+MemAlloc: 0.070000
+HtoD: 0.360738
+Exec: 1660.273682
+DtoH: 2.287138
+Close: 15.060000
+Total: 2387.041016
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 256 
+Platform: Intel(R) Corporation
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: hidden
+Time spent in different stages of the application:
+Init: 443.475006
+MemAlloc: 0.079000
+HtoD: 0.507906
+Exec: 1651.734741
+DtoH: 2.031187
+Close: 15.570000
+Total: 2451.428955
+++ echo
+
+++ echo
+

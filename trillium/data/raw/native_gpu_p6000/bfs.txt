@@ -1,0 +1,257 @@
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 871.473022
+MemAlloc: 16.764000
+HtoD: 127.458252
+Exec: 615.117493
+DtoH: 2.732398
+Close: 0.537000
+Total: 1831.792969
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 869.443970
+MemAlloc: 15.655000
+HtoD: 127.647949
+Exec: 614.793579
+DtoH: 2.760390
+Close: 0.544000
+Total: 1828.555054
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 868.460022
+MemAlloc: 17.461000
+HtoD: 127.557922
+Exec: 615.020996
+DtoH: 2.774374
+Close: 0.534000
+Total: 1829.837036
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 866.778992
+MemAlloc: 16.497000
+HtoD: 127.829987
+Exec: 614.679688
+DtoH: 2.748200
+Close: 0.531000
+Total: 1827.228027
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 870.960022
+MemAlloc: 16.740000
+HtoD: 127.790222
+Exec: 615.239685
+DtoH: 2.776135
+Close: 0.692000
+Total: 1831.537964
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 870.419006
+MemAlloc: 16.021000
+HtoD: 127.285545
+Exec: 614.770203
+DtoH: 2.736879
+Close: 0.545000
+Total: 1828.828979
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 881.328979
+MemAlloc: 19.129000
+HtoD: 129.421951
+Exec: 618.515503
+DtoH: 2.814229
+Close: 0.610000
+Total: 1883.512939
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 862.984009
+MemAlloc: 17.208000
+HtoD: 128.276733
+Exec: 615.766235
+DtoH: 2.726032
+Close: 0.531000
+Total: 1828.765991
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 867.096985
+MemAlloc: 17.539000
+HtoD: 128.175308
+Exec: 615.333313
+DtoH: 2.762790
+Close: 0.535000
+Total: 1830.931030
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 885.271973
+MemAlloc: 16.923000
+HtoD: 127.900986
+Exec: 615.267578
+DtoH: 2.758531
+Close: 0.537000
+Total: 1847.284058
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 869.125977
+MemAlloc: 17.462999
+HtoD: 128.164963
+Exec: 617.104492
+DtoH: 2.757395
+Close: 0.534000
+Total: 1835.318970
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 870.606018
+MemAlloc: 17.594000
+HtoD: 128.160217
+Exec: 615.075867
+DtoH: 2.761379
+Close: 0.540000
+Total: 1835.984009
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 852.380005
+MemAlloc: 16.652000
+HtoD: 127.903885
+Exec: 614.917236
+DtoH: 2.735183
+Close: 0.544000
+Total: 1813.930054
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 868.283020
+MemAlloc: 17.601999
+HtoD: 128.091415
+Exec: 615.742554
+DtoH: 2.776836
+Close: 0.546000
+Total: 1835.573975
+--cambine:passed:-)
+++ echo
+
+++ ./run -p 1 -d 0
+Reading File
+number of platforms:2
+vendor is Intel(R) Corporation
+vendor is NVIDIA Corporation
+device number: 3
+Creating GPU Context
+Init: 861.776978
+MemAlloc: 16.055000
+HtoD: 127.206940
+Exec: 614.932495
+DtoH: 2.737808
+Close: 0.534000
+Total: 1819.901978
+--cambine:passed:-)
+++ echo
+
+++ echo
+

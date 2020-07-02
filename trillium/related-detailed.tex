@@ -1,0 +1,156 @@
+% !TeX root = ../dissertation.tex
+\vfill\eject
+\section*{APPENDIX}
+\label{sec:appendix}
+
+\begin{compactitem}
+\item NVIDIA + VMware collaboration~\cite{grid}.
+\item AMD FirePro:~\cite{firepro}
+\item Cloud Gaming
+\item VDI and graphics virtualization~\cite{vmware-virtual-gpu, VGML} handle
+	graphics frameworks like Direct3D~\cite{directX}, OpenGL~\cite{openGLspec}, and Cg~\cite{mark03cg}.
+\item VGPU~\cite{VGPU}: no documentation available
+\end{compactitem}
+
+ % \begin{compactitem}
+ % \item VMware vSGA: ESXi hosts can share graphics capability of FirePro (and others?)
+ % \item VMware vDGA: Supports 1-to-1 mapping from VM to graphics card. Presumably this is pass-through?
+ % \end{compactitem}
+
+
+\paragraph {\bf rCUDA}: rCUDA~\cite{rCUDA, rCUDAnew} is a middle-ware system for virtualizing and multiplexing
+	NVIDIA GPUs and CUDA across a cluster. The system appears to be an entirely user-mode solution in which
+	a client library encapsulates access to a (potentially) remote GPU. An apparent side effect of this design
+	decision is that client applications must be recompiled/relinked against the rCUDA library, which results
+	in some feature incompatibilities for a number of important undocumented features that are handled transparently
+	by the {\tt nvcc} compiler. While the basic design is isomorphic to the API remoting design, virtual machines
+	need not be present.
+
+\paragraph {\bf GridCuda}: GridCuda~\cite{GridCuda} is a system similar to rCUDA~\cite{rCUDA} which is a pure
+	user-mode fabric for tunneling CUDA API traffic to GPUs on remote machines. No virtualization appears to be present.
+
+\paragraph {\bf SnuCL}: SnuCL~\cite{kim2012snucl} provides an OpenCL~\cite{OpenCL} programming interface
+	to clusters of CPU/GPU servers. The basic approach is to extend the OpenCL semantics to encapsulate
+	remote resources, which preserves the original programming model which, like CUDA~\cite{CUDA}, assumes
+	a process model, running in the context of a single operating system image. Like rCUDA~\cite{rCUDA}
+	and GridCuda~\cite{GridCuda}, SnuCL should be viewed as a distributed runtime that supports GPUs,
+	rather than a general approach to GPU virtualization.
+
+\paragraph {\bf VCL}: VCL~\cite{VCL} is the lower layer in a package called MGP (many-gpu-package)
+   which, like rCUDA~\cite{rCUDA}, SnuCL~\cite{kim2012snucl}, and GridCuda~\cite{GridCuda} tackles the challenge
+   of GPU programmability in a distributed environment: the goal is to encapsulate remote compute resources and
+   data management within the OpenCL API implementation, such that remote GPUs look to the application running on the
+   master node, like a local OpenCL device. Virtualization is involved only to the extent that remote GPUs are
+   virtual compute devices on the master node.
+
+\paragraph {\bf GViM}: GViM~\cite{gupta2009gvim}, a 2009 system, supports a straightforward split-driver API remoting approach to virtualization
+    of CUDA in Xen. Applications in the Guest VM have CUDA API calls redirected by an interposer library through
+	a front-end driver (using Xen event channels) to a back-end driver in dom0, which exercises the CUDA driver and runtime.
+	Describes some memory management optimizations to avoid double buffering, redundant copy, (such as mmapping guest
+	kernel memory into the front end driver to avoid user-to-kernel, using a page-directory structure to avoid copy
+	between VMs from front-end driver to back-end driver. Most of these optimizations should be obviated by
+	VM support for cross-VM bulk-transfer mechanisms like VMCI.
+
+\paragraph {\bf vCUDA}: vCUDA ~\cite{vCUDA} is yet another API remoting system for CUDA from 2009. CUDA API calls are redirected
+	through an interposer library (``vCUDA'') to a stub in the host OS, which interacts with the device using pass through.
+	Cross-VM communication is done using an XML RPC library, which turns out to be the primary term in performance because
+	RPC is slow. The paper explores a lazy RPC optimization (batching RPCs effectively), suspend/resume. No transparent support
+	for interposition appears to be present. The authors consider at a high level issues around re-ordering API calls.
+	The discussion is largely unsatisfactory, but the idea itself is interesting.
+
+
+\paragraph {\bf gVirt}. A Full GPU Virtualization Solution with Mediated Pass-through~\cite{Tian:2014:FGV:2643634.2643647}. From 2014, describes
+     gVirt, an Intel-centric technique for implementing virtualization of \emph{graphics}-only. The system runs the native graphics driver
+	 in the guest OS in DOM0, implements pass-through for access to performance critical resources (command buffer and frame buffer),
+	 and uses trap-emulate for resources generally accessed off the critical path (PTEs, I/O Registers). Native driver is present
+	 primarily to simplify tasks like initialization and power management; these activities are ostensibly passed through. Trap-emulate
+	 operations are forwarded to a mediator module in Dom0 (which implements the vGPU interface and scheduler) which are subsequently
+	 handled by making hypercalls into a stub in Xen. Memory is multiplexed with a combination of partitioning and `` ballooning''.
+	 Each VM gets 2GB of local graphics memory and 2GB global graphics memory. These partitions are striped across the actual physical
+	 memory, and sections not belongning to a particular VM are marked ``ballooned'' in the page tables of that VM, which means they
+	 are inaccessible. Between this and the partitioning, the address translation winds up being exactly the same for each VM. The
+	 caveat is that regions belonging to different VMs must be made inaccessible, which the designers argue they handle through
+	 ``smart shadowing'' and auditing of the command buffer. The primary limitations of this work are as follows. First, the
+	 solution is clearly geared toward graphics. Second, the partitioning of the memory space means the full physical memory
+	 can never be utilized by each VM. Finally the auditing process seems tenuous. You can check that register values are
+	 bounded by regions that should be mapped to a given VM, but how do you know for sure when a register value is actually
+	 a pointer? Can you cause protection faults in programs that happen to use values large enough to look like pointers?
+	 Can memory instructions with indirection and offsets be used to circumvent the audit?
+
+\paragraph {\bf vmCUDA}: GPU Virtualization for High Performance General Purpose Computing on the ESX Hypervisor~\cite{Vu:2014:GVH:2663510.2663512}.
+	HPC 2014 paper from VMware. Observes pass through is performance, but not sharable, and incompatible with vMotion.
+	Solution proposed here uses API remoting and ``DirectPath I/O'' (pass-through for PCIe). vmCUDA employs a fairly
+	standard split-driver model with a front-end driver in the guest, and a backend driver in the control domain (called
+	the ``appliance VM'') which interacts with the CUDA runtime and driver, interacting with the GPU hardware using pass-through.
+	The claim of compatibility with vMotion appears to be based on the fact that the appliance VM needn't move if the
+	guest VM moves, which I find somewhat specious. CUDA applications in the guest are linked against an interposer
+	library which uses vRDMA, VCMI, TCP to forward calls and data to the appliance VM. The application starts on the client,
+	sends a copy of binary to appliance VM, which modifies the binary and starts a process container for it: client VM
+	communicates with that process. They find that data copy calls must be broken down into smaller fragments to enable
+	multiple VMs to share the GPU. No discussion of isolation-related issues is present in the paper.
+
+\paragraph GPU Virtualization on VMware's Hosted I/O Architecture~\cite{vmware-virtual-gpu}.
+\paragraph An Efficient Implementation of GPU Virtualization in High Performance Clusters~\cite{Duato:2009:EIG:1884795.1884840}.
+\paragraph GPU Resource Sharing and Virtualization on High Performance Computing Systems~\cite{Li:2011:GRS:2066302.2066933}.
+\paragraph Transparent Accelerator Migration in a Virtualized GPU Environment~\cite{Xiao:2012:TAM:2310096.2310143}
+
+\paragraph {\bf GPUvm}. Why Not Virtualizing GPUs at the Hypervisor?~\cite{Suzuki:2014:GWV:2643634.2643646}. From 2014 ATC, presents
+      GPUvm, which is (on my view) the only plausible GPGPU virtualization system that I've seen so far. Virtualizes
+	  CUDA on Kepler and Fermi (NVIDIA) GPUs for Xen. The paper explores the design space for such virtualization
+	  in considerable depth, evaluating implementations ranging from full virtualization
+	  para-virtualization, and pass through. The design introduces a number of new concepts: GPU shadow
+	  channels, GPU shadow page tables, virtual GPU schedulers, and (ostensibly) virtual memory mapped I/O (MMIO).
+	  GPUvm exposes a native GPU device model to guest device drivers.
+
+	  GPUvm implements a unified address space across both CPU and GPU memory. Host CPU accesses GPU page tables (in device memory)
+	  and registers on the device through MMIO. Other CPU-GPU memory traffic (bulk transfers) is DMA-based. It is not clear
+	  whether DMA-accessible regions have any intersection with MMIO accessible regions. A GPU context is analogous to a process
+	  context: the primary function is as a container for page tables. Commands are submitted to the GPU over a GPU channel, which
+	  has a 1:1 relationship to a GPU context. For each GPU channel, a dedicated comman buffer is allocated in GPU memory
+	  accessible through MMIO. GPU page tables translate a GPU virtual address to both GPU device physical address and host
+      physical addresses. PCIe BARs work as windows of MMIO. GPU control registers and memory apertures are mapped onto the BARs.
+
+	  In the basic design, GPUvm presents a GPU device model to each VM, each of which in turn accesses the GPU through a
+	  GPU Access aggregator module. The aggegator in turn accesses the GPU, maintains shadow page tables, shadow
+	  channels, and implements a ``fair share scheduler''. The aggregator may modify requests to enforce isolation.
+	  GPUvm interposes on communication between guest device driver and the GPU device model, it marks the MMIO
+	  ranges inaccessible so it can then trap and forward. Like gVirt, GPUvm statically partitions resources among VMs.
+	  The claim is this is not fundamental (unlike gVirt).
+
+	  GPUvm describes a number of optimizations:
+	  \begin{compactitem}
+	  \item {\bf Lazy Shadowing}: reflect guest updates to page tables into shadow page tables
+	        only when the tables are references, rather than on every TLB flush.
+	  \item {\bf Bar Remap}: pass through BAR accesses other than those made to GPU channel descriptors.
+	  \item {\bf Para-virtualization}: Guest GPU driver updates page tables through hypercalls, and GPUvm
+	        validates those updates. Hence GPUvm doesn't need to scan guest GPU page tables to detect
+			updates that must reflected into shadow tables.
+	  \item {\bf Multi-call}: batching of hypercalls into GPUvm.
+	  \end{compactitem}
+
+	  Evaluation considers Rodinia along with a number of microbenchmarks across a range of implementation
+	  inluding, native, pass-through, full-virtualization, full-virtualization with various optimizations,
+	  and para-virtualization. Para-virtualization with multi-call generally sees $2\times$ slowdown relative to
+	  native. The most heavily optimized full virtualization has pretty high variability; best cases here are
+	  around $5\times$. For most real-world GPU acceleration scenarios, $5\times$ is probably too much, and
+	  renders the offload non-profitable.
+
+\paragraph {\bf gVirtuS}: gVirtuS~\cite{gVirtuS} is an API remoting framework that claims to provide
+	transparent support for CUDA, OpenCL, and OpenGL on Xen, KVM, and VMware VMs, using a front-end/back-end
+	to provide a formal abstraction layer for GPUs that is independent of VMM.
+
+\paragraph {\bf LoGV}: LoGV~\cite{LoGV} describes an approach to GPGPU virtualization that, in essense, uses
+        GPU protection hardware in the hypervisor to enforce cross-VM isolation, rather than in the OS
+        to enforce cross-process isolation. This strategy has two important consequences. First, cross-VM
+        isolation is easy to enforce, and the overheads of virtualization induced by the hypervisor component
+        is minimal. Second, guests are left with no hardware mechanism to enforce cross-process isolation,
+        which pushes the responsibility on the guest driver, which may be forced to use high overhead
+        techniques to provide such guarantees. In this paper, we classify LoGV as a para-virtualization technique
+        because it ultimately forces change on the guest OS in the form of changes to support
+        process isolation. The virtualization overheads reported in the paper are exceptionally rosy
+        (indeed, the virtualized solution is faster than native in 3 of 4 reported benchmarks). However,
+        the evaluation prototype makes no effort to enforce isolation in guests, which ultimately hides
+        a significant cost and makes the reported numbers meaningless for our purporses. It is worth noting
+        that in environments where cross-process isolation is *not* a requirement (potentially HPC for example)
+        this might be a viable solution. It is not a viable general solution.
+

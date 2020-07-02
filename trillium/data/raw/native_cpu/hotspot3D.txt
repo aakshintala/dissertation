@@ -1,0 +1,227 @@
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 215.815994
+MemAlloc: 0.021000
+HtoD: 6.657825
+Exec: 2447.347412
+DtoH: 2.899064
+Close: 14.029000
+Total: 2786.264893
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 221.376007
+MemAlloc: 0.021000
+HtoD: 6.845535
+Exec: 2277.882324
+DtoH: 2.827861
+Close: 13.868000
+Total: 2622.361084
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 136.850998
+MemAlloc: 0.021000
+HtoD: 6.580222
+Exec: 2446.447510
+DtoH: 2.878589
+Close: 14.091000
+Total: 2708.068115
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 186.138000
+MemAlloc: 0.024000
+HtoD: 6.745030
+Exec: 2447.557617
+DtoH: 2.862895
+Close: 14.168000
+Total: 2752.791992
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 202.332001
+MemAlloc: 0.023000
+HtoD: 6.587593
+Exec: 2501.356689
+DtoH: 2.787682
+Close: 13.960000
+Total: 2824.343994
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 200.567001
+MemAlloc: 0.020000
+HtoD: 6.678601
+Exec: 2441.092773
+DtoH: 2.843523
+Close: 13.963000
+Total: 2766.944092
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 222.951996
+MemAlloc: 0.022000
+HtoD: 6.917902
+Exec: 2302.483154
+DtoH: 2.797883
+Close: 14.089000
+Total: 2648.873047
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 175.520996
+MemAlloc: 0.020000
+HtoD: 6.876060
+Exec: 2319.283691
+DtoH: 2.889916
+Close: 14.157000
+Total: 2623.833008
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 194.871994
+MemAlloc: 0.023000
+HtoD: 6.066010
+Exec: 2572.745361
+DtoH: 2.878223
+Close: 13.868000
+Total: 2884.724121
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 148.755005
+MemAlloc: 0.021000
+HtoD: 6.436570
+Exec: 2384.476318
+DtoH: 2.781571
+Close: 14.512000
+Total: 2657.254883
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 144.789001
+MemAlloc: 0.020000
+HtoD: 6.938408
+Exec: 2546.802490
+DtoH: 2.705452
+Close: 14.034000
+Total: 2808.300049
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 155.643997
+MemAlloc: 0.029000
+HtoD: 6.925402
+Exec: 2270.682861
+DtoH: 2.809006
+Close: 14.282000
+Total: 2553.058105
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 177.455994
+MemAlloc: 0.019000
+HtoD: 6.472985
+Exec: 2511.743408
+DtoH: 2.739921
+Close: 14.108000
+Total: 2807.783936
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 160.345993
+MemAlloc: 0.020000
+HtoD: 6.401143
+Exec: 2459.120850
+DtoH: 2.873523
+Close: 14.620000
+Total: 2738.749023
+Accuracy: 1.364655e-04
+++ echo
+
+++ ./run -p 0 -d 0
+num_devices = 1
+ 
+ Device is  Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+ Intel(R) Corporation 
+Init: 193.186005
+MemAlloc: 0.023000
+HtoD: 6.455970
+Exec: 2453.267578
+DtoH: 2.807034
+Close: 14.008000
+Total: 2763.081055
+Accuracy: 1.364655e-04
+++ echo
+
+++ echo
+

@@ -1,0 +1,19 @@
+% !TeX root = ../dissertation.tex
+\begin{table*}[h!]
+\centering
+% \footnotesize{
+\begin{tabular}{@{}lllllllll@{}}
+\toprule
+           & \multicolumn{4}{l}{LLVM+PTXAS} & \multicolumn{4}{l}{Clover+Nouveua} \\ \midrule
+           & SYNC    & SSY   & BRA   & BB   & SYNC     & SSY    & BRA    & BB    \\
+bfs        & 0       & 0     & 15    & 12   & 8        & 4      & 5      & 18    \\
+gaussian   & 0       & 0     & 23    & 18   & 6        & 3      & 3      & 9     \\
+nn         & 0       & 0     & 9     & 7    & 0        & 0      & 0      & 4     \\
+nw         & 10      & 5     & 18    & 23   & 8        & 4      & 8      & 18    \\
+pathfinder & 9       & 5     & 18    & 23   & 12       & 6      & 7      & 32    \\
+lud        & 31      & 13    & 67    & 76   & 20       & 10     & 14     & 35    \\ \bottomrule
+\end{tabular}
+% }
+\caption{\footnotesize{Possible sources of performance differences between kernels generated using LLVM+PTXAS (comparable to NVCC) and Clover+Nouveau.}}
+\label{tab:sassdiferences}
+\end{table*}

@@ -1,0 +1,197 @@
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 40.983002
+MemAlloc: 0.076000
+HtoD: 9.923000
+Exec: 845.663025
+DtoH: 34.769001
+Close: 3.159000
+Total: 934.572998
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 36.841000
+MemAlloc: 0.080000
+HtoD: 8.893000
+Exec: 845.406006
+DtoH: 34.617001
+Close: 3.224000
+Total: 929.060974
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 41.652000
+MemAlloc: 0.074000
+HtoD: 10.101000
+Exec: 843.536987
+DtoH: 34.521000
+Close: 2.854000
+Total: 932.739014
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 37.298000
+MemAlloc: 0.058000
+HtoD: 8.901000
+Exec: 844.612976
+DtoH: 34.629002
+Close: 2.939000
+Total: 928.437988
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 36.862000
+MemAlloc: 0.064000
+HtoD: 8.927000
+Exec: 844.893005
+DtoH: 34.674999
+Close: 2.926000
+Total: 928.346985
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 37.026001
+MemAlloc: 0.056000
+HtoD: 8.898000
+Exec: 844.452026
+DtoH: 34.422001
+Close: 3.214000
+Total: 928.067993
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 40.705002
+MemAlloc: 0.094000
+HtoD: 9.831000
+Exec: 844.635010
+DtoH: 34.714001
+Close: 3.115000
+Total: 933.093994
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 36.396000
+MemAlloc: 0.053000
+HtoD: 8.983000
+Exec: 843.580994
+DtoH: 34.508999
+Close: 2.891000
+Total: 926.413025
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 41.573002
+MemAlloc: 0.077000
+HtoD: 9.940000
+Exec: 845.252014
+DtoH: 34.555000
+Close: 2.860000
+Total: 934.257019
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 37.200001
+MemAlloc: 0.056000
+HtoD: 8.905000
+Exec: 844.244019
+DtoH: 34.493999
+Close: 3.256000
+Total: 928.155029
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 39.599998
+MemAlloc: 0.055000
+HtoD: 8.889000
+Exec: 844.987976
+DtoH: 34.797001
+Close: 3.166000
+Total: 931.494995
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 39.044998
+MemAlloc: 0.075000
+HtoD: 10.153000
+Exec: 843.948975
+DtoH: 34.521999
+Close: 2.778000
+Total: 930.521973
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 38.146000
+MemAlloc: 0.072000
+HtoD: 9.800000
+Exec: 843.710022
+DtoH: 34.583000
+Close: 2.848000
+Total: 929.158997
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 36.984001
+MemAlloc: 0.055000
+HtoD: 9.045000
+Exec: 844.145020
+DtoH: 34.800999
+Close: 3.050000
+Total: 928.080017
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Reading matrix from file ../../data/lud/2048.dat
+Init: 36.941002
+MemAlloc: 0.058000
+HtoD: 8.875000
+Exec: 844.775024
+DtoH: 34.564999
+Close: 2.773000
+Total: 927.987000
+++ echo
+
+++ echo
+

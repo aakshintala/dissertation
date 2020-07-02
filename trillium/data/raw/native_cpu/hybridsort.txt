@@ -1,0 +1,512 @@
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 229.329 
+Bucket Count Kernel Time: 431.354 
+Bucket Prefix Kernel Time: 91.403 
+Bucket Sort Kernel Time: 60.250 
+Merge First Kernel Time: 24.032 
+Merge Pass Kernel Iteration Time: 32.036 
+Merge Pass Kernel Iteration Time: 32.409 
+Merge Pass Kernel Iteration Time: 36.985 
+Merge Pass Kernel Iteration Time: 36.707 
+Merge Pass Kernel Iteration Time: 39.688 
+Merge Pass Kernel Iteration Time: 38.438 
+Merge Pass Kernel Iteration Time: 40.035 
+Merge Pass Kernel Iteration Time: 39.282 
+Merge Pass Kernel Iteration Time: 41.339 
+Merge Pass Kernel Iteration Time: 41.501 
+Merge Pass Kernel Iteration Time: 42.144 
+Merge Pass Kernel Iteration Time: 42.721 
+Merge Pass Kernel Iteration Time: 74.773 
+Merge Pass Kernel Iteration Time: 77.124 
+Merge Pass Kernel Iteration Time: 120.805 
+Merge Pass Kernel Time: 735.989 
+Merge Pack Kernel Time: 25.378 
+Init: 391.078003
+MemAlloc: 0.285000
+HtoD: 2248.700195
+Exec: 1597.734619
+DtoH: 1050.648193
+Close: 7.813000
+Total: 5439.058105
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 229.980 
+Bucket Count Kernel Time: 424.397 
+Bucket Prefix Kernel Time: 91.235 
+Bucket Sort Kernel Time: 61.420 
+Merge First Kernel Time: 24.136 
+Merge Pass Kernel Iteration Time: 31.931 
+Merge Pass Kernel Iteration Time: 33.244 
+Merge Pass Kernel Iteration Time: 35.549 
+Merge Pass Kernel Iteration Time: 37.484 
+Merge Pass Kernel Iteration Time: 37.689 
+Merge Pass Kernel Iteration Time: 39.674 
+Merge Pass Kernel Iteration Time: 36.439 
+Merge Pass Kernel Iteration Time: 41.671 
+Merge Pass Kernel Iteration Time: 41.320 
+Merge Pass Kernel Iteration Time: 41.969 
+Merge Pass Kernel Iteration Time: 41.738 
+Merge Pass Kernel Iteration Time: 41.471 
+Merge Pass Kernel Iteration Time: 74.480 
+Merge Pass Kernel Iteration Time: 77.029 
+Merge Pass Kernel Iteration Time: 121.197 
+Merge Pass Kernel Time: 732.884 
+Merge Pack Kernel Time: 25.375 
+Init: 337.835999
+MemAlloc: 0.313000
+HtoD: 2242.262939
+Exec: 1589.426392
+DtoH: 1029.231201
+Close: 7.818000
+Total: 5338.057129
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 215.046 
+Bucket Count Kernel Time: 424.098 
+Bucket Prefix Kernel Time: 92.169 
+Bucket Sort Kernel Time: 60.339 
+Merge First Kernel Time: 24.078 
+Merge Pass Kernel Iteration Time: 33.252 
+Merge Pass Kernel Iteration Time: 35.890 
+Merge Pass Kernel Iteration Time: 34.415 
+Merge Pass Kernel Iteration Time: 36.302 
+Merge Pass Kernel Iteration Time: 37.893 
+Merge Pass Kernel Iteration Time: 38.096 
+Merge Pass Kernel Iteration Time: 39.515 
+Merge Pass Kernel Iteration Time: 40.490 
+Merge Pass Kernel Iteration Time: 41.244 
+Merge Pass Kernel Iteration Time: 44.050 
+Merge Pass Kernel Iteration Time: 41.435 
+Merge Pass Kernel Iteration Time: 41.517 
+Merge Pass Kernel Iteration Time: 74.676 
+Merge Pass Kernel Iteration Time: 77.397 
+Merge Pass Kernel Iteration Time: 122.433 
+Merge Pass Kernel Time: 738.606 
+Merge Pack Kernel Time: 25.397 
+Init: 391.044983
+MemAlloc: 0.304000
+HtoD: 2231.947021
+Exec: 1579.734741
+DtoH: 1050.878540
+Close: 7.802000
+Total: 5394.245117
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 213.971 
+Bucket Count Kernel Time: 433.153 
+Bucket Prefix Kernel Time: 91.350 
+Bucket Sort Kernel Time: 56.910 
+Merge First Kernel Time: 24.188 
+Merge Pass Kernel Iteration Time: 31.933 
+Merge Pass Kernel Iteration Time: 35.226 
+Merge Pass Kernel Iteration Time: 35.260 
+Merge Pass Kernel Iteration Time: 35.786 
+Merge Pass Kernel Iteration Time: 36.002 
+Merge Pass Kernel Iteration Time: 37.122 
+Merge Pass Kernel Iteration Time: 38.685 
+Merge Pass Kernel Iteration Time: 39.144 
+Merge Pass Kernel Iteration Time: 41.437 
+Merge Pass Kernel Iteration Time: 43.274 
+Merge Pass Kernel Iteration Time: 42.082 
+Merge Pass Kernel Iteration Time: 41.806 
+Merge Pass Kernel Iteration Time: 74.726 
+Merge Pass Kernel Iteration Time: 77.124 
+Merge Pass Kernel Iteration Time: 121.348 
+Merge Pass Kernel Time: 730.955 
+Merge Pack Kernel Time: 25.355 
+Init: 370.399994
+MemAlloc: 0.257000
+HtoD: 2248.703613
+Exec: 1575.882202
+DtoH: 1073.933838
+Close: 7.823000
+Total: 5420.086914
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 225.753 
+Bucket Count Kernel Time: 427.546 
+Bucket Prefix Kernel Time: 92.411 
+Bucket Sort Kernel Time: 62.223 
+Merge First Kernel Time: 24.142 
+Merge Pass Kernel Iteration Time: 31.733 
+Merge Pass Kernel Iteration Time: 31.564 
+Merge Pass Kernel Iteration Time: 36.510 
+Merge Pass Kernel Iteration Time: 36.250 
+Merge Pass Kernel Iteration Time: 38.033 
+Merge Pass Kernel Iteration Time: 39.115 
+Merge Pass Kernel Iteration Time: 39.436 
+Merge Pass Kernel Iteration Time: 38.143 
+Merge Pass Kernel Iteration Time: 41.375 
+Merge Pass Kernel Iteration Time: 41.489 
+Merge Pass Kernel Iteration Time: 42.249 
+Merge Pass Kernel Iteration Time: 52.817 
+Merge Pass Kernel Iteration Time: 74.547 
+Merge Pass Kernel Iteration Time: 77.332 
+Merge Pass Kernel Iteration Time: 122.014 
+Merge Pass Kernel Time: 742.608 
+Merge Pack Kernel Time: 25.655 
+Init: 317.958008
+MemAlloc: 0.284000
+HtoD: 2290.219482
+Exec: 1600.337158
+DtoH: 1075.089355
+Close: 9.298000
+Total: 5438.536133
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 227.363 
+Bucket Count Kernel Time: 427.665 
+Bucket Prefix Kernel Time: 96.108 
+Bucket Sort Kernel Time: 61.152 
+Merge First Kernel Time: 24.154 
+Merge Pass Kernel Iteration Time: 31.948 
+Merge Pass Kernel Iteration Time: 31.809 
+Merge Pass Kernel Iteration Time: 34.854 
+Merge Pass Kernel Iteration Time: 36.780 
+Merge Pass Kernel Iteration Time: 38.024 
+Merge Pass Kernel Iteration Time: 38.613 
+Merge Pass Kernel Iteration Time: 39.684 
+Merge Pass Kernel Iteration Time: 40.159 
+Merge Pass Kernel Iteration Time: 39.612 
+Merge Pass Kernel Iteration Time: 46.809 
+Merge Pass Kernel Iteration Time: 42.132 
+Merge Pass Kernel Iteration Time: 41.760 
+Merge Pass Kernel Iteration Time: 74.858 
+Merge Pass Kernel Iteration Time: 77.599 
+Merge Pass Kernel Iteration Time: 122.250 
+Merge Pass Kernel Time: 736.890 
+Merge Pack Kernel Time: 25.427 
+Init: 374.896027
+MemAlloc: 0.286000
+HtoD: 2294.407715
+Exec: 1598.758301
+DtoH: 1023.347168
+Close: 7.701000
+Total: 5442.089844
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 225.563 
+Bucket Count Kernel Time: 426.694 
+Bucket Prefix Kernel Time: 91.204 
+Bucket Sort Kernel Time: 61.877 
+Merge First Kernel Time: 24.141 
+Merge Pass Kernel Iteration Time: 31.933 
+Merge Pass Kernel Iteration Time: 33.283 
+Merge Pass Kernel Iteration Time: 32.551 
+Merge Pass Kernel Iteration Time: 37.356 
+Merge Pass Kernel Iteration Time: 37.812 
+Merge Pass Kernel Iteration Time: 39.218 
+Merge Pass Kernel Iteration Time: 39.412 
+Merge Pass Kernel Iteration Time: 40.628 
+Merge Pass Kernel Iteration Time: 41.581 
+Merge Pass Kernel Iteration Time: 43.213 
+Merge Pass Kernel Iteration Time: 41.852 
+Merge Pass Kernel Iteration Time: 41.897 
+Merge Pass Kernel Iteration Time: 74.412 
+Merge Pass Kernel Iteration Time: 76.676 
+Merge Pass Kernel Iteration Time: 121.203 
+Merge Pass Kernel Time: 733.028 
+Merge Pack Kernel Time: 25.380 
+Init: 339.708008
+MemAlloc: 0.291000
+HtoD: 2268.742920
+Exec: 1587.886475
+DtoH: 1033.428223
+Close: 7.885000
+Total: 5370.333984
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 210.444 
+Bucket Count Kernel Time: 427.816 
+Bucket Prefix Kernel Time: 90.988 
+Bucket Sort Kernel Time: 62.946 
+Merge First Kernel Time: 24.129 
+Merge Pass Kernel Iteration Time: 33.500 
+Merge Pass Kernel Iteration Time: 33.711 
+Merge Pass Kernel Iteration Time: 35.292 
+Merge Pass Kernel Iteration Time: 37.347 
+Merge Pass Kernel Iteration Time: 36.501 
+Merge Pass Kernel Iteration Time: 37.608 
+Merge Pass Kernel Iteration Time: 38.330 
+Merge Pass Kernel Iteration Time: 39.328 
+Merge Pass Kernel Iteration Time: 39.921 
+Merge Pass Kernel Iteration Time: 46.615 
+Merge Pass Kernel Iteration Time: 41.963 
+Merge Pass Kernel Iteration Time: 41.599 
+Merge Pass Kernel Iteration Time: 74.475 
+Merge Pass Kernel Iteration Time: 76.862 
+Merge Pass Kernel Iteration Time: 122.033 
+Merge Pass Kernel Time: 735.085 
+Merge Pack Kernel Time: 25.369 
+Init: 326.089996
+MemAlloc: 0.288000
+HtoD: 2234.772949
+Exec: 1576.776978
+DtoH: 1072.324585
+Close: 7.921000
+Total: 5352.708008
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 211.442 
+Bucket Count Kernel Time: 441.111 
+Bucket Prefix Kernel Time: 91.767 
+Bucket Sort Kernel Time: 62.487 
+Merge First Kernel Time: 24.127 
+Merge Pass Kernel Iteration Time: 31.967 
+Merge Pass Kernel Iteration Time: 33.152 
+Merge Pass Kernel Iteration Time: 34.014 
+Merge Pass Kernel Iteration Time: 36.859 
+Merge Pass Kernel Iteration Time: 37.826 
+Merge Pass Kernel Iteration Time: 38.795 
+Merge Pass Kernel Iteration Time: 37.988 
+Merge Pass Kernel Iteration Time: 39.649 
+Merge Pass Kernel Iteration Time: 42.278 
+Merge Pass Kernel Iteration Time: 41.633 
+Merge Pass Kernel Iteration Time: 41.706 
+Merge Pass Kernel Iteration Time: 41.473 
+Merge Pass Kernel Iteration Time: 74.610 
+Merge Pass Kernel Iteration Time: 77.685 
+Merge Pass Kernel Iteration Time: 120.572 
+Merge Pass Kernel Time: 730.205 
+Merge Pack Kernel Time: 25.298 
+Init: 374.600006
+MemAlloc: 0.274000
+HtoD: 2298.707275
+Exec: 1586.437500
+DtoH: 1066.674805
+Close: 7.741000
+Total: 5470.425781
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 209.304 
+Bucket Count Kernel Time: 434.595 
+Bucket Prefix Kernel Time: 90.893 
+Bucket Sort Kernel Time: 61.585 
+Merge First Kernel Time: 24.197 
+Merge Pass Kernel Iteration Time: 31.836 
+Merge Pass Kernel Iteration Time: 35.789 
+Merge Pass Kernel Iteration Time: 35.395 
+Merge Pass Kernel Iteration Time: 36.663 
+Merge Pass Kernel Iteration Time: 36.849 
+Merge Pass Kernel Iteration Time: 38.745 
+Merge Pass Kernel Iteration Time: 39.291 
+Merge Pass Kernel Iteration Time: 38.260 
+Merge Pass Kernel Iteration Time: 38.914 
+Merge Pass Kernel Iteration Time: 46.389 
+Merge Pass Kernel Iteration Time: 42.004 
+Merge Pass Kernel Iteration Time: 41.420 
+Merge Pass Kernel Iteration Time: 73.034 
+Merge Pass Kernel Iteration Time: 78.081 
+Merge Pass Kernel Iteration Time: 121.777 
+Merge Pass Kernel Time: 734.448 
+Merge Pack Kernel Time: 25.286 
+Init: 326.809998
+MemAlloc: 0.276000
+HtoD: 2323.978516
+Exec: 1580.307373
+DtoH: 1057.074463
+Close: 7.902000
+Total: 5428.067871
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 227.229 
+Bucket Count Kernel Time: 428.501 
+Bucket Prefix Kernel Time: 92.933 
+Bucket Sort Kernel Time: 62.002 
+Merge First Kernel Time: 24.195 
+Merge Pass Kernel Iteration Time: 31.941 
+Merge Pass Kernel Iteration Time: 34.041 
+Merge Pass Kernel Iteration Time: 35.591 
+Merge Pass Kernel Iteration Time: 36.685 
+Merge Pass Kernel Iteration Time: 37.985 
+Merge Pass Kernel Iteration Time: 38.889 
+Merge Pass Kernel Iteration Time: 38.708 
+Merge Pass Kernel Iteration Time: 39.276 
+Merge Pass Kernel Iteration Time: 39.571 
+Merge Pass Kernel Iteration Time: 45.600 
+Merge Pass Kernel Iteration Time: 42.267 
+Merge Pass Kernel Iteration Time: 41.534 
+Merge Pass Kernel Iteration Time: 74.427 
+Merge Pass Kernel Iteration Time: 77.025 
+Merge Pass Kernel Iteration Time: 121.452 
+Merge Pass Kernel Time: 734.994 
+Merge Pack Kernel Time: 25.890 
+Init: 377.641998
+MemAlloc: 0.285000
+HtoD: 2281.210693
+Exec: 1595.743286
+DtoH: 1051.692261
+Close: 8.742000
+Total: 5457.153809
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 230.918 
+Bucket Count Kernel Time: 426.264 
+Bucket Prefix Kernel Time: 92.781 
+Bucket Sort Kernel Time: 63.103 
+Merge First Kernel Time: 24.191 
+Merge Pass Kernel Iteration Time: 31.975 
+Merge Pass Kernel Iteration Time: 32.783 
+Merge Pass Kernel Iteration Time: 34.398 
+Merge Pass Kernel Iteration Time: 37.341 
+Merge Pass Kernel Iteration Time: 37.798 
+Merge Pass Kernel Iteration Time: 38.447 
+Merge Pass Kernel Iteration Time: 39.245 
+Merge Pass Kernel Iteration Time: 39.344 
+Merge Pass Kernel Iteration Time: 39.897 
+Merge Pass Kernel Iteration Time: 46.471 
+Merge Pass Kernel Iteration Time: 41.777 
+Merge Pass Kernel Iteration Time: 42.167 
+Merge Pass Kernel Iteration Time: 75.124 
+Merge Pass Kernel Iteration Time: 78.157 
+Merge Pass Kernel Iteration Time: 121.280 
+Merge Pass Kernel Time: 736.203 
+Merge Pack Kernel Time: 25.326 
+Init: 349.173004
+MemAlloc: 0.304000
+HtoD: 2239.058594
+Exec: 1598.787109
+DtoH: 1077.003784
+Close: 7.737000
+Total: 5415.799805
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 230.394 
+Bucket Count Kernel Time: 436.840 
+Bucket Prefix Kernel Time: 91.059 
+Bucket Sort Kernel Time: 62.459 
+Merge First Kernel Time: 24.160 
+Merge Pass Kernel Iteration Time: 31.687 
+Merge Pass Kernel Iteration Time: 34.485 
+Merge Pass Kernel Iteration Time: 35.674 
+Merge Pass Kernel Iteration Time: 37.186 
+Merge Pass Kernel Iteration Time: 38.017 
+Merge Pass Kernel Iteration Time: 38.835 
+Merge Pass Kernel Iteration Time: 39.397 
+Merge Pass Kernel Iteration Time: 39.126 
+Merge Pass Kernel Iteration Time: 39.815 
+Merge Pass Kernel Iteration Time: 43.594 
+Merge Pass Kernel Iteration Time: 42.107 
+Merge Pass Kernel Iteration Time: 41.721 
+Merge Pass Kernel Iteration Time: 75.111 
+Merge Pass Kernel Iteration Time: 76.895 
+Merge Pass Kernel Iteration Time: 120.785 
+Merge Pass Kernel Time: 734.434 
+Merge Pack Kernel Time: 25.267 
+Init: 333.920990
+MemAlloc: 0.273000
+HtoD: 2231.464844
+Exec: 1604.613037
+DtoH: 1034.229126
+Close: 7.994000
+Total: 5345.341797
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 211.219 
+Bucket Count Kernel Time: 439.191 
+Bucket Prefix Kernel Time: 91.361 
+Bucket Sort Kernel Time: 63.051 
+Merge First Kernel Time: 24.172 
+Merge Pass Kernel Iteration Time: 32.019 
+Merge Pass Kernel Iteration Time: 33.138 
+Merge Pass Kernel Iteration Time: 35.279 
+Merge Pass Kernel Iteration Time: 37.317 
+Merge Pass Kernel Iteration Time: 38.225 
+Merge Pass Kernel Iteration Time: 37.314 
+Merge Pass Kernel Iteration Time: 37.656 
+Merge Pass Kernel Iteration Time: 40.054 
+Merge Pass Kernel Iteration Time: 41.540 
+Merge Pass Kernel Iteration Time: 43.126 
+Merge Pass Kernel Iteration Time: 42.376 
+Merge Pass Kernel Iteration Time: 41.580 
+Merge Pass Kernel Iteration Time: 74.904 
+Merge Pass Kernel Iteration Time: 77.179 
+Merge Pass Kernel Iteration Time: 121.027 
+Merge Pass Kernel Time: 732.735 
+Merge Pack Kernel Time: 25.369 
+Init: 321.191986
+MemAlloc: 0.278000
+HtoD: 2253.235352
+Exec: 1587.098267
+DtoH: 1041.831421
+Close: 7.929000
+Total: 5358.828125
+++ echo
+
+++ ./run -p 0 -d 0
+Sorting list of 100000000 floats.
+Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz 
+Histogram Kernel Time: 230.120 
+Bucket Count Kernel Time: 427.125 
+Bucket Prefix Kernel Time: 91.953 
+Bucket Sort Kernel Time: 61.212 
+Merge First Kernel Time: 24.223 
+Merge Pass Kernel Iteration Time: 31.799 
+Merge Pass Kernel Iteration Time: 31.929 
+Merge Pass Kernel Iteration Time: 35.049 
+Merge Pass Kernel Iteration Time: 37.434 
+Merge Pass Kernel Iteration Time: 38.100 
+Merge Pass Kernel Iteration Time: 37.552 
+Merge Pass Kernel Iteration Time: 38.639 
+Merge Pass Kernel Iteration Time: 40.296 
+Merge Pass Kernel Iteration Time: 39.354 
+Merge Pass Kernel Iteration Time: 46.511 
+Merge Pass Kernel Iteration Time: 41.740 
+Merge Pass Kernel Iteration Time: 41.419 
+Merge Pass Kernel Iteration Time: 70.538 
+Merge Pass Kernel Iteration Time: 77.003 
+Merge Pass Kernel Iteration Time: 122.058 
+Merge Pass Kernel Time: 729.421 
+Merge Pack Kernel Time: 25.352 
+Init: 357.931000
+MemAlloc: 0.269000
+HtoD: 2245.934570
+Exec: 1589.405640
+DtoH: 1095.256348
+Close: 7.882000
+Total: 5443.917969
+++ echo
+
+++ echo
+

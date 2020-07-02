@@ -1,0 +1,227 @@
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 273.080994
+MemAlloc: 0.016000
+HtoD: 0.004000
+Exec: 7717.126953
+DtoH: 0.000469
+Close: 0.151000
+Total: 8673.190430
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 313.178009
+MemAlloc: 0.016000
+HtoD: 0.004000
+Exec: 7684.603516
+DtoH: 0.000479
+Close: 0.347000
+Total: 8682.801758
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 281.673004
+MemAlloc: 0.015000
+HtoD: 0.003000
+Exec: 7701.514160
+DtoH: 0.000451
+Close: 0.198000
+Total: 8667.006836
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 299.964996
+MemAlloc: 0.017000
+HtoD: 0.003000
+Exec: 7716.668945
+DtoH: 0.000459
+Close: 0.345000
+Total: 8697.522461
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 303.240997
+MemAlloc: 0.018000
+HtoD: 0.004000
+Exec: 7712.902344
+DtoH: 0.000487
+Close: 0.307000
+Total: 8701.478516
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 244.723999
+MemAlloc: 0.016000
+HtoD: 0.004000
+Exec: 7708.923340
+DtoH: 0.000462
+Close: 0.235000
+Total: 8638.933594
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 282.803986
+MemAlloc: 0.017000
+HtoD: 0.003000
+Exec: 7715.155762
+DtoH: 0.000453
+Close: 0.221000
+Total: 8683.050781
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 292.690002
+MemAlloc: 0.016000
+HtoD: 0.003000
+Exec: 7711.769043
+DtoH: 0.000566
+Close: 0.311000
+Total: 8687.154297
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 328.833008
+MemAlloc: 0.019000
+HtoD: 0.004000
+Exec: 7701.564941
+DtoH: 0.000467
+Close: 0.301000
+Total: 8716.065430
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 310.774994
+MemAlloc: 0.015000
+HtoD: 0.004000
+Exec: 7707.508789
+DtoH: 0.000477
+Close: 0.194000
+Total: 8699.715820
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 244.419006
+MemAlloc: 0.017000
+HtoD: 0.004000
+Exec: 7702.933594
+DtoH: 0.000467
+Close: 0.324000
+Total: 8632.429688
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 295.950012
+MemAlloc: 0.018000
+HtoD: 0.004000
+Exec: 7721.972656
+DtoH: 0.000464
+Close: 0.303000
+Total: 8700.181641
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 308.557007
+MemAlloc: 0.015000
+HtoD: 0.003000
+Exec: 7705.088379
+DtoH: 0.000467
+Close: 0.154000
+Total: 8696.269531
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 227.705002
+MemAlloc: 0.016000
+HtoD: 0.004000
+Exec: 7709.075195
+DtoH: 0.000525
+Close: 0.308000
+Total: 8620.894531
+++ echo
+
+++ ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Platform: Intel(R) Corporation
+num_devices = 1
+Device: Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz
+Use CPU device
+Init: 305.141998
+MemAlloc: 0.018000
+HtoD: 0.004000
+Exec: 7718.018555
+DtoH: 0.000495
+Close: 0.208000
+Total: 8707.313477
+++ echo
+
+++ echo
+

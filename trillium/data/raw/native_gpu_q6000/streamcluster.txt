@@ -1,0 +1,242 @@
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 345.910004
+MemAlloc: 4.071000
+HtoD: 591.069458
+Exec: 1600.822266
+DtoH: 355.921936
+Close: 0.911000
+Total: 6062.563965
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 328.674988
+MemAlloc: 4.015000
+HtoD: 586.893311
+Exec: 1603.960449
+DtoH: 357.151947
+Close: 0.850000
+Total: 5478.261230
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 349.462006
+MemAlloc: 4.129000
+HtoD: 588.532898
+Exec: 1605.049683
+DtoH: 357.256195
+Close: 0.977000
+Total: 5893.248047
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 343.246002
+MemAlloc: 4.044000
+HtoD: 585.483887
+Exec: 1603.643188
+DtoH: 355.807648
+Close: 0.888000
+Total: 5686.222168
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 343.643005
+MemAlloc: 4.009000
+HtoD: 586.153748
+Exec: 1602.389404
+DtoH: 356.073334
+Close: 0.910000
+Total: 5493.570801
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 311.523010
+MemAlloc: 3.741000
+HtoD: 591.515259
+Exec: 1602.706421
+DtoH: 356.203064
+Close: 0.915000
+Total: 5513.015137
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 324.283997
+MemAlloc: 4.058000
+HtoD: 593.219482
+Exec: 1600.820435
+DtoH: 355.823547
+Close: 0.958000
+Total: 5735.407227
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 351.256012
+MemAlloc: 4.051000
+HtoD: 585.770386
+Exec: 1603.471802
+DtoH: 355.816162
+Close: 0.950000
+Total: 5696.595215
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 355.856995
+MemAlloc: 4.010000
+HtoD: 587.987366
+Exec: 1605.129761
+DtoH: 357.427155
+Close: 0.891000
+Total: 5554.087891
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 351.036987
+MemAlloc: 4.050000
+HtoD: 585.598816
+Exec: 1603.551270
+DtoH: 355.805786
+Close: 0.923000
+Total: 5696.383789
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 357.953003
+MemAlloc: 4.112000
+HtoD: 593.323425
+Exec: 1600.687256
+DtoH: 355.760162
+Close: 0.975000
+Total: 5902.111816
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 358.692993
+MemAlloc: 4.076000
+HtoD: 593.180847
+Exec: 1600.889160
+DtoH: 355.900818
+Close: 0.957000
+Total: 5797.889160
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 316.794006
+MemAlloc: 4.088000
+HtoD: 586.227295
+Exec: 1603.893677
+DtoH: 355.869751
+Close: 0.918000
+Total: 5634.550781
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 346.796997
+MemAlloc: 4.070000
+HtoD: 582.550842
+Exec: 1600.652100
+DtoH: 355.835999
+Close: 0.930000
+Total: 5673.491211
+++ echo
+
+++ ./run -p 0 -d 1
+PARSEC Benchmark Suite
+--cambine: device name=Quadro 6000
+before sc
+read 65536 points
+finish local search
+after sc
+Init: 327.696014
+MemAlloc: 3.990000
+HtoD: 587.492065
+Exec: 1605.121216
+DtoH: 357.397919
+Close: 0.871000
+Total: 5534.279785
+++ echo
+
+++ echo
+

@@ -1,0 +1,257 @@
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 36.698002
+MemAlloc: 10.137000
+HtoD: 210.022003
+Exec: 4.160000
+DtoH: 75.050003
+Close: 4.553000
+Total: 340.963013
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 38.102001
+MemAlloc: 10.758000
+HtoD: 210.231003
+Exec: 4.141000
+DtoH: 75.056000
+Close: 4.538000
+Total: 343.145996
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 39.292999
+MemAlloc: 9.586000
+HtoD: 210.438004
+Exec: 4.150000
+DtoH: 74.750999
+Close: 3.781000
+Total: 342.308990
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 38.245998
+MemAlloc: 10.986000
+HtoD: 210.186005
+Exec: 4.133000
+DtoH: 75.056000
+Close: 4.485000
+Total: 343.399994
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 38.001999
+MemAlloc: 10.353000
+HtoD: 210.167007
+Exec: 4.145000
+DtoH: 75.009003
+Close: 4.458000
+Total: 342.441010
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 39.244999
+MemAlloc: 10.619000
+HtoD: 210.442001
+Exec: 4.135000
+DtoH: 74.799004
+Close: 3.835000
+Total: 343.384003
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 36.566002
+MemAlloc: 10.133000
+HtoD: 210.022003
+Exec: 4.139000
+DtoH: 75.141998
+Close: 4.558000
+Total: 340.864990
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 36.551998
+MemAlloc: 10.146000
+HtoD: 209.862000
+Exec: 4.147000
+DtoH: 75.055000
+Close: 4.530000
+Total: 340.608002
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 38.245998
+MemAlloc: 11.177000
+HtoD: 211.029999
+Exec: 4.137000
+DtoH: 74.754997
+Close: 3.899000
+Total: 343.549011
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 36.632000
+MemAlloc: 10.152000
+HtoD: 209.819000
+Exec: 4.159000
+DtoH: 75.046997
+Close: 4.569000
+Total: 340.701996
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 36.566002
+MemAlloc: 10.142000
+HtoD: 209.942001
+Exec: 4.142000
+DtoH: 75.057999
+Close: 4.483000
+Total: 340.651001
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 37.894001
+MemAlloc: 10.592000
+HtoD: 210.166000
+Exec: 4.156000
+DtoH: 75.043999
+Close: 4.561000
+Total: 342.726013
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 38.280998
+MemAlloc: 10.726000
+HtoD: 210.096008
+Exec: 4.153000
+DtoH: 75.047997
+Close: 4.472000
+Total: 343.096008
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 36.528000
+MemAlloc: 10.157000
+HtoD: 209.847000
+Exec: 4.145000
+DtoH: 75.068001
+Close: 4.513000
+Total: 340.569000
+Training done
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Random number generator seed: 7
+Input layer size : 2097152
+Starting training kernel
+Performing GPU computation
+Init: 39.577000
+MemAlloc: 10.525000
+HtoD: 210.597000
+Exec: 4.134000
+DtoH: 74.769997
+Close: 3.822000
+Total: 343.750000
+Training done
+++ echo
+
+++ echo
+

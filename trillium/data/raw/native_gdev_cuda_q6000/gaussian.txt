@@ -1,0 +1,182 @@
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 40.174000
+MemAlloc: 0.127000
+HtoD: 9.504000
+Exec: 8306.029297
+DtoH: 13.922000
+Close: 2.446000
+Total: 8372.204102
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 37.380001
+MemAlloc: 0.100000
+HtoD: 6.129000
+Exec: 8305.255859
+DtoH: 13.467000
+Close: 2.364000
+Total: 8364.697266
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 37.692001
+MemAlloc: 0.078000
+HtoD: 6.053000
+Exec: 8305.129883
+DtoH: 13.827000
+Close: 2.519000
+Total: 8365.299805
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 38.006001
+MemAlloc: 0.162000
+HtoD: 9.774000
+Exec: 8301.399414
+DtoH: 12.908000
+Close: 2.070000
+Total: 8364.320312
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 36.286999
+MemAlloc: 0.085000
+HtoD: 6.086000
+Exec: 8307.072266
+DtoH: 13.682000
+Close: 2.360000
+Total: 8365.573242
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 35.696999
+MemAlloc: 0.069000
+HtoD: 6.070000
+Exec: 8305.250977
+DtoH: 13.513000
+Close: 2.390000
+Total: 8362.990234
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 35.917000
+MemAlloc: 0.098000
+HtoD: 6.117000
+Exec: 8308.362305
+DtoH: 14.098000
+Close: 2.350000
+Total: 8366.942383
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 35.734001
+MemAlloc: 0.085000
+HtoD: 6.205000
+Exec: 8308.266602
+DtoH: 14.122000
+Close: 2.403000
+Total: 8366.817383
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 35.775002
+MemAlloc: 0.080000
+HtoD: 6.153000
+Exec: 8307.939453
+DtoH: 14.131000
+Close: 2.354000
+Total: 8366.431641
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 35.662998
+MemAlloc: 0.080000
+HtoD: 6.158000
+Exec: 8309.335938
+DtoH: 14.195000
+Close: 2.450000
+Total: 8367.883789
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 35.783001
+MemAlloc: 0.083000
+HtoD: 6.146000
+Exec: 8309.111328
+DtoH: 14.198000
+Close: 2.388000
+Total: 8367.710938
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 35.751999
+MemAlloc: 0.077000
+HtoD: 6.184000
+Exec: 8309.198242
+DtoH: 14.190000
+Close: 2.434000
+Total: 8367.835938
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 36.935001
+MemAlloc: 0.078000
+HtoD: 6.298000
+Exec: 8303.579102
+DtoH: 12.912000
+Close: 2.091000
+Total: 8361.892578
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 36.391998
+MemAlloc: 0.103000
+HtoD: 6.174000
+Exec: 8309.033203
+DtoH: 14.383000
+Close: 2.391000
+Total: 8368.477539
+++ echo
+
+++ sudo ./run
+[gdev] Opened gdev0
+[gdev] Closed gdev0
+Init: 37.730000
+MemAlloc: 0.091000
+HtoD: 6.797000
+Exec: 8308.384766
+DtoH: 14.442000
+Close: 2.386000
+Total: 8369.832031
+++ echo
+
+++ echo
+
