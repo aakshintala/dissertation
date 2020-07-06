@@ -1,0 +1,238 @@
+% -*- fill-column: 85; -*-
+%!TEX root = ../dissertation.tex
+
+\section{\Compiler Generated Code}
+\label{app:cuMemcpyHtoD-code}
+
+This appendix shows the generated code for the CUDA driver API function \lstinline|cuMemcpyHtoD|.
+The specification used is:
+
+\begin{lstlisting}[language=C,columns=flexible]
+#include <cuda.h>
+ava_type(CUdeviceptr) { ava_handle; }
+CUresult CUDAAPI
+cuMemcpyHtoD(CUdeviceptr dst,
+             const void *src,
+             size_t size) {
+  ava_argument(src) {
+    ava_in; ava_buffer(size);
+    ava_lifetime_call; } }
+\end{lstlisting}
+
+An added \lstinline|_v2| appears throughout the generated code because the CUDA header defines \lstinline|cuMemcpyHtoD| to \lstinline|cuMemcpyHtoD_v2| as a form of symbol versioning.
+
+\amp{I don't expect we will actually want to include this appendix in the paper, but I thought I would add it to the working draft so we can see it and extract things from it. As such I have made no attempt to format it well.}
+
+
+\subsection{Structures}
+
+The types used to transmit calls.
+
+
+\begin{lstlisting}[language=C,columns=flexible]
+struct cu_cu_memcpy_hto_d_v2_call {
+    struct command_base base;
+    intptr_t __call_id;
+    CUdeviceptr dst;
+    size_t size;
+    void *src;
+};
+struct cu_cu_memcpy_hto_d_v2_ret {
+    struct command_base base;
+    intptr_t __call_id;
+    CUresult ret;
+};
+struct cu_cu_memcpy_hto_d_v2_call_record {
+    CUdeviceptr dst;
+    size_t size;
+    void *src;
+    CUresult ret;
+    char __handler_deallocate;
+    volatile char __call_complete;
+};
+\end{lstlisting}
+
+\subsection{The Application-side Stub Function}
+
+The call stub in the application:
+
+\begin{lstlisting}[language=C,columns=flexible]
+EXPORTED CUresult
+cuMemcpyHtoD(CUdeviceptr dst, const void *src, size_t size)
+{
+    const int ava_is_in = 1,
+        ava_is_out = 0;
+    intptr_t __call_id = ava_get_call_id(&__ava_endpoint);
+    GPtrArray *__ava_alloc_list_cuMemcpyHtoD_v2 =
+        g_ptr_array_new_full(0, (GDestroyNotify) ava_buffer_with_deallocator_free);
+    size_t __total_buffer_size = 0;
+    {
+        /* Size: const void * src */
+        if ((src) != (NULL) && (size) > (0)) {
+            __total_buffer_size += command_channel_buffer_size(__chan, ((size_t)(size)) * sizeof(const void));
+        }
+    }
+    struct cu_cu_memcpy_hto_d_v2_call *__cmd =
+        (struct cu_cu_memcpy_hto_d_v2_call *)command_channel_new_command(__chan,
+        sizeof(struct cu_cu_memcpy_hto_d_v2_call), __total_buffer_size);
+    __cmd->base.api_id = CU_API;
+    __cmd->base.command_id = CALL_CU_CU_MEMCPY_HTO_D_V2;
+    __cmd->base.thread_id = shadow_thread_id(nw_shadow_thread_pool);
+    __cmd->__call_id = __call_id;
+    /* Input: CUdeviceptr dst */
+    __cmd->dst = dst;
+    /* Input: const void * src */
+    if ((src) != (NULL) && (size) > (0)) {
+        __cmd->src =
+            (void *)command_channel_attach_buffer(__chan, (struct command_base *)__cmd, src,
+            ((size_t)(size)) * sizeof(const void));
+    } else {
+        __cmd->src = NULL;
+    }
+    /* Input: size_t size */
+    __cmd->size = size;
+    struct cu_cu_memcpy_hto_d_v2_call_record *__call_record =
+        (struct cu_cu_memcpy_hto_d_v2_call_record *)calloc(1, sizeof(struct cu_cu_memcpy_hto_d_v2_call_record));
+    __call_record->dst = dst;
+    __call_record->size = size;
+    __call_record->src = src;
+    __call_record->__call_complete = 0;
+    __call_record->__handler_deallocate = 0;
+    ava_add_call(&__ava_endpoint, __call_id, __call_record);
+    command_channel_send_command(__chan, (struct command_base *)__cmd);
+    g_ptr_array_unref(__ava_alloc_list_cuMemcpyHtoD_v2);        /* Deallocate all memory in the alloc list */
+    shadow_thread_handle_command_until(nw_shadow_thread_pool, __call_record->__call_complete);
+    CUresult ret;
+    ret = __call_record->ret;
+    free(__call_record);
+    return ret;
+}
+\end{lstlisting}
+
+\subsection{\Worker-side Call Handler}
+The \worker handler for calls sent by the stub.
+The wrapper function \lstinline|__wrapper_cuMemcpyHtoD_v2| is used to guarantee a separate scope for some of the generated code and allow \lstinline|return| to behave as expected.
+
+\begin{lstlisting}[language=C,columns=flexible]
+static CUresult
+__wrapper_cuMemcpyHtoD_v2(CUdeviceptr dst, size_t size, const void *src) {
+    CUresult ret;
+    ret = cuMemcpyHtoD_v2(dst, src, size);
+    return ret;
+}
+
+void
+__handle_command_cu(struct command_channel *__chan, struct nw_handle_pool *handle_pool,
+    struct command_channel *__log, const struct command_base *__cmd)
+{
+    int ava_is_in,
+     ava_is_out;
+    switch (__cmd->command_id) {
+    case CALL_CU_CU_MEMCPY_HTO_D_V2:{
+        ava_is_in = 1;
+        ava_is_out = 0;
+        GPtrArray *__ava_alloc_list_cuMemcpyHtoD_v2 =
+            g_ptr_array_new_full(0, (GDestroyNotify) ava_buffer_with_deallocator_free);
+        struct cu_cu_memcpy_hto_d_v2_call *__call = (struct cu_cu_memcpy_hto_d_v2_call *)__cmd;
+        assert(__call->base.api_id == CU_API);
+        assert(__call->base.command_size == sizeof(struct cu_cu_memcpy_hto_d_v2_call)
+            &&
+            "Command size does not match ID. (Can be caused by incorrectly computed buffer sizes, expecially using `strlen(s)` instead of `strlen(s)+1`)");
+        /* Unpack and translate arguments */
+        /* Input: CUdeviceptr dst */
+        CUdeviceptr dst;
+        dst = (CUdeviceptr) __call->dst;
+        dst = (CUdeviceptr) nw_handle_pool_deref(handle_pool, (void *)__call->dst);
+        /* Input: size_t size */
+        size_t size;
+        size = (size_t)__call->size;
+        size = __call->size;
+        /* Input: const void * src */
+        void *src;
+        src =
+            ((__call->src) != (NULL)) ? ((const void *)command_channel_get_buffer(__chan, __cmd,
+                __call->src)) : ((const void *)__call->src);
+        if ((__call->src) != (NULL)) {
+            void *__src_src_0;
+            __src_src_0 = src;
+            size_t __buffer_size;
+            __buffer_size = ((size_t)(size));
+            src = (const void *)command_channel_get_buffer(__chan, __cmd, __call->src);
+         if ((src) != (__src_src_0)) {
+                memcpy(src, __src_src_0, __buffer_size * sizeof(const void));
+            }
+        } else {
+            src =
+                ((__call->src) != (NULL)) ? ((const void *)command_channel_get_buffer(__chan, __cmd,
+                    __call->src)) : ((const void *)__call->src);
+        }
+        /* Perform Call */
+        CUresult ret;
+        ret = __wrapper_cuMemcpyHtoD_v2(dst, size, src);
+        ava_is_in = 0;
+        ava_is_out = 1;
+        size_t __total_buffer_size = 0;
+        struct cu_cu_memcpy_hto_d_v2_ret *__ret =
+            (struct cu_cu_memcpy_hto_d_v2_ret *)command_channel_new_command(__chan,
+            sizeof(struct cu_cu_memcpy_hto_d_v2_ret), __total_buffer_size);
+        __ret->base.api_id = CU_API;
+        __ret->base.command_id = RET_CU_CU_MEMCPY_HTO_D_V2;
+        __ret->base.thread_id = __call->base.thread_id;
+        __ret->__call_id = __call->__call_id;
+        /* Output: CUresult ret */
+        __ret->ret = ret;
+        /* Send reply message */
+        command_channel_send_command(__chan, (struct command_base *)__ret);
+        g_ptr_array_unref(__ava_alloc_list_cuMemcpyHtoD_v2);    /* Deallocate all memory in the alloc list */
+        break;
+    }
+    default:
+        abort_with_reason("Received unsupported command");
+    }                                            // switch
+}
+\end{lstlisting}
+
+\subsection{The Application-side Reply Handler}
+
+The handler for replies from the \worker to the application:
+
+\begin{lstlisting}[language=C,columns=flexible]
+void
+__handle_command_cu(struct command_channel *__chan, struct nw_handle_pool *handle_pool,
+    struct command_channel *__log, const struct command_base *__cmd)
+{
+    int ava_is_in,
+     ava_is_out;
+    switch (__cmd->command_id) {
+    case RET_CU_CU_MEMCPY_HTO_D_V2:{
+        ava_is_in = 0;
+        ava_is_out = 1;
+        struct cu_cu_memcpy_hto_d_v2_ret *__ret = (struct cu_cu_memcpy_hto_d_v2_ret *)__cmd;
+        assert(__ret->base.api_id == CU_API);
+        assert(__ret->base.command_size == sizeof(struct cu_cu_memcpy_hto_d_v2_ret)
+            &&
+            "Command size does not match ID. (Can be caused by incorrectly computed buffer sizes, especially using `strlen(s)` instead of `strlen(s)+1`)");
+        struct cu_cu_memcpy_hto_d_v2_call_record *__local =
+            (struct cu_cu_memcpy_hto_d_v2_call_record *)ava_remove_call(&__ava_endpoint, __ret->__call_id);
+        CUdeviceptr dst;
+        dst = __local->dst;
+        size_t size;
+        size = __local->size;
+        void *src;
+        src = __local->src;
+        CUresult ret;
+        ret = (CUresult) __ret->ret;
+        /* Output: CUresult ret */
+        __local->ret = __ret->ret;
+        __local->__call_complete = 1;
+        if (__local->__handler_deallocate) {
+            free(__local);
+        }
+        break;
+    }
+
+    default:
+        abort_with_reason("Received unsupported command");
+    } // switch
+}
+\end{lstlisting}

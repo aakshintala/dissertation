@@ -1,0 +1,266 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 370.351990
+MemAlloc: 1.682000
+HtoD: 12.809000
+HtoD_Phy: 11.821100
+Exec: 1026.879028
+DtoH: 4.908000
+DtoH_Phy: 4.417502
+Close: 0.920000
+API: 1417.550049
+Total: 1436.095947
+
+Finish the training for one iteration
+real 1.62 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 391.507996
+MemAlloc: 1.948000
+HtoD: 13.449000
+HtoD_Phy: 12.731618
+Exec: 1028.411011
+DtoH: 5.266000
+DtoH_Phy: 4.773518
+Close: 0.965000
+API: 1441.546997
+Total: 1462.181030
+
+Finish the training for one iteration
+real 1.66 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 377.848999
+MemAlloc: 1.888000
+HtoD: 13.531000
+HtoD_Phy: 12.538221
+Exec: 1028.411987
+DtoH: 5.214000
+DtoH_Phy: 4.660287
+Close: 1.042000
+API: 1427.935913
+Total: 1449.381958
+
+Finish the training for one iteration
+real 1.62 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 390.165009
+MemAlloc: 1.790000
+HtoD: 13.045000
+HtoD_Phy: 11.892751
+Exec: 1028.467041
+DtoH: 5.367000
+DtoH_Phy: 4.796034
+Close: 1.040000
+API: 1439.874023
+Total: 1459.036011
+
+Finish the training for one iteration
+real 1.64 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 388.000000
+MemAlloc: 1.632000
+HtoD: 12.920000
+HtoD_Phy: 11.709146
+Exec: 1026.281982
+DtoH: 4.984000
+DtoH_Phy: 4.529910
+Close: 0.925000
+API: 1434.743042
+Total: 1451.521973
+
+Finish the training for one iteration
+real 1.62 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 384.223999
+MemAlloc: 1.757000
+HtoD: 12.440001
+HtoD_Phy: 11.468048
+Exec: 1026.570923
+DtoH: 5.044000
+DtoH_Phy: 4.466461
+Close: 1.141000
+API: 1431.176880
+Total: 1450.853027
+
+Finish the training for one iteration
+real 1.62 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 393.996002
+MemAlloc: 1.917000
+HtoD: 13.990999
+HtoD_Phy: 13.062082
+Exec: 1026.314087
+DtoH: 5.052000
+DtoH_Phy: 4.528210
+Close: 0.990000
+API: 1442.260010
+Total: 1465.146973
+
+Finish the training for one iteration
+real 1.64 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 388.515015
+MemAlloc: 1.974000
+HtoD: 13.614000
+HtoD_Phy: 12.539742
+Exec: 1028.421021
+DtoH: 5.136000
+DtoH_Phy: 4.586048
+Close: 0.722000
+API: 1438.382080
+Total: 1456.097046
+
+Finish the training for one iteration
+real 1.62 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 390.399994
+MemAlloc: 1.939000
+HtoD: 12.544001
+HtoD_Phy: 11.663854
+Exec: 1028.500977
+DtoH: 5.148000
+DtoH_Phy: 4.651664
+Close: 1.029000
+API: 1439.561035
+Total: 1459.008057
+
+Finish the training for one iteration
+real 1.62 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 389.617004
+MemAlloc: 1.892000
+HtoD: 13.497000
+HtoD_Phy: 12.350662
+Exec: 1028.494995
+DtoH: 5.016000
+DtoH_Phy: 4.470170
+Close: 0.976000
+API: 1439.492920
+Total: 1458.515015
+
+Finish the training for one iteration
+real 1.62 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 385.309998
+MemAlloc: 1.956000
+HtoD: 14.231000
+HtoD_Phy: 13.022202
+Exec: 1026.376953
+DtoH: 4.933000
+DtoH_Phy: 4.432181
+Close: 1.033000
+API: 1433.839844
+Total: 1455.250977
+
+Finish the training for one iteration
+real 1.62 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 371.658997
+MemAlloc: 2.162000
+HtoD: 13.633000
+HtoD_Phy: 12.513591
+Exec: 1028.416992
+DtoH: 4.803000
+DtoH_Phy: 4.306402
+Close: 1.038000
+API: 1421.711914
+Total: 1443.402954
+
+Finish the training for one iteration
+real 1.61 seconds
+++ echo
+
+++ echo
+

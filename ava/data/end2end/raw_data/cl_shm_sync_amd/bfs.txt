@@ -1,0 +1,482 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f18661ea000
+assigned worker at 4031
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 384.850006
+MemAlloc: 11.793000
+HtoD: 15.287999
+HtoD_Phy: 3.368224
+Exec: 30.485998
+DtoH: 6.870000
+DtoH_Phy: 0.804972
+Close: 0.000000
+API: 449.286987
+Total: 451.441010
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.61 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5058d49000
+assigned worker at 4032
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 369.792999
+MemAlloc: 11.886000
+HtoD: 15.325000
+HtoD_Phy: 3.047660
+Exec: 30.017000
+DtoH: 6.704000
+DtoH_Phy: 0.684903
+Close: 0.000000
+API: 433.725006
+Total: 435.696014
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.57 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fbe4cc12000
+assigned worker at 4033
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 368.365997
+MemAlloc: 12.929000
+HtoD: 15.785999
+HtoD_Phy: 3.435205
+Exec: 30.896997
+DtoH: 7.210000
+DtoH_Phy: 0.921230
+Close: 0.000000
+API: 435.187988
+Total: 437.351990
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.57 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f73efd3a000
+assigned worker at 4034
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 374.326996
+MemAlloc: 12.619000
+HtoD: 15.445999
+HtoD_Phy: 3.804178
+Exec: 30.221001
+DtoH: 6.703000
+DtoH_Phy: 0.912492
+Close: 0.000000
+API: 439.315979
+Total: 441.566010
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fc291283000
+assigned worker at 4035
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 371.257996
+MemAlloc: 13.446000
+HtoD: 22.340002
+HtoD_Phy: 3.751177
+Exec: 31.282997
+DtoH: 8.224999
+DtoH_Phy: 1.065705
+Close: 0.000000
+API: 446.552002
+Total: 448.490997
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa234d18000
+assigned worker at 4036
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 372.765015
+MemAlloc: 14.718000
+HtoD: 16.253000
+HtoD_Phy: 3.705638
+Exec: 30.287998
+DtoH: 6.608000
+DtoH_Phy: 0.924591
+Close: 0.000000
+API: 440.631989
+Total: 442.945007
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8786463000
+assigned worker at 4037
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 368.626007
+MemAlloc: 10.735000
+HtoD: 14.248000
+HtoD_Phy: 3.323534
+Exec: 29.936001
+DtoH: 6.181000
+DtoH_Phy: 0.856994
+Close: 0.000000
+API: 429.725983
+Total: 431.931000
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.57 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fd50d549000
+assigned worker at 4038
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 369.717010
+MemAlloc: 12.107000
+HtoD: 14.167999
+HtoD_Phy: 3.385246
+Exec: 29.900000
+DtoH: 6.383000
+DtoH_Phy: 0.840922
+Close: 0.000000
+API: 432.274994
+Total: 434.403015
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.57 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f61692fb000
+assigned worker at 4039
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 373.026001
+MemAlloc: 10.742000
+HtoD: 14.057999
+HtoD_Phy: 3.448961
+Exec: 30.402000
+DtoH: 6.750999
+DtoH_Phy: 0.880090
+Close: 0.000000
+API: 434.979004
+Total: 437.324005
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.57 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fcffbce8000
+assigned worker at 4040
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 379.552002
+MemAlloc: 12.524000
+HtoD: 15.143000
+HtoD_Phy: 3.592289
+Exec: 30.708000
+DtoH: 6.921000
+DtoH_Phy: 0.868356
+Close: 0.000000
+API: 444.847992
+Total: 447.181000
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fdf6ad87000
+assigned worker at 4041
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 372.532013
+MemAlloc: 12.570000
+HtoD: 15.367000
+HtoD_Phy: 3.560039
+Exec: 30.618000
+DtoH: 6.901999
+DtoH_Phy: 0.937674
+Close: 0.000000
+API: 437.989044
+Total: 440.441986
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f501cdf3000
+assigned worker at 4042
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 369.315002
+MemAlloc: 12.048000
+HtoD: 14.584999
+HtoD_Phy: 3.444425
+Exec: 29.461002
+DtoH: 6.262001
+DtoH_Phy: 0.750827
+Close: 0.001000
+API: 431.671997
+Total: 433.410004
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.57 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7ff073c7d000
+assigned worker at 4043
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 369.600006
+MemAlloc: 12.287000
+HtoD: 22.879999
+HtoD_Phy: 3.797128
+Exec: 31.051998
+DtoH: 7.837999
+DtoH_Phy: 0.935097
+Close: 0.000000
+API: 443.657013
+Total: 445.851990
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.60 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb07fd3b000
+assigned worker at 4044
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 373.667999
+MemAlloc: 10.820000
+HtoD: 14.919001
+HtoD_Phy: 3.551123
+Exec: 30.570002
+DtoH: 6.810999
+DtoH_Phy: 1.056944
+Close: 0.000000
+API: 436.788025
+Total: 438.976013
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f70e4f99000
+assigned worker at 4045
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 374.200012
+MemAlloc: 11.988000
+HtoD: 15.127001
+HtoD_Phy: 3.828645
+Exec: 30.300001
+DtoH: 6.594000
+DtoH_Phy: 0.998825
+Close: 0.000000
+API: 438.209015
+Total: 440.188995
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f578bf4b000
+assigned worker at 4046
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 373.816010
+MemAlloc: 13.399000
+HtoD: 15.813001
+HtoD_Phy: 3.675201
+Exec: 30.591999
+DtoH: 6.877000
+DtoH_Phy: 0.928174
+Close: 0.000000
+API: 440.497009
+Total: 442.739014
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0518e59000
+assigned worker at 4047
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 369.300995
+MemAlloc: 12.654000
+HtoD: 22.024000
+HtoD_Phy: 3.756369
+Exec: 31.447998
+DtoH: 7.730000
+DtoH_Phy: 0.945446
+Close: 0.001000
+API: 443.157990
+Total: 445.447998
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7ff40ac85000
+assigned worker at 4048
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 379.308990
+MemAlloc: 14.105000
+HtoD: 16.080999
+HtoD_Phy: 3.333476
+Exec: 30.612999
+DtoH: 7.049000
+DtoH_Phy: 0.885565
+Close: 0.000000
+API: 447.157013
+Total: 449.431000
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f645d032000
+assigned worker at 4049
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 371.338989
+MemAlloc: 11.821000
+HtoD: 13.735001
+HtoD_Phy: 3.230434
+Exec: 29.625000
+DtoH: 6.135000
+DtoH_Phy: 0.847617
+Close: 0.000000
+API: 432.655029
+Total: 434.996002
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f447a3e4000
+assigned worker at 4050
+Reading File
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 377.710999
+MemAlloc: 12.400000
+HtoD: 15.185000
+HtoD_Phy: 3.267390
+Exec: 30.886000
+DtoH: 6.824000
+DtoH_Phy: 0.903157
+Close: 0.000000
+API: 443.005981
+Total: 445.312012
+--cambine:passed:-)
+Command exited with non-zero status 255
+real 0.59 seconds
+++ echo
+
+++ echo
+

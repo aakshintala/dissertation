@@ -1,0 +1,398 @@
+% -*- fill-column: 85; -*-
+%!TEX root = ../dissertation.tex
+
+\begingroup % A group to prevent \txt from leaking into following files.
+\newcommand{\txt}[1]{\textrm{\it #1}}
+\newcommand{\halfvspace}{} % \vspace*{0.25em}
+\newcommand{\halfhspace}{\hspace*{0.25em}}
+\newcommand{\spec}{\lstinline[language=C,style=nwspecc,columns=fullflexible]}
+
+\graphicspath{{images/}}
+
+\section{\Compiler}
+\label{s:api}
+\label{s:compiler}
+
+% \reviewer{B}{This paper doesn't introduce the CAvA clearly and it is quite difficult to understand this section. For example, this paper just mentioned that "field(member) { member annotations } Annotate member". What do the member and filed mean? It is hard to understand since there is no sample code to explain it.}
+
+% \reviewer{D}{I find the middle sections, especially Section 5, are hard to understand. The key problem is that the authors do not describe the high-level ideas/design but often directly zoom into the details.}
+
+\Compiler implements \speclang (Low-level API Semantics), a specification language for API semantics and policy, and generates C source code to implement API remoting components.
+\Speclang reuses the C syntax to declaratively specify the semantics of the functions in the API.
+%\cjr{And BPF for policy}\amp{I don't think the policy is part of \speclang. Let's discuss.}\cjr{I'll just take your position for granted at this point.}
+This section will introduce a representative subset of \speclang and describe its semantics.
+% All \model semantics may be conditional, to support dynamic semantics.
+Most of the annotations in \speclang apply to values, including arguments and return values.
+% , annotated using \spec@argument(|\txt{arg}|) { |\txt{arg annotations}| }@, and return values, annotated with \spec@return_value { |\txt{return value annotations}| }@.
+\Compiler supports nesting, allowing \speclang to describe any data structure, including arrays and structures
+%~\cjr{example needed? e.g. OCL images? not sure if its necessary...}\hyu{may not be necessary as no one will care about this detail.}.\cjr{ok}
+\Compiler supports annotations on functions to specify if they are synchronous or asynchronous, which API objects (e.g. buffers)
+%\hyu{explain or change?}\hyu{explain in \S\ref{s:migration}}
+are modified by function calls to enable VM migration (see \S\ref{s:migration}).
+
+% AMP: CAvA may not be able to represent certain complex data structures, for
+% instance where the pointer argument actually points into the middle of the data
+% structure and the pointer will be adjusted backwards by the callee (this happens
+% with C++ classes with multiple superclasses).
+
+% \begin{compactitem}
+% \item \spec@argument(|\txt{arg}|) { |\txt{arg annotations}| }@
+%   Annotate \txt{arg}.
+% \item \spec@element { |\txt{element annotations}| }@
+%   Annotate the elements of a buffer.
+% \item \spec@field(|\txt{member}|) { |\txt{member annotations}| }@
+%   Annotate \txt{member}.
+% \end{compactitem}
+
+Each value in \compiler has a \emph{kind} describing how it can be transferred.
+An \spec@opaque@ value that can be copied bit-for-bit without any special handling (e.g., \lstinline|int|).
+% A \spec@handle@ which is a number or pointer used to identify an abstract API object and which is never manipulated directly by user code.
+% (\compiler also provides the \spec@allocates@ and \spec@deallocates@ annotations to specify when API objects are created and destroyed.)
+% \spec@callback@s References to application functions.
+% \spec@userdata@ Opaque ``tag'' values that are combined with a callback function to form a closure.
+A \spec@buffer(|\txt{size}|)@ that is a pointer to a buffer with the specified \txt{size}.
+Buffers can be \spec@in@, \spec@out@,
+%~\cjr{AMP: commas don't play well with line breaks here!}
+or both to specify whether the buffer is input, output, or both for a call.
+Buffers are copied from the caller to the callee before the call if the buffer is an input, and from the callee to the caller after the call if the buffer is an output.
+\Compiler also provides kinds of values to support other API features (e.g., callbacks) and to specify cases where optimizations (e.g., buffer reuse) can be applied.
+These \emph{kind}s are applied to values,
+%\hyu{This sentence looks a duplicate}
+%\cjr{looks ok to me}
+e.g., \spec@argument(ptr) { out; buffer(size); }@ specifies that the argument \spec@ptr@ is a pointer to a buffer with size \spec@size@ (another argument) and is an input.
+
+% \Model also accepts specialized allocation functions for buffers with special memory requirements.
+% For buffers that outlive a single function call, their lifetime can be explicitly denoted: a buffer's lifetime may be coupled to another object's lifetime, it may be valid until explicitly deallocated by another API, or a buffer may be considered static (never deallocated).
+% Structures containing only simple types do not need to be annotated.
+
+% \reviewer{A}{Most of the annotations listed in the bullet points seem to be used for serializing and deserializing API call arguments and return values (as in a traditional RPC compiler). It might be good to classify the annotations into different uses when explaining AvA semantics.}
+
+% \cjr{Cite PTask size descriptor functions}
+% \amp{Unless I totally misunderstand the PTask paper \S{}4.1.2, then there isn't much to say beyond the below and I don't think it's that important.}
+% In AvA, unlike PTask~\citep{ptask}, buffer sizes can always be computed ahead of time in the host, because the guest application will already contain explicit buffer allocations.
+
+% \Compiler allows the specification developer to embed C code in the specification to perform actions before or after a function is called.
+% The embedded code can also store information between API calls.
+% This provides the ability to perform guest-side or server-side computation to handle values that \model does not directly support.~\cjr{clarify relationship to eBPF!}
+
+% \Compiler supports most C functions directly without the need for manual wrappers in either the guest application or the \worker.
+These features allow \model to remote unmodified C APIs.
+Additionally, \speclang natively supports virtualization specific features: resource consumption tracking and enforcement; record and replay of commands
+%\hyu{what's command?}\hyu{ok to explan it in \S\ref{s:design_transport}?}
+for VM migration (\S\ref{s:migration}).
+Previous RPC compilers only support a restricted set of data types (often to enable cross-language compatibility), forcing developers to manually translate arguments and return values.%
+%\amp{Commented text here for addition to camera ready.}
+%\cjr{great, thanks.}
+% The details of how to remote these unrestricted C APIs will be the subject of a future paper.~\cjr{We probably need a better way to say this. It's important to leave the impression that this paper contains enough detail to understand/evaluate the work.}
+
+
+\Compiler can infer the semantics of functions and arguments in simple cases and provides safe defaults when possible (e.g., functions are by default synchronous and numeric types are by default opaque).
+%~\cjr{is it possible to always have safe defaults by using defaults that are undeployable when we can't figure out everything? I'd like to say the defaults are always safe.}
+Defaults are always safe in that they will not crash the hypervisor. The default buffer size (1) may be wrong and result in crashes in the application or \worker. It would be easy to replace the default buffer size with an error, as is already done for ``direction'' (in/out parameters).
+\cjr{Last 2 sentences can cut in a pinch.}
+% (e.g., a pointer to an incomplete type is assumed to be a handle).
+\Compiler generates a skeletal default specification for all functions from an API header file, which the developer can modify as needed.
+% Generated functions are marked ``unsupported''. The programmer must verify and fix the auto-generated annotations for all functions they wish to support before \compiler will generate code for them.
+% To simplify maintenance when an API changes, \compiler emits errors if the unmodified header and the specifications disagree on the declarations of the API functions.
+
+%\hyu{Shall we separate the paragraphs into subsections?}
+%\cjr{no, too tight already.}
+\Compiler also supports resource accounting via annotations to specify the type and quantity of resources each API function consumes.
+\Compiler generates code to report this utilization to the hypervisor.
+The developer also provides an eBPF program which, when needed, schedules API calls from different VMs.
+The program processes all of resource usage reports and decides which VMs may execute API calls and which VMs must wait.
+The eBPF program is stored in a separate file and referenced from the API specification using \spec@policy("policy_kern.c")@ at the top level.
+
+
+\begin{figure}
+	\centering
+  \vspace{-1em}
+\begin{lstlisting}[language=c,style=nwspecc,numbers=left,escapechar=|,basicstyle={\footnotesize\ttfamily}]
+#include <CL/cl.h>|\label{line:include_cl}|
+throughput_resource commands_res;|\label{line:declare_resource}|
+policy("policy_kern.c");|\label{line:scheduler_code}|
+cl_int clEnqueueTask(
+  cl_command_queue command_q, cl_kernel kernel,
+  cl_uint wait_list_len, cl_event *wait_list,
+  cl_event *event) {
+    if (event == NULL) async; else sync;|\label{line:sync_async}|
+    consumes_resource(commands_res, 1);|\label{line:consume_resource}|
+    |...| }
+\end{lstlisting}
+	\vspace*{-5pt}\caption{An example of \speclang. The file \spec{policy_kern.c} is shown in Figure~\ref{fig:scheduler_example}.}
+	\label{fig:spec_example}
+\end{figure}
+
+% \begin{lstlisting}[language=c,style=nwspecc,numbers=left,escapechar=|,basicstyle={\footnotesize\ttfamily}]
+% #include <CL/cl.h>|\label{line:include_cl}|
+% throughput_resource bus_transfer;|\label{line:declare_resource}|
+% scheduler("policy_kern.c");|\label{line:scheduler_code}|
+% cl_int clEnqueueReadBuffer(
+%     cl_command_queue command_queue,
+%     cl_mem buf, cl_bool blocking_read,
+%     size_t offset, size_t size, void *ptr,
+%     cl_uint num_wl_events,
+%     const cl_event *wl_events, cl_event *event) {
+%   if(blocking_read) sync; else async;|\label{line:sync_async}|
+%   argument(ptr) { out; buffer(size); }|\label{line:params_start}|
+%   argument(wl_events) { buffer(num_wl_events); }
+%   argument(event) { out; element { allocates; } }|\label{line:params_end}|
+%   return_value { success(CL_SUCCESS); }|\label{line:type_success}|
+%   consumes_resource(bus_transfer, size);|\label{line:consume_resource}| }
+% \end{lstlisting}
+
+\begin{figure}
+	\centering
+\begin{lstlisting}[language=c,numbers=left,escapechar=|,basicstyle={\footnotesize\ttfamily}]
+map_def cmd_cnt, priority;
+commands_res = avx_get_res_id("commands_res");
+tot_id = 0; // ID of total in cmd_cnt
+int consume(__sk_buff *skb) {
+  vm_id = load_avx_vm_id(skb)
+  amount = load_avx_res_amount(skb,|\halfhspace|commands_res);
+  vm_cnt = map_lookup_elem(&cmd_cnt, &vm_id);
+  tot_cnt = map_lookup_elem(&cmd_cnt, &tot_id);
+  fetch_and_add(vm_cnt, amount);|\label{line:bpf_count_begin}|
+  fetch_and_add(tot_cnt, amount); }|\label{line:bpf_count_end}|
+int schedule(__sk_buff *skb) {
+  // load vm_id, vm_cnt, vm_pri, tot_cnt, and tot_pri as in consume ...
+  if((*vm_cnt)|\halfhspace|*|\halfhspace|(*tot_pri)|\halfhspace|<=|\halfhspace|(*vm_pri)|\halfhspace|*|\halfhspace|(*tot_cnt))|\label{line:bpf_prio_begin}|
+    return HIGH_PRIO;
+  else return LOW_PRIO; }|\label{line:bpf_prio_end}|
+\end{lstlisting}
+\vspace*{-5pt}\caption{An example eBPF policy program (simplified for clarity). This is referenced from Figure~\ref{fig:spec_example} as \spec{policy_kern.c}.
+  % \amp{Would it be acceptable to remove the reference (\&) and dereference (*) operators?}\hyu{That's not a good idea. But we can simplify line 7-8,12 as ``load vm\_cnt, tot\_cnt from maps'', then we may remove the dereference from line 13.}
+  \amp{TODO: Add tiny amount of vspace between functions.}
+  % \amp{elide code to shorten.}\hyu{Shall we use smaller number for higher priority? It seems more practical for some policies.}\amp{I don't see any value in that. May as well keep it conceptually simple. A real implementation might flip the priorities, but that doesn't really matter.}
+}
+	\label{fig:scheduler_example}
+\end{figure}
+
+Figure~\ref{fig:spec_example} shows an example \compiler OpenCL specification.
+Line~\ref{line:include_cl} imports the unmodified OpenCL header
+Line~\ref{line:declare_resource} declares a resource representing function invocation rate.
+Line~\ref{line:scheduler_code} specifies the eBPF code used to schedule function invocations.
+The rest of Figure~\ref{fig:spec_example} provides annotations for \lstinline[breaklines=true,escapechar=|]@clEnqueue||Task@,\linebreak{} which launches a compute kernel on the device.
+Line~\ref{line:sync_async} specifies that it is synchronous when \lstinline|blocking_read| is true.
+% Lines~\ref{line:params_start}--\ref{line:params_end} provide annotations for the arguments:
+% \lstinline|ptr| is an output buffer with the specified \lstinline{size}.
+% \lstinline|wl_events| (event waitlist) has size \lstinline[breaklines=true,escapechar=|]@num_wl_events@ and is inferred to be an input buffer, because its type is \lstinline|const|.
+% \lstinline|event| is implicitly a buffer of size 1 and annotations specify that it is an output buffer where the element is freshly allocated.
+% Line~\ref{line:type_success} specifies that the return value from asynchronous calls is \lstinline|CL_SUCCESS|.
+Line~\ref{line:consume_resource} specifies that a call to this function counts as one unit of the \spec{commands} resource for scheduling purposes.
+Some argument annotations which specify how argument should be transferred are elided.
+\hyu{I feel this paragraph can be shortened as ``Figure~\ref{fig:spec_example} shows an example \compiler OpenCL specification for \lstinline[breaklines=true,escapechar=|]@clEnqueue||Task@,\linebreak{} which launches a compute kernel on the device.'' The previous paragraphs explain the semantics well.}
+\cjr{I like it but if we get stuck for space, it can go.}
+
+Figure~\ref{fig:scheduler_example} shows an outline of an eBPF based scheduler.
+The \spec@consume@ function is called when the \worker reports resource utilization to the hypervisor.
+In this case, every time an API call is made.
+The \spec@schedule@ function is called whenever a command reaches the head of its VM's command queue to compute the priority for the command.
+The router dispatches commands in priority order (highest to lowest).
+% \amp{This could result in many commands being sent to different workers which use the same device at the same time. We may need to limit the number of commands sitting in the \workers queue to some small value (2-3) to avoid \workers contending due to the execution time needed for the commands.}%
+% \hyu{This is allowed as long as the device supports time sharing.}\amp{This would break policy enforcement because ALL outstanding commands could be dispatched at the same time.}
+% \hyu{We can always schedule only one or some of the most prioritized commands. BTW that won't break the policy enforcement even if the hardware's time multiplexing is unfair if we only consider the ``end2end'' device execution time.}
+% \amp{I think we are talking across each other. Let's talk after submission}
+The \model policy functions take an \spec@__sk_buff@ argument containing the \model command information.
+This allows \model to use the existing eBPF infrastructure directly.
+
+The algorithm in Figure~\ref{fig:scheduler_example} is simplified for clarity.
+It counts the number of commands each VM sends (\spec@consume@, lines~\ref{line:bpf_count_begin}--\ref{line:bpf_count_end}) and prioritizes VMs which have have sent less than their share of the total commands (\spec@schedule@, lines~\ref{line:bpf_prio_begin}--\ref{line:bpf_prio_end}).
+A real policy would periodically reset or slowly reduce the counts and use additional information to properly handler varied command costs~\cite{sched_survey,rossbach2011ptask,aimd}.
+
+% \reviewer{A}{Annotating the API seems to require significant knowledge about the hardware (e.g., specifying the type and quantity of resources each call consumes, specifying which objects are modified). These annotations also seem to assume that the side effect of API calls are uniform across different hardware versions, etc.}
+
+Writing a \speclang specification requires a user-level knowledge of the API.
+The developer needs to understand the API function semantics, but only from the perspective of the API user, they do not need to know how to implement the API.
+%However, if the API truly abstracts the underlying hardware\hyu{this sentence is abstract}, the developer should not need a deep understanding of the underlying hardware and the API annotations will be usable with any hardware which supports the API.
+Our experience is that all APIs (e.g., OpenCL~\cite{opencl}) provide documentation sufficient to achieve this.
+% some even provide this information in a structured way (e.g., GTI~\cite{gyrfalcon}).~\cjr{need context. No one will know what GTI is at this point in the paper.}
+% \amp{This is simply an example of an API with very good documentation for the semantic details we need. No other APIs that I have looked at do this.}
+
+% \subsection{Programming Languages}
+
+% \subsection{Specification Guidance\amp{Locked}}
+
+% The API specification annotates the APIs and the accelerator resources,
+% providing a \emph{documentation} for \compiler to generate the virtualization stack.
+% The documentation is required because C function declarations in the original API header provide little or no semantic information about functions or arguments,
+% and no information about device resources or policies.
+% \Model eases the writing of the specification by designing a C-like IDL language,
+% and also generates a rude specification automatically by inferring limited semantic information from the API header.
+% For example, the \model prototype uses argument types and names to infer the relations and dependencies between API arguments.
+% We envision \model will be able to leverage natural language processing to
+% extract richer semantic information from the documentation and comments for API definitions~\cite{nie2018natural,hotcomments,icomment,acomment}.
+
+\subsection{Code Generation}
+\label{s:code_gen}
+
+% \Compiler generates C source code from the API specification using templating.
+% \Compiler builds simplified intermediate representation of the specification, \compiler-IR.
+% \compiler-IR is similar to \speclang, but it applies a fixed set of annotations to every value (e.g., argument) and combines all conditionals into expressions which compute specification values (e.g., the boolean representing that a function is synchronous).\amp{Is this clear?}\cjr{DISCUSS}
+
+\Compiler generates several separate components for each API function, including a stub function, a call handler, a return handler, and a replay handler for VM migration.
+The stub functions and return handlers are in the guest library, while call handlers are in the \worker, except in the case of callbacks, for which the placement is reversed.
+Replay handlers are always in the \worker.
+
+For each component and API function, \compiler traverses the parsed \speclang recursively, using string templates to generate C source code from each element of the IR\amp{Check}.
+Consider the \txt{function-stub} and \txt{attach-value} templates, for example (other templates follow similar patterns):
+\txt{function-stub} takes the specification of an API function and returns the stub for that API function.
+It uses \txt{attach-value} to attach values to the command for transport.
+\txt{Attach-value} recursively traverses the value type handling buffers, structures, and other values as needed.
+For instance, in \txt{attach-value}, a buffer value \txt{src} is stored in the command structure \txt{tgt} as follows:\amp{self: fix column break.}
+\ifthenelse{\boolean{squeeze}}{\vspace{-0.5em}}{}
+\begin{lstlisting}[language=C,escapechar=|,basicstyle=\footnotesize\ttfamily]
+if (|\txt{src}| != NULL && |\txt{argument is input}|){|\label{line:guest_buffer_start}|
+  |tgt| = attach_buffer(cmd, |\txt{src}|, |\txt{src.size}|);
+  for(i in 0..|\txt{src.size}|) |\txt{attach-value(tgt}|[i]|\txt{, src}|[i]|\txt{, argument)}| }|\label{line:guest_buffer_end}|
+\end{lstlisting}
+
+% The template \txt{call-implementation} takes an API function specification and returns code to perform a call dispatched by the stub.
+% \txt{Call-implementation} extracts values from the command (using a recursive template similar to \txt{attach-value}), performs the call, and then sends a return command containing the return value and any output argument values.
+% The template \txt{return-implementation} handles the return command, much like \txt{call-implementation}, by extracting the output values and storing them in the expected relocations for the application code.~\cjr{good stuff, but a bit much.}
+
+% \amp{Figure~\ref{fig:guest_code_stub_template} shows a stylized version of a couple of the templates discussed above. I don't think we actually want it though. I think we should just try to convince people that this templating is fairly easy and give them an idea of how to the resulting code works and then move on.}
+
+
+\begin{comment}
+\begin{figure}
+  \centering
+\begin{lstlisting}[language=C,escapechar=|,basicstyle=\footnotesize\ttfamily]
+|\txt{function-stub(f):}|
+  |\txt{generate:}|
+    |\txt{f.return.type}| |\txt{f.name}|(|\txt{arg.type arg for f.arguments}, ...|) {
+      cmd = |\txt{Create command for API function}|;
+      |\txt{attach-value(}|cmd->|\txt{arg, arg, arg) for arg in f.arguments}|
+      record = |\txt{Create structure containing all arguments}|;|\label{line:register_call_start}|
+      register_call(record);|\label{line:register_call_end}|
+      send_command(cmd);|\label{line:send_call}|
+      handle_commands_until(record->completed);|\label{line:wait_for_reply}|
+      return record->ret;|\label{line:return_ret}|
+    }
+|\txt{attach-value(target, source, argument):}|
+  |\txt{if source is opaque:}|
+    |\txt{generate:}|
+      |\txt{target}| = |\txt{source}|
+  |\txt{else if source is a buffer:}|
+    |\txt{generate:}|
+      if (|\txt{source}| != NULL && |\txt{argument is input}|){|\label{line:guest_buffer_start}|
+        |target| = attach_buffer(cmd, |\txt{source}|, |\txt{source.size}|);
+        for(i in 0..|\txt{source.size}|) {
+          |\txt{attach-value(target}|[i]|\txt{, source}|[i]|\txt{, argument)}|
+        }
+      }|\label{line:guest_buffer_end}|
+\end{lstlisting}
+	\caption{\compiler generated guest library API stubs. \amp{Code can be syntactically compressed later}}
+	\label{fig:guest_code_stub_template}
+\end{figure}
+\end{comment}
+
+
+\begin{comment}
+
+\begin{figure}
+  \centering
+\begin{lstlisting}[language=C,escapechar=|,basicstyle=\footnotesize\ttfamily]
+|\txt{API function with arguments}|:
+  call_record = get_registered_call();|\label{line:get_call}|
+  |\txt{For each argument, apply place output argument(}|cmd->|\txt{argument, argument);}|
+  call_reply->ret = reply->ret;|\label{line:guest_set_ret}|
+  call_reply->completed = true;|\label{line:guest_set_completed}|
+
+|\txt{Place output argument}|(target, value) {
+  if (|\txt{value is opaque}|) {
+  } else if (|\txt{value is a buffer with size}| size) {
+    if (|\txt{buffer is output}|) {|\label{line:guest_buffer_reply_start}|
+      memcpy(call_record->|\txt{value}|,
+        get_buffer(reply->|\txt{value}|),
+        size);
+    }|\label{line:guest_buffer_reply_end}|
+  }
+}
+\end{lstlisting}
+	\caption{\compiler generated guest library code to handle replies from the \worker.}
+	\label{fig:guest_code_handler_template}
+\end{figure}
+
+\begin{figure}
+  \centering
+\begin{lstlisting}[language=C,escapechar=|,basicstyle=\footnotesize\ttfamily]
+|\txt{Handle command}|(cmd) {
+  switch (cmd->command_id) {
+  case |\txt{API function command ID}|:
+    |\txt{Argument processing as Figure~\ref{fig:guest_code_handler_template}} \ldots||\label{line:worker_unpack_arguments_end}||\label{line:worker_unpack_arguments_start}||\halfvspace|
+    ret = |\txt{API function}|(|\txt{Argument}|, |\txt{Buffer argument}|, |\ldots|);|\label{line:worker_call}||\halfvspace|
+    reply = |\txt{Create command for API function reply}|;|\label{line:worker_reply_start}|
+    reply->thread_id = cmd->thread_id;
+    if (|\txt{Buffer argument}| != NULL|\halfhspace|&&|\halfhspace||\txt{Buffer argument is output}|) {
+      reply->|\txt{Buffer argument}| = attach_buffer(
+        reply, |\txt{Buffer argument}|, |\txt{Buffer size}|); }
+    reply->ret = ret;|\label{line:worker_reply_end}|
+    send_command(replay);|\label{line:send_reply}|
+    break;
+  |\txt{Other API commands}| |\ldots| } }
+\end{lstlisting}
+	\caption{\compiler generated API server (C-like pseudo-code).}
+	\label{fig:worker_code_template}
+\end{figure}
+
+
+Figures~\ref{fig:guest_code_stub_template}--\ref{fig:worker_code_template} show the structure of the guest library and \worker code, resp., generated by \compiler.
+%The code generated for the example specification in Figure~\ref{fig:spec_example} can be found at\break \url{https://github.com/ava-virt/specification-example-output}\footnote{The referenced repository and the code in it are anonymized.}.
+The guest library contains a stub function for each API function as shown in Figure~\ref{fig:guest_code_stub_template}.
+The stubs take the same arguments as the original API function.
+Lines~\ref{line:guest_cmd_start}--\ref{line:guest_cmd_end} create a command (an internal structure used to transport requests and replies between the guest lib and \worker) and set the executing thread and arguments.
+Any buffer arguments have their data attached to the command as in lines~\ref{line:guest_buffer_start}--\ref{line:guest_buffer_end}.
+More complex data structures (e.g., buffers containing buffers) will produce nested handling code.
+Conditional annotations result in conditionals in the generated code.
+Lines~\ref{line:register_call_start} and \ref{line:register_call_end} register the call and argument with the \model runtime for use during reply handling.
+Line~\ref{line:send_call} sends the call command.
+Lines~\ref{line:wait_for_reply}--\ref{line:return_ret} wait for the reply and return the remote return value.
+
+
+The guest library also contains a command handling function for replies as shown in Figure~\ref{fig:guest_code_handler_template}.
+The handler contains a case for each reply command ID.
+Line~\ref{line:get_call} gets the registered call information.
+Lines~\ref{line:guest_buffer_reply_start}--\ref{line:guest_buffer_reply_end} copy data into local buffers for an output buffer value.
+Lines~\ref{line:guest_set_ret} and \ref{line:guest_set_completed} store the return value and notify the blocked stub that the call has returned.
+
+
+The \worker contains a command handling function for calls as shown in Figure~\ref{fig:worker_code_template}.
+Lines~\ref{line:worker_unpack_arguments_start}--\ref{line:worker_unpack_arguments_end} unpack the arguments in the command into local variables (and buffers, if needed).
+Line~\ref{line:worker_call} performs the actual API function call.
+Lines~\ref{line:worker_reply_start}--\ref{line:worker_reply_end} build the reply command including both output buffer data and the return value.
+Line~\ref{line:send_reply} sends the reply message to the guest.
+\end{comment}
+
+
+\endgroup
+% \vspace{-1.5em}
+
+\subsection{Limitations}
+%\cjr{[mis, over sub]}\amp{Huh?}\cjr{this is resolved.}
+
+% While \compiler targets frameworks with C exports~\cjr{ok?}, \model is implementable in most general programming languages.
+% Some of its features are not needed in all languages, for instance ???
+The only features \model requires are function calls and the ability to get the identity of an object (e.g., its address).
+% Implementing callback functions \emph{with} \texttt{userdata} (a tag) only requires function pointers or objects.
+% However, supporting callback functions \emph{without} \texttt{userdata} requires support for either closures (as provided by Python) or run-time code generation (as allowed in C).
+Supporting C++ and Python will require few changes to \model.
+We manually virtualized the Python TensorFlow and TensorFlow Lite APIs using \model's communication components (\S\ref{s:eval_effort}).
+% Some libraries use esoteric (and often non-portable) features of the language and architecture.
+% For instance, the AMD HIP framework performs binary introspection at load time to associate function pointers with GPU kernels.
+% The developer was able to duplicate the binary introspection code into the guest library and then transport the resulting GPU kernel information to the \worker.
+% \Compiler could provide explicit support for this pattern.
+
+% \cjr{our experience suggest guidelines for API design. Is this?}
+\begin{comment}
+Our experiences with \model suggest several principles for designing APIs with virtualization in mind:
+\begin{compactitem}
+\item Make inputs and outputs explicit. E.g., any call that reads or writes a buffer should receive it as a part of an argument.
+\item If an argument to a function can take multiple different types (e.g., a pointer to device \emph{or} host buffer), provide a way to query the expected type.
+\item Provide a way to explicitly provide any static data the API uses. E.g., if the API uses a compiler-generated table, provide a way to explicitly provide that table, so that the guest version of the table can be used in the \worker.
+% \item Provide ways to leave data on the device between calls, so as to avoid repeated copies.
+% \item Use asynchronous functions as much as possible.
+\end{compactitem}
+\end{comment}
+% APIs in unsupported language.
+% The foreign function interfaces (FFI)~\cite{foreign_function_interface} approach is recommended by official TensorFlow team~\cite{tensorflow_lang} and used by projects such as Swift TensorFlow~\cite{perfect_tensorflow}.

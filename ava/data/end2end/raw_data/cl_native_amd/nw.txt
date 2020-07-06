@@ -1,0 +1,290 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 661.549988
+MemAlloc: 1.173000
+HtoD: 5.963000
+HtoD_Phy: 5.769361
+Exec: 758.217041
+DtoH: 3.449000
+DtoH_Phy: 3.315194
+Close: 1.041000
+API: 1431.393066
+Total: 1431.396973
+real 1.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 666.403992
+MemAlloc: 1.033000
+HtoD: 5.810000
+HtoD_Phy: 5.620424
+Exec: 753.158997
+DtoH: 3.114000
+DtoH_Phy: 2.974165
+Close: 1.071000
+API: 1430.591064
+Total: 1430.593018
+real 1.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 654.203979
+MemAlloc: 1.015000
+HtoD: 5.163000
+HtoD_Phy: 4.977143
+Exec: 755.005981
+DtoH: 3.580000
+DtoH_Phy: 3.392837
+Close: 1.209000
+API: 1420.176880
+Total: 1420.178955
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 670.239014
+MemAlloc: 0.898000
+HtoD: 4.817000
+HtoD_Phy: 4.629397
+Exec: 754.731995
+DtoH: 3.145000
+DtoH_Phy: 2.974963
+Close: 1.053000
+API: 1434.884033
+Total: 1434.885010
+real 1.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 655.231995
+MemAlloc: 1.015000
+HtoD: 5.086000
+HtoD_Phy: 4.891298
+Exec: 757.015991
+DtoH: 3.592000
+DtoH_Phy: 3.462853
+Close: 1.138000
+API: 1423.078979
+Total: 1423.082031
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 626.937988
+MemAlloc: 1.030000
+HtoD: 5.598000
+HtoD_Phy: 5.399319
+Exec: 758.312012
+DtoH: 3.101000
+DtoH_Phy: 2.975587
+Close: 1.161000
+API: 1396.140015
+Total: 1396.141968
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 657.249023
+MemAlloc: 1.048000
+HtoD: 5.823000
+HtoD_Phy: 5.613460
+Exec: 757.625977
+DtoH: 3.561000
+DtoH_Phy: 3.370407
+Close: 1.195000
+API: 1426.501953
+Total: 1426.505981
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 661.622986
+MemAlloc: 1.033000
+HtoD: 5.490000
+HtoD_Phy: 5.309464
+Exec: 752.851013
+DtoH: 3.039000
+DtoH_Phy: 2.909030
+Close: 0.970000
+API: 1425.005981
+Total: 1425.008057
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 661.497986
+MemAlloc: 0.956000
+HtoD: 5.531000
+HtoD_Phy: 5.325084
+Exec: 755.321045
+DtoH: 3.442000
+DtoH_Phy: 3.307778
+Close: 1.121000
+API: 1427.869019
+Total: 1427.869995
+real 1.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 651.328003
+MemAlloc: 1.018000
+HtoD: 5.749000
+HtoD_Phy: 5.572152
+Exec: 753.700012
+DtoH: 3.138000
+DtoH_Phy: 2.979930
+Close: 0.995000
+API: 1415.927979
+Total: 1415.931030
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 649.306030
+MemAlloc: 1.034000
+HtoD: 5.803000
+HtoD_Phy: 5.591890
+Exec: 753.869019
+DtoH: 3.460000
+DtoH_Phy: 3.341140
+Close: 1.163000
+API: 1414.634888
+Total: 1414.636963
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 661.023010
+MemAlloc: 1.055000
+HtoD: 5.572000
+HtoD_Phy: 5.394145
+Exec: 753.115967
+DtoH: 3.448000
+DtoH_Phy: 3.296546
+Close: 1.190000
+API: 1425.403931
+Total: 1425.406982
+real 1.49 seconds
+++ echo
+
+++ echo
+

@@ -1,0 +1,17 @@
+QAT-Sync, 1.1GiB-MozillaCopiedOntoItself
+VM1-blksz, VM2-blksz, VM1-thrpt, VM2-thrpt
+4 KiB, 1 KiB, 479.364 Mbit/s, 121.740 Mbit/s
+4 KiB, 4 KiB, 483.364 Mbit/s, 486.853 Mbit/s
+4 KiB, 16 KiB, 485.307 Mbit/s, 1032.570 Mbit/s
+4 KiB, 64 KiB, 480.120 Mbit/s, 1840.251 Mbit/s
+4 KiB, 256 KiB, 463.504 Mbit/s, 2349.870 Mbit/s
+4 KiB, 512 KiB, 479.364 Mbit/s, 2412.493 Mbit/s
+
+QAT-Async, 1.1GiB-MozillaCopiedOntoItself
+VM1-blksz, VM2-blksz, VM1-thrpt, VM2-thrpt
+4 KiB, 1 KiB, 8066.564 Mbit/s, 2833.531 Mbit/s
+4 KiB, 4 KiB, 7489.245 Mbit/s, 7317.253 Mbit/s
+4 KiB, 16 KiB, 7530.089 Mbit/s, 15277.828 Mbit/s
+4 KiB, 64 KiB, 7190.537 Mbit/s, 17318.478 Mbit/s
+4 KiB, 256 KiB, 7071.783 Mbit/s, 17581.595 Mbit/s
+4 KiB, 512 KiB, 6870.103 Mbit/s, 17315.384 Mbit/s

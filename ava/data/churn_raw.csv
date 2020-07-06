@@ -1,0 +1,11 @@
+Spec,LOC,Commits,Churn
+opencl,1060,63,2868
+cuda,266,16,410
+fpga,30,2,40
+mvnc,479,13,1279
+qat,444,27,676
+tensorflow,501,11,887
+hip,624,21,990
+tf_py, 3245, 92, 5972
+tflite, 1295, 46, 2005
+opencl_manual,7514, 1119, 14318

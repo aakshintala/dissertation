@@ -1,0 +1,230 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004050 [0.34MB]	0.017043	0.000543 [0.17MB]	0.021636
+
+Init: 285.528015
+MemAlloc: 0.011000
+HtoD: 4.050240
+Exec: 17.043093
+DtoH: 0.543073
+Close: 0.008000
+Total: 401.520996
+real 0.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003716 [0.34MB]	0.017042	0.000501 [0.17MB]	0.021260
+
+Init: 274.204010
+MemAlloc: 0.013000
+HtoD: 3.716199
+Exec: 17.042454
+DtoH: 0.501350
+Close: 0.010000
+Total: 390.225006
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003868 [0.34MB]	0.017038	0.000509 [0.17MB]	0.021415
+
+Init: 285.259003
+MemAlloc: 0.013000
+HtoD: 3.868315
+Exec: 17.037813
+DtoH: 0.509022
+Close: 0.010000
+Total: 401.040985
+real 0.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003731 [0.34MB]	0.017033	0.000477 [0.17MB]	0.021241
+
+Init: 285.128998
+MemAlloc: 0.013000
+HtoD: 3.731133
+Exec: 17.033339
+DtoH: 0.476803
+Close: 0.010000
+Total: 400.842010
+real 0.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003936 [0.34MB]	0.017035	0.000524 [0.17MB]	0.021495
+
+Init: 276.059998
+MemAlloc: 0.013000
+HtoD: 3.935888
+Exec: 17.034777
+DtoH: 0.524173
+Close: 0.011000
+Total: 390.398010
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003491 [0.34MB]	0.017041	0.000500 [0.17MB]	0.021032
+
+Init: 274.971008
+MemAlloc: 0.009000
+HtoD: 3.490673
+Exec: 17.041330
+DtoH: 0.500357
+Close: 0.006000
+Total: 389.473999
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004015 [0.34MB]	0.017013	0.000585 [0.17MB]	0.021613
+
+Init: 281.191010
+MemAlloc: 0.015000
+HtoD: 4.015068
+Exec: 17.012535
+DtoH: 0.585437
+Close: 0.011000
+Total: 393.977997
+real 0.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003574 [0.34MB]	0.017026	0.000512 [0.17MB]	0.021113
+
+Init: 284.987000
+MemAlloc: 0.011000
+HtoD: 3.574350
+Exec: 17.026291
+DtoH: 0.511968
+Close: 0.007000
+Total: 399.877991
+real 0.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003495 [0.34MB]	0.017039	0.000487 [0.17MB]	0.021021
+
+Init: 284.988007
+MemAlloc: 0.011000
+HtoD: 3.494670
+Exec: 17.039099
+DtoH: 0.487382
+Close: 0.006000
+Total: 397.127014
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003955 [0.34MB]	0.017036	0.000531 [0.17MB]	0.021522
+
+Init: 286.850006
+MemAlloc: 0.013000
+HtoD: 3.954710
+Exec: 17.036211
+DtoH: 0.531324
+Close: 0.006000
+Total: 400.751007
+real 0.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003627 [0.34MB]	0.017054	0.000513 [0.17MB]	0.021195
+
+Init: 282.404999
+MemAlloc: 0.012000
+HtoD: 3.627308
+Exec: 17.054457
+DtoH: 0.513402
+Close: 0.010000
+Total: 397.113007
+real 0.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004047 [0.34MB]	0.017035	0.000553 [0.17MB]	0.021635
+
+Init: 273.493988
+MemAlloc: 0.014000
+HtoD: 4.046790
+Exec: 17.034767
+DtoH: 0.553037
+Close: 0.010000
+Total: 390.338989
+real 0.47 seconds
+++ echo
+
+++ echo
+

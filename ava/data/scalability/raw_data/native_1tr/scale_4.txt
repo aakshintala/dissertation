@@ -1,0 +1,1180 @@
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	5.542000 [33.56MB]	2729.927002	3.344000 [33.56MB]	2738.812988
+
+Init: 585.562012
+MemAlloc: 0.004000
+HtoD: 5.542000
+HtoD_Phy: 4.444672
+Exec: 2729.927002
+DtoH: 3.344000
+DtoH_Phy: 2.619520
+Close: 0.746000
+API: 3325.125244
+Total: 3333.916992
+3.35
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	12.716000 [33.56MB]	2752.612061	5.880000 [33.56MB]	2771.208008
+
+Init: 586.492004
+MemAlloc: 0.004000
+HtoD: 12.716000
+HtoD_Phy: 8.861568
+Exec: 2752.612061
+DtoH: 5.880000
+DtoH_Phy: 5.097952
+Close: 0.763000
+API: 3358.467041
+Total: 3368.118896
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	12.766000 [33.56MB]	2753.322021	5.779000 [33.56MB]	2771.867188
+
+Init: 586.658997
+MemAlloc: 0.003000
+HtoD: 12.766000
+HtoD_Phy: 8.816192
+Exec: 2753.322021
+DtoH: 5.779000
+DtoH_Phy: 5.100992
+Close: 1.019000
+API: 3359.548096
+Total: 3369.200928
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	12.557000 [33.56MB]	2754.881104	13.968000 [33.56MB]	2781.406006
+
+Init: 584.661011
+MemAlloc: 0.003000
+HtoD: 12.557000
+HtoD_Phy: 8.940415
+Exec: 2754.881104
+DtoH: 13.968000
+DtoH_Phy: 10.588961
+Close: 2.117000
+API: 3368.187012
+Total: 3378.087891
+3.40
+3.41
+3.45
+++ echo
+
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	5.445000 [33.56MB]	2726.424072	3.074000 [33.56MB]	2734.943115
+
+Init: 580.380005
+MemAlloc: 0.004000
+HtoD: 5.445000
+HtoD_Phy: 4.372320
+Exec: 2726.424072
+DtoH: 3.074000
+DtoH_Phy: 2.619424
+Close: 0.778000
+API: 3316.105225
+Total: 3324.544922
+3.34
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	12.004000 [33.56MB]	2757.341064	5.391000 [33.56MB]	2774.736084
+
+Init: 582.772034
+MemAlloc: 0.005000
+HtoD: 12.004000
+HtoD_Phy: 8.354848
+Exec: 2757.341064
+DtoH: 5.391000
+DtoH_Phy: 4.733408
+Close: 0.812000
+API: 3358.325195
+Total: 3368.050049
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	11.797000 [33.56MB]	2759.252930	5.735000 [33.56MB]	2776.785156
+
+Init: 586.135010
+MemAlloc: 0.004000
+HtoD: 11.797000
+HtoD_Phy: 7.771168
+Exec: 2759.252930
+DtoH: 5.735000
+DtoH_Phy: 5.036832
+Close: 0.728000
+API: 3363.652100
+Total: 3373.337891
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.572000 [33.56MB]	2759.816895	12.779000 [33.56MB]	2782.167969
+
+Init: 589.885986
+MemAlloc: 0.006000
+HtoD: 9.572000
+HtoD_Phy: 7.127488
+Exec: 2759.816895
+DtoH: 12.779000
+DtoH_Phy: 10.372896
+Close: 8.902000
+API: 3380.961914
+Total: 3390.582031
+3.39
+3.41
+3.43
+++ echo
+
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	10.061000 [33.56MB]	2764.092041	3.184000 [33.56MB]	2777.337158
+
+Init: 496.178009
+MemAlloc: 0.004000
+HtoD: 10.061000
+HtoD_Phy: 8.072672
+Exec: 2764.092041
+DtoH: 3.184000
+DtoH_Phy: 2.610816
+Close: 0.765000
+API: 3274.283936
+Total: 3284.496094
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	11.528000 [33.56MB]	2764.701904	4.035000 [33.56MB]	2780.264893
+
+Init: 497.828003
+MemAlloc: 0.004000
+HtoD: 11.528000
+HtoD_Phy: 7.364384
+Exec: 2764.701904
+DtoH: 4.035000
+DtoH_Phy: 3.268096
+Close: 0.761000
+API: 3278.857910
+Total: 3289.330078
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.949000 [33.56MB]	2761.764893	15.431000 [33.56MB]	2787.144775
+
+Init: 495.932983
+MemAlloc: 0.005000
+HtoD: 9.949000
+HtoD_Phy: 8.192127
+Exec: 2761.764893
+DtoH: 15.431000
+DtoH_Phy: 13.857023
+Close: 1.178000
+API: 3284.260742
+Total: 3294.024902
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	13.855000 [33.56MB]	2761.906982	14.528000 [33.56MB]	2790.290039
+
+Init: 500.924011
+MemAlloc: 0.006000
+HtoD: 13.855000
+HtoD_Phy: 7.324992
+Exec: 2761.906982
+DtoH: 14.528000
+DtoH_Phy: 12.203903
+Close: 2.820000
+API: 3294.040039
+Total: 3304.480957
+3.32
+3.35
+3.35
+3.38
+++ echo
+
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.162000 [33.56MB]	2767.523926	3.128000 [33.56MB]	2779.813965
+
+Init: 588.940002
+MemAlloc: 0.004000
+HtoD: 9.162000
+HtoD_Phy: 7.129568
+Exec: 2767.523926
+DtoH: 3.128000
+DtoH_Phy: 2.620416
+Close: 0.816000
+API: 3369.573730
+Total: 3379.141113
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.748000 [33.56MB]	2768.905029	5.692000 [33.56MB]	2784.344971
+
+Init: 591.693970
+MemAlloc: 0.003000
+HtoD: 9.748000
+HtoD_Phy: 7.276192
+Exec: 2768.905029
+DtoH: 5.692000
+DtoH_Phy: 3.842208
+Close: 0.922000
+API: 3376.964111
+Total: 3386.867920
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.555000 [33.56MB]	2771.166992	10.240000 [33.56MB]	2789.961914
+
+Init: 589.114990
+MemAlloc: 0.004000
+HtoD: 8.555000
+HtoD_Phy: 7.098112
+Exec: 2771.166992
+DtoH: 10.240000
+DtoH_Phy: 7.675648
+Close: 1.396000
+API: 3380.477051
+Total: 3389.974121
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.443000 [33.56MB]	2771.740967	8.382000 [33.56MB]	2789.566162
+
+Init: 588.156006
+MemAlloc: 0.004000
+HtoD: 9.443000
+HtoD_Phy: 7.484192
+Exec: 2771.740967
+DtoH: 8.382000
+DtoH_Phy: 7.384480
+Close: 1.534000
+API: 3379.260010
+Total: 3388.403076
+3.40
+3.45
+3.45
+3.47
+++ echo
+
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	6.832000 [33.56MB]	2560.982910	3.163000 [33.56MB]	2570.978027
+
+Init: 550.617981
+MemAlloc: 0.004000
+HtoD: 6.832000
+HtoD_Phy: 5.602112
+Exec: 2560.982910
+DtoH: 3.163000
+DtoH_Phy: 2.928448
+Close: 0.767000
+API: 3122.367188
+Total: 3132.917969
+3.15
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	6.836000 [33.56MB]	2674.094971	3.357000 [33.56MB]	2684.287842
+
+Init: 620.812012
+MemAlloc: 0.003000
+HtoD: 6.836000
+HtoD_Phy: 3.720928
+Exec: 2674.094971
+DtoH: 3.357000
+DtoH_Phy: 2.659200
+Close: 0.716000
+API: 3305.819092
+Total: 3314.072998
+3.33
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	7.899000 [33.56MB]	2678.810059	4.551000 [33.56MB]	2691.260010
+
+Init: 644.781982
+MemAlloc: 0.004000
+HtoD: 7.899000
+HtoD_Phy: 5.998464
+Exec: 2678.810059
+DtoH: 4.551000
+DtoH_Phy: 3.594176
+Close: 0.797000
+API: 3336.843262
+Total: 3345.360107
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	7.779000 [33.56MB]	2683.181885	3.981000 [33.56MB]	2694.941895
+
+Init: 645.552002
+MemAlloc: 0.003000
+HtoD: 7.779000
+HtoD_Phy: 5.625920
+Exec: 2683.181885
+DtoH: 3.981000
+DtoH_Phy: 3.629792
+Close: 0.768000
+API: 3341.264893
+Total: 3349.073975
+3.37
+3.40
+++ echo
+
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	10.760000 [33.56MB]	2769.329102	5.166000 [33.56MB]	2785.255127
+
+Init: 627.032959
+MemAlloc: 0.004000
+HtoD: 10.760000
+HtoD_Phy: 8.330912
+Exec: 2769.329102
+DtoH: 5.166000
+DtoH_Phy: 4.404480
+Close: 0.781000
+API: 3413.072998
+Total: 3422.305908
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	11.012000 [33.56MB]	2769.153076	6.891000 [33.56MB]	2787.056152
+
+Init: 626.824036
+MemAlloc: 0.004000
+HtoD: 11.012000
+HtoD_Phy: 8.121152
+Exec: 2769.153076
+DtoH: 6.891000
+DtoH_Phy: 4.732512
+Close: 0.802000
+API: 3414.686279
+Total: 3424.298096
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	11.186000 [33.56MB]	2768.413086	10.273000 [33.56MB]	2789.872070
+
+Init: 625.539001
+MemAlloc: 0.003000
+HtoD: 11.186000
+HtoD_Phy: 8.838272
+Exec: 2768.413086
+DtoH: 10.273000
+DtoH_Phy: 7.908000
+Close: 0.955000
+API: 3416.369141
+Total: 3426.256104
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	10.311000 [33.56MB]	2772.304932	9.435000 [33.56MB]	2792.051025
+
+Init: 627.658020
+MemAlloc: 0.004000
+HtoD: 10.311000
+HtoD_Phy: 8.194272
+Exec: 2772.304932
+DtoH: 9.435000
+DtoH_Phy: 8.553856
+Close: 0.838000
+API: 3420.550781
+Total: 3430.010986
+3.50
+3.49
+3.50
+3.52
+++ echo
+
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	5.631000 [33.56MB]	2693.690918	3.378000 [33.56MB]	2702.699951
+
+Init: 551.273987
+MemAlloc: 0.004000
+HtoD: 5.631000
+HtoD_Phy: 4.464160
+Exec: 2693.690918
+DtoH: 3.378000
+DtoH_Phy: 2.662528
+Close: 0.740000
+API: 3254.717773
+Total: 3264.653076
+3.29
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	7.242000 [33.56MB]	2706.136963	3.158000 [33.56MB]	2716.536865
+
+Init: 556.556030
+MemAlloc: 0.003000
+HtoD: 7.242000
+HtoD_Phy: 4.241824
+Exec: 2706.136963
+DtoH: 3.158000
+DtoH_Phy: 2.667264
+Close: 3.783000
+API: 3276.878906
+Total: 3286.676025
+3.31
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	6.950000 [33.56MB]	2711.314941	5.142000 [33.56MB]	2723.406982
+
+Init: 604.420044
+MemAlloc: 0.007000
+HtoD: 6.950000
+HtoD_Phy: 5.026528
+Exec: 2711.314941
+DtoH: 5.142000
+DtoH_Phy: 4.243712
+Close: 0.786000
+API: 3328.619873
+Total: 3342.849121
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.082000 [33.56MB]	2716.855957	4.929000 [33.56MB]	2729.866943
+
+Init: 603.679993
+MemAlloc: 0.004000
+HtoD: 8.082000
+HtoD_Phy: 5.185024
+Exec: 2716.855957
+DtoH: 4.929000
+DtoH_Phy: 4.523648
+Close: 0.756000
+API: 3334.307129
+Total: 3344.919922
+3.37
+3.39
+++ echo
+
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	6.280000 [33.56MB]	2759.882080	4.428000 [33.56MB]	2770.590088
+
+Init: 604.052979
+MemAlloc: 0.004000
+HtoD: 6.280000
+HtoD_Phy: 4.993792
+Exec: 2759.882080
+DtoH: 4.428000
+DtoH_Phy: 3.533120
+Close: 0.798000
+API: 3375.445312
+Total: 3384.861084
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	6.673000 [33.56MB]	2761.946045	3.397000 [33.56MB]	2772.016113
+
+Init: 605.691956
+MemAlloc: 0.004000
+HtoD: 6.673000
+HtoD_Phy: 5.381952
+Exec: 2761.946045
+DtoH: 3.397000
+DtoH_Phy: 2.655744
+Close: 0.751000
+API: 3378.462891
+Total: 3386.687988
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	6.952000 [33.56MB]	2761.141113	4.587000 [33.56MB]	2772.679932
+
+Init: 613.245972
+MemAlloc: 0.004000
+HtoD: 6.952000
+HtoD_Phy: 5.012512
+Exec: 2761.141113
+DtoH: 4.587000
+DtoH_Phy: 3.991520
+Close: 1.023000
+API: 3386.953125
+Total: 3396.780029
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.157000 [33.56MB]	2763.826904	13.913000 [33.56MB]	2786.896973
+
+Init: 607.752991
+MemAlloc: 0.004000
+HtoD: 9.157000
+HtoD_Phy: 6.105696
+Exec: 2763.826904
+DtoH: 13.913000
+DtoH_Phy: 10.431040
+Close: 4.886000
+API: 3399.540039
+Total: 3409.568115
+3.41
+3.42
+3.45
+3.47
+++ echo
+
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.600000 [33.56MB]	2747.043945	13.292000 [33.56MB]	2769.936035
+
+Init: 544.829956
+MemAlloc: 0.004000
+HtoD: 9.600000
+HtoD_Phy: 7.874432
+Exec: 2747.043945
+DtoH: 13.292000
+DtoH_Phy: 12.197760
+Close: 0.924000
+API: 3315.694092
+Total: 3326.031006
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	14.253000 [33.56MB]	2761.779053	3.332000 [33.56MB]	2779.364014
+
+Init: 548.562012
+MemAlloc: 0.005000
+HtoD: 14.253000
+HtoD_Phy: 10.080640
+Exec: 2761.779053
+DtoH: 3.332000
+DtoH_Phy: 2.696096
+Close: 0.828000
+API: 3328.759033
+Total: 3339.231934
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	14.298000 [33.56MB]	2764.683105	3.373000 [33.56MB]	2782.354248
+
+Init: 547.235046
+MemAlloc: 0.004000
+HtoD: 14.298000
+HtoD_Phy: 9.901793
+Exec: 2764.683105
+DtoH: 3.373000
+DtoH_Phy: 2.698336
+Close: 9.919000
+API: 3339.512207
+Total: 3349.990967
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	14.345000 [33.56MB]	2761.010986	17.357000 [33.56MB]	2792.712891
+
+Init: 545.938965
+MemAlloc: 0.004000
+HtoD: 14.345000
+HtoD_Phy: 10.451872
+Exec: 2761.010986
+DtoH: 17.357000
+DtoH_Phy: 13.819392
+Close: 1.468000
+API: 3340.123779
+Total: 3351.324951
+3.35
+3.37
+3.39
+3.41
+++ echo
+
+++ ./run
+++ ./run
+++ ./run
+++ ./run
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	5.870000 [33.56MB]	2723.846924	3.360000 [33.56MB]	2733.077148
+
+Init: 628.339050
+MemAlloc: 0.004000
+HtoD: 5.870000
+HtoD_Phy: 4.699616
+Exec: 2723.846924
+DtoH: 3.360000
+DtoH_Phy: 2.660352
+Close: 0.730000
+API: 3362.150146
+Total: 3371.214111
+3.39
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.087000 [33.56MB]	2753.002930	4.043000 [33.56MB]	2765.132812
+
+Init: 638.768982
+MemAlloc: 0.004000
+HtoD: 8.087000
+HtoD_Phy: 5.043840
+Exec: 2753.002930
+DtoH: 4.043000
+DtoH_Phy: 3.628992
+Close: 0.769000
+API: 3404.674805
+Total: 3414.393066
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.208000 [33.56MB]	2749.513916	6.802000 [33.56MB]	2765.523926
+
+Init: 641.748962
+MemAlloc: 0.004000
+HtoD: 9.208000
+HtoD_Phy: 5.644544
+Exec: 2749.513916
+DtoH: 6.802000
+DtoH_Phy: 5.731264
+Close: 0.804000
+API: 3408.080811
+Total: 3417.989990
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: NVIDIA Corporation
+no of devices: 1
+	device 0: NVIDIA Corporation GeForce GTX 1080
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	11.512000 [33.56MB]	2751.799072	4.805000 [33.56MB]	2768.115967
+
+Init: 641.387024
+MemAlloc: 0.003000
+HtoD: 11.512000
+HtoD_Phy: 5.828096
+Exec: 2751.799072
+DtoH: 4.805000
+DtoH_Phy: 4.160928
+Close: 0.746000
+API: 3410.252197
+Total: 3419.821045
+3.49
+3.49
+3.51
+++ echo
+

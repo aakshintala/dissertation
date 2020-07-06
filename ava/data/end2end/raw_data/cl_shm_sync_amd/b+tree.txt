@@ -1,0 +1,1023 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f122732a000
+assigned worker at 4056
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.831892
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 83.739998
+MemAlloc: 2.461000
+HtoD: 32.599998
+Exec: 730.184998
+DtoH: 1.562000
+Close: 6.086000
+Total: 1229.911011
+Command exited with non-zero status 255
+real 2.84 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f705ce3c000
+assigned worker at 4057
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.839253
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 86.856003
+MemAlloc: 2.143000
+HtoD: 36.374001
+Exec: 728.859985
+DtoH: 1.799000
+Close: 6.231000
+Total: 1225.466064
+./run: line 8: 22114 Segmentation fault      (core dumped) ./b+tree.out file ${DATA_DIR}/b+tree/mil.txt command ${DATA_DIR}/b+tree/command.txt $@
+Command exited with non-zero status 139
+real 3.11 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa45fdb7000
+assigned worker at 4058
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.837538
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 84.711998
+MemAlloc: 2.022000
+HtoD: 34.435001
+Exec: 729.015015
+DtoH: 1.484000
+Close: 5.289000
+Total: 1220.652954
+Command exited with non-zero status 255
+real 2.86 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f94803e6000
+assigned worker at 4059
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.836366
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 83.146004
+MemAlloc: 1.729000
+HtoD: 27.795000
+Exec: 728.002991
+DtoH: 1.362000
+Close: 5.834000
+Total: 1210.692993
+Command exited with non-zero status 255
+real 2.85 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8e4e2f5000
+assigned worker at 4060
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.840084
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 87.046997
+MemAlloc: 2.304000
+HtoD: 33.167999
+Exec: 729.057007
+DtoH: 1.728000
+Close: 6.241000
+Total: 1228.927979
+Command exited with non-zero status 255
+real 2.89 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f70ef999000
+assigned worker at 4061
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.833315
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 82.565002
+MemAlloc: 1.778000
+HtoD: 29.703999
+Exec: 728.502014
+DtoH: 1.309000
+Close: 5.241000
+Total: 1217.444946
+Command exited with non-zero status 255
+real 2.84 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f42ab065000
+assigned worker at 4062
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.837091
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 81.864998
+MemAlloc: 1.934000
+HtoD: 33.251999
+Exec: 728.861023
+DtoH: 1.493000
+Close: 5.470000
+Total: 1227.239014
+Command exited with non-zero status 255
+real 2.89 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f6d269eb000
+assigned worker at 4063
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.832746
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 85.775002
+MemAlloc: 3.280000
+HtoD: 33.884998
+Exec: 730.809021
+DtoH: 1.811000
+Close: 6.290000
+Total: 1219.222046
+Command exited with non-zero status 255
+real 2.82 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f7e247c2000
+assigned worker at 4064
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.831261
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 84.449997
+MemAlloc: 2.198000
+HtoD: 30.285999
+Exec: 729.830017
+DtoH: 1.658000
+Close: 5.979000
+Total: 1207.879028
+Command exited with non-zero status 255
+real 2.84 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f302f3d9000
+assigned worker at 4065
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.834400
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 84.596001
+MemAlloc: 2.098000
+HtoD: 31.913000
+Exec: 729.367004
+DtoH: 1.592000
+Close: 6.028000
+Total: 1227.001953
+Command exited with non-zero status 255
+real 2.85 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f3fe8fbb000
+assigned worker at 4066
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.833495
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 86.277000
+MemAlloc: 2.758000
+HtoD: 35.758999
+Exec: 729.293030
+DtoH: 1.816000
+Close: 6.585000
+Total: 1226.895020
+Command exited with non-zero status 255
+real 2.86 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fd58de28000
+assigned worker at 4067
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.860889
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 87.580002
+MemAlloc: 2.258000
+HtoD: 36.173000
+Exec: 729.293030
+DtoH: 1.602000
+Close: 5.690000
+Total: 1237.604004
+Command exited with non-zero status 255
+real 2.89 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb439674000
+assigned worker at 4068
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.832712
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 88.516998
+MemAlloc: 2.835000
+HtoD: 37.124001
+Exec: 730.289978
+DtoH: 1.921000
+Close: 6.806000
+Total: 1243.593994
+Command exited with non-zero status 255
+real 2.89 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f462eba7000
+assigned worker at 4069
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.835925
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 70.496002
+MemAlloc: 1.954000
+HtoD: 28.274000
+Exec: 728.226013
+DtoH: 1.380000
+Close: 4.997000
+Total: 1198.125000
+Command exited with non-zero status 255
+real 2.84 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8c5282e000
+assigned worker at 4070
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.831222
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 84.109001
+MemAlloc: 1.979000
+HtoD: 28.887001
+Exec: 729.543030
+DtoH: 1.354000
+Close: 5.063000
+Total: 1219.744019
+Command exited with non-zero status 255
+real 2.84 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f235352b000
+assigned worker at 4071
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.835333
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 84.290001
+MemAlloc: 1.919000
+HtoD: 29.267000
+Exec: 728.276978
+DtoH: 1.281000
+Close: 5.563000
+Total: 1216.139038
+Command exited with non-zero status 255
+real 2.84 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa5a2592000
+assigned worker at 4072
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.848518
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 84.064003
+MemAlloc: 2.842000
+HtoD: 35.493999
+Exec: 728.489014
+DtoH: 1.571000
+Close: 5.590000
+Total: 1215.196045
+Command exited with non-zero status 255
+real 2.87 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fc34c77c000
+assigned worker at 4073
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.832715
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 84.602997
+MemAlloc: 1.893000
+HtoD: 28.773001
+Exec: 729.132996
+DtoH: 1.220000
+Close: 5.214000
+Total: 1222.782959
+Command exited with non-zero status 255
+real 2.85 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8d86cc0000
+assigned worker at 4074
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.834978
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 84.154999
+MemAlloc: 2.194000
+HtoD: 31.720999
+Exec: 727.671997
+DtoH: 1.388000
+Close: 4.884000
+Total: 1224.126953
+Command exited with non-zero status 255
+real 2.84 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb3530d0000
+assigned worker at 4075
+WG size of kernel 1 = 256 WG size of kernel 2 = 256 
+Input File: /home/hyu/gpu-rodinia/data/b+tree/mil.txt 
+Command File: /home/hyu/gpu-rodinia/data/b+tree/command.txt 
+Command Buffer: 
+j 6000 3000
+k 10000
+
+
+
+Getting input from file file...
+Transforming data to a GPU suitable structure...
+Tree transformation took 0.831927
+Waiting for command
+> 
+******command: j count=6000, rSize=6000 
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 6000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > > > 
+ ******command: k count=10000 
+records_elem=1000000, records_unit_mem=4, records_mem=4000000
+knodes_elem=7874, knodes_unit_mem=2068, knodes_mem=16283432
+Platform: Advanced Micro Devices, Inc.
+Device num: 1
+Creating GPU Context
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+# of blocks = 10000, # of threads/block = 256 (ensure that device can handle)
+> > > > > > > > > > 
+Time spent in different stages of GPU_CUDA KERNEL:
+Init: 85.699997
+MemAlloc: 2.909000
+HtoD: 36.645000
+Exec: 731.132019
+DtoH: 1.873000
+Close: 7.222000
+Total: 1235.666992
+Command exited with non-zero status 255
+real 2.86 seconds
+++ echo
+
+++ echo
+

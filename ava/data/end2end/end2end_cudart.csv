@@ -1,0 +1,6 @@
+cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia,cudart_nvidia
+backprop,bfs,b+tree,dwt2d,gaussian,hotspot,lavaMD,lud,myocyte,nn,nw,particlefilter,pathfinder,srad_v1,srad_v2,streamcluster
+1.42592,1.04797048,1.218530073,2.421029281,2.444691764,1.204547477,1.170992177,1.596187943,7.084167919,1.008656036,1.422011085,1.034896849,1.112564103,1.855498721,1.231510255,3.295160937
+tf_py,tf_py,tf_py,tf_py,tf_py,tf_py,tf_py,tf_py,tf_py,,,,,,,
+mmul,kmeans,nn,linear_reg,rnd_forest,log_reg,dnn,rnn,resnet,,,,,,,
+1.396444151,1.84702917,1.595624024,3.168823492,1.511644892,2.869979126,1.633829729,5.891850602,1.95837517,,,,,,,

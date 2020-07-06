@@ -1,0 +1,562 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f6b9f305000
+assigned worker at 4306
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 649.171021
+MemAlloc: 2.158000
+HtoD: 11.677000
+HtoD_Phy: 5.162138
+Exec: 756.801025
+DtoH: 13.107000
+DtoH_Phy: 3.425218
+Close: 2.267000
+API: 1435.181152
+Total: 1435.182983
+Command exited with non-zero status 255
+real 1.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f3688b65000
+assigned worker at 4307
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 662.601013
+MemAlloc: 1.669000
+HtoD: 10.764000
+HtoD_Phy: 5.387831
+Exec: 757.204956
+DtoH: 13.170000
+DtoH_Phy: 3.167426
+Close: 2.062000
+API: 1447.471069
+Total: 1447.473022
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f2d6a37d000
+assigned worker at 4308
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 667.939026
+MemAlloc: 2.327000
+HtoD: 11.077000
+HtoD_Phy: 5.833166
+Exec: 759.089966
+DtoH: 13.094000
+DtoH_Phy: 3.439120
+Close: 1.822000
+API: 1455.349121
+Total: 1455.349976
+Command exited with non-zero status 255
+real 1.54 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f3f38795000
+assigned worker at 4309
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 661.583984
+MemAlloc: 1.919000
+HtoD: 11.464000
+HtoD_Phy: 5.703492
+Exec: 757.351013
+DtoH: 11.154000
+DtoH_Phy: 3.225345
+Close: 1.970000
+API: 1445.442017
+Total: 1445.442993
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f7d57a72000
+assigned worker at 4310
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 654.463989
+MemAlloc: 1.963000
+HtoD: 10.857000
+HtoD_Phy: 5.355709
+Exec: 760.187988
+DtoH: 12.981000
+DtoH_Phy: 3.538638
+Close: 2.046000
+API: 1442.498901
+Total: 1442.500977
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fe88d8b2000
+assigned worker at 4311
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 662.679993
+MemAlloc: 2.094000
+HtoD: 11.494000
+HtoD_Phy: 5.533965
+Exec: 756.734009
+DtoH: 13.764000
+DtoH_Phy: 3.475984
+Close: 2.021000
+API: 1448.786987
+Total: 1448.788940
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f68c86c2000
+assigned worker at 4312
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 638.080017
+MemAlloc: 2.386000
+HtoD: 12.997000
+HtoD_Phy: 5.633088
+Exec: 761.280029
+DtoH: 12.443000
+DtoH_Phy: 3.376102
+Close: 1.757000
+API: 1428.942993
+Total: 1428.944946
+Command exited with non-zero status 255
+real 1.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f1d83f17000
+assigned worker at 4313
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 663.385986
+MemAlloc: 1.977000
+HtoD: 10.695000
+HtoD_Phy: 5.176101
+Exec: 761.177002
+DtoH: 11.404000
+DtoH_Phy: 3.005569
+Close: 1.885000
+API: 1450.524048
+Total: 1450.526978
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f254197e000
+assigned worker at 4314
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 656.877014
+MemAlloc: 2.343000
+HtoD: 12.703000
+HtoD_Phy: 5.451106
+Exec: 761.497009
+DtoH: 12.640000
+DtoH_Phy: 3.444432
+Close: 2.853000
+API: 1448.913086
+Total: 1448.915039
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f93f96c5000
+assigned worker at 4315
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 650.025024
+MemAlloc: 2.147000
+HtoD: 11.199000
+HtoD_Phy: 5.427911
+Exec: 760.344971
+DtoH: 11.779000
+DtoH_Phy: 3.495567
+Close: 1.735000
+API: 1437.229980
+Total: 1437.229980
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fe8bb6c8000
+assigned worker at 4316
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 650.159973
+MemAlloc: 2.022000
+HtoD: 10.195000
+HtoD_Phy: 4.620934
+Exec: 757.059998
+DtoH: 12.188000
+DtoH_Phy: 3.383675
+Close: 2.062000
+API: 1433.687012
+Total: 1433.688965
+Command exited with non-zero status 255
+real 1.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5e607ce000
+assigned worker at 4317
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 655.310974
+MemAlloc: 2.482000
+HtoD: 11.941000
+HtoD_Phy: 5.292163
+Exec: 761.094971
+DtoH: 13.412000
+DtoH_Phy: 3.434530
+Close: 2.345000
+API: 1446.585815
+Total: 1446.588989
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f128cda6000
+assigned worker at 4318
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 652.931030
+MemAlloc: 2.433000
+HtoD: 12.877000
+HtoD_Phy: 5.786088
+Exec: 760.841003
+DtoH: 13.170000
+DtoH_Phy: 3.464011
+Close: 2.048000
+API: 1444.300049
+Total: 1444.302979
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fcba850c000
+assigned worker at 4319
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 644.786987
+MemAlloc: 1.636000
+HtoD: 10.066000
+HtoD_Phy: 5.351045
+Exec: 761.387024
+DtoH: 11.642000
+DtoH_Phy: 3.575779
+Close: 1.785000
+API: 1431.302979
+Total: 1431.305054
+Command exited with non-zero status 255
+real 1.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa751477000
+assigned worker at 4320
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 649.398987
+MemAlloc: 2.396000
+HtoD: 12.553000
+HtoD_Phy: 5.926594
+Exec: 757.119995
+DtoH: 11.496000
+DtoH_Phy: 3.199444
+Close: 1.817000
+API: 1434.781006
+Total: 1434.784058
+Command exited with non-zero status 255
+real 1.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7ff2b239d000
+assigned worker at 4321
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 663.848999
+MemAlloc: 2.281000
+HtoD: 10.806000
+HtoD_Phy: 4.891242
+Exec: 756.612976
+DtoH: 11.728000
+DtoH_Phy: 3.282897
+Close: 1.817000
+API: 1447.094116
+Total: 1447.094971
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fec875ee000
+assigned worker at 4322
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 664.031982
+MemAlloc: 2.312000
+HtoD: 11.148000
+HtoD_Phy: 5.397881
+Exec: 756.790039
+DtoH: 13.142000
+DtoH_Phy: 3.383694
+Close: 1.872000
+API: 1449.295898
+Total: 1449.297974
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fcb82a4b000
+assigned worker at 4323
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 657.562988
+MemAlloc: 2.150000
+HtoD: 11.679000
+HtoD_Phy: 6.108433
+Exec: 761.100952
+DtoH: 12.004000
+DtoH_Phy: 3.521857
+Close: 1.757000
+API: 1446.253906
+Total: 1446.255981
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f394f11c000
+assigned worker at 4324
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 659.106995
+MemAlloc: 1.881000
+HtoD: 10.879000
+HtoD_Phy: 5.842029
+Exec: 756.249023
+DtoH: 13.285000
+DtoH_Phy: 3.359409
+Close: 1.829000
+API: 1443.229980
+Total: 1443.232056
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fca4ceee000
+assigned worker at 4325
+WG size of kernel = 16 
+num_devices = 1
+device type=4
+<<<<
+
+>>>>
+worksize = 1024
+Processing upper-left matrix
+Processing lower-right matrix
+Computation Done
+Init: 656.653015
+MemAlloc: 2.156000
+HtoD: 10.933000
+HtoD_Phy: 5.179328
+Exec: 761.356018
+DtoH: 13.472000
+DtoH_Phy: 3.546744
+Close: 2.021000
+API: 1446.591064
+Total: 1446.592041
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ echo
+

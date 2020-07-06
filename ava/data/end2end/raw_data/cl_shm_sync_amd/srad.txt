@@ -1,0 +1,542 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f508fd7d000
+assigned worker at 4356
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 449.545990
+MemAlloc: 1.930000
+HtoD: 9.297000
+HtoD_Phy: 4.769298
+Exec: 1182.968994
+DtoH: 25.238998
+DtoH_Phy: 1.627319
+Close: 3.191000
+API: 1672.171997
+Total: 1672.177979
+Command exited with non-zero status 255
+real 1.76 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f578e42d000
+assigned worker at 4357
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 443.272003
+MemAlloc: 1.575000
+HtoD: 7.490000
+HtoD_Phy: 4.081647
+Exec: 1180.984009
+DtoH: 25.974998
+DtoH_Phy: 1.580014
+Close: 3.703000
+API: 1662.999023
+Total: 1663.004028
+Command exited with non-zero status 255
+real 1.75 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f4092350000
+assigned worker at 4358
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 440.618988
+MemAlloc: 1.802000
+HtoD: 9.560000
+HtoD_Phy: 4.627223
+Exec: 1184.310059
+DtoH: 29.203005
+DtoH_Phy: 1.691623
+Close: 3.323000
+API: 1668.817017
+Total: 1668.822021
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f168e379000
+assigned worker at 4359
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 455.369995
+MemAlloc: 2.190000
+HtoD: 9.015000
+HtoD_Phy: 4.584961
+Exec: 1184.432983
+DtoH: 30.521999
+DtoH_Phy: 1.772679
+Close: 3.086000
+API: 1684.616089
+Total: 1684.623047
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f2ef4133000
+assigned worker at 4360
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 456.217010
+MemAlloc: 2.044000
+HtoD: 9.427000
+HtoD_Phy: 4.668647
+Exec: 1184.642944
+DtoH: 29.313997
+DtoH_Phy: 1.723615
+Close: 3.341000
+API: 1684.985840
+Total: 1684.993042
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8cac74a000
+assigned worker at 4361
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 447.795990
+MemAlloc: 1.943000
+HtoD: 8.895000
+HtoD_Phy: 4.625765
+Exec: 1185.055054
+DtoH: 32.186001
+DtoH_Phy: 1.757714
+Close: 4.045000
+API: 1679.920044
+Total: 1679.927002
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fbf94c96000
+assigned worker at 4362
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 452.933990
+MemAlloc: 2.272000
+HtoD: 9.667000
+HtoD_Phy: 5.143442
+Exec: 1185.130005
+DtoH: 30.243000
+DtoH_Phy: 1.778120
+Close: 3.501000
+API: 1683.746948
+Total: 1683.753052
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f3ecfd54000
+assigned worker at 4363
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 458.253998
+MemAlloc: 2.017000
+HtoD: 8.914000
+HtoD_Phy: 4.329172
+Exec: 1184.968018
+DtoH: 31.081999
+DtoH_Phy: 1.735642
+Close: 4.028000
+API: 1689.263062
+Total: 1689.270996
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f40cd637000
+assigned worker at 4364
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 451.864990
+MemAlloc: 1.983000
+HtoD: 8.142000
+HtoD_Phy: 4.447309
+Exec: 1183.440918
+DtoH: 28.877996
+DtoH_Phy: 1.736801
+Close: 3.967000
+API: 1678.276001
+Total: 1678.281006
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb231f91000
+assigned worker at 4365
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 445.144989
+MemAlloc: 1.947000
+HtoD: 7.694000
+HtoD_Phy: 4.226417
+Exec: 1188.968018
+DtoH: 32.430000
+DtoH_Phy: 1.682455
+Close: 3.994000
+API: 1680.178101
+Total: 1680.183960
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f6f602fd000
+assigned worker at 4366
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 449.691010
+MemAlloc: 2.071000
+HtoD: 9.133000
+HtoD_Phy: 4.556633
+Exec: 1185.000977
+DtoH: 32.413006
+DtoH_Phy: 1.707437
+Close: 3.954000
+API: 1682.262939
+Total: 1682.267944
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f493b581000
+assigned worker at 4367
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 447.811005
+MemAlloc: 1.991000
+HtoD: 8.934000
+HtoD_Phy: 4.965328
+Exec: 1186.424927
+DtoH: 31.587006
+DtoH_Phy: 2.494535
+Close: 3.612000
+API: 1680.359985
+Total: 1680.368042
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8331297000
+assigned worker at 4368
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 446.790009
+MemAlloc: 2.341000
+HtoD: 9.923000
+HtoD_Phy: 4.986019
+Exec: 1187.375000
+DtoH: 37.996002
+DtoH_Phy: 2.003630
+Close: 4.449000
+API: 1688.873901
+Total: 1688.879028
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8e2c843000
+assigned worker at 4369
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 456.188995
+MemAlloc: 2.086000
+HtoD: 9.499000
+HtoD_Phy: 5.142156
+Exec: 1185.375000
+DtoH: 29.377001
+DtoH_Phy: 2.013051
+Close: 3.808000
+API: 1686.333862
+Total: 1686.339966
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f7154a5a000
+assigned worker at 4370
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 448.895996
+MemAlloc: 1.828000
+HtoD: 8.478000
+HtoD_Phy: 4.907954
+Exec: 1186.958008
+DtoH: 33.818001
+DtoH_Phy: 1.925149
+Close: 4.436000
+API: 1684.414062
+Total: 1684.418945
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fd0e3106000
+assigned worker at 4371
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 455.412994
+MemAlloc: 2.053000
+HtoD: 8.938000
+HtoD_Phy: 4.686921
+Exec: 1186.665039
+DtoH: 33.745998
+DtoH_Phy: 1.737511
+Close: 3.979000
+API: 1690.794067
+Total: 1690.797974
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f27557cb000
+assigned worker at 4372
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 456.682007
+MemAlloc: 2.389000
+HtoD: 10.670000
+HtoD_Phy: 5.711569
+Exec: 1187.882080
+DtoH: 35.872997
+DtoH_Phy: 1.998012
+Close: 4.359000
+API: 1697.855103
+Total: 1697.859985
+Command exited with non-zero status 255
+real 1.79 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f59d793d000
+assigned worker at 4373
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 449.229004
+MemAlloc: 2.397000
+HtoD: 9.133000
+HtoD_Phy: 5.027883
+Exec: 1184.993042
+DtoH: 25.983999
+DtoH_Phy: 1.675750
+Close: 3.372000
+API: 1675.108032
+Total: 1675.113037
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f31857b9000
+assigned worker at 4374
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 455.015991
+MemAlloc: 2.705000
+HtoD: 9.273000
+HtoD_Phy: 4.992144
+Exec: 1184.932007
+DtoH: 29.129000
+DtoH_Phy: 1.702705
+Close: 3.846000
+API: 1684.901001
+Total: 1684.907959
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fc1dab9c000
+assigned worker at 4375
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 456.204010
+MemAlloc: 1.929000
+HtoD: 8.982000
+HtoD_Phy: 4.798578
+Exec: 1185.231934
+DtoH: 29.694002
+DtoH_Phy: 1.603613
+Close: 3.905000
+API: 1685.945923
+Total: 1685.951050
+Command exited with non-zero status 255
+real 1.77 seconds
+++ echo
+
+++ echo
+

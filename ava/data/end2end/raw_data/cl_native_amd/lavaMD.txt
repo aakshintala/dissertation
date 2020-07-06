@@ -1,0 +1,230 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 394.907013
+MemAlloc: 1.910000
+HtoD: 9.523000
+HtoD_Phy: 9.156796
+Exec: 10229.779297
+DtoH: 2.639000
+DtoH_Phy: 2.353539
+Close: 0.938000
+API: 10639.696289
+Total: 10639.990234
+real 10.77 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 396.587006
+MemAlloc: 1.884000
+HtoD: 9.651000
+HtoD_Phy: 9.299864
+Exec: 10317.260742
+DtoH: 3.341000
+DtoH_Phy: 3.036865
+Close: 1.468000
+API: 10730.191406
+Total: 10730.355469
+real 10.85 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 388.734985
+MemAlloc: 1.822000
+HtoD: 9.104000
+HtoD_Phy: 8.812701
+Exec: 10330.275391
+DtoH: 3.198000
+DtoH_Phy: 2.872919
+Close: 1.384000
+API: 10734.518555
+Total: 10734.695312
+real 10.86 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 398.096008
+MemAlloc: 2.074000
+HtoD: 9.251000
+HtoD_Phy: 8.876806
+Exec: 10350.427734
+DtoH: 3.027000
+DtoH_Phy: 2.720393
+Close: 1.418000
+API: 10764.293945
+Total: 10764.421875
+real 10.90 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 390.773987
+MemAlloc: 1.747000
+HtoD: 9.125000
+HtoD_Phy: 8.861121
+Exec: 10308.021484
+DtoH: 2.660000
+DtoH_Phy: 2.416865
+Close: 1.163000
+API: 10713.491211
+Total: 10713.669922
+real 10.85 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 386.572998
+MemAlloc: 1.851000
+HtoD: 9.294000
+HtoD_Phy: 8.963293
+Exec: 10306.762695
+DtoH: 3.071000
+DtoH_Phy: 2.745438
+Close: 1.337000
+API: 10708.888672
+Total: 10709.003906
+real 10.83 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 390.640991
+MemAlloc: 1.879000
+HtoD: 9.548000
+HtoD_Phy: 9.229517
+Exec: 10249.101562
+DtoH: 3.127000
+DtoH_Phy: 2.799219
+Close: 1.420000
+API: 10655.716797
+Total: 10655.940430
+real 10.78 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 392.889008
+MemAlloc: 1.562000
+HtoD: 9.979000
+HtoD_Phy: 9.417981
+Exec: 10229.376953
+DtoH: 3.207000
+DtoH_Phy: 2.880160
+Close: 1.360000
+API: 10638.374023
+Total: 10638.625000
+real 10.76 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 394.325012
+MemAlloc: 1.909000
+HtoD: 9.016000
+HtoD_Phy: 8.714750
+Exec: 10327.570312
+DtoH: 3.040000
+DtoH_Phy: 2.736988
+Close: 1.356000
+API: 10737.216797
+Total: 10737.333984
+real 10.86 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 402.670013
+MemAlloc: 2.067000
+HtoD: 9.697000
+HtoD_Phy: 9.348024
+Exec: 10405.007812
+DtoH: 2.802000
+DtoH_Phy: 2.514757
+Close: 1.204000
+API: 10823.447266
+Total: 10823.626953
+real 10.96 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 387.657013
+MemAlloc: 1.908000
+HtoD: 9.440000
+HtoD_Phy: 9.054398
+Exec: 10240.921875
+DtoH: 3.166000
+DtoH_Phy: 2.831460
+Close: 1.347000
+API: 10644.439453
+Total: 10644.550781
+real 10.76 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 383.558014
+MemAlloc: 1.844000
+HtoD: 8.980000
+HtoD_Phy: 8.668987
+Exec: 10301.559570
+DtoH: 3.168000
+DtoH_Phy: 2.857975
+Close: 1.313000
+API: 10700.422852
+Total: 10700.552734
+real 10.83 seconds
+++ echo
+
+++ echo
+

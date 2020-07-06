@@ -1,0 +1,278 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 458.970001
+MemAlloc: 0.604000
+HtoD: 5.236000
+HtoD_Phy: 5.000815
+Exec: 1176.334961
+DtoH: 2.452000
+DtoH_Phy: 1.148032
+Close: 1.217000
+API: 1644.814087
+Total: 1644.818970
+real 1.74 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 448.428009
+MemAlloc: 0.561000
+HtoD: 4.830000
+HtoD_Phy: 4.593650
+Exec: 1176.449951
+DtoH: 2.311000
+DtoH_Phy: 1.066436
+Close: 1.016000
+API: 1633.595947
+Total: 1633.603027
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 446.675995
+MemAlloc: 0.596000
+HtoD: 5.166000
+HtoD_Phy: 4.915071
+Exec: 1176.715942
+DtoH: 2.698000
+DtoH_Phy: 1.169484
+Close: 1.496000
+API: 1633.347900
+Total: 1633.353027
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 453.433990
+MemAlloc: 0.547000
+HtoD: 4.890000
+HtoD_Phy: 4.657150
+Exec: 1176.330933
+DtoH: 2.472000
+DtoH_Phy: 1.124284
+Close: 1.290000
+API: 1638.963989
+Total: 1638.969971
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 444.273010
+MemAlloc: 0.580000
+HtoD: 4.708000
+HtoD_Phy: 4.473145
+Exec: 1176.441040
+DtoH: 2.349000
+DtoH_Phy: 1.064462
+Close: 1.235000
+API: 1629.586060
+Total: 1629.593018
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 465.513000
+MemAlloc: 0.585000
+HtoD: 5.098000
+HtoD_Phy: 4.842952
+Exec: 1176.842041
+DtoH: 2.397000
+DtoH_Phy: 1.126139
+Close: 1.318000
+API: 1651.753052
+Total: 1651.758057
+real 1.74 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 449.183014
+MemAlloc: 0.566000
+HtoD: 5.229000
+HtoD_Phy: 4.982809
+Exec: 1177.400024
+DtoH: 2.583000
+DtoH_Phy: 1.081368
+Close: 0.998000
+API: 1635.959106
+Total: 1635.963013
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 455.602997
+MemAlloc: 0.541000
+HtoD: 4.772000
+HtoD_Phy: 4.541314
+Exec: 1177.712036
+DtoH: 2.430000
+DtoH_Phy: 1.084780
+Close: 1.368000
+API: 1642.426147
+Total: 1642.430054
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 450.234009
+MemAlloc: 0.572000
+HtoD: 5.133000
+HtoD_Phy: 4.855078
+Exec: 1176.915894
+DtoH: 2.292000
+DtoH_Phy: 1.066586
+Close: 0.993000
+API: 1636.139893
+Total: 1636.144043
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 449.638000
+MemAlloc: 0.597000
+HtoD: 5.430000
+HtoD_Phy: 5.145929
+Exec: 1177.635986
+DtoH: 2.416000
+DtoH_Phy: 1.039582
+Close: 1.059000
+API: 1636.776001
+Total: 1636.780029
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 454.704010
+MemAlloc: 0.569000
+HtoD: 4.947000
+HtoD_Phy: 4.680568
+Exec: 1177.796021
+DtoH: 2.439000
+DtoH_Phy: 1.142169
+Close: 1.070000
+API: 1641.524902
+Total: 1641.530029
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 256 
+The file was not opened for reading
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+-----OpenCL Compiler Output-----
+--------------------------------
+max # of workgroups = 899, # of threads/workgroup = 256 (ensure that device can handle)
+Iterations Progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 
+Time spent in different stages of the application:
+Init: 456.753998
+MemAlloc: 0.611000
+HtoD: 5.190000
+HtoD_Phy: 4.924822
+Exec: 1177.688965
+DtoH: 2.552000
+DtoH_Phy: 1.189013
+Close: 1.302000
+API: 1644.097900
+Total: 1644.103027
+real 1.74 seconds
+++ echo
+
+++ echo
+

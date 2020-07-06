@@ -1,0 +1,17 @@
+
+\begin{figure}
+\begin{lstlisting}[language=C,columns=flexible,mathescape,belowskip=0em,aboveskip=0em,basicstyle={\scriptsize\ttfamily}]
+void handle_command(cmd) {
+  switch (cmd->command_id) {
+  case RET_CU_STREAM_SYNCHRONIZE: {
+    cu_stream_synchronize_ret *ret = cmd;
+    cu_stream_synchronize_call_record *record = 
+       get_call(ret->call_id);
+    record->ret = ret->ret; record->call_complete = 1;
+    break; } $\ldots$ } }
+\end{lstlisting}
+\caption{An outline of the generated reply handler in guestlib for \spec|cuStreamSynchronize|.
+\spec|cuMemcpyHtoDAsync|'s is similar.}
+\label{fig:generated-code-outline-guest-handle}
+\vspace*{-1em}
+\end{figure}

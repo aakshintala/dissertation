@@ -1,0 +1,230 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 990.841003
+MemAlloc: 0.741000
+HtoD: 5.532000
+HtoD_Phy: 5.334898
+Exec: 21421.779297
+DtoH: 3.902000
+DtoH_Phy: 3.487313
+Close: 1.109000
+API: 22423.904297
+Total: 22423.904297
+real 22.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 999.992981
+MemAlloc: 0.743000
+HtoD: 6.423000
+HtoD_Phy: 6.238251
+Exec: 21398.095703
+DtoH: 3.683000
+DtoH_Phy: 3.287243
+Close: 1.095000
+API: 22410.033203
+Total: 22410.033203
+real 22.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 987.273987
+MemAlloc: 0.749000
+HtoD: 6.434000
+HtoD_Phy: 6.212302
+Exec: 21384.687500
+DtoH: 3.799000
+DtoH_Phy: 3.407622
+Close: 1.119000
+API: 22384.062500
+Total: 22384.064453
+real 22.46 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 995.041992
+MemAlloc: 0.742000
+HtoD: 6.227000
+HtoD_Phy: 6.028946
+Exec: 21360.667969
+DtoH: 4.430000
+DtoH_Phy: 4.027116
+Close: 1.060000
+API: 22368.169922
+Total: 22368.169922
+real 22.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 1008.476013
+MemAlloc: 0.764000
+HtoD: 6.788000
+HtoD_Phy: 6.605110
+Exec: 21383.697266
+DtoH: 3.918000
+DtoH_Phy: 3.508851
+Close: 1.059000
+API: 22404.701172
+Total: 22404.703125
+real 22.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 987.672974
+MemAlloc: 0.762000
+HtoD: 6.336000
+HtoD_Phy: 6.153247
+Exec: 21371.212891
+DtoH: 3.811000
+DtoH_Phy: 3.418399
+Close: 1.163000
+API: 22370.957031
+Total: 22370.958984
+real 22.46 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 983.164001
+MemAlloc: 0.772000
+HtoD: 5.947000
+HtoD_Phy: 5.774175
+Exec: 21382.710938
+DtoH: 3.723000
+DtoH_Phy: 3.343717
+Close: 1.111000
+API: 22377.427734
+Total: 22377.431641
+real 22.46 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 1007.317017
+MemAlloc: 0.744000
+HtoD: 6.124000
+HtoD_Phy: 5.922452
+Exec: 21384.203125
+DtoH: 3.944000
+DtoH_Phy: 3.537642
+Close: 1.148000
+API: 22403.480469
+Total: 22403.482422
+real 22.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 982.994995
+MemAlloc: 0.844000
+HtoD: 6.308000
+HtoD_Phy: 6.120021
+Exec: 21365.402344
+DtoH: 3.767000
+DtoH_Phy: 3.347208
+Close: 1.077000
+API: 22360.392578
+Total: 22360.396484
+real 22.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 982.208008
+MemAlloc: 0.755000
+HtoD: 6.384000
+HtoD_Phy: 6.140449
+Exec: 21359.386719
+DtoH: 3.946000
+DtoH_Phy: 3.560779
+Close: 1.173000
+API: 22353.853516
+Total: 22353.853516
+real 22.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 1004.562012
+MemAlloc: 0.785000
+HtoD: 6.233000
+HtoD_Phy: 6.048060
+Exec: 21376.048828
+DtoH: 3.885000
+DtoH_Phy: 3.497800
+Close: 1.111000
+API: 22392.625000
+Total: 22392.626953
+real 22.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 996.193970
+MemAlloc: 0.748000
+HtoD: 6.535000
+HtoD_Phy: 6.311090
+Exec: 21392.009766
+DtoH: 3.940000
+DtoH_Phy: 3.467503
+Close: 1.057000
+API: 22400.482422
+Total: 22400.482422
+real 22.47 seconds
+++ echo
+
+++ echo
+

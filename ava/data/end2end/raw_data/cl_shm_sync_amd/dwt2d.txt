@@ -1,0 +1,1102 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f4b005e8000
+assigned worker at 4081
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 904.192993
+MemAlloc: 44.145000
+HtoD: 0.000000
+Exec: 430.516998
+DtoH: 17.280001
+Close: 3.573000
+Total: 1431.625977
+Command exited with non-zero status 255
+real 1.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fdcb9228000
+assigned worker at 4082
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 896.760010
+MemAlloc: 42.132000
+HtoD: 0.000000
+Exec: 426.431000
+DtoH: 17.373001
+Close: 3.875000
+Total: 1416.891968
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f081d24e000
+assigned worker at 4083
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 889.140015
+MemAlloc: 44.360001
+HtoD: 0.000000
+Exec: 430.843018
+DtoH: 18.777000
+Close: 4.220000
+Total: 1420.936035
+Command exited with non-zero status 255
+real 1.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fd799641000
+assigned worker at 4084
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 897.689026
+MemAlloc: 43.545998
+HtoD: 0.000000
+Exec: 425.868011
+DtoH: 17.792000
+Close: 4.150000
+Total: 1420.302979
+Command exited with non-zero status 255
+real 1.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb1bf0d7000
+assigned worker at 4085
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 894.721985
+MemAlloc: 42.321999
+HtoD: 0.000000
+Exec: 427.981995
+DtoH: 16.837000
+Close: 3.269000
+Total: 1415.629028
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f92b5c25000
+assigned worker at 4086
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 900.692017
+MemAlloc: 44.033001
+HtoD: 0.000000
+Exec: 425.421967
+DtoH: 17.977001
+Close: 3.428000
+Total: 1422.129028
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0561c33000
+assigned worker at 4087
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 899.585022
+MemAlloc: 41.125999
+HtoD: 0.000000
+Exec: 428.296021
+DtoH: 18.375000
+Close: 5.552000
+Total: 1424.675049
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f10d078a000
+assigned worker at 4088
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 890.005981
+MemAlloc: 43.273003
+HtoD: 0.000000
+Exec: 428.717987
+DtoH: 18.631001
+Close: 3.879000
+Total: 1416.390015
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f88c0010000
+assigned worker at 4089
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 911.716003
+MemAlloc: 45.332001
+HtoD: 0.000000
+Exec: 433.265991
+DtoH: 17.633999
+Close: 5.053000
+Total: 1445.265991
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fad268a4000
+assigned worker at 4090
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 902.955017
+MemAlloc: 44.166000
+HtoD: 0.000000
+Exec: 429.365967
+DtoH: 17.007999
+Close: 2.910000
+Total: 1429.545044
+Command exited with non-zero status 255
+real 1.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f818af3a000
+assigned worker at 4091
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 898.052002
+MemAlloc: 46.068001
+HtoD: 0.000000
+Exec: 429.047028
+DtoH: 18.042000
+Close: 4.067000
+Total: 1426.987061
+Command exited with non-zero status 255
+real 1.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8c6dcc4000
+assigned worker at 4092
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 906.372986
+MemAlloc: 43.762001
+HtoD: 0.000000
+Exec: 427.799957
+DtoH: 17.342001
+Close: 4.374000
+Total: 1431.774048
+Command exited with non-zero status 255
+real 1.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f1782f88000
+assigned worker at 4093
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 906.434021
+MemAlloc: 41.332001
+HtoD: 0.000000
+Exec: 422.341003
+DtoH: 16.851000
+Close: 2.702000
+Total: 1420.469971
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f1672ddc000
+assigned worker at 4094
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 902.632019
+MemAlloc: 40.196999
+HtoD: 0.000000
+Exec: 427.082977
+DtoH: 17.605000
+Close: 3.866000
+Total: 1424.307983
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8e9e8e5000
+assigned worker at 4095
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 882.807007
+MemAlloc: 42.677002
+HtoD: 0.000000
+Exec: 426.702026
+DtoH: 17.934999
+Close: 4.101000
+Total: 1406.887939
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fd6265ed000
+assigned worker at 4096
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 895.112000
+MemAlloc: 44.900997
+HtoD: 0.000000
+Exec: 432.769989
+DtoH: 17.447001
+Close: 4.302000
+Total: 1425.920044
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f7d6a3ab000
+assigned worker at 4097
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 895.455994
+MemAlloc: 43.851997
+HtoD: 0.000000
+Exec: 427.048981
+DtoH: 17.626999
+Close: 4.063000
+Total: 1420.019043
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fbd0bc09000
+assigned worker at 4098
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 895.263977
+MemAlloc: 43.347000
+HtoD: 0.000000
+Exec: 429.615997
+DtoH: 17.208000
+Close: 2.583000
+Total: 1419.141968
+Command exited with non-zero status 255
+real 1.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5fd11e4000
+assigned worker at 4099
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 899.960022
+MemAlloc: 43.537998
+HtoD: 0.000000
+Exec: 430.317993
+DtoH: 17.727001
+Close: 3.308000
+Total: 1426.859009
+Command exited with non-zero status 255
+real 1.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f84dcd25000
+assigned worker at 4100
+
+Source file:		/home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+ Dimensions:		1024x1024
+ Components count:	3
+ Bit depth:		8
+ DWT levels:		3
+ Forward transform:	1
+ 9/7 transform:		0
+Loading ipnput: /home/hyu/gpu-rodinia/data/dwt2d/rgb.bmp
+precteno 3145728, inputsize 3145728
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+*** 3 stages of 2D forward DWT:
+sliding steps = 9 , gx = 6 , gy = 15 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 5 , gx = 4 , gy = 13 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+sliding steps = 3 , gx = 4 , gy = 11 
+kl_fdwt53Kernel in launchFDW53Kernel has finished
+
+Writing to rgb.bmp.dwt.r (1024 x 1024)
+
+Writing to rgb.bmp.dwt.g (1024 x 1024)
+
+Writing to rgb.bmp.dwt.b (1024 x 1024)
+Init: 906.570007
+MemAlloc: 46.423000
+HtoD: 0.000000
+Exec: 428.105957
+DtoH: 16.997000
+Close: 4.098000
+Total: 1432.883057
+Command exited with non-zero status 255
+real 1.51 seconds
+++ echo
+
+++ echo
+

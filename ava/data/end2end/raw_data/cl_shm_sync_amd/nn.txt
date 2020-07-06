@@ -1,0 +1,462 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f1a0e347000
+assigned worker at 4281
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004029 [0.34MB]	0.017056	0.000656 [0.17MB]	0.021740
+
+Init: 285.316986
+MemAlloc: 0.286000
+HtoD: 4.028713
+Exec: 17.055588
+DtoH: 0.655846
+Close: 0.255000
+Total: 376.878998
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb60e5a7000
+assigned worker at 4282
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004104 [0.34MB]	0.017048	0.000798 [0.17MB]	0.021950
+
+Init: 290.286011
+MemAlloc: 0.286000
+HtoD: 4.104217
+Exec: 17.047592
+DtoH: 0.798145
+Close: 0.297000
+Total: 383.549988
+Command exited with non-zero status 255
+real 0.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5458d18000
+assigned worker at 4283
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003716 [0.34MB]	0.017052	0.000514 [0.17MB]	0.021283
+
+Init: 288.376007
+MemAlloc: 0.285000
+HtoD: 3.715944
+Exec: 17.052378
+DtoH: 0.514218
+Close: 0.275000
+Total: 380.128998
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7facab3a6000
+assigned worker at 4284
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003951 [0.34MB]	0.017041	0.000772 [0.17MB]	0.021764
+
+Init: 284.931000
+MemAlloc: 0.320000
+HtoD: 3.951377
+Exec: 17.041014
+DtoH: 0.771754
+Close: 0.273000
+Total: 375.800995
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5868c4f000
+assigned worker at 4285
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003667 [0.34MB]	0.017038	0.000519 [0.17MB]	0.021224
+
+Init: 286.152008
+MemAlloc: 0.252000
+HtoD: 3.666671
+Exec: 17.038145
+DtoH: 0.519307
+Close: 0.243000
+Total: 377.394989
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fcf5fa99000
+assigned worker at 4286
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003890 [0.34MB]	0.017066	0.000767 [0.17MB]	0.021723
+
+Init: 296.971008
+MemAlloc: 0.455000
+HtoD: 3.890118
+Exec: 17.065664
+DtoH: 0.767258
+Close: 0.271000
+Total: 388.187988
+Command exited with non-zero status 255
+real 0.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7ff24b9c6000
+assigned worker at 4287
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003828 [0.34MB]	0.017037	0.000702 [0.17MB]	0.021568
+
+Init: 288.691010
+MemAlloc: 0.342000
+HtoD: 3.828202
+Exec: 17.037333
+DtoH: 0.702032
+Close: 0.282000
+Total: 379.294006
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f35c4dd5000
+assigned worker at 4288
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003719 [0.34MB]	0.017036	0.000633 [0.17MB]	0.021388
+
+Init: 284.776001
+MemAlloc: 0.266000
+HtoD: 3.719138
+Exec: 17.036377
+DtoH: 0.632697
+Close: 0.239000
+Total: 376.480988
+Command exited with non-zero status 255
+real 0.46 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fae2daf4000
+assigned worker at 4289
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003955 [0.34MB]	0.017049	0.000755 [0.17MB]	0.021759
+
+Init: 288.244995
+MemAlloc: 0.289000
+HtoD: 3.954902
+Exec: 17.048866
+DtoH: 0.755377
+Close: 0.224000
+Total: 378.416992
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa93e68b000
+assigned worker at 4290
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004145 [0.34MB]	0.017035	0.000631 [0.17MB]	0.021811
+
+Init: 283.860992
+MemAlloc: 0.856000
+HtoD: 4.144705
+Exec: 17.034941
+DtoH: 0.630877
+Close: 0.247000
+Total: 378.627014
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f3e77415000
+assigned worker at 4291
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004074 [0.34MB]	0.017040	0.000769 [0.17MB]	0.021883
+
+Init: 286.545990
+MemAlloc: 0.291000
+HtoD: 4.074297
+Exec: 17.040064
+DtoH: 0.769098
+Close: 0.269000
+Total: 379.497009
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f88da451000
+assigned worker at 4292
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004042 [0.34MB]	0.017049	0.000555 [0.17MB]	0.021646
+
+Init: 289.580994
+MemAlloc: 0.277000
+HtoD: 4.041692
+Exec: 17.048702
+DtoH: 0.555286
+Close: 0.244000
+Total: 378.921997
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f159e94e000
+assigned worker at 4293
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004222 [0.34MB]	0.017055	0.000811 [0.17MB]	0.022088
+
+Init: 286.376007
+MemAlloc: 0.384000
+HtoD: 4.222192
+Exec: 17.055422
+DtoH: 0.810864
+Close: 0.252000
+Total: 377.045013
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fcf8821a000
+assigned worker at 4294
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003779 [0.34MB]	0.017049	0.000632 [0.17MB]	0.021459
+
+Init: 286.665985
+MemAlloc: 0.329000
+HtoD: 3.778501
+Exec: 17.048697
+DtoH: 0.631974
+Close: 0.272000
+Total: 378.682007
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fe067289000
+assigned worker at 4295
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003814 [0.34MB]	0.017074	0.000535 [0.17MB]	0.021422
+
+Init: 287.153015
+MemAlloc: 0.287000
+HtoD: 3.813963
+Exec: 17.073658
+DtoH: 0.534681
+Close: 0.239000
+Total: 379.072998
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f6ef97af000
+assigned worker at 4296
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003651 [0.34MB]	0.017040	0.000586 [0.17MB]	0.021278
+
+Init: 288.414001
+MemAlloc: 0.326000
+HtoD: 3.651472
+Exec: 17.040228
+DtoH: 0.586297
+Close: 0.256000
+Total: 377.691986
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb5b60b7000
+assigned worker at 4297
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004421 [0.34MB]	0.017034	0.000838 [0.17MB]	0.022293
+
+Init: 291.424011
+MemAlloc: 0.316000
+HtoD: 4.421477
+Exec: 17.033823
+DtoH: 0.837502
+Close: 0.261000
+Total: 382.001007
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f1bcc082000
+assigned worker at 4298
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.004263 [0.34MB]	0.017036	0.000865 [0.17MB]	0.022164
+
+Init: 286.738007
+MemAlloc: 0.299000
+HtoD: 4.262819
+Exec: 17.036226
+DtoH: 0.864935
+Close: 0.238000
+Total: 376.330994
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7ffa8cece000
+assigned worker at 4299
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003813 [0.34MB]	0.017054	0.000651 [0.17MB]	0.021519
+
+Init: 288.144989
+MemAlloc: 0.347000
+HtoD: 3.813160
+Exec: 17.054136
+DtoH: 0.651401
+Close: 0.254000
+Total: 377.781006
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5989e6b000
+assigned worker at 4300
+Number of platforms detected:1
+Platform 0:	Vendor: Advanced Micro Devices, Inc.
+	Device: 0	Vendor: Advanced Micro Devices, Inc.
+		Name: gfx803
+	nearestNeighbor_kernel.cl
+# Records	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+42764        	0.003839 [0.34MB]	0.017041	0.000554 [0.17MB]	0.021435
+
+Init: 283.638000
+MemAlloc: 0.314000
+HtoD: 3.839466
+Exec: 17.041178
+DtoH: 0.554192
+Close: 0.268000
+Total: 373.549988
+Command exited with non-zero status 255
+real 0.47 seconds
+++ echo
+
+++ echo
+

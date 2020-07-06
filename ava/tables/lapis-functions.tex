@@ -1,0 +1,44 @@
+% -*- fill-column: 85; -*-
+%!TEX root = ../main.tex
+
+% NOTE: TexLive 2017 fails when a lstlisting environment is inside a table. This is fixed in 2018, but
+% multirow still has the issue. Because of this, I'm using saveboxes for a bunch of listings just in case.
+\newsavebox{\boxutilitysyntax}
+\begin{lrbox}{\boxutilitysyntax}
+\begin{lstlisting}[language=C,style=nwspecc,columns=fullflexible,numbers=none,belowskip=-2.2em,aboveskip=-1em,mathescape]
+utility $\txt{C declaration}$;
+\end{lstlisting}
+\end{lrbox}
+
+\begin{table}
+  \centering
+\resizebox{\columnwidth}{!}{
+  \begin{tabular}{@{}p{1.31in}@{}p{2.7in}@{}}
+  \toprule
+  Function & The function ... \\
+  \midrule
+  \spec|sync| & is synchronous: application calls wait for completion in the \worker. \\
+  \spec|async| & can be asynchronous: calls will return immediately after call dispatch. \\  
+  \spec|success(v)| & should return \spec|v| when called with \spec|async|. \\
+  \spec|contextual_argument| & has additional context that should be transported along with the normal arguments. This is used to copy values or buffers which are not explicitly arguments to the call, e.g., \spec|errno|. 
+%  Contextual arguments can be annotated as usual. 
+  \\
+  \spec|allocates_rc(r, x)| & allocates \spec|x| units of the continuous resource \spec|r|. \\
+  \spec|deallocates_rc(r, x)| & deallocates \spec|x| units of the continuous resource \spec|r|. \\
+  \spec|consumes_rc(r, x)| & consumes \spec|x| units of the instantaneous resource \spec|r| during the call. \\
+  \midrule
+  Declarations & The statement declares ... \\
+  \midrule
+  \spec|continuous_rc r;| & a continuous resource \spec|r|. \\
+  \spec|instantaneous_rc r;| & an instantaneous resource \spec|r|. \\
+  \usebox{\boxutilitysyntax} & a global utility function or variable that is not part of the API, but is used in the specification. \\
+%  \usebox{\boxreplacesyntax} & a replacement for an API function that should be used within the guest application instead of forwarding the call to the \worker.  \\  
+  \bottomrule
+  \end{tabular}  
+  }
+  \caption{\Speclang descriptors for functions.
+%  \amp{CJR, you have opinions on where these tables should be. Tell me what you want and I'll make it happen. I think the tables are close to stable.}
+%  \amp{Use ``rc'' as a contraction for ``resource''?}\hyu{Make sure Figure 9 uses the same short form.}
+  }
+  \label{tab:lapis-functions}
+\end{table}

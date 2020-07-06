@@ -1,0 +1,522 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb8ebe12000
+assigned worker at 4006
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 381.666992
+MemAlloc: 3.615000
+HtoD: 41.668999
+HtoD_Phy: 19.071077
+Exec: 1028.081055
+DtoH: 28.575001
+DtoH_Phy: 10.242315
+Close: 1.406000
+API: 1485.012939
+Total: 1519.010010
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f1af6b8a000
+assigned worker at 4007
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 380.438995
+MemAlloc: 3.382000
+HtoD: 39.228001
+HtoD_Phy: 18.023022
+Exec: 1027.986938
+DtoH: 28.905998
+DtoH_Phy: 10.546511
+Close: 1.448000
+API: 1481.389893
+Total: 1516.391968
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.74 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f6b32eb5000
+assigned worker at 4008
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 372.026001
+MemAlloc: 3.829000
+HtoD: 39.057999
+HtoD_Phy: 16.982252
+Exec: 1030.242065
+DtoH: 29.091000
+DtoH_Phy: 9.940214
+Close: 1.623000
+API: 1475.869019
+Total: 1507.858032
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f882fce6000
+assigned worker at 4009
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 381.920013
+MemAlloc: 3.563000
+HtoD: 39.729000
+HtoD_Phy: 17.932079
+Exec: 1027.958008
+DtoH: 29.764000
+DtoH_Phy: 11.106253
+Close: 1.807000
+API: 1484.741089
+Total: 1517.655029
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.74 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f2c85fed000
+assigned worker at 4010
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 374.694000
+MemAlloc: 3.885000
+HtoD: 40.208000
+HtoD_Phy: 17.908466
+Exec: 1028.066040
+DtoH: 28.888000
+DtoH_Phy: 10.269653
+Close: 1.648000
+API: 1477.388916
+Total: 1507.943970
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0f00f24000
+assigned worker at 4011
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 379.600006
+MemAlloc: 3.892000
+HtoD: 42.526001
+HtoD_Phy: 18.009159
+Exec: 1028.628052
+DtoH: 31.571999
+DtoH_Phy: 10.947323
+Close: 1.973000
+API: 1488.191040
+Total: 1523.020020
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.74 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f52a7615000
+assigned worker at 4012
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 374.139008
+MemAlloc: 2.977000
+HtoD: 37.737999
+HtoD_Phy: 16.461887
+Exec: 1028.327026
+DtoH: 29.793999
+DtoH_Phy: 10.315195
+Close: 1.930000
+API: 1474.905029
+Total: 1505.512939
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.74 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fc0c33b0000
+assigned worker at 4013
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 371.018005
+MemAlloc: 3.953000
+HtoD: 43.306999
+HtoD_Phy: 17.978661
+Exec: 1028.723022
+DtoH: 32.584000
+DtoH_Phy: 10.653528
+Close: 2.184000
+API: 1481.768921
+Total: 1515.041016
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.75 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f9483b8d000
+assigned worker at 4014
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 374.675995
+MemAlloc: 3.092000
+HtoD: 41.313000
+HtoD_Phy: 18.930788
+Exec: 1028.015991
+DtoH: 30.110001
+DtoH_Phy: 10.790843
+Close: 1.745000
+API: 1478.951904
+Total: 1511.662964
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fceb9a83000
+assigned worker at 4015
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 371.842010
+MemAlloc: 3.633000
+HtoD: 40.726997
+HtoD_Phy: 18.326290
+Exec: 1028.144043
+DtoH: 29.534000
+DtoH_Phy: 10.456497
+Close: 1.934000
+API: 1475.814087
+Total: 1507.239014
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fbbc5e1a000
+assigned worker at 4016
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 373.947998
+MemAlloc: 4.019000
+HtoD: 40.302002
+HtoD_Phy: 17.543749
+Exec: 1028.253906
+DtoH: 30.076000
+DtoH_Phy: 10.433179
+Close: 2.013000
+API: 1478.611938
+Total: 1511.600952
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.74 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5f43fa1000
+assigned worker at 4017
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 375.877991
+MemAlloc: 4.104000
+HtoD: 42.452999
+HtoD_Phy: 17.235399
+Exec: 1028.400024
+DtoH: 31.054001
+DtoH_Phy: 10.071087
+Close: 2.038000
+API: 1483.926880
+Total: 1516.599976
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.74 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb7b9aa5000
+assigned worker at 4018
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 379.026001
+MemAlloc: 3.459000
+HtoD: 41.114998
+HtoD_Phy: 16.127705
+Exec: 1028.500977
+DtoH: 30.842001
+DtoH_Phy: 9.983135
+Close: 2.063000
+API: 1485.005981
+Total: 1518.842041
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.75 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa610713000
+assigned worker at 4019
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 376.826996
+MemAlloc: 3.618000
+HtoD: 43.000999
+HtoD_Phy: 19.516754
+Exec: 1029.972046
+DtoH: 31.698999
+DtoH_Phy: 10.568210
+Close: 2.039000
+API: 1487.156006
+Total: 1516.687012
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f6b39433000
+assigned worker at 4020
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 376.019989
+MemAlloc: 3.474000
+HtoD: 41.499001
+HtoD_Phy: 19.312046
+Exec: 1029.270020
+DtoH: 29.535000
+DtoH_Phy: 10.454061
+Close: 1.911000
+API: 1481.708984
+Total: 1515.301025
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.74 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f07aa5f0000
+assigned worker at 4021
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 381.166992
+MemAlloc: 3.533000
+HtoD: 41.571999
+HtoD_Phy: 18.664764
+Exec: 1028.588013
+DtoH: 31.161999
+DtoH_Phy: 10.653898
+Close: 1.863000
+API: 1487.885010
+Total: 1520.693970
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.75 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0fae50f000
+assigned worker at 4022
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 373.931000
+MemAlloc: 3.697000
+HtoD: 41.882999
+HtoD_Phy: 18.621483
+Exec: 1028.221069
+DtoH: 29.868000
+DtoH_Phy: 10.615264
+Close: 1.674000
+API: 1479.274048
+Total: 1510.813965
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.72 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa9566a1000
+assigned worker at 4023
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 375.817993
+MemAlloc: 3.652000
+HtoD: 41.844002
+HtoD_Phy: 17.790707
+Exec: 1028.616943
+DtoH: 31.484001
+DtoH_Phy: 10.602315
+Close: 2.009000
+API: 1483.423950
+Total: 1518.985962
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.73 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f3da3e52000
+assigned worker at 4024
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 378.845001
+MemAlloc: 3.396000
+HtoD: 39.181999
+HtoD_Phy: 17.256420
+Exec: 1028.017090
+DtoH: 29.594999
+DtoH_Phy: 10.769567
+Close: 1.598000
+API: 1480.633057
+Total: 1514.290039
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.75 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8f6286a000
+assigned worker at 4025
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Memory buffer size: 36.000263 MB
+Performing GPU computation
+Init: 372.877014
+MemAlloc: 3.770000
+HtoD: 43.694000
+HtoD_Phy: 18.524342
+Exec: 1029.198975
+DtoH: 30.806999
+DtoH_Phy: 10.756372
+Close: 2.189000
+API: 1482.536011
+Total: 1514.676025
+
+Finish the training for one iteration
+Command exited with non-zero status 255
+real 1.72 seconds
+++ echo
+
+++ echo
+

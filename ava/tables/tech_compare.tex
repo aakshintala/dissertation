@@ -1,0 +1,25 @@
+% !TeX root = ../main.tex
+\begingroup % Prevent leakage of length settings and defs into other files.
+
+\def\chk{\checkmark}
+
+\begin{table}[]
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{c|c|c|c|}
+\cline{2-4}
+                                      & isolated & interposition & compatibility \\ \hline
+\multicolumn{1}{|l|}{PCIe PT}         &          &               &               \\ \hline
+\multicolumn{1}{|l|}{FV}              & \chk     & \chk          &               \\ \hline
+\multicolumn{1}{|l|}{MPT}             & \chk     &               &               \\ \hline
+\multicolumn{1}{|l|}{PV}              & \chk     & \chk          &               \\ \hline
+\multicolumn{1}{|l|}{SR-IOV}          & \chk     &               & \chk          \\ \hline
+\multicolumn{1}{|l|}{API-Remote}      &          &               &               \\ \hline
+\multicolumn{1}{|l|}{HIRA}            & \chk     & \chk          &               \\ \hline
+\multicolumn{1}{|l|}{Automation+HIRA} & \chk     & \chk          & \chk          \\ \hline
+\end{tabular}
+}
+\caption{
+	Properties of virtualization techniques.
+}
+\label{tab:tech_compare}
+\end{table}

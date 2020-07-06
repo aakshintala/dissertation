@@ -1,0 +1,158 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 368.619995
+MemAlloc: 1.536000
+HtoD: 10.116000
+Exec: 770.112976
+DtoH: 1.104000
+DtoH_Phy: 1.006852
+Close: 1.018000
+API: 1152.506958
+Total: 1152.963013
+real 1.34 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 396.214996
+MemAlloc: 1.577000
+HtoD: 10.317000
+Exec: 773.091980
+DtoH: 1.280000
+DtoH_Phy: 1.154274
+Close: 1.440000
+API: 1183.920898
+Total: 1184.475952
+real 1.37 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 389.523010
+MemAlloc: 1.606000
+HtoD: 10.415000
+Exec: 776.875000
+DtoH: 1.324000
+DtoH_Phy: 1.210367
+Close: 1.379000
+API: 1181.121948
+Total: 1181.583984
+real 1.36 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 388.987000
+MemAlloc: 1.547000
+HtoD: 9.620000
+Exec: 778.072998
+DtoH: 1.549000
+DtoH_Phy: 1.429627
+Close: 1.367000
+API: 1181.142944
+Total: 1181.612061
+real 1.36 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 362.173004
+MemAlloc: 1.520000
+HtoD: 10.623000
+Exec: 772.414001
+DtoH: 1.416000
+DtoH_Phy: 1.300482
+Close: 1.399000
+API: 1149.545044
+Total: 1149.942993
+real 1.32 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 378.015991
+MemAlloc: 1.546000
+HtoD: 9.987000
+Exec: 772.820984
+DtoH: 1.296000
+DtoH_Phy: 1.189232
+Close: 1.410000
+API: 1165.076050
+Total: 1165.462036
+real 1.34 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 390.727997
+MemAlloc: 1.580000
+HtoD: 10.300000
+Exec: 774.619995
+DtoH: 1.351000
+DtoH_Phy: 1.236058
+Close: 1.390000
+API: 1179.968994
+Total: 1180.447021
+real 1.36 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 386.503998
+MemAlloc: 1.793000
+HtoD: 9.999000
+Exec: 772.655029
+DtoH: 1.419000
+DtoH_Phy: 1.312049
+Close: 1.391000
+API: 1173.760986
+Total: 1174.295044
+real 1.36 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 381.231995
+MemAlloc: 1.570000
+HtoD: 10.273000
+Exec: 771.734009
+DtoH: 1.359000
+DtoH_Phy: 1.248159
+Close: 1.374000
+API: 1167.542114
+Total: 1167.978027
+real 1.34 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 380.612000
+MemAlloc: 1.611000
+HtoD: 10.500000
+Exec: 772.705017
+DtoH: 1.477000
+DtoH_Phy: 1.368158
+Close: 1.395000
+API: 1168.300049
+Total: 1168.875977
+real 1.36 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 382.360992
+MemAlloc: 1.607000
+HtoD: 10.102000
+Exec: 770.487000
+DtoH: 1.392000
+DtoH_Phy: 1.273470
+Close: 1.478000
+API: 1167.427002
+Total: 1167.953003
+real 1.36 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+Init: 383.020996
+MemAlloc: 1.610000
+HtoD: 10.725000
+Exec: 772.249023
+DtoH: 1.512000
+DtoH_Phy: 1.383053
+Close: 1.372000
+API: 1170.488892
+Total: 1170.965942
+real 1.36 seconds
+++ echo
+
+++ echo
+

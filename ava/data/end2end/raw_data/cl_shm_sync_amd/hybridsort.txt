@@ -1,0 +1,642 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f9d04aa8000
+assigned worker at 4156
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.087 
+Bucket Count Kernel Time: 0.337 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 103.053 
+Merge First Kernel Time: 0.032 
+Merge Pass Kernel Iteration Time: 7.366 
+Merge Pass Kernel Iteration Time: 24.164 
+Merge Pass Kernel Iteration Time: 40.926 
+Merge Pass Kernel Iteration Time: 33.857 
+Merge Pass Kernel Iteration Time: 30.927 
+Merge Pass Kernel Iteration Time: 38.769 
+Merge Pass Kernel Iteration Time: 69.293 
+Merge Pass Kernel Iteration Time: 166.594 
+Merge Pass Kernel Time: 411.895 
+Merge Pack Kernel Time: 0.043 
+Init: 589.922974
+MemAlloc: 3.158000
+HtoD: 21.586861
+Exec: 515.528870
+DtoH: 7.486012
+Close: 6.709000
+Total: 1256.451050
+Command exited with non-zero status 255
+real 1.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa2c458c000
+assigned worker at 4157
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.334 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 100.144 
+Merge First Kernel Time: 0.032 
+Merge Pass Kernel Iteration Time: 7.345 
+Merge Pass Kernel Iteration Time: 23.968 
+Merge Pass Kernel Iteration Time: 40.978 
+Merge Pass Kernel Iteration Time: 33.829 
+Merge Pass Kernel Iteration Time: 30.884 
+Merge Pass Kernel Iteration Time: 38.718 
+Merge Pass Kernel Iteration Time: 69.142 
+Merge Pass Kernel Iteration Time: 166.777 
+Merge Pass Kernel Time: 411.642 
+Merge Pack Kernel Time: 0.044 
+Init: 597.216980
+MemAlloc: 3.183000
+HtoD: 20.913593
+Exec: 512.364014
+DtoH: 7.311780
+Close: 6.045000
+Total: 1264.941040
+Command exited with non-zero status 255
+real 1.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa816aa1000
+assigned worker at 4158
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.066 
+Bucket Count Kernel Time: 0.294 
+Bucket Prefix Kernel Time: 0.054 
+Bucket Sort Kernel Time: 91.486 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.361 
+Merge Pass Kernel Iteration Time: 24.181 
+Merge Pass Kernel Iteration Time: 41.111 
+Merge Pass Kernel Iteration Time: 33.850 
+Merge Pass Kernel Iteration Time: 30.838 
+Merge Pass Kernel Iteration Time: 38.679 
+Merge Pass Kernel Iteration Time: 68.987 
+Merge Pass Kernel Iteration Time: 166.751 
+Merge Pass Kernel Time: 411.758 
+Merge Pack Kernel Time: 0.043 
+Init: 598.556030
+MemAlloc: 2.978000
+HtoD: 21.010752
+Exec: 503.734741
+DtoH: 7.396784
+Close: 6.800000
+Total: 1255.293945
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f24f98ef000
+assigned worker at 4159
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.334 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 104.298 
+Merge First Kernel Time: 0.034 
+Merge Pass Kernel Iteration Time: 7.380 
+Merge Pass Kernel Iteration Time: 24.442 
+Merge Pass Kernel Iteration Time: 41.044 
+Merge Pass Kernel Iteration Time: 33.811 
+Merge Pass Kernel Iteration Time: 30.854 
+Merge Pass Kernel Iteration Time: 38.662 
+Merge Pass Kernel Iteration Time: 69.161 
+Merge Pass Kernel Iteration Time: 166.733 
+Merge Pass Kernel Time: 412.087 
+Merge Pack Kernel Time: 0.042 
+Init: 601.666992
+MemAlloc: 3.814000
+HtoD: 21.405346
+Exec: 516.962158
+DtoH: 7.465341
+Close: 7.484000
+Total: 1284.616943
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f2d2bbd4000
+assigned worker at 4160
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.334 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 104.732 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.462 
+Merge Pass Kernel Iteration Time: 24.178 
+Merge Pass Kernel Iteration Time: 41.029 
+Merge Pass Kernel Iteration Time: 33.812 
+Merge Pass Kernel Iteration Time: 30.826 
+Merge Pass Kernel Iteration Time: 38.806 
+Merge Pass Kernel Iteration Time: 69.049 
+Merge Pass Kernel Iteration Time: 166.649 
+Merge Pass Kernel Time: 411.813 
+Merge Pack Kernel Time: 0.043 
+Init: 595.492981
+MemAlloc: 4.277000
+HtoD: 20.730980
+Exec: 517.123169
+DtoH: 7.153139
+Close: 7.287000
+Total: 1281.187988
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fbaf8e9e000
+assigned worker at 4161
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.087 
+Bucket Count Kernel Time: 0.336 
+Bucket Prefix Kernel Time: 0.053 
+Bucket Sort Kernel Time: 91.175 
+Merge First Kernel Time: 0.034 
+Merge Pass Kernel Iteration Time: 7.380 
+Merge Pass Kernel Iteration Time: 24.310 
+Merge Pass Kernel Iteration Time: 41.066 
+Merge Pass Kernel Iteration Time: 33.864 
+Merge Pass Kernel Iteration Time: 30.925 
+Merge Pass Kernel Iteration Time: 38.897 
+Merge Pass Kernel Iteration Time: 69.075 
+Merge Pass Kernel Iteration Time: 166.746 
+Merge Pass Kernel Time: 412.263 
+Merge Pack Kernel Time: 0.044 
+Init: 607.218994
+MemAlloc: 4.860000
+HtoD: 21.794485
+Exec: 503.990326
+DtoH: 8.125356
+Close: 7.974000
+Total: 1304.597046
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8e6a185000
+assigned worker at 4162
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.087 
+Bucket Count Kernel Time: 0.333 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 106.758 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.372 
+Merge Pass Kernel Iteration Time: 24.266 
+Merge Pass Kernel Iteration Time: 41.068 
+Merge Pass Kernel Iteration Time: 33.811 
+Merge Pass Kernel Iteration Time: 30.842 
+Merge Pass Kernel Iteration Time: 38.681 
+Merge Pass Kernel Iteration Time: 69.147 
+Merge Pass Kernel Iteration Time: 166.577 
+Merge Pass Kernel Time: 411.763 
+Merge Pack Kernel Time: 0.044 
+Init: 591.070007
+MemAlloc: 2.760000
+HtoD: 20.828218
+Exec: 519.100525
+DtoH: 7.187149
+Close: 6.661000
+Total: 1259.842041
+Command exited with non-zero status 255
+real 1.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f86e7c0d000
+assigned worker at 4163
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.093 
+Bucket Count Kernel Time: 0.334 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 107.300 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.295 
+Merge Pass Kernel Iteration Time: 24.068 
+Merge Pass Kernel Iteration Time: 41.126 
+Merge Pass Kernel Iteration Time: 33.847 
+Merge Pass Kernel Iteration Time: 30.929 
+Merge Pass Kernel Iteration Time: 38.881 
+Merge Pass Kernel Iteration Time: 69.123 
+Merge Pass Kernel Iteration Time: 166.753 
+Merge Pass Kernel Time: 412.023 
+Merge Pack Kernel Time: 0.043 
+Init: 600.562012
+MemAlloc: 3.488000
+HtoD: 21.555529
+Exec: 519.908813
+DtoH: 7.491542
+Close: 6.912000
+Total: 1286.503052
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f13a15e2000
+assigned worker at 4164
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.336 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 97.538 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.336 
+Merge Pass Kernel Iteration Time: 24.087 
+Merge Pass Kernel Iteration Time: 40.966 
+Merge Pass Kernel Iteration Time: 33.875 
+Merge Pass Kernel Iteration Time: 30.854 
+Merge Pass Kernel Iteration Time: 38.733 
+Merge Pass Kernel Iteration Time: 68.936 
+Merge Pass Kernel Iteration Time: 166.864 
+Merge Pass Kernel Time: 411.652 
+Merge Pack Kernel Time: 0.044 
+Init: 593.234009
+MemAlloc: 3.941000
+HtoD: 21.392717
+Exec: 509.769714
+DtoH: 7.529587
+Close: 7.058000
+Total: 1270.712036
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fde2cc5d000
+assigned worker at 4165
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.066 
+Bucket Count Kernel Time: 0.294 
+Bucket Prefix Kernel Time: 0.053 
+Bucket Sort Kernel Time: 112.219 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.167 
+Merge Pass Kernel Iteration Time: 24.358 
+Merge Pass Kernel Iteration Time: 41.082 
+Merge Pass Kernel Iteration Time: 33.875 
+Merge Pass Kernel Iteration Time: 30.898 
+Merge Pass Kernel Iteration Time: 38.785 
+Merge Pass Kernel Iteration Time: 68.957 
+Merge Pass Kernel Iteration Time: 166.770 
+Merge Pass Kernel Time: 411.892 
+Merge Pack Kernel Time: 0.043 
+Init: 590.997009
+MemAlloc: 3.032000
+HtoD: 19.455774
+Exec: 524.601685
+DtoH: 6.790100
+Close: 6.504000
+Total: 1258.338013
+Command exited with non-zero status 255
+real 1.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0cb6983000
+assigned worker at 4166
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.087 
+Bucket Count Kernel Time: 0.335 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 107.732 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.360 
+Merge Pass Kernel Iteration Time: 24.258 
+Merge Pass Kernel Iteration Time: 41.103 
+Merge Pass Kernel Iteration Time: 33.893 
+Merge Pass Kernel Iteration Time: 30.767 
+Merge Pass Kernel Iteration Time: 38.422 
+Merge Pass Kernel Iteration Time: 69.198 
+Merge Pass Kernel Iteration Time: 166.757 
+Merge Pass Kernel Time: 411.757 
+Merge Pack Kernel Time: 0.043 
+Init: 591.978027
+MemAlloc: 3.501000
+HtoD: 21.449036
+Exec: 520.069153
+DtoH: 7.646371
+Close: 6.685000
+Total: 1274.618042
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f08d076f000
+assigned worker at 4167
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.337 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 107.970 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.275 
+Merge Pass Kernel Iteration Time: 24.176 
+Merge Pass Kernel Iteration Time: 40.916 
+Merge Pass Kernel Iteration Time: 33.849 
+Merge Pass Kernel Iteration Time: 30.848 
+Merge Pass Kernel Iteration Time: 38.606 
+Merge Pass Kernel Iteration Time: 69.138 
+Merge Pass Kernel Iteration Time: 166.726 
+Merge Pass Kernel Time: 411.535 
+Merge Pack Kernel Time: 0.043 
+Init: 596.776978
+MemAlloc: 3.407000
+HtoD: 21.388453
+Exec: 520.086426
+DtoH: 7.302556
+Close: 7.391000
+Total: 1282.873047
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5ca26f0000
+assigned worker at 4168
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.087 
+Bucket Count Kernel Time: 0.335 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 102.830 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.305 
+Merge Pass Kernel Iteration Time: 24.323 
+Merge Pass Kernel Iteration Time: 41.076 
+Merge Pass Kernel Iteration Time: 33.876 
+Merge Pass Kernel Iteration Time: 30.845 
+Merge Pass Kernel Iteration Time: 38.643 
+Merge Pass Kernel Iteration Time: 69.326 
+Merge Pass Kernel Iteration Time: 166.614 
+Merge Pass Kernel Time: 412.007 
+Merge Pack Kernel Time: 0.043 
+Init: 587.612000
+MemAlloc: 3.307000
+HtoD: 19.904005
+Exec: 515.416870
+DtoH: 7.159880
+Close: 7.065000
+Total: 1266.378052
+Command exited with non-zero status 255
+real 1.46 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fefe22f1000
+assigned worker at 4169
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.333 
+Bucket Prefix Kernel Time: 0.053 
+Bucket Sort Kernel Time: 94.946 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.462 
+Merge Pass Kernel Iteration Time: 24.507 
+Merge Pass Kernel Iteration Time: 41.041 
+Merge Pass Kernel Iteration Time: 33.864 
+Merge Pass Kernel Iteration Time: 30.842 
+Merge Pass Kernel Iteration Time: 38.846 
+Merge Pass Kernel Iteration Time: 69.047 
+Merge Pass Kernel Iteration Time: 166.500 
+Merge Pass Kernel Time: 412.110 
+Merge Pack Kernel Time: 0.043 
+Init: 598.372009
+MemAlloc: 3.614000
+HtoD: 21.215761
+Exec: 507.604095
+DtoH: 7.258476
+Close: 7.666000
+Total: 1280.947021
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fc0a4ba3000
+assigned worker at 4170
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.336 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 107.067 
+Merge First Kernel Time: 0.034 
+Merge Pass Kernel Iteration Time: 7.203 
+Merge Pass Kernel Iteration Time: 24.365 
+Merge Pass Kernel Iteration Time: 40.920 
+Merge Pass Kernel Iteration Time: 33.823 
+Merge Pass Kernel Iteration Time: 30.849 
+Merge Pass Kernel Iteration Time: 38.557 
+Merge Pass Kernel Iteration Time: 69.009 
+Merge Pass Kernel Iteration Time: 166.753 
+Merge Pass Kernel Time: 411.480 
+Merge Pack Kernel Time: 0.043 
+Init: 598.509033
+MemAlloc: 3.714000
+HtoD: 21.492752
+Exec: 519.127625
+DtoH: 7.310568
+Close: 7.072000
+Total: 1277.657959
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fd670c84000
+assigned worker at 4171
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.333 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 105.751 
+Merge First Kernel Time: 0.034 
+Merge Pass Kernel Iteration Time: 7.572 
+Merge Pass Kernel Iteration Time: 24.413 
+Merge Pass Kernel Iteration Time: 41.080 
+Merge Pass Kernel Iteration Time: 33.893 
+Merge Pass Kernel Iteration Time: 30.800 
+Merge Pass Kernel Iteration Time: 38.780 
+Merge Pass Kernel Iteration Time: 69.058 
+Merge Pass Kernel Iteration Time: 166.789 
+Merge Pass Kernel Time: 412.386 
+Merge Pack Kernel Time: 0.044 
+Init: 604.859009
+MemAlloc: 3.150000
+HtoD: 22.216757
+Exec: 518.715149
+DtoH: 7.521218
+Close: 7.250000
+Total: 1286.803955
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5c5f80e000
+assigned worker at 4172
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.087 
+Bucket Count Kernel Time: 0.335 
+Bucket Prefix Kernel Time: 0.082 
+Bucket Sort Kernel Time: 105.320 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.357 
+Merge Pass Kernel Iteration Time: 24.064 
+Merge Pass Kernel Iteration Time: 41.090 
+Merge Pass Kernel Iteration Time: 33.802 
+Merge Pass Kernel Iteration Time: 30.782 
+Merge Pass Kernel Iteration Time: 38.817 
+Merge Pass Kernel Iteration Time: 69.060 
+Merge Pass Kernel Iteration Time: 166.719 
+Merge Pass Kernel Time: 411.690 
+Merge Pack Kernel Time: 0.043 
+Init: 598.265991
+MemAlloc: 3.202000
+HtoD: 21.474020
+Exec: 517.590393
+DtoH: 7.560095
+Close: 6.862000
+Total: 1276.854004
+Command exited with non-zero status 255
+real 1.46 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8a9826c000
+assigned worker at 4173
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.335 
+Bucket Prefix Kernel Time: 0.053 
+Bucket Sort Kernel Time: 95.492 
+Merge First Kernel Time: 0.033 
+Merge Pass Kernel Iteration Time: 7.311 
+Merge Pass Kernel Iteration Time: 24.162 
+Merge Pass Kernel Iteration Time: 41.042 
+Merge Pass Kernel Iteration Time: 33.851 
+Merge Pass Kernel Iteration Time: 30.845 
+Merge Pass Kernel Iteration Time: 38.893 
+Merge Pass Kernel Iteration Time: 69.102 
+Merge Pass Kernel Iteration Time: 166.502 
+Merge Pass Kernel Time: 411.706 
+Merge Pack Kernel Time: 0.044 
+Init: 598.046021
+MemAlloc: 3.384000
+HtoD: 21.153177
+Exec: 507.748810
+DtoH: 7.680777
+Close: 6.237000
+Total: 1264.183960
+Command exited with non-zero status 255
+real 1.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fda0587d000
+assigned worker at 4174
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.066 
+Bucket Count Kernel Time: 0.294 
+Bucket Prefix Kernel Time: 0.053 
+Bucket Sort Kernel Time: 111.192 
+Merge First Kernel Time: 0.019 
+Merge Pass Kernel Iteration Time: 7.529 
+Merge Pass Kernel Iteration Time: 24.199 
+Merge Pass Kernel Iteration Time: 40.913 
+Merge Pass Kernel Iteration Time: 33.803 
+Merge Pass Kernel Iteration Time: 30.869 
+Merge Pass Kernel Iteration Time: 38.873 
+Merge Pass Kernel Iteration Time: 69.016 
+Merge Pass Kernel Iteration Time: 166.900 
+Merge Pass Kernel Time: 412.101 
+Merge Pack Kernel Time: 0.044 
+Init: 592.196960
+MemAlloc: 2.968000
+HtoD: 21.350088
+Exec: 523.767456
+DtoH: 7.730338
+Close: 6.250000
+Total: 1265.081055
+Command exited with non-zero status 255
+real 1.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fba244ad000
+assigned worker at 4175
+Sorting list of 500000 floats.
+gfx803 
+Histogram Kernel Time: 0.086 
+Bucket Count Kernel Time: 0.334 
+Bucket Prefix Kernel Time: 0.056 
+Bucket Sort Kernel Time: 95.729 
+Merge First Kernel Time: 0.032 
+Merge Pass Kernel Iteration Time: 6.734 
+Merge Pass Kernel Iteration Time: 24.340 
+Merge Pass Kernel Iteration Time: 40.977 
+Merge Pass Kernel Iteration Time: 33.792 
+Merge Pass Kernel Iteration Time: 30.831 
+Merge Pass Kernel Iteration Time: 38.596 
+Merge Pass Kernel Iteration Time: 69.129 
+Merge Pass Kernel Iteration Time: 167.001 
+Merge Pass Kernel Time: 411.399 
+Merge Pack Kernel Time: 0.044 
+Init: 595.572998
+MemAlloc: 2.906000
+HtoD: 20.106367
+Exec: 507.680664
+DtoH: 6.955974
+Close: 5.684000
+Total: 1249.135986
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ echo
+

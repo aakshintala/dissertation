@@ -1,0 +1,53 @@
+Run by Amogh.
+
+Setup: Installed on zemaitis.
+
+Rodinia:
+
+BFS
+
+Native
+
+Init: 160.106003
+MemAlloc: 0.433000
+HtoD: 0.693000
+Exec: 256.076996
+DtoH: 0.092000
+Close: 44.799999
+API: 462.200989
+Total: 462.201996
+
+BitFusion
+
+Init: 1570.291016
+MemAlloc: 13.114000
+HtoD: 6.671000
+Exec: 257.539001
+DtoH: 0.326000
+Close: 241.496002
+API: 2089.437012
+Total: 2089.437012
+
+Gaussian
+
+Native
+
+Init: 167.819000
+MemAlloc: 0.699000
+HtoD: 6.181000
+Exec: 1642.615967
+DtoH: 15.478000
+Close: 42.584999
+API: 1875.377930
+Total: 1875.378052
+
+BitFusion
+
+Init: 1529.099976
+MemAlloc: 6.246000
+HtoD: 48.909000
+Exec: 1650.855957
+DtoH: 30.695999
+Close: 230.500000
+API: 3496.306885
+Total: 3496.308105

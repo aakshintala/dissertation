@@ -1,0 +1,342 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f436764a000
+assigned worker at 4331
+Init: 382.464996
+MemAlloc: 2.533000
+HtoD: 28.837999
+Exec: 772.843994
+DtoH: 3.809000
+DtoH_Phy: 1.192376
+Close: 2.506000
+API: 1192.994873
+Total: 1196.911011
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f25b0cbd000
+assigned worker at 4332
+Init: 380.596985
+MemAlloc: 2.542000
+HtoD: 29.132999
+Exec: 768.950989
+DtoH: 4.286000
+DtoH_Phy: 1.114030
+Close: 2.848000
+API: 1188.356934
+Total: 1193.118042
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fdef3698000
+assigned worker at 4333
+Init: 390.200989
+MemAlloc: 2.233000
+HtoD: 26.645000
+Exec: 775.229980
+DtoH: 4.201000
+DtoH_Phy: 1.077738
+Close: 2.719000
+API: 1201.229004
+Total: 1205.312012
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fad8a68f000
+assigned worker at 4334
+Init: 371.665985
+MemAlloc: 2.339000
+HtoD: 30.191000
+Exec: 771.176025
+DtoH: 3.986000
+DtoH_Phy: 1.193254
+Close: 2.366000
+API: 1181.723999
+Total: 1186.454956
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f4b124c3000
+assigned worker at 4335
+Init: 383.444000
+MemAlloc: 2.389000
+HtoD: 29.608000
+Exec: 772.098022
+DtoH: 3.798000
+DtoH_Phy: 1.019155
+Close: 2.333000
+API: 1193.670044
+Total: 1198.470947
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f4cbe83b000
+assigned worker at 4336
+Init: 380.166992
+MemAlloc: 2.424000
+HtoD: 28.023001
+Exec: 768.841980
+DtoH: 4.290000
+DtoH_Phy: 0.943319
+Close: 2.261000
+API: 1186.007080
+Total: 1190.525024
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7efed75a4000
+assigned worker at 4337
+Init: 384.434998
+MemAlloc: 2.400000
+HtoD: 30.407000
+Exec: 772.651978
+DtoH: 4.467000
+DtoH_Phy: 1.131693
+Close: 3.041000
+API: 1197.402100
+Total: 1202.168945
+Command exited with non-zero status 255
+real 1.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f04f3282000
+assigned worker at 4338
+Init: 383.651001
+MemAlloc: 2.325000
+HtoD: 29.231001
+Exec: 774.247009
+DtoH: 3.551000
+DtoH_Phy: 1.230082
+Close: 2.648000
+API: 1195.652954
+Total: 1200.119995
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7feb6128a000
+assigned worker at 4339
+Init: 383.128998
+MemAlloc: 2.136000
+HtoD: 29.916000
+Exec: 773.580017
+DtoH: 3.548000
+DtoH_Phy: 1.214687
+Close: 2.486000
+API: 1194.794922
+Total: 1198.670044
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f12318de000
+assigned worker at 4340
+Init: 371.496002
+MemAlloc: 2.501000
+HtoD: 30.785999
+Exec: 771.375977
+DtoH: 4.059000
+DtoH_Phy: 1.201286
+Close: 2.714000
+API: 1182.931885
+Total: 1187.288940
+Command exited with non-zero status 255
+real 1.46 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f339dd95000
+assigned worker at 4341
+Init: 385.773987
+MemAlloc: 2.178000
+HtoD: 29.981001
+Exec: 771.377014
+DtoH: 3.856000
+DtoH_Phy: 1.206217
+Close: 3.307000
+API: 1196.473022
+Total: 1201.196045
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f18c6048000
+assigned worker at 4342
+Init: 382.384003
+MemAlloc: 2.744000
+HtoD: 29.669001
+Exec: 770.591980
+DtoH: 4.234000
+DtoH_Phy: 1.131851
+Close: 2.398000
+API: 1192.020874
+Total: 1196.128052
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f6ab4060000
+assigned worker at 4343
+Init: 385.279999
+MemAlloc: 2.267000
+HtoD: 26.614000
+Exec: 774.913025
+DtoH: 4.342000
+DtoH_Phy: 1.206829
+Close: 2.558000
+API: 1195.973999
+Total: 1199.854980
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f483d5ee000
+assigned worker at 4344
+Init: 383.112000
+MemAlloc: 2.403000
+HtoD: 29.358999
+Exec: 773.098999
+DtoH: 3.976000
+DtoH_Phy: 1.033164
+Close: 2.791000
+API: 1194.739990
+Total: 1198.983032
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fe545365000
+assigned worker at 4345
+Init: 392.079010
+MemAlloc: 2.413000
+HtoD: 30.794001
+Exec: 771.104980
+DtoH: 5.262000
+DtoH_Phy: 1.216852
+Close: 3.209000
+API: 1204.861938
+Total: 1209.681030
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fae3c8c7000
+assigned worker at 4346
+Init: 383.010010
+MemAlloc: 2.302000
+HtoD: 28.400000
+Exec: 774.838989
+DtoH: 3.926000
+DtoH_Phy: 1.337073
+Close: 2.577000
+API: 1195.054077
+Total: 1198.895020
+Command exited with non-zero status 255
+real 1.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8a7f032000
+assigned worker at 4347
+Init: 379.645996
+MemAlloc: 2.489000
+HtoD: 30.629000
+Exec: 768.916992
+DtoH: 4.072000
+DtoH_Phy: 1.046190
+Close: 2.733000
+API: 1188.486084
+Total: 1193.074951
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0607afd000
+assigned worker at 4348
+Init: 378.415985
+MemAlloc: 2.170000
+HtoD: 27.747999
+Exec: 769.130005
+DtoH: 3.896000
+DtoH_Phy: 1.071467
+Close: 2.804000
+API: 1184.163940
+Total: 1188.706055
+Command exited with non-zero status 255
+real 1.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f51cfb97000
+assigned worker at 4349
+Init: 384.734009
+MemAlloc: 2.096000
+HtoD: 28.191000
+Exec: 768.492981
+DtoH: 3.778000
+DtoH_Phy: 1.034531
+Close: 2.707000
+API: 1189.999023
+Total: 1194.753052
+Command exited with non-zero status 255
+real 1.46 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f42d8e7f000
+assigned worker at 4350
+Init: 378.648987
+MemAlloc: 2.103000
+HtoD: 28.441999
+Exec: 770.744995
+DtoH: 3.315000
+DtoH_Phy: 1.108248
+Close: 2.299000
+API: 1185.552856
+Total: 1189.366943
+Command exited with non-zero status 255
+real 1.46 seconds
+++ echo
+
+++ echo
+

@@ -1,0 +1,562 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f13fb60d000
+assigned worker at 4131
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 767.278015
+MemAlloc: 11.167000
+HtoD: 72.199654
+Exec: 9224.582031
+DtoH: 0.913836
+Close: 3.922000
+Total: 10857.992188
+Command exited with non-zero status 255
+real 10.93 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f4b1bc32000
+assigned worker at 4132
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 777.531006
+MemAlloc: 8.591000
+HtoD: 68.208824
+Exec: 9223.155273
+DtoH: 1.070413
+Close: 3.924000
+Total: 10819.903320
+Command exited with non-zero status 255
+real 10.89 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb3f5a71000
+assigned worker at 4133
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 775.880981
+MemAlloc: 10.026000
+HtoD: 63.321316
+Exec: 9224.860352
+DtoH: 0.803946
+Close: 4.040000
+Total: 10933.566406
+Command exited with non-zero status 255
+real 10.99 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f97a8b98000
+assigned worker at 4134
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 779.784973
+MemAlloc: 7.924000
+HtoD: 71.636116
+Exec: 9222.571289
+DtoH: 1.000209
+Close: 4.685000
+Total: 10864.039062
+Command exited with non-zero status 255
+real 10.95 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8e6fa64000
+assigned worker at 4135
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 777.039001
+MemAlloc: 9.019000
+HtoD: 70.752930
+Exec: 9222.812500
+DtoH: 1.027434
+Close: 4.020000
+Total: 10831.533203
+Command exited with non-zero status 255
+real 10.91 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f26f1dec000
+assigned worker at 4136
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 771.239990
+MemAlloc: 8.628000
+HtoD: 68.123802
+Exec: 9224.499023
+DtoH: 1.034975
+Close: 3.984000
+Total: 10820.589844
+Command exited with non-zero status 255
+real 10.90 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f6357fc6000
+assigned worker at 4137
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 779.770020
+MemAlloc: 8.867000
+HtoD: 71.157326
+Exec: 9222.763672
+DtoH: 1.007073
+Close: 4.771000
+Total: 10821.781250
+Command exited with non-zero status 255
+real 10.90 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8465782000
+assigned worker at 4138
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 776.789001
+MemAlloc: 9.287000
+HtoD: 71.958626
+Exec: 9224.409180
+DtoH: 1.048081
+Close: 4.170000
+Total: 10890.248047
+Command exited with non-zero status 255
+real 10.96 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb85ae04000
+assigned worker at 4139
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 775.338989
+MemAlloc: 8.949000
+HtoD: 69.032463
+Exec: 9223.265625
+DtoH: 0.926498
+Close: 4.089000
+Total: 10854.574219
+Command exited with non-zero status 255
+real 10.93 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8464f6b000
+assigned worker at 4140
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 769.411011
+MemAlloc: 10.076000
+HtoD: 71.408302
+Exec: 9223.240234
+DtoH: 1.020697
+Close: 4.016000
+Total: 10826.012695
+Command exited with non-zero status 255
+real 10.90 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7faa01e7f000
+assigned worker at 4141
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 772.695984
+MemAlloc: 11.757999
+HtoD: 64.008583
+Exec: 9223.906250
+DtoH: 0.935996
+Close: 3.971000
+Total: 10903.333984
+Command exited with non-zero status 255
+real 10.96 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0a08e5f000
+assigned worker at 4142
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 745.645020
+MemAlloc: 7.350000
+HtoD: 70.927231
+Exec: 9222.507812
+DtoH: 0.985547
+Close: 4.863000
+Total: 10829.122070
+Command exited with non-zero status 255
+real 10.90 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f289a7e4000
+assigned worker at 4143
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 780.732971
+MemAlloc: 8.878000
+HtoD: 71.353394
+Exec: 9225.373047
+DtoH: 1.056801
+Close: 4.563000
+Total: 10877.709961
+Command exited with non-zero status 255
+real 10.94 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5d39e0b000
+assigned worker at 4144
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 776.309021
+MemAlloc: 9.896000
+HtoD: 72.340546
+Exec: 9224.542969
+DtoH: 0.861841
+Close: 4.457000
+Total: 10873.304688
+Command exited with non-zero status 255
+real 10.96 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb73f3df000
+assigned worker at 4145
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 771.148987
+MemAlloc: 8.596001
+HtoD: 71.328148
+Exec: 9222.144531
+DtoH: 0.926129
+Close: 4.557000
+Total: 10843.963867
+Command exited with non-zero status 255
+real 10.91 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fde83b47000
+assigned worker at 4146
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 769.828003
+MemAlloc: 13.738000
+HtoD: 70.193466
+Exec: 9223.082031
+DtoH: 0.936234
+Close: 4.012000
+Total: 10879.519531
+Command exited with non-zero status 255
+real 10.95 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7ff41e5eb000
+assigned worker at 4147
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 774.669983
+MemAlloc: 9.637000
+HtoD: 56.454887
+Exec: 9222.448242
+DtoH: 0.767398
+Close: 4.149000
+Total: 10835.493164
+Command exited with non-zero status 255
+real 10.90 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f9531bef000
+assigned worker at 4148
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 766.161011
+MemAlloc: 13.357000
+HtoD: 59.906441
+Exec: 9219.384766
+DtoH: 0.852485
+Close: 4.653000
+Total: 10874.715820
+Command exited with non-zero status 255
+real 10.95 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f157a962000
+assigned worker at 4149
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 778.768982
+MemAlloc: 13.301000
+HtoD: 71.276947
+Exec: 9223.144531
+DtoH: 0.946952
+Close: 3.943000
+Total: 10933.975586
+Command exited with non-zero status 255
+real 10.99 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fce70c9c000
+assigned worker at 4150
+WG size of kernel = 256 
+# of platforms 1
+	Platform 0: Advanced Micro Devices, Inc.
+Selecting platform 0
+# of devices 1
+	Device 0: gfx803
+Selecting device 0
+-----OpenCL Compiler Output-----
+--------------------------------
+tSize is 25, sSize is 40
+# of workgroups = 51, # of threads/workgroup = 256 (ensure that device can handle)
+frame progress: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 
+Time spent in different stages of the application:
+Init: 777.606018
+MemAlloc: 9.856000
+HtoD: 61.982536
+Exec: 9224.699219
+DtoH: 0.845457
+Close: 4.044000
+Total: 10974.795898
+Command exited with non-zero status 255
+real 11.04 seconds
+++ echo
+
+++ echo
+

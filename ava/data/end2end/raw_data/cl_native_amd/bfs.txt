@@ -1,0 +1,290 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063400 s 609052000 nsec
+Reading File
+before gpu timestamp = 1556063400 s 677783000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 368.579987
+MemAlloc: 7.789000
+HtoD: 3.018000
+HtoD_Phy: 2.615359
+Exec: 22.516003
+DtoH: 0.977000
+DtoH_Phy: 0.720283
+Close: 0.000000
+API: 402.879974
+Total: 403.825012
+after gpu timestamp = 1556063401 s 81625000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063401 s 89353000 nsec
+real 0.54 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063401 s 161713000 nsec
+Reading File
+before gpu timestamp = 1556063401 s 229097000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 377.319000
+MemAlloc: 7.814000
+HtoD: 3.051000
+HtoD_Phy: 2.644000
+Exec: 22.479000
+DtoH: 1.092000
+DtoH_Phy: 0.756784
+Close: 0.000000
+API: 411.755005
+Total: 412.566010
+after gpu timestamp = 1556063401 s 641687000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063401 s 653353000 nsec
+real 0.56 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063401 s 727311000 nsec
+Reading File
+before gpu timestamp = 1556063401 s 794951000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 375.471985
+MemAlloc: 7.413000
+HtoD: 2.873000
+HtoD_Phy: 2.426517
+Exec: 22.785002
+DtoH: 1.087000
+DtoH_Phy: 0.736789
+Close: 0.000000
+API: 409.629974
+Total: 410.342987
+after gpu timestamp = 1556063402 s 205327000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063402 s 217246000 nsec
+real 0.56 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063402 s 295569000 nsec
+Reading File
+before gpu timestamp = 1556063402 s 360175000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 378.306000
+MemAlloc: 8.065000
+HtoD: 3.215000
+HtoD_Phy: 2.675292
+Exec: 22.775000
+DtoH: 1.111000
+DtoH_Phy: 0.781929
+Close: 0.000000
+API: 413.471985
+Total: 414.252991
+after gpu timestamp = 1556063402 s 774453000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063402 s 785410000 nsec
+real 0.56 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063402 s 863080000 nsec
+Reading File
+before gpu timestamp = 1556063402 s 930547000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 367.643005
+MemAlloc: 7.562000
+HtoD: 2.902000
+HtoD_Phy: 2.438365
+Exec: 22.820000
+DtoH: 1.017000
+DtoH_Phy: 0.693132
+Close: 0.000000
+API: 401.944031
+Total: 402.619995
+after gpu timestamp = 1556063403 s 333190000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063403 s 342018000 nsec
+real 0.54 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063403 s 413510000 nsec
+Reading File
+before gpu timestamp = 1556063403 s 484230000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 374.199005
+MemAlloc: 8.170000
+HtoD: 3.254000
+HtoD_Phy: 2.447797
+Exec: 22.784000
+DtoH: 1.069000
+DtoH_Phy: 0.689062
+Close: 0.000000
+API: 409.476013
+Total: 410.403015
+after gpu timestamp = 1556063403 s 894657000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063403 s 905395000 nsec
+real 0.55 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063403 s 980422000 nsec
+Reading File
+before gpu timestamp = 1556063404 s 48682000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 373.112000
+MemAlloc: 6.678000
+HtoD: 2.859000
+HtoD_Phy: 2.399498
+Exec: 22.752003
+DtoH: 1.075000
+DtoH_Phy: 0.726863
+Close: 0.000000
+API: 406.476044
+Total: 407.276001
+after gpu timestamp = 1556063404 s 455982000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063404 s 466732000 nsec
+real 0.56 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063404 s 548047000 nsec
+Reading File
+before gpu timestamp = 1556063404 s 617768000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 376.035004
+MemAlloc: 6.925000
+HtoD: 3.336000
+HtoD_Phy: 2.739020
+Exec: 22.855000
+DtoH: 1.132000
+DtoH_Phy: 0.796457
+Close: 0.000000
+API: 410.282990
+Total: 411.108002
+after gpu timestamp = 1556063405 s 28902000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063405 s 37583000 nsec
+real 0.55 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063405 s 115038000 nsec
+Reading File
+before gpu timestamp = 1556063405 s 179969000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 378.471008
+MemAlloc: 7.678000
+HtoD: 3.225000
+HtoD_Phy: 2.695064
+Exec: 22.731001
+DtoH: 0.925000
+DtoH_Phy: 0.591083
+Close: 0.001000
+API: 413.031006
+Total: 413.727997
+after gpu timestamp = 1556063405 s 593724000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063405 s 604697000 nsec
+real 0.55 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063405 s 681927000 nsec
+Reading File
+before gpu timestamp = 1556063405 s 750176000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 380.285004
+MemAlloc: 7.198000
+HtoD: 3.043999
+HtoD_Phy: 2.577884
+Exec: 22.872997
+DtoH: 1.063000
+DtoH_Phy: 0.719231
+Close: 0.000000
+API: 414.462982
+Total: 415.358002
+after gpu timestamp = 1556063406 s 165558000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063406 s 176448000 nsec
+real 0.56 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063406 s 250207000 nsec
+Reading File
+before gpu timestamp = 1556063406 s 320626000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 369.773010
+MemAlloc: 7.306000
+HtoD: 2.839000
+HtoD_Phy: 2.412181
+Exec: 22.827999
+DtoH: 1.167000
+DtoH_Phy: 0.845928
+Close: 0.000000
+API: 403.912994
+Total: 404.617004
+after gpu timestamp = 1556063406 s 725270000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063406 s 734292000 nsec
+real 0.55 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+start timestamp = 1556063406 s 817079000 nsec
+Reading File
+before gpu timestamp = 1556063406 s 886063000 nsec
+number of platforms:1
+vendor is Advanced Micro Devices, Inc.
+device number: 1
+Creating GPU Context
+Init: 375.742004
+MemAlloc: 6.614000
+HtoD: 2.954000
+HtoD_Phy: 2.443059
+Exec: 22.827000
+DtoH: 1.080000
+DtoH_Phy: 0.748496
+Close: 0.000000
+API: 409.217010
+Total: 409.865997
+after gpu timestamp = 1556063407 s 295953000 nsec
+--cambine:passed:-)
+before exit timestamp = 1556063407 s 306853000 nsec
+real 0.55 seconds
+++ echo
+
+++ echo
+

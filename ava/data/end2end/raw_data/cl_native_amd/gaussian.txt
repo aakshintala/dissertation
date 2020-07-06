@@ -1,0 +1,374 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.785000 [33.56MB]	30855.720703	6.393000 [33.56MB]	30870.898438
+
+Init: 385.459991
+MemAlloc: 1.403000
+HtoD: 8.785000
+HtoD_Phy: 8.256676
+Exec: 30855.720703
+DtoH: 6.393000
+DtoH_Phy: 5.868568
+Close: 1.349000
+API: 31259.111328
+Total: 31271.201172
+real 31.35 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.473000 [33.56MB]	30894.570312	5.660000 [33.56MB]	30908.703125
+
+Init: 383.471985
+MemAlloc: 1.462000
+HtoD: 8.473000
+HtoD_Phy: 8.149201
+Exec: 30894.570312
+DtoH: 5.660000
+DtoH_Phy: 5.193901
+Close: 1.037000
+API: 31294.673828
+Total: 31306.251953
+real 31.38 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.429000 [33.56MB]	30883.818359	5.906000 [33.56MB]	30898.154297
+
+Init: 380.298981
+MemAlloc: 1.463000
+HtoD: 8.429000
+HtoD_Phy: 7.977792
+Exec: 30883.818359
+DtoH: 5.906000
+DtoH_Phy: 5.432329
+Close: 1.021000
+API: 31280.937500
+Total: 31292.439453
+real 31.36 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.422000 [33.56MB]	30845.796875	6.270000 [33.56MB]	30860.488281
+
+Init: 387.319000
+MemAlloc: 1.561000
+HtoD: 8.422000
+HtoD_Phy: 8.082244
+Exec: 30845.796875
+DtoH: 6.270000
+DtoH_Phy: 5.738432
+Close: 1.174000
+API: 31250.542969
+Total: 31262.277344
+real 31.33 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.896000 [33.56MB]	30966.115234	6.676000 [33.56MB]	30981.687500
+
+Init: 385.359009
+MemAlloc: 1.384000
+HtoD: 8.896000
+HtoD_Phy: 8.447627
+Exec: 30966.115234
+DtoH: 6.676000
+DtoH_Phy: 5.988356
+Close: 1.164000
+API: 31369.593750
+Total: 31381.347656
+real 31.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.644000 [33.56MB]	30864.074219	5.663000 [33.56MB]	30879.380859
+
+Init: 385.846008
+MemAlloc: 1.548000
+HtoD: 9.644000
+HtoD_Phy: 9.038401
+Exec: 30864.074219
+DtoH: 5.663000
+DtoH_Phy: 5.298417
+Close: 0.683000
+API: 31267.457031
+Total: 31279.638672
+real 31.35 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.438000 [33.56MB]	30843.699219	6.550000 [33.56MB]	30858.687500
+
+Init: 385.752991
+MemAlloc: 1.463000
+HtoD: 8.438000
+HtoD_Phy: 8.115014
+Exec: 30843.699219
+DtoH: 6.550000
+DtoH_Phy: 5.852193
+Close: 1.140000
+API: 31247.044922
+Total: 31258.980469
+real 31.33 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	9.197000 [33.56MB]	30840.341797	6.350000 [33.56MB]	30855.888672
+
+Init: 379.046997
+MemAlloc: 1.478000
+HtoD: 9.197000
+HtoD_Phy: 8.814486
+Exec: 30840.341797
+DtoH: 6.350000
+DtoH_Phy: 5.759371
+Close: 1.163000
+API: 31237.576172
+Total: 31250.957031
+real 31.33 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.845000 [33.56MB]	30899.564453	6.594000 [33.56MB]	30915.003906
+
+Init: 381.857025
+MemAlloc: 1.447000
+HtoD: 8.845000
+HtoD_Phy: 8.528642
+Exec: 30899.564453
+DtoH: 6.594000
+DtoH_Phy: 5.900432
+Close: 1.176000
+API: 31299.482422
+Total: 31311.529297
+real 31.38 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.892000 [33.56MB]	30832.390625	6.058000 [33.56MB]	30847.341797
+
+Init: 380.351990
+MemAlloc: 1.458000
+HtoD: 8.892000
+HtoD_Phy: 8.400879
+Exec: 30832.390625
+DtoH: 6.058000
+DtoH_Phy: 5.505609
+Close: 1.058000
+API: 31230.208984
+Total: 31243.162109
+real 31.31 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.527000 [33.56MB]	30940.488281	6.259000 [33.56MB]	30955.275391
+
+Init: 386.661987
+MemAlloc: 1.442000
+HtoD: 8.527000
+HtoD_Phy: 8.111668
+Exec: 30940.488281
+DtoH: 6.259000
+DtoH_Phy: 5.603965
+Close: 1.176000
+API: 31344.554688
+Total: 31356.730469
+real 31.43 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	8.419000 [33.56MB]	30938.919922	6.466000 [33.56MB]	30953.806641
+
+Init: 387.799011
+MemAlloc: 1.404000
+HtoD: 8.419000
+HtoD_Phy: 8.073462
+Exec: 30938.919922
+DtoH: 6.466000
+DtoH_Phy: 5.786186
+Close: 1.136000
+API: 31344.144531
+Total: 31356.751953
+real 31.43 seconds
+++ echo
+
+++ echo
+

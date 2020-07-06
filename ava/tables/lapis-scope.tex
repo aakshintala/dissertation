@@ -1,0 +1,59 @@
+% -*- fill-column: 85; -*-
+%!TEX root = ../main.tex
+
+% NOTE: TexLive 2017 fails when a lstlisting environment is inside a table. This is fixed in 2018, but
+% multirow still has the issue. Because of this, I'm using saveboxes for a bunch of listings just in case.
+\newsavebox{\boxargumentsyntax}
+\begin{lrbox}{\boxargumentsyntax}
+\begin{lstlisting}[language=C,style=nwspecc,columns=fullflexible,numbers=none]
+argument(x) {
+  descriptors }
+\end{lstlisting}
+\end{lrbox}
+
+\newsavebox{\boxelementsyntax}
+\begin{lrbox}{\boxelementsyntax}
+\begin{lstlisting}[language=C,style=nwspecc,columns=fullflexible,numbers=none]
+element {
+  descriptors }
+\end{lstlisting}
+\end{lrbox}
+
+\newsavebox{\boxtypesyntax}
+\begin{lrbox}{\boxtypesyntax}
+\begin{lstlisting}[language=C,style=nwspecc,columns=fullflexible,numbers=none]
+type(ty) {
+  descriptors }
+\end{lstlisting}
+\end{lrbox}
+
+\newsavebox{\boxifsyntax}
+\begin{lrbox}{\boxifsyntax}
+\begin{lstlisting}[language=C,style=nwspecc,columns=fullflexible,numbers=none]
+if (pred) { 
+  descriptors1
+} else {
+  descriptors2 }
+\end{lstlisting}
+\end{lrbox}
+
+\begin{table}
+  \centering
+\resizebox{\columnwidth}{!}{
+  \begin{tabular}{@{}p{1in} p{3in}@{}}
+  \toprule
+  Scope & \spec|descriptors| in this scope apply to ...  \\
+  \midrule 
+  \raisebox{-0.5em}{\usebox{\boxargumentsyntax}}  & the argument \spec|x|, called the described argument. \\
+  \raisebox{-0.5em}{\usebox{\boxelementsyntax}} & the referenced value, called the described value; e.g., if applied to an argument \spec|x|, the descriptors inside apply to \spec|*x|. \\
+  \raisebox{-0.5em}{\usebox{\boxtypesyntax}} & all values of type \spec|ty|. \\
+  \raisebox{-1.7em}{\usebox{\boxifsyntax}} & \spec|descriptors1| apply only if \spec|pred| is true; \spec|descriptors2| apply otherwise. \\
+  \bottomrule
+  \end{tabular}
+  }
+  \caption{\speclang syntax which values descriptors apply to and when those descriptors apply.
+  %\cjr{maybe we can refactor this   whole thing into the sentence that says descriptors are flexibly scoped.}
+  }
+  \label{tab:lapis-scope}
+%  \vspace*{-1em}
+\end{table}

@@ -1,0 +1,702 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fe6e9995000
+assigned worker at 4106
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	24.945000 [33.56MB]	30823.935547	37.226002 [33.56MB]	30886.107422
+
+Init: 373.414001
+MemAlloc: 2.104000
+HtoD: 24.945000
+HtoD_Phy: 10.543173
+Exec: 30823.935547
+DtoH: 37.226002
+DtoH_Phy: 14.988102
+Close: 2.230000
+API: 31263.855469
+Total: 31289.769531
+Command exited with non-zero status 255
+real 31.36 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fee45c0f000
+assigned worker at 4107
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	26.025000 [33.56MB]	30886.837891	39.556000 [33.56MB]	30952.419922
+
+Init: 377.504028
+MemAlloc: 2.333000
+HtoD: 26.025000
+HtoD_Phy: 11.033627
+Exec: 30886.837891
+DtoH: 39.556000
+DtoH_Phy: 14.010700
+Close: 1.625000
+API: 31333.880859
+Total: 31361.855469
+Command exited with non-zero status 255
+real 31.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f50642a9000
+assigned worker at 4108
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	27.950001 [33.56MB]	30845.408203	39.381001 [33.56MB]	30912.738281
+
+Init: 372.660980
+MemAlloc: 2.016000
+HtoD: 27.950001
+HtoD_Phy: 10.663179
+Exec: 30845.408203
+DtoH: 39.381001
+DtoH_Phy: 15.308529
+Close: 1.738000
+API: 31289.154297
+Total: 31315.865234
+Command exited with non-zero status 255
+real 31.40 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f362de2c000
+assigned worker at 4109
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	25.538000 [33.56MB]	30856.816406	35.442001 [33.56MB]	30917.794922
+
+Init: 375.944000
+MemAlloc: 2.334000
+HtoD: 25.538000
+HtoD_Phy: 10.445251
+Exec: 30856.816406
+DtoH: 35.442001
+DtoH_Phy: 14.553448
+Close: 1.954000
+API: 31298.027344
+Total: 31325.244141
+Command exited with non-zero status 255
+real 31.41 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f1aad08e000
+assigned worker at 4110
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	24.153000 [33.56MB]	30834.140625	36.464001 [33.56MB]	30894.757812
+
+Init: 373.750000
+MemAlloc: 1.914000
+HtoD: 24.153000
+HtoD_Phy: 10.208631
+Exec: 30834.140625
+DtoH: 36.464001
+DtoH_Phy: 12.985031
+Close: 1.685000
+API: 31272.107422
+Total: 31298.537109
+Command exited with non-zero status 255
+real 31.38 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8e104c1000
+assigned worker at 4111
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	22.993999 [33.56MB]	30844.906250	36.580002 [33.56MB]	30904.480469
+
+Init: 376.177979
+MemAlloc: 1.951000
+HtoD: 22.993999
+HtoD_Phy: 9.500282
+Exec: 30844.906250
+DtoH: 36.580002
+DtoH_Phy: 13.604920
+Close: 1.847000
+API: 31284.457031
+Total: 31310.923828
+Command exited with non-zero status 255
+real 31.38 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb971528000
+assigned worker at 4112
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	26.499001 [33.56MB]	30839.755859	38.284000 [33.56MB]	30904.537109
+
+Init: 375.436005
+MemAlloc: 1.961000
+HtoD: 26.499001
+HtoD_Phy: 11.803148
+Exec: 30839.755859
+DtoH: 38.284000
+DtoH_Phy: 14.644101
+Close: 1.387000
+API: 31283.322266
+Total: 31309.695312
+Command exited with non-zero status 255
+real 31.38 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f990886d000
+assigned worker at 4113
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	24.542999 [33.56MB]	30980.984375	37.536999 [33.56MB]	31043.064453
+
+Init: 372.401978
+MemAlloc: 1.909000
+HtoD: 24.542999
+HtoD_Phy: 10.235446
+Exec: 30980.984375
+DtoH: 37.536999
+DtoH_Phy: 14.621279
+Close: 1.511000
+API: 31418.886719
+Total: 31446.410156
+Command exited with non-zero status 255
+real 31.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f34c6b89000
+assigned worker at 4114
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	26.757999 [33.56MB]	30876.330078	35.582001 [33.56MB]	30938.669922
+
+Init: 372.414001
+MemAlloc: 2.314000
+HtoD: 26.757999
+HtoD_Phy: 11.038963
+Exec: 30876.330078
+DtoH: 35.582001
+DtoH_Phy: 13.971149
+Close: 1.619000
+API: 31315.017578
+Total: 31341.058594
+Command exited with non-zero status 255
+real 31.41 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0c4309e000
+assigned worker at 4115
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	24.239000 [33.56MB]	30887.097656	36.839001 [33.56MB]	30948.175781
+
+Init: 376.500000
+MemAlloc: 1.881000
+HtoD: 24.239000
+HtoD_Phy: 10.507171
+Exec: 30887.097656
+DtoH: 36.839001
+DtoH_Phy: 12.888321
+Close: 1.300000
+API: 31327.857422
+Total: 31354.796875
+Command exited with non-zero status 255
+real 31.43 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f2ad7f6d000
+assigned worker at 4116
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	24.593000 [33.56MB]	30914.140625	39.328999 [33.56MB]	30978.062500
+
+Init: 373.169983
+MemAlloc: 2.204000
+HtoD: 24.593000
+HtoD_Phy: 10.354073
+Exec: 30914.140625
+DtoH: 39.328999
+DtoH_Phy: 14.906021
+Close: 1.637000
+API: 31355.072266
+Total: 31379.847656
+Command exited with non-zero status 255
+real 31.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f9fd8083000
+assigned worker at 4117
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	25.624001 [33.56MB]	30814.525391	37.167999 [33.56MB]	30877.316406
+
+Init: 381.700012
+MemAlloc: 2.639000
+HtoD: 25.624001
+HtoD_Phy: 10.283100
+Exec: 30814.525391
+DtoH: 37.167999
+DtoH_Phy: 13.428642
+Close: 1.604000
+API: 31263.259766
+Total: 31292.121094
+Command exited with non-zero status 255
+real 31.38 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0f4d170000
+assigned worker at 4118
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	25.212000 [33.56MB]	30880.925781	37.896000 [33.56MB]	30944.035156
+
+Init: 377.255005
+MemAlloc: 2.295000
+HtoD: 25.212000
+HtoD_Phy: 10.592155
+Exec: 30880.925781
+DtoH: 37.896000
+DtoH_Phy: 14.215608
+Close: 2.085000
+API: 31325.669922
+Total: 31352.337891
+Command exited with non-zero status 255
+real 31.43 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fc40fb9a000
+assigned worker at 4119
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	24.090000 [33.56MB]	30805.816406	33.785999 [33.56MB]	30863.691406
+
+Init: 383.994995
+MemAlloc: 1.975000
+HtoD: 24.090000
+HtoD_Phy: 10.283237
+Exec: 30805.816406
+DtoH: 33.785999
+DtoH_Phy: 13.034866
+Close: 1.267000
+API: 31250.929688
+Total: 31276.816406
+Command exited with non-zero status 255
+real 31.34 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f9d7113a000
+assigned worker at 4120
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	27.249001 [33.56MB]	30898.937500	37.111000 [33.56MB]	30963.296875
+
+Init: 376.618011
+MemAlloc: 2.142000
+HtoD: 27.249001
+HtoD_Phy: 11.018410
+Exec: 30898.937500
+DtoH: 37.111000
+DtoH_Phy: 14.372049
+Close: 1.907000
+API: 31343.964844
+Total: 31369.308594
+Command exited with non-zero status 255
+real 31.44 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fe3a6c84000
+assigned worker at 4121
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	26.195000 [33.56MB]	30887.144531	36.035999 [33.56MB]	30949.375000
+
+Init: 373.080994
+MemAlloc: 2.163000
+HtoD: 26.195000
+HtoD_Phy: 10.591655
+Exec: 30887.144531
+DtoH: 36.035999
+DtoH_Phy: 14.505123
+Close: 1.886000
+API: 31326.505859
+Total: 31353.107422
+Command exited with non-zero status 255
+real 31.45 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f050b782000
+assigned worker at 4122
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	24.590000 [33.56MB]	30891.634766	36.783001 [33.56MB]	30953.007812
+
+Init: 374.411987
+MemAlloc: 2.095000
+HtoD: 24.590000
+HtoD_Phy: 11.194762
+Exec: 30891.634766
+DtoH: 36.783001
+DtoH_Phy: 14.233981
+Close: 1.457000
+API: 31330.972656
+Total: 31357.871094
+Command exited with non-zero status 255
+real 31.43 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa5e3f3c000
+assigned worker at 4123
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	25.169001 [33.56MB]	30830.431641	36.750999 [33.56MB]	30892.353516
+
+Init: 373.790009
+MemAlloc: 2.090000
+HtoD: 25.169001
+HtoD_Phy: 10.387621
+Exec: 30830.431641
+DtoH: 36.750999
+DtoH_Phy: 11.648401
+Close: 2.166000
+API: 31270.398438
+Total: 31296.599609
+Command exited with non-zero status 255
+real 31.38 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fe6cd7ea000
+assigned worker at 4124
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	24.160000 [33.56MB]	30821.955078	46.070999 [33.56MB]	30892.185547
+
+Init: 378.554993
+MemAlloc: 2.145000
+HtoD: 24.160000
+HtoD_Phy: 10.447186
+Exec: 30821.955078
+DtoH: 46.070999
+DtoH_Phy: 13.832221
+Close: 1.592000
+API: 31274.476562
+Total: 31301.148438
+Command exited with non-zero status 255
+real 31.38 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5adca8f000
+assigned worker at 4125
+WG size of kernel 1 = 4, WG size of kernel 2= 0 X 0
+Create matrix internally in parse, size = 2048 
+Number of platforms detected:1
+Checking For OpenCl Compatible Devices
+Platform 0
+vendor: Advanced Micro Devices, Inc.
+no of devices: 1
+	device 0: Advanced Micro Devices, Inc. gfx803
+
+Using Platform 0 Device 0 
+Creating GPU Context
+Profiling enabled
+create input internally before create, size = 2048 
+	gaussianElim_kernels.cl
+Matrix Size	Write(s) [size]		Kernel(s)	Read(s)  [size]		Total(s)
+2048x2048      	25.250000 [33.56MB]	30757.210938	41.120998 [33.56MB]	30823.582031
+
+Init: 379.226013
+MemAlloc: 2.315000
+HtoD: 25.250000
+HtoD_Phy: 10.583437
+Exec: 30757.210938
+DtoH: 41.120998
+DtoH_Phy: 14.515862
+Close: 2.115000
+API: 31207.238281
+Total: 31234.312500
+Command exited with non-zero status 255
+real 31.33 seconds
+++ echo
+
+++ echo
+

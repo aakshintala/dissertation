@@ -1,0 +1,350 @@
+native, all CUs
+
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 274.638000
+MemAlloc: 0.010000
+HtoD: 11.249001
+HtoD_Phy: 6.841695
+Exec: 245.434998
+DtoH: 3.596000
+DtoH_Phy: 2.854738
+Close: 31.754999
+API: 566.683044
+Total: 575.674988
+
+######################################
+native 32 CUs, 1 app
+
+Performing GPU computation
+Init: 272.717010
+MemAlloc: 0.010000
+HtoD: 11.786000
+HtoD_Phy: 7.128141
+Exec: 478.632019
+DtoH: 3.890000
+DtoH_Phy: 3.081861
+Close: 31.319000
+API: 798.354004
+Total: 807.330017
+
+######################################
+native 16 CUs, 1 app
+
+Performing GPU computation
+Init: 271.694000
+MemAlloc: 0.012000
+HtoD: 11.707001
+HtoD_Phy: 7.076656
+Exec: 945.283997
+DtoH: 3.953000
+DtoH_Phy: 3.018143
+Close: 30.985001
+API: 1263.635010
+Total: 1273.411987
+
+######################################
+native 16 CUs for each app
+
+Init: 287.571014
+MemAlloc: 0.015000
+HtoD: 13.342999
+HtoD_Phy: 8.565719
+Exec: 955.793945
+DtoH: 4.156000
+DtoH_Phy: 3.505061
+Close: 42.201000
+API: 1303.079956
+Total: 1315.909058
+
+Init: 291.829987
+MemAlloc: 0.010000
+HtoD: 14.509001
+HtoD_Phy: 8.351796
+Exec: 955.440979
+DtoH: 4.334000
+DtoH_Phy: 3.644415
+Close: 37.860001
+API: 1303.984009
+Total: 1318.144043
+
+
+######################################3
+native, 32 CUs for each
+
+Init: 287.220001
+MemAlloc: 0.011000
+HtoD: 17.007999
+HtoD_Phy: 11.657352
+Exec: 483.649017
+DtoH: 4.793000
+DtoH_Phy: 4.304285
+Close: 48.136002
+API: 840.817017
+Total: 856.823975
+
+Init: 287.165985
+MemAlloc: 0.009000
+HtoD: 17.073000
+HtoD_Phy: 10.082140
+Exec: 483.686005
+DtoH: 4.701000
+DtoH_Phy: 4.057781
+Close: 48.150002
+API: 840.784973
+Total: 856.903015
+
+######################################
+native 16 and 48 CUs for each app
+
+Init: 293.126007
+MemAlloc: 0.010000
+HtoD: 12.681000
+HtoD_Phy: 7.596547
+Exec: 326.294006
+DtoH: 3.768000
+DtoH_Phy: 3.236523
+Close: 32.764000
+API: 668.643005
+Total: 678.354004
+
+Init: 281.614990
+MemAlloc: 0.009000
+HtoD: 13.762000
+HtoD_Phy: 8.536662
+Exec: 955.945007
+DtoH: 4.067000
+DtoH_Phy: 3.438876
+Close: 32.995998
+API: 1288.394043
+Total: 1298.201050
+
+######################################
+native 16 and 32 CUs for each app
+
+Init: 286.651001
+MemAlloc: 0.013000
+HtoD: 14.373000
+HtoD_Phy: 8.798046
+Exec: 484.770996
+DtoH: 3.664000
+DtoH_Phy: 3.131346
+Close: 34.272999
+API: 823.744995
+Total: 839.526978
+
+Init: 286.722992
+MemAlloc: 0.007000
+HtoD: 15.106001
+HtoD_Phy: 9.042971
+Exec: 958.669983
+DtoH: 4.631000
+DtoH_Phy: 3.810266
+Close: 32.519001
+API: 1297.656006
+Total: 1314.030029
+
+######################################
+1VM 64 CUs
+Init: 277.561005
+MemAlloc: 0.403000
+HtoD: 46.890999
+HtoD_Phy: 11.242708
+Exec: 250.834000
+DtoH: 13.541000
+DtoH_Phy: 3.387667
+Close: 0.102000
+API: 589.332031
+Total: 598.822998
+
+######################################
+1VM 32 CUs
+
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 277.597992
+MemAlloc: 0.189000
+HtoD: 42.392002
+HtoD_Phy: 10.095578
+Exec: 483.282013
+DtoH: 12.969000
+DtoH_Phy: 3.344890
+Close: 0.109000
+API: 816.539001
+Total: 827.322998
+
+######################################
+1VM 16 CUs
+
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 280.928986
+MemAlloc: 0.454000
+HtoD: 41.620998
+HtoD_Phy: 9.955815
+Exec: 950.772034
+DtoH: 15.304999
+DtoH_Phy: 3.856817
+Close: 0.099000
+API: 1289.180054
+Total: 1300.307007
+
+######################################
+2VM 32 CUs for each
+
+[1] 20:29:03 [SUCCESS] dev
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 291.674011
+MemAlloc: 0.418000
+HtoD: 55.006004
+HtoD_Phy: 13.127852
+Exec: 489.708008
+DtoH: 17.085001
+DtoH_Phy: 4.701860
+Close: 0.114000
+API: 854.005066
+Total: 867.372986
+
+Finish the training for one iteration
+[2] 20:29:03 [SUCCESS] dev1
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 295.105988
+MemAlloc: 0.502000
+HtoD: 48.702999
+HtoD_Phy: 11.030099
+Exec: 488.682007
+DtoH: 19.598000
+DtoH_Phy: 4.314409
+Close: 0.077000
+API: 852.668091
+Total: 870.174988
+
+######################################
+2VM 16 CUs for each
+
+[1] 20:25:38 [SUCCESS] dev
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 295.343994
+MemAlloc: 0.565000
+HtoD: 61.892998
+HtoD_Phy: 10.881844
+Exec: 957.627991
+DtoH: 18.828001
+DtoH_Phy: 4.364388
+Close: 0.071000
+API: 1334.328979
+Total: 1350.923950
+
+Finish the training for one iteration
+[2] 20:25:38 [SUCCESS] dev1
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 301.434998
+MemAlloc: 0.201000
+HtoD: 60.778000
+HtoD_Phy: 15.208386
+Exec: 954.541992
+DtoH: 20.587000
+DtoH_Phy: 4.779189
+Close: 0.082000
+API: 1337.625122
+Total: 1355.682983
+
+######################################
+2VM 16 CUs and 32 CUs for each
+
+[1] 20:33:41 [SUCCESS] dev1
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 292.565002
+MemAlloc: 0.458000
+HtoD: 48.438000
+HtoD_Phy: 9.823581
+Exec: 489.683014
+DtoH: 17.362999
+DtoH_Phy: 4.583333
+Close: 0.117000
+API: 848.624023
+Total: 864.599976
+
+Finish the training for one iteration
+[2] 20:33:41 [SUCCESS] dev
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 298.292999
+MemAlloc: 0.443000
+HtoD: 50.335999
+HtoD_Phy: 10.801712
+Exec: 959.926025
+DtoH: 16.513000
+DtoH_Phy: 4.451968
+Close: 0.093000
+API: 1325.604004
+Total: 1341.512939
+
+######################################
+2VM 16 CUs and 48 CUs for each
+
+[1] 20:31:05 [SUCCESS] dev1
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 289.502014
+MemAlloc: 0.166000
+HtoD: 43.638000
+HtoD_Phy: 9.436693
+Exec: 332.778015
+DtoH: 15.518000
+DtoH_Phy: 3.922749
+Close: 0.113000
+API: 681.714966
+Total: 693.481995
+
+Finish the training for one iteration
+[2] 20:31:05 [SUCCESS] dev
+Random number generator seed: 7
+Input layer size : 262144
+Starting training kernel
+num_devices = 1
+Performing GPU computation
+Init: 301.925995
+MemAlloc: 0.304000
+HtoD: 45.144001
+HtoD_Phy: 11.752396
+Exec: 956.691956
+DtoH: 15.863000
+DtoH_Phy: 4.134283
+Close: 0.079000
+API: 1320.007935
+Total: 1337.187988

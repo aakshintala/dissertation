@@ -1,0 +1,462 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f033c19c000
+assigned worker at 4231
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 997.364990
+MemAlloc: 0.907000
+HtoD: 14.786000
+HtoD_Phy: 6.645884
+Exec: 21406.281250
+DtoH: 25.577999
+DtoH_Phy: 9.582080
+Close: 2.002000
+API: 22446.919922
+Total: 22446.921875
+Command exited with non-zero status 255
+real 22.56 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0922c33000
+assigned worker at 4232
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 996.914001
+MemAlloc: 1.149000
+HtoD: 15.102000
+HtoD_Phy: 6.926013
+Exec: 21365.269531
+DtoH: 19.611000
+DtoH_Phy: 8.740338
+Close: 1.713000
+API: 22399.757812
+Total: 22399.759766
+Command exited with non-zero status 255
+real 22.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fde576be000
+assigned worker at 4233
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 991.890015
+MemAlloc: 1.050000
+HtoD: 16.062000
+HtoD_Phy: 7.962433
+Exec: 21374.156250
+DtoH: 24.487000
+DtoH_Phy: 8.828945
+Close: 1.908000
+API: 22409.552734
+Total: 22409.552734
+Command exited with non-zero status 255
+real 22.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5411ccc000
+assigned worker at 4234
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 985.698975
+MemAlloc: 1.010000
+HtoD: 14.485000
+HtoD_Phy: 6.626939
+Exec: 21358.207031
+DtoH: 25.309999
+DtoH_Phy: 9.353042
+Close: 2.624000
+API: 22387.333984
+Total: 22387.337891
+Command exited with non-zero status 255
+real 22.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7ff20925b000
+assigned worker at 4235
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 989.034973
+MemAlloc: 0.911000
+HtoD: 14.435000
+HtoD_Phy: 6.584136
+Exec: 21355.599609
+DtoH: 23.349001
+DtoH_Phy: 9.159767
+Close: 1.760000
+API: 22385.089844
+Total: 22385.091797
+Command exited with non-zero status 255
+real 22.47 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f678a2f6000
+assigned worker at 4236
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 1006.530029
+MemAlloc: 1.080000
+HtoD: 14.989000
+HtoD_Phy: 6.678267
+Exec: 21374.560547
+DtoH: 24.080000
+DtoH_Phy: 9.095977
+Close: 2.062000
+API: 22423.302734
+Total: 22423.302734
+Command exited with non-zero status 255
+real 22.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fc7ac3cd000
+assigned worker at 4237
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 999.590027
+MemAlloc: 0.952000
+HtoD: 14.710000
+HtoD_Phy: 6.231440
+Exec: 21382.072266
+DtoH: 24.673000
+DtoH_Phy: 9.505580
+Close: 1.700000
+API: 22423.697266
+Total: 22423.697266
+Command exited with non-zero status 255
+real 22.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb0a4e8c000
+assigned worker at 4238
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 991.525024
+MemAlloc: 1.065000
+HtoD: 14.816000
+HtoD_Phy: 6.470683
+Exec: 21394.007812
+DtoH: 23.455000
+DtoH_Phy: 9.197345
+Close: 1.600000
+API: 22426.468750
+Total: 22426.468750
+Command exited with non-zero status 255
+real 22.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f6b804be000
+assigned worker at 4239
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 998.044006
+MemAlloc: 1.075000
+HtoD: 15.844000
+HtoD_Phy: 6.888538
+Exec: 21376.828125
+DtoH: 24.027000
+DtoH_Phy: 9.217875
+Close: 1.945000
+API: 22417.763672
+Total: 22417.763672
+Command exited with non-zero status 255
+real 22.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fd9d22eb000
+assigned worker at 4240
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 999.791992
+MemAlloc: 0.996000
+HtoD: 16.594000
+HtoD_Phy: 8.621188
+Exec: 21377.814453
+DtoH: 24.089001
+DtoH_Phy: 10.115385
+Close: 1.881000
+API: 22421.167969
+Total: 22421.166016
+Command exited with non-zero status 255
+real 22.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f28ccce8000
+assigned worker at 4241
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 995.112000
+MemAlloc: 1.170000
+HtoD: 15.222000
+HtoD_Phy: 6.608431
+Exec: 21387.111328
+DtoH: 24.497999
+DtoH_Phy: 8.516225
+Close: 2.197000
+API: 22425.310547
+Total: 22425.310547
+Command exited with non-zero status 255
+real 22.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f102d105000
+assigned worker at 4242
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 1004.859985
+MemAlloc: 1.057000
+HtoD: 14.712000
+HtoD_Phy: 6.622618
+Exec: 21380.117188
+DtoH: 24.559999
+DtoH_Phy: 9.932740
+Close: 1.534000
+API: 22426.839844
+Total: 22426.839844
+Command exited with non-zero status 255
+real 22.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fafac3d3000
+assigned worker at 4243
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 988.770020
+MemAlloc: 1.112000
+HtoD: 15.420000
+HtoD_Phy: 6.983427
+Exec: 21365.142578
+DtoH: 24.924999
+DtoH_Phy: 9.127893
+Close: 2.197000
+API: 22397.568359
+Total: 22397.568359
+Command exited with non-zero status 255
+real 22.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fea08f5c000
+assigned worker at 4244
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 1010.239014
+MemAlloc: 1.053000
+HtoD: 15.361000
+HtoD_Phy: 7.258236
+Exec: 21389.353516
+DtoH: 23.652000
+DtoH_Phy: 9.151933
+Close: 1.676000
+API: 22441.333984
+Total: 22441.337891
+Command exited with non-zero status 255
+real 22.53 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7ff4f83d8000
+assigned worker at 4245
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 999.588013
+MemAlloc: 1.045000
+HtoD: 16.698000
+HtoD_Phy: 8.025753
+Exec: 21388.617188
+DtoH: 23.351000
+DtoH_Phy: 9.023624
+Close: 1.644000
+API: 22430.943359
+Total: 22430.947266
+Command exited with non-zero status 255
+real 22.54 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f5e916a2000
+assigned worker at 4246
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 997.536011
+MemAlloc: 0.856000
+HtoD: 14.479000
+HtoD_Phy: 6.526794
+Exec: 21367.890625
+DtoH: 24.492001
+DtoH_Phy: 9.740226
+Close: 1.631000
+API: 22406.884766
+Total: 22406.884766
+Command exited with non-zero status 255
+real 22.49 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8c76a91000
+assigned worker at 4247
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 982.611023
+MemAlloc: 1.034000
+HtoD: 15.282000
+HtoD_Phy: 7.160742
+Exec: 21389.671875
+DtoH: 24.118000
+DtoH_Phy: 8.989026
+Close: 1.793000
+API: 22414.509766
+Total: 22414.511719
+Command exited with non-zero status 255
+real 22.51 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f02f5a89000
+assigned worker at 4248
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 1004.879028
+MemAlloc: 1.018000
+HtoD: 14.324000
+HtoD_Phy: 6.310851
+Exec: 21390.648438
+DtoH: 24.052000
+DtoH_Phy: 8.417833
+Close: 1.916000
+API: 22436.837891
+Total: 22436.837891
+Command exited with non-zero status 255
+real 22.52 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f88f1f20000
+assigned worker at 4249
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 992.448975
+MemAlloc: 1.164000
+HtoD: 16.056000
+HtoD_Phy: 7.380888
+Exec: 21359.097656
+DtoH: 23.306000
+DtoH_Phy: 8.778707
+Close: 2.155000
+API: 22394.226562
+Total: 22394.230469
+Command exited with non-zero status 255
+real 22.50 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7efd09738000
+assigned worker at 4250
+WG size of kernel = 16 X 16
+Generate input matrix internally, size =2048
+Creating matrix internally size=2048
+num_devices = 1
+Create GPU context
+Init: 1003.890991
+MemAlloc: 1.123000
+HtoD: 14.918000
+HtoD_Phy: 6.721844
+Exec: 21376.673828
+DtoH: 24.452999
+DtoH_Phy: 9.891088
+Close: 1.455000
+API: 22422.513672
+Total: 22422.515625
+Command exited with non-zero status 255
+real 22.52 seconds
+++ echo
+
+++ echo
+

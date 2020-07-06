@@ -17,6 +17,7 @@
 
 % Figures
 \usepackage{graphicx}
+\usepackage{color}
 \usepackage{grffile}
 \usepackage{subcaption}
 \usepackage{epsfig}
@@ -24,6 +25,7 @@
 \usepackage{listings}
 
 % Tables
+\usepackage{array}
 \usepackage{booktabs}
 \usepackage{rotating}
 \usepackage{dcolumn}
@@ -31,6 +33,7 @@
 \usepackage{hhline}
 \usepackage{stackengine}
 \usepackage{tablefootnote}
+\usepackage{tabularx}
 \usepackage{tabulary}
 
 % Algorithms
@@ -39,6 +42,7 @@
 % Math
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{siunitx}
 
 % Typography
 \usepackage{times}
@@ -47,8 +51,10 @@
 
 % Macro support
 \usepackage{xspace}
-\usepackage{xcolor,colortbl}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
 \usepackage{ntheorem}
+\usepackage{comment}
 
 % Diagrams
 \usepackage{pgf}
@@ -140,10 +146,127 @@
 	\renewcommand\thehyp{\arabic{hyp}}%
 }
 
+% LAPIS Stuff
+% ============
+
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+\newcommand{\cross}{$\mathbin{\tikz [x=1.4ex,y=1.4ex,line width=.2ex] \draw (0,0) -- (1,1) (0,1) -- (1,0);}$}%
+
+% YAML highlight
+\newcommand\YAMLcolonstyle{\color{red}\mdseries}
+\newcommand\YAMLkeystyle{\color{black}\bfseries}
+\newcommand\YAMLvaluestyle{\color{blue}\mdseries}
+
+\makeatletter
+% here is a macro expanding to the name of the language
+% (handy if you decide to change it further down the road)
+\newcommand\language@yaml{yaml}
+\expandafter\expandafter\expandafter\lstdefinelanguage
+\expandafter{\language@yaml}
+{
+	keywords={true,false,null,y,n},
+	keywordstyle=\color{darkgray}\bfseries,
+	basicstyle=\YAMLkeystyle,                                 % assuming a key comes first
+	sensitive=false,
+	comment=[l]{\#},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\YAMLvaluestyle\ttfamily,
+	moredelim=[l][\color{orange}]{\&},
+	moredelim=[l][\color{magenta}]{*},
+	moredelim=**[il][\YAMLcolonstyle{:}\YAMLvaluestyle]{:},   % switch to value style at :
+	morestring=[b]',
+	morestring=[b]",
+	literate =    {---}{{\ProcessThreeDashes}}3
+	{>}{{\textcolor{red}\textgreater}}1
+	{|}{{\textcolor{red}\textbar}}1
+	{\ -\ }{{\mdseries\ -\ }}3,
+}
+
+% switch to key style at EOL
+\lst@AddToHook{EveryLine}{\ifx\lst@language\language@yaml\YAMLkeystyle\fi}
+
+\newcommand{\elidedcodeStart}[1]{\bgroup\itshape\color{black!60!green}[\aftergroup\elidedcodeEnd}
+\def\elidedcodeEnd{]\egroup}
+\newcommand{\elidedcode}[1]{\text{\itshape\color{black!60!green}...{#1}...}}
+
+\makeatother
+
+\lstset{
+	breaklines=true,
+	basicstyle={\small\ttfamily},
+	literate={*}{{\fontfamily{lmtt}\selectfont*}}1,
+	numbers=left,
+	numberstyle=\scriptsize\color{gray!50!black},
+	commentstyle=\itshape\color{black!60!green},
+	%stepnumber=1,
+	numbersep=4pt,
+    moredelim={**[is][\lapisprototypestyle]{@@}{@@}},
+    escapechar=|
+}
+
+% http://tex.stackexchange.com/q/43526
+% fix the apparently deliberate but undocumented behaviour of disabling escapes other than mathescape in TextStyle (used by \lstinline)
+% there may be a good reason why this is disabled by default, so beware in case it causes any problems
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\lsthk@TextStyle}{\let\lst@DefEsc\@empty}{}{}{\errmessage{failed to patch}}
+\makeatother
+
+% Due to how lstlisting works, this works better if it SETs the style instead of styling and argument.
+\newcommand*{\lapiskeywordstyle}{\color{blue!50!black}\bfseries}
+\newcommand*{\lapisstdlibstyle}{\color{green!40!black}\itshape}
+\newcommand*{\lapisprototypestyle}{\color{black!70}}
+
+
+\lstdefinestyle{nwspecc}{
+	breaklines=true,
+	language=C,
+    % This intentionally replaces all normal C keywords, since they are not the important part of nwspecc listings.
+    keywords={},
+    % API remoting related Lapis keywords
+    emph={[1]sync,async,name,version,identifier,opaque,
+          number,export_qualifier,success,type,in,out,buffer,
+          zerocopy,type_cast,
+          element,allocates,deallocates,argument,
+          handle,callback,userdata,return_value,field,
+          contextual_argument,
+          lifetime_manual,lifetime_call,allocate,deallocate,no_copy,
+          index,policy,
+          utility},
+          % \btHL[fill=blue!10,draw=blue!50!black]
+    emphstyle={[1]\lapiskeywordstyle},
+    % Resource accounting related Lapis keywords
+    emph={[2]throughput_rc,consumes_rc,allocates_rc,deallocates_rc,
+              continuous_rc,instantaneous_rc},
+    emphstyle={[2]\lapiskeywordstyle},
+    % Record-and-replay related Lapis keywords
+    emph={[3]obj_record,obj_depends_on,obj_state_cbs},
+    emphstyle={[3]\lapiskeywordstyle},
+    % Standard library
+    emph={[4]buf_registry,register_buf,get_bufs,get_n_bufs,get_buf_size,
+        declare_metadata,metadata,
+        strlen,min,max,
+        zerocopy_alloc,zerocopy_free,zerocopy_get_physical_address},
+    emphstyle={[4]\lapisstdlibstyle},
+    moredelim={**[is][\lapisprototypestyle]{@@}{@@}}
+}
+
+%
+% Table
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\newcommand\ProcessThreeDashes{\llap{\color{cyan}\mdseries-{-}-}}
+
+\newcommand{\newterm}[1]{{\bf #1}}
+\newcommand{\parname}[1]{\textbf{\textit{#1}}}
+\newcommand{\paragraphbe}[1]{\vspace{.25ex}\noindent\parname{#1} }
+% ============
+
 % Shortcut MACROs for virtcomptable
 \newcommand\T{\rule{0pt}{2.0ex}}
 \newcommand\B{\rule[-0.9ex]{0pt}{0pt}}
-\newcommand{\paragraphbe}[1]{\vspace{.75ex}\noindent{\textbf{\textit{ #1}}}\xspace}
 
 \newcommand{\fs}[1]{\footnotesize{#1}}
 \newcommand{\bfs}[1]{\textbf{\footnotesize{#1}}}

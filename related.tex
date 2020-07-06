@@ -33,7 +33,7 @@ programmer via an API.
 
 \input{virtcomptable}
 
-{\noindent \bf \large Full Virtualization}
+\subsection{Full Virtualization}
 
 \paragraphbe{GPUvm}~\cite{suzuki2014gpuvm} virtualizes CUDA on Kepler and
 Fermi (NVIDIA) GPUs for Xen. GPUvm presents a GPU device model to each VM.
@@ -54,7 +54,7 @@ management are done by the native driver in DOM0. Memory is multiplexed with a
 combination of partitioning and `` ballooning''. gVirtus is geared toward
 graphics and can't be easily extened to support GPGPU computing.
 
-{\noindent \bf \large API Remoting}
+\subsection{API Remoting}
 
 \paragraphbe{GViM}~\cite{gupta2009gvim} supports a straightforward
 split-driver API remoting approach to virtualization of CUDA in Xen.
@@ -94,7 +94,7 @@ multiplexing GPUs and CUDA/OpenCL across a cluster. A client library
 encapsulates access to a (potentially) remote GPU. While the basic design is
 isomorphic to the API remoting design, virtual machines need not be present.
 
-{\noindent \bf \large Para-virtualization}
+\subsection{Para-virtualization}
 
 \paragraphbe{LoGV}~\cite{logv} describes an approach to GPGPU virtualization
 that uses GPU protection hardware in the hypervisor to enforce cross-VM
@@ -136,12 +136,13 @@ multiplexing viable for graphics rendering but not for general purpose
 computation.
 
 \section{Language-level Virtualization}
-\textbf{\textit{Dandelion}}~\cite{dandelion} abstracts accelerators at the
+\paragraphbe{Dandelion}~\cite{dandelion} abstracts accelerators at the
 language runtime by compiling sequential .Net code to the accelerator
 (GPU or FPGA). vTask draws inspiration from the buffer management in Dandelion
 and PTask~\cite{rossbach2011ptask}, the underlying accelerator abstraction
 layer.
-\textbf{\textit{HPVM}}~\cite{HPVM} explores the design of a virtual ISA
+
+\paragraphbe{HPVM}~\cite{HPVM} explores the design of a virtual ISA
 (vISA) for abstracting heterogeneous compute devices. The HPVM vISA serves as
 a portable compilation target for managed language run-times built on top of
 the LLVM compiler infrastructure. HPVM can serve as a replacement for LLVM in

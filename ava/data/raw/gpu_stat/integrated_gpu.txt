@@ -1,0 +1,23 @@
+AMD
+FirePro A300	Trinity GL	Jun 2012	PCIe 2.0 x16	System Shared	760 MHz	System Shared	384 / 24 / 8
+FirePro A320	Trinity GL	Jun 2012	PCIe 2.0 x16	System Shared	800 MHz	System Shared	384 / 24 / 8
+
+ATI
+ES1000	ES1000	Oct 2007	PCI	System Shared	200 MHz	System Shared	0 / 0 / 3 / 1
+
+Intel
+HD Graphics P630	Kaby Lake GT2	Aug 2016	PCIe 3.0 x1	System Shared	300 MHz	System Shared	192 / 24 / 3
+HD Graphics P530	Skylake GT2	Sep 2015	PCIe 3.0 x1	System Shared	350 MHz	System Shared	192 / 24 / 3
+Iris Pro Graphics P555	Skylake GT3e	Sep 2015	PCIe 3.0 x1	System Shared	300 MHz	System Shared	384 / 48 / 6
+Iris Pro Graphics P580	Skylake GT4e	Sep 2015	PCIe 3.0 x1	System Shared	300 MHz	System Shared	576 / 72 / 9
+HD Graphics P5700	Broadwell GT2	Sep 2014	IGP	System Shared	700 MHz	System Shared	192 / 24 / 3
+Iris Pro Graphics P6300	Broadwell GT3e	Sep 2014	IGP	System Shared	800 MHz	System Shared	384 / 48 / 6
+HD Graphics	Haswell GT1	Jun 2013	IGP	System Shared	650 MHz	System Shared	128 / 16 / 1
+HD Graphics P4600	Haswell GT2	Jun 2013	IGP	System Shared	350 MHz	System Shared	160 / 20 / 2
+HD Graphics P4700	Haswell GT2	Jun 2013	IGP	System Shared	350 MHz	System Shared	160 / 20 / 2
+HD Graphics P4000	Ivy Bridge GT2	May 2012	PCIe 1.0 x16	System Shared	650 MHz	System Shared	128 / 16 / 1
+HD Graphics P3000	Sandy Bridge GT2	Feb 2011	PCIe 1.0 x16	System Shared	850 MHz	System Shared	96 / 12 / 1
+
+NVIDIA
+Quadro FX 470	C79MX	Sep 2007	PCI	System Shared	580 MHz	System Shared	16 / 8 / 4
+Quadro NVS 210S	MCP51	Dec 2003	PCI	System Shared	425 MHz	System Shared	2 / 1 / 2 / 1

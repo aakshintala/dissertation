@@ -1,0 +1,462 @@
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f73d2525000
+assigned worker at 4206
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 391.984985
+MemAlloc: 2.817000
+HtoD: 23.139999
+HtoD_Phy: 9.758115
+Exec: 10367.782227
+DtoH: 19.789000
+DtoH_Phy: 6.009693
+Close: 2.052000
+API: 10807.565430
+Total: 10809.518555
+Command exited with non-zero status 255
+real 10.98 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fa2ba9a8000
+assigned worker at 4207
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 395.346985
+MemAlloc: 4.037000
+HtoD: 27.267000
+HtoD_Phy: 11.344863
+Exec: 10322.879883
+DtoH: 20.879000
+DtoH_Phy: 6.269074
+Close: 2.671000
+API: 10773.081055
+Total: 10775.713867
+Command exited with non-zero status 255
+real 10.96 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f3529c60000
+assigned worker at 4208
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 387.888000
+MemAlloc: 2.930000
+HtoD: 25.868000
+HtoD_Phy: 10.770908
+Exec: 10312.183594
+DtoH: 20.582001
+DtoH_Phy: 7.510260
+Close: 2.268000
+API: 10751.718750
+Total: 10753.913086
+Command exited with non-zero status 255
+real 10.91 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0aee314000
+assigned worker at 4209
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 397.996002
+MemAlloc: 3.148000
+HtoD: 25.275999
+HtoD_Phy: 10.584058
+Exec: 10323.768555
+DtoH: 21.548000
+DtoH_Phy: 7.673078
+Close: 2.277000
+API: 10774.013672
+Total: 10775.218750
+Command exited with non-zero status 255
+real 10.94 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f46610c7000
+assigned worker at 4210
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 394.690002
+MemAlloc: 2.468000
+HtoD: 23.004000
+HtoD_Phy: 10.043086
+Exec: 10227.960938
+DtoH: 21.995001
+DtoH_Phy: 8.022656
+Close: 2.441000
+API: 10672.559570
+Total: 10674.108398
+Command exited with non-zero status 255
+real 10.83 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f1e71b44000
+assigned worker at 4211
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 399.313995
+MemAlloc: 2.623000
+HtoD: 25.582001
+HtoD_Phy: 10.911408
+Exec: 10344.435547
+DtoH: 22.188000
+DtoH_Phy: 8.106986
+Close: 2.489000
+API: 10796.631836
+Total: 10798.216797
+Command exited with non-zero status 255
+real 10.96 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8857c33000
+assigned worker at 4212
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 392.071014
+MemAlloc: 3.661000
+HtoD: 27.153999
+HtoD_Phy: 11.233117
+Exec: 10329.309570
+DtoH: 19.215000
+DtoH_Phy: 6.277230
+Close: 2.339000
+API: 10773.749023
+Total: 10775.873047
+Command exited with non-zero status 255
+real 10.93 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f23a2f51000
+assigned worker at 4213
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 391.800995
+MemAlloc: 2.944000
+HtoD: 25.006001
+HtoD_Phy: 10.990949
+Exec: 10318.884766
+DtoH: 20.027000
+DtoH_Phy: 6.016994
+Close: 2.462000
+API: 10761.125000
+Total: 10762.736328
+Command exited with non-zero status 255
+real 10.93 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fee13999000
+assigned worker at 4214
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 396.036011
+MemAlloc: 3.201000
+HtoD: 26.066000
+HtoD_Phy: 11.250982
+Exec: 10314.922852
+DtoH: 19.813000
+DtoH_Phy: 6.292505
+Close: 3.933000
+API: 10763.971680
+Total: 10766.036133
+Command exited with non-zero status 255
+real 10.93 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f21db567000
+assigned worker at 4215
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 395.554993
+MemAlloc: 3.550000
+HtoD: 25.392000
+HtoD_Phy: 10.109011
+Exec: 10315.054688
+DtoH: 20.757999
+DtoH_Phy: 7.666863
+Close: 2.127000
+API: 10762.436523
+Total: 10765.200195
+Command exited with non-zero status 255
+real 10.93 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f0df00ee000
+assigned worker at 4216
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 393.730988
+MemAlloc: 3.100000
+HtoD: 27.090000
+HtoD_Phy: 11.793655
+Exec: 10305.471680
+DtoH: 20.891001
+DtoH_Phy: 6.876868
+Close: 2.034000
+API: 10752.317383
+Total: 10754.186523
+Command exited with non-zero status 255
+real 10.92 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f4634523000
+assigned worker at 4217
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 391.144989
+MemAlloc: 3.751000
+HtoD: 26.278999
+HtoD_Phy: 10.691677
+Exec: 10271.469727
+DtoH: 21.761000
+DtoH_Phy: 7.332331
+Close: 2.529000
+API: 10716.934570
+Total: 10719.308594
+Command exited with non-zero status 255
+real 10.88 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fe953473000
+assigned worker at 4218
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 389.151001
+MemAlloc: 3.016000
+HtoD: 26.292999
+HtoD_Phy: 11.062516
+Exec: 10346.165039
+DtoH: 21.639000
+DtoH_Phy: 7.877327
+Close: 2.576000
+API: 10788.839844
+Total: 10790.954102
+Command exited with non-zero status 255
+real 10.98 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7fb1db1a5000
+assigned worker at 4219
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 392.828003
+MemAlloc: 3.082000
+HtoD: 25.820999
+HtoD_Phy: 10.719109
+Exec: 10311.990234
+DtoH: 22.371000
+DtoH_Phy: 7.616117
+Close: 2.504000
+API: 10758.596680
+Total: 10760.819336
+Command exited with non-zero status 255
+real 10.91 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f8e2f99d000
+assigned worker at 4220
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 386.653992
+MemAlloc: 3.349000
+HtoD: 27.134001
+HtoD_Phy: 11.313642
+Exec: 10327.650391
+DtoH: 24.605000
+DtoH_Phy: 8.032576
+Close: 2.487000
+API: 10771.879883
+Total: 10774.111328
+Command exited with non-zero status 255
+real 10.93 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f71e9cf9000
+assigned worker at 4221
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 393.855011
+MemAlloc: 3.363000
+HtoD: 25.850000
+HtoD_Phy: 11.156694
+Exec: 10336.486328
+DtoH: 32.041000
+DtoH_Phy: 8.039861
+Close: 2.332000
+API: 10793.927734
+Total: 10795.885742
+Command exited with non-zero status 255
+real 10.96 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f4b1daf9000
+assigned worker at 4222
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 387.777008
+MemAlloc: 3.122000
+HtoD: 25.702000
+HtoD_Phy: 10.811274
+Exec: 10323.623047
+DtoH: 22.763000
+DtoH_Phy: 7.919276
+Close: 2.549000
+API: 10765.535156
+Total: 10767.408203
+Command exited with non-zero status 255
+real 10.93 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f30e58dd000
+assigned worker at 4223
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 379.509003
+MemAlloc: 2.440000
+HtoD: 25.209999
+HtoD_Phy: 11.495312
+Exec: 10315.430664
+DtoH: 22.388000
+DtoH_Phy: 7.506839
+Close: 2.171000
+API: 10747.148438
+Total: 10748.796875
+Command exited with non-zero status 255
+real 10.91 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f77b33b5000
+assigned worker at 4224
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 387.026001
+MemAlloc: 3.181000
+HtoD: 25.875000
+HtoD_Phy: 11.269764
+Exec: 10352.160156
+DtoH: 22.697001
+DtoH_Phy: 7.118173
+Close: 2.433000
+API: 10793.372070
+Total: 10794.811523
+Command exited with non-zero status 255
+real 10.98 seconds
+++ echo
+
+++ /usr/bin/time -f real %e seconds ./run -p 0 -d 0
+assigned vm_id=1
+param_block size=10000000, offset=0, base=7f41fc71e000
+assigned worker at 4225
+WG size of kernel = 128 
+Configuration used: arch = 0, cores = 1, boxes1d = 20
+Platform: Advanced Micro Devices, Inc.
+Device: gfx803
+# of blocks = 8000, # of threads/block = 128 (ensure that device can handle)
+Init: 397.451996
+MemAlloc: 3.530000
+HtoD: 26.163000
+HtoD_Phy: 10.697517
+Exec: 10335.168945
+DtoH: 20.663000
+DtoH_Phy: 6.674434
+Close: 2.741000
+API: 10785.717773
+Total: 10787.903320
+Command exited with non-zero status 255
+real 10.95 seconds
+++ echo
+
+++ echo
+
