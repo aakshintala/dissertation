@@ -46,12 +46,12 @@
 
 \setlength{\aboverulesep}{0pt}
 \setlength{\belowrulesep}{0pt}
-
+\begin{landscape}
 \begin{table*}[ht!]
 \vspace*{2em}
 \centering
 \footnotesize{
-\resizebox{\textwidth}{!}{
+% \resizebox{\textwidth}{!}{
 \begin{tabular}{r|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 %\hline
 \T\B {\textbf{Technique}}       &
@@ -400,17 +400,11 @@
 
 \end{tabular}
 }
-}
-\caption{Existing GPU virtualization proposals, grouped by approach. Previously published in the Trillium paper~\cite{trillium}.}
-\label{tab:virt-comp}
-% \vspace*{-6pt}
-\end{table*}
-
-GPU virtualization has received a lot of attention since the late 2000s. This
-section presents an overview of all prior work.
-Table~\ref{tab:virt-comp} presents a comprehensive overview of prior
-accelerator virtualization techniques in terms of traditional virtualization
-properties. The \textbf{\libnomod} and \textbf{\osnomod}
+% } %resizebox
+\caption{Existing GPU virtualization proposals, grouped by approach.
+Previously published in the Trillium paper~\cite{trillium}. \\
+\footnotesize{
+The \textbf{\libnomod} and \textbf{\osnomod}
 columns indicate ability to support unmodified guest libraries and OS/driver.
 The \textbf{\libflex} and \textbf{\hwflex} indicate the ability
 (compatibility) to support a GPU device abstraction that is independent of
@@ -434,4 +428,52 @@ Entries where overheads eclipse GPU-based performance gains are marked in
 \textcolor{red}{red}. Performance profitable entries are
 \textcolor{blue}{blue}. \textcolor{darkgray}{Greyed out cells} indicate the
 metric is meaningless for that design. \textcolor{gray}{Light grey cells}
-indicate that the data was not available.
+indicate that the data was not available.}}
+\label{tab:virt-comp}
+% \vspace*{-6pt}
+\end{table*}
+\end{landscape}
+
+\subsection{Comparison methodology}
+
+Our goal in reducing the performance of a research system to an aggregate number or two, is to arrive at ``back-of-the-envelop'' estimates that can ultimate inform some intuition of the impact of fundamental design tradeoffs on {\it expected} performance. Under performance, we include the benchmarks used, and where possible, a report (or estimate) of the geometric mean speedup one should expect for using GPUs over CPUs on the given benchmark suite (called \emph{native speedup}, and \emph{virtual-speedup}---the geometric mean expected speedup one might expect for the given benchmarks in a system whose GPUs are virtualized similarly. It should go without saying, that if the overheads induced by virtualization overwhelm the expected speedup, the case for using GPUs in that context is significantly weakened.
+The virtual speedup is computed as the expected speedup from GPUs for the given suite of benchmarks divided by the slowdown induced by virtualization. Entries where overheads eclipse GPU-based performance gains are marked in red; performance profitable entries are blue.
+
+An ideal system would leave guest libraries and OS unmodified, provide strong
+isolation with fairness guarantees, maintain compatibility across diverse GPU
+hardware, and preserve GPU performance profitability. More succinctly, an
+ideal system would have all checks in the qualitative columns, with a {\bf
+virtual speedup} column that differs negligbly from the {\bf native speedup}
+column. An acceptable system might relax this along any axis, with the caveat
+that {\bf virtual-spdup} must be blue, indicating the preservation of at least
+{\it some} of the expected performance profitability of GPU execution.
+
+\subsection{Dominant Trends}
+
+Two trends are clearly expressed in this table. First, {\bf no proposals
+address compatibility}, suggesting it is at once a serious challenge and an
+ideal research opportunity. Second, The performance profitability of GPU
+acceleration is at risk if full virtualization overheads reported in the
+literature are to be believed.
+
+\subsection{Additional Considerations}
+
+In many cases, reporting gpu:cpu performance ratios and expected performance
+after virtualization overheads are accounted is either inappropriate or
+impossible. For example, gVirt is included in this table because it claims
+full virtualization, we cannot report expected speedups because the evaluation
+relies entirely on graphics workloads, for which we have no way to obtain
+reasonable sequential baselines. The same is true for SVGA2.
+
+Several systems are evaluated on samples from various versions of the CUDA SDK.
+GViM, vmCUDA, vCUDA, and gVirtus were evaluated on hand-picked samples from
+the CUDA 1.1, 5.0, 4.0 and 4.0 respectively. Since the papers do not report
+CPU-GPU speedup baselines, we estimate the expected speedup from GPUs by
+measuring GPU speedup on corresponding CUDA 7.0 SDK samples on a machine with
+a Tesla k20 and Intel i7 CPU. Clearly, the hardware differences from the
+original papers are significant, and we encourage the reader to interpret the
+numbers with that mind. Generally speaking the evaluations in these papers
+are sufficiently specious that additional uncertainty induced by using
+incomparable hardware is likely neglible, as we are primarily concerned with
+estimating a single bit of information: will performance profitability be
+preserved.

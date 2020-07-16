@@ -30,29 +30,86 @@ binaries, have their own memory, and are typically exposed to the application
 programmer via an API.
 
 \section{GPU Virtualization}
+GPU virtualization has received a lot of attention since the late 2000s. This
+section presents an overview of all prior work.
+Table~\ref{tab:virt-comp} presents a comprehensive overview of virtualization
+systems in the research literature, classifying them (sometimes tenuously)
+according to traditional virtualization properties.
+We evaluate the completeness of each solution along several dimensions:
+fidelity (ability run with unmodified guest libraries and OS), sharing (ability to safely and fairly multiplex GPUs across guest VMs), compatibility (ability to support a GPU device abstraction that is independent of hardware actually present on the host), ability to support VM mobility, and performance.
 
 \input{virtcomptable}
 
 \subsection{Full Virtualization}
 
 \paragraphbe{GPUvm}~\cite{suzuki2014gpuvm} virtualizes CUDA on Kepler and
-Fermi (NVIDIA) GPUs for Xen. GPUvm presents a GPU device model to each VM.
+Fermi (NVIDIA) GPUs for Xen.
+GPUvm safely multiplexes the basic GPU physical resources: GPU contexts (
+analogous to a process), GPU channels (the mechanism by which commands are
+submitted to a context), GPU page tables, and GPU control registers, which are
+memory apertures mapped onto PCIe BARs with MMIO. To this end, the design introduces \emph{GPU shadow channels}, \emph{GPU shadow page tables}, and \emph{virtual GPU schedulers}: these abstractions form the interposition boundary for virtualization.
+GPUvm presents a GPU device model to each VM.
 Attempts to access the GPU from all VMs are routed through a GPU Aggregator.
 The aggregator maintains shadow page tables, shadow channels, implements a
 ``fair share scheduler'', and modifies requests to enforce isolation. GPUvm
 interposes on communication between guest device driver and the GPU device
-model, by trapping and forwarding MMIO writes. The authors also explore a
-number of optimizations: lazy shadowing, bar remap, para-virtualization, and
-multi-call batching. Despite these optimizations, GPUvm remains non-viable due to its high overhead---the most optimal configuration of GPUvm induces a 6~$\times$ slowdown on average.
+model, by trapping and forwarding MMIO writes. The performance costs of full
+virtualization are unacceptable, and primarily result from page table
+management overheads. TLB flushes are required with every GPU page table
+update. Moreover, GPU page faults are not forwarded to the host CPU, so GPUvm
+must scan GPU page tables on every TLB flush to keep GPU shadow page tables
+current. The authors explore a number of optimizations: lazy shadowing, bar
+remap, para-virtualization, and multi-call batching. \emph{Lazy Shadowing}
+reflects guest updates to page tables into shadow page tables \emph{only} when
+the tables are referenced, rather than on every TLB flush. \emph{Bar Remap}
+limits BAR interposition and passes through BAR accesses other than those made
+to GPU channel descriptors. \emph{Para-virtualization} allows a guest GPU
+driver updates page tables through hypercalls (which can be further optimized
+with \emph{multi-calls}), and GPUvm validates those updates, eliminating the
+scan of guest GPU page tables. Naturally, this optimization gives up full
+virtualization, as guest GPU drivers must be modified. Despite these
+optimizations, GPUvm remains non-viable due to its high overhead---the most
+optimal configuration of GPUvm induces a 6~$\times$ slowdown on average.
+GPUvm~\cite{GPUvm} warrants entries under multiple virtualization techniques
+in Table~\ref{tab:virt-comp} because the authors (to their credit) built a
+large number of variants of their system to characterize the performance
+impact of a large range of fundamental design tradeoffs. Specifically, while
+full virtualization is the stated goal of the effort, the authors implemented
+a number of variants using para-virtualization techniques, along with a simple
+pass-through variant. Indeed, the characterization of the space is
+sufficiently prolific to challenge summarization.
+GPUvm under para-virtualization requires the guest to issue hypercalls to make
+GPU page table updates (similar to direct-paging in Xen~\cite{xen}) and
+provides a multi-call interface to batch those hypercalls, again borrowed from
+Xen.
+
 
 \paragraphbe{gVirt}~\cite{tian2014full} is a \emph{graphics}-only
-virtualization technique for Intel GPUs. The GPU is multiplexed among multiple
-VMs via pass-through for access to performance critical resources (command
-buffer and frame buffer), and trap-emulate for resources generally accessed
-off the critical path (PTEs, I/O Registers). Initialization and power
-management are done by the native driver in DOM0. Memory is multiplexed with a
-combination of partitioning and `` ballooning''. gVirtus is geared toward
-graphics and can't be easily extened to support GPGPU computing.
+virtualization technique for Intel GPUs. gVirt represents an Intel-centric
+technique for implementing virtualization of \emph{graphics}, but as
+full-virtualization system the techniques are relevant to GPGPU. The system
+runs the native graphics driver in the guest OS in dom0, and implements
+pass-through for access only to performance-critical resources (command and
+frame buffers), using trap-emulate for resources generally accessed off the
+critical path (PTEs, I/O Registers). The native driver is present primarily to
+simplify tasks like initialization and power management. Trap-emulate
+operations are forwarded to a mediator module in dom0, which implements the
+vGPU interface and scheduler. Operations are subsequently handled with
+hypercalls into a stub in Xen. Memory is multiplexed with a combination of
+partitioning and `` ballooning''. Each VM gets 2GB of local graphics memory
+and 2GB global graphics memory. These partitions are striped across the actual
+physical memory, and sections not belonging to a particular VM are marked
+``ballooned'' in the page tables of that VM, which means they are
+inaccessible. This makes address translations exactly the same for each VM
+with the caveat that regions belonging to different VMs must be made
+inaccessible. gVirt handles this through ``smart shadowing'' and auditing of
+the command buffer. The primary limitations of this work are that it is geared
+only toward graphics and not compute, and that partitioning memory space means
+the full physical memory can never be utilized by each VM. Further, the
+auditing process seems tenuous: While inspecting register values to ensure
+they are bounded by regions that should be mapped to a given VM is feasible,
+it is much harder to determine whether the register value is actually a
+pointer.
 
 \subsection{API Remoting}
 
@@ -60,7 +117,12 @@ graphics and can't be easily extened to support GPGPU computing.
 split-driver API remoting approach to virtualization of CUDA in Xen.
 CUDA API calls made by applications in the Guest VM are interposed through a
 front-end driver (using Xen event channels) and forwarded to a back-end driver
-in DOM0, which exercises the CUDA driver and runtime. While GViM's
+in DOM0, which exercises the CUDA driver and runtime.
+GViM proposes some memory management optimizations to avoid double buffering,
+redundant copy, such as using {\tt mmap} to map guest kernel memory into the
+front end driver to avoid user-to-kernel copies, and using a page-directory
+structure to avoid copy between VMs from front-end driver to back-end driver.~\footnote{Most of these optimizations should be obviated by VM support for
+cross-VM bulk-transfer mechanisms like VMCI.} While GViM's
 split-driver design is very similar to AvA's HIRA, AvA presents an
 accelerator-agnostic framework that can be used to implement
 hypervisor-mediated API-remoting for arbitrary devices, can enforce flexible
@@ -74,12 +136,7 @@ turns out to be the primary performance term. The authors explores RPC
 batching as an optimization. The system has no support for interposition.
 
 \paragraphbe{vmCUDA}~\cite{vmCUDA} observes that while pass-through is
-performant, it precludes sharing, and VM migration.
-vmCUDA employs a split-driver model with a front-end driver in the guest that
-provides an interposition point, and a back-end driver in the control domain
-which interacts with the CUDA runtime and driver. CUDA applications in the
-guest are linked against an interposer library which forward calls and data to
-the appliance VM. As with vCUDA, the system guarantees no isolation among VMs.
+performant, it precludes sharing, and VM migration. vmCUDA supports API remoting for CUDA in the the ESX Hypervisor. vmCUDA employs a standard split-driver model with a front-end driver in the guest, and a backend driver in the control domain (called the ``appliance VM'') which interacts with the CUDA runtime and driver. The driver in the appliance VM interacts with the GPU hardware using pass-through. CUDA applications in the guest are linked against an interposer library which uses vRDMA, VCMI, TCP to forward calls and data to the appliance VM. The application starts on the client, sends a copy of binary to appliance VM, which modifies the binary and starts a process container for it: the client VM communicates with that process. The authors find that data copy calls must be broken down into smaller fragments to enable multiple VMs to share the GPU. Cross-VM isolation guarantees result from use of per-application child processes in the appliance VM, which effectively level process-level protection mechanisms toward cross-VM protection. The design addresses compatibility challenges with VM mobility (vMotion): the appliance VM needn't move if the guest VM moves.~\footnote{This is a fairly limited form of support for mobility, and is not likely what the user intends when migrating a VM. That said, API remoting is fundamentally resistant to mobility, and this is the best known solution as of this writing.} vmCUDA performs dynamic binary re-writing of the client application (replacing API calls) to make API forwarding transparent to the developer. As with vCUDA, the system guarantees no isolation among VMs.
 
 \paragraphbe{gVirtuS}~\cite{gVirtuS} is an API remoting framework that claims
 to provide transparent support for CUDA, OpenCL, and OpenGL on Xen, KVM, and
@@ -90,9 +147,33 @@ for GPUs that is independent of VMM.
 \textbf{\textit{GridCuda}}~\cite{GridCuda},
 \textbf{\textit{SnuCL}}~\cite{kim2012snucl} and
 \textbf{\textit{VCL}}~\cite{VCL} are all user-mode middle-ware systems for
-multiplexing GPUs and CUDA/OpenCL across a cluster. A client library
-encapsulates access to a (potentially) remote GPU. While the basic design is
+multiplexing GPUs and CUDA/OpenCL across a cluster. rCUDA is a middle-ware
+system for multiplexing NVIDIA GPUs and CUDA across a cluster. A client
+library encapsulates access to a (potentially) remote GPU. Client applications
+must be recompiled/re-linked against the rCUDA library, which results in
+feature incompatibilities for a number of undocumented features that are
+handled transparently by the {\tt nvcc} compiler. While the basic design is
 isomorphic to the API remoting design, virtual machines need not be present.
+GridCuda~\cite{GridCuda} is similar: a pure user-mode fabric for tunnelling
+CUDA API traffic to GPUs on remote machines.
+SnuCL~\cite{kim2012snucl} provides an OpenCL~\cite{openCLspec} programming
+interface to clusters of CPU/GPU servers. The basic approach is to extend the
+OpenCL semantics to encapsulate remote resources, which preserves the original
+programming model which, like CUDA~\cite{CUDA:Programming-Guide}, assumes a
+process model, running in the context of a single operating system image. Like
+rCUDA~\cite{rCUDA} and GridCuda~\cite{GridCuda}, SnuCL should be viewed as a
+distributed runtime that supports GPUs, rather than a general approach to GPU
+virtualization.
+VCL~\cite{VCL} is the lower layer in a package called MGP (many-gpu-package)
+which encapsulates remote compute resources and data management within the
+local OpenCL API implementation, such that remote GPUs look to the application
+running on the master node, like a local OpenCL device.
+We do not estimate expected speedup for rCUDA, GridCUDA, SnuCL, and VCL, in
+Table~\ref{tab:virt-comp} as evaluations of these systems include network
+overheads that would not be present in our target setting. Moreover, since
+these are ultimately API remoting solutions, we consider the performance case
+to be sufficiently well made by the four systems targeting single machine
+settings.
 
 \subsection{Para-virtualization}
 
@@ -110,6 +191,14 @@ are exceptionally rosy (indeed, the virtualized solution is faster than native
 in 3 of 4 reported benchmarks). However, the evaluation prototype makes no
 effort to enforce isolation in guests, which ultimately hides a significant
 cost and makes the reported numbers meaningless.
+LoGV is present under para-virtualized systems in Table~\ref{tab:virt-comp}
+because it leverages GPU  protection hardware in the hypervisor to enforce
+cross-VM isolation, with the side-effect that guest drivers must be modified
+to implement that displaced functionality. We report no expected speedup first
+because the four micro-benchmarks used in the evaluation are non-standard, and
+second because the evaluation prototype used unmodified guest drivers, which
+means guests could not enforce isolation. Consequently, the numbers reported
+neglect the (likely high) performance impact of a critical feature.
 
 \paragraphbe{HSA-KVM}~\cite{kaveri16vee} is a para-virtual system for
 Heterogeneous System Architecture (HSA) compliant systems. HSA has the CPU and
