@@ -19,13 +19,12 @@ consolidation) afforded by a virtualized system~\cite{waldspurger12cacm}.
 Virtualization techniques are well explored, yielding conventional
 wisdom about their fundamental trade-offs. For example,
 \emph{full virtualization} interposes the software-hardware interface
-to provide a virtual view of the
-underlying hardware. This enables guests to run unmodified OS and
-application binaries, yielding high compatibility. However, hardware interfaces
-for GPUs rely heavily on MMIO and communication through memory, which
-necessitates page-fault-based interposition~\cite{tian2014full,
-intel_kvmgt,kindratenko2009gpu,montella2012general} techniques that cripple
-performance.
+to provide a virtual view of the underlying hardware. This enables guests to
+run unmodified OS and application binaries, yielding high compatibility.
+However, hardware interfaces for GPUs rely heavily on MMIO and communication
+through memory, which necessitates page-fault-based interposition~\cite{
+tian2014full, intel_kvmgt,kindratenko2009gpu,montella2012general} techniques
+that cripple performance.
 \emph{Para-virtual} designs export an abstract device to the guest,
 but require hypervisor-specific drivers and runtime libraries in the
 guest, trading compatibility for improved performance.
@@ -35,6 +34,26 @@ issued in VMs, running them on the host or in a dedicated appliance VM.
 This technique can provide near native performance because API calls
 are infrequent, but has poor compatibility because it requires
 changes in guest applications or libraries.
+
+\begin{table*}[tt!]
+\centering
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}p{0.25\linewidth}|p{0.18\linewidth}|p{0.18\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}@{}}
+\toprule
+\multirow{2}{*}{}         & \multirow{2}{*}{GPUvm} & \multicolumn{2}{c|}{VMware SVGA}         & \multirow{2}{*}{rCUDA} \\
+                          &                        & Control Interface  & GPU ABI             &                        \\ \midrule
+Interposed Interface      & MMIO/BAR               & DirectX APIs       & Device ISA          & Userspace API          \\
+Interposition Source      & Trap handler           & Guest driver/libs  & Guest Driver        & Guest Library          \\
+Interposition Destination & Host driver            & Host framework     & Host Driver         & Host/Server Daemon     \\
+Interposition Mechanism   & Trap                   & Guest library      & Compilation to vISA & Guest Library Shim     \\
+Transport                 & Fault                  & Hypervisor FIFOs   & Hypervisor FIFOs    & RPC                    \\
+Synthesis                 & Emulation              & Call host API      & Binary translation  & Call Server API        \\ \bottomrule
+\end{tabular}
+}
+\caption{Comparing virtualization designs using the \texttt{IEMTS} framework.}
+\label{tab:new-dims}
+\end{table*}
 
 We argue that the current \emph{de facto} taxonomy and property trade-off space
 are illustrative but not informative for GPUs:
@@ -49,6 +68,21 @@ Consider compatibility: there are many dimensions to compatibility (library,
 hardware, OS, etc.), and each of those are commonly achieved by separate
 technical, and non-technical means (e.g., TGSI is the common vISA for both the
 VMware and GNU/Linux graphics stacks; this is \emph{not a lucky coincidence}).
+It is common to see systems compared to other systems intended as exemplars
+for a technique or design pattern. Ironically, the end-to-end comparison
+presented in the prior chapter on \Trillium is guilty of exactly this: we
+compared \Trillium against other systems intended to represent ``full
+virtualization'', ''API remoting'', and so on.
+Methodologically, such a comparison is laudable: evaluating a design
+exhaustively against plausible alternatives in an end-to-end setting is
+fundamental to good science. However, its value for drawing out fundamental
+insights is scant because ``full virtualization'' only talks about the quality
+of the guest-visible abstraction, while findings involving ``API remoting''
+are really about the particular API in question. ``Paravirtualization'' is
+often cast as a design dimension, ultimately grouping designs that share no
+core techniques, such as SVGA and GPUvm. As a framework within which to seek
+higher-level insights about design, a rough taxonomy that fails to cleanly
+separate most concerns is in unacceptable.
 
 We argue that practical design goals, such as providing a virtualization layer
 with specific characteristics, get obscured when these properties are
@@ -71,26 +105,6 @@ transported between,
 \item the mechanisms used to \textbf{S}ynthesize or implement the desired
 functionality at the destination. We call this the \textbf{\texttt{IEMTS}} framework.
 \end{itemize}
-
-\begin{table*}[tt!]
-\centering
-\footnotesize
-\resizebox{\textwidth}{!}{%
-\begin{tabular}{@{}p{0.25\linewidth}|p{0.18\linewidth}|p{0.18\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}@{}}
-\toprule
-\multirow{2}{*}{}         & \multirow{2}{*}{GPUvm} & \multicolumn{2}{c|}{VMware SVGA}         & \multirow{2}{*}{rCUDA} \\
-                          &                        & Control Interface  & GPU ABI             &                        \\ \midrule
-Interposed Interface      & MMIO/BAR               & DirectX APIs       & Device ISA          & Userspace API          \\
-Interposition Source      & Trap handler           & Guest driver/libs  & Guest Driver        & Guest Library          \\
-Interposition Destination & Host driver            & Host framework     & Host Driver         & Host/Server Daemon     \\
-Interposition Mechanism   & Trap                   & Guest library      & Compilation to vISA & Guest Library Shim     \\
-Transport                 & Fault                  & Hypervisor FIFOs   & Hypervisor FIFOs    & RPC                    \\
-Synthesis                 & Emulation              & Call host API      & Binary translation  & Call Server API        \\ \bottomrule
-\end{tabular}
-}
-\caption{Comparing virtualization designs using the \texttt{IEMTS} framework.}
-\label{tab:new-dims}
-\end{table*}
 
 Table~\ref{tab:new-dims} presents analysis of three prior GPU virtualization
 systems under the \texttt{IEMTS} framework. A quick glance at the table

@@ -58,7 +58,8 @@ protection provides isolation.
 \section{Domain Specific Accelerators}
 Domain Specific Accelerators (DSAs) are programmable compute units that are
 specialized to a particular class of computation in order to improve
-performance, and to optimize energy usage for that class of computation.
+performance, to optimize energy usage for that class of computation, or
+frequently both.
 The slowing down of Moore's law coupled with the rise of Dark Silicon~\cite{
 Esmaeilzadeh2011-qv} has made Domain Specific Accelerators extremely attractive
 as they exhibit high computation/Watt efficiency in the computation domain
@@ -70,10 +71,62 @@ The first generation of TPUs were empirically found to have 200$\times$ and
 GPUs that were prevalent in Google's data centers at the time~\cite{TPU-ISCA}.
 
 \subsection{DSA Design}
-...
+Domain Specific Accelerators are mini-computers that are attached to and
+controlled by a CPU. DSAs tend to have everything a normal 'computer' does (
+computation units, control logic, memory, and a programming interface), except
+access to I/O, for which they typically rely on the CPU.
+Their computation units are typically specialized to a specific domain or type
+of computation: e.g., GPUs are DSAs that are specially suited to graphics
+rendering operations (tesselation, occlusion detection, culling, etc.).
+GPUs have also found wider adoption in other domains (scientific computing,
+Artificial Intelligence, etc.) due to their inclusion of Single Instruction
+Multiple Thread (SIMT) style `shader' cores, which efficiently perform
+the same simple computation in parallel on hundreds (or even thousands) of
+threads. DSAs typically have their own memory: while some have small amounts
+of memory that are just enough to process limited operations (e.g., Intel
+QAT), most have a lot of internal memory, as memory bandwidth and size are key
+parameters in tuning the architecture for the given domain. DSAs typically
+expose an I/O device-like hardware interface, i.e., a command queue, a DMA
+engine, and some number of memory-mapped control registers.
 
-\subsection{DSA Software stack}
-...
+DSAs look like I/O devices to the host CPU, and many DSA designers take
+advantage of this to build a software stack that is opaque to the host OS.
+Exposing an I/O device-like hardware interface enables the vendor to raise the
+level of abstraction of the end user's interface to a user-space software API,
+enabling quick evolution of both the underlying software and hardware. The
+user-space API is the only interface that needs to be stable (or at least
+backwards compatible). The ISA of the compute units on the DSA are typically
+not exposed to the programmer.
+
+\subsection{DSA Software stacks are silos}
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=.5\linewidth]{figures/silo.pdf}
+	\caption{An accelerator silo. The public API and the interfaces with striped backgrounds are interposition candidates. All interfaces with backgrounds are proprietary and subject to change.}
+	\label{fig:silo}
+\end{figure}
+
+Domain Specific Accelerator stacks are composed of layered components that
+include a user-mode library to support an API framework and a driver to manage
+the device. Vendors are incentivized to use proprietary interfaces and
+protocols between layers to preserve forward compatibility, and to use
+kernel-bypass communication techniques to eliminate OS overheads.
+
+Scheduling and resource allocation on DSAs are typically not managed by the
+CPU-based Operating System. Instead resource allocation is primarily under the
+control of a combination of the proprietary CPU-based runtime (user-space and
+kernel), and the controller on the DSA itself. DSAs typically contain an
+entire software stack on the hardware module, which is hidden from the
+programmer. This stack is used to implement a command-based programming
+interface that enables the vendor's CPU-based control software for scheduling
+and resource allocation.
+
+End users work with the DSA almost entirely in higher level languages,
+typically the language the DSL is embedded in (e.g., Python for Google's TPU,
+C/C++ for Nvidia and AMD GPGPUs). The DSL/API is supported by a compiler
+(which converts the user's program to the the ISA of the computation units on
+the DSA), a user-space runtime and a kernel module (which work together to
+implement the user-space API, and control the DSA).
 
 \section{DSA Virtualization}
 
@@ -111,7 +164,7 @@ and isolation) at the native performance of the hardware (performance), while
 allowing virtualized software and physical hardware to evolve independently
 (encapsulation).
 We briefly describe each technique, and look at their strengths and
-shortcomings in this section. Refer to Related Work~\ref{sec:related} for
+shortcomings in this section. Refer to Related Work (\S~\ref{sec:related}) for
 details on individual prior work under each technique.
 
 \subsubsection{Pass-through}
@@ -170,7 +223,7 @@ modified, and the para-virtual device interface must be maintained as
 interfaces evolve.
 For example, VMware's SVGA II~\cite{dowty2009gpu} encapsulates multiple GPU
 programming frameworks, but keeping up with the evolution of those frameworks
-has proved untenable: SVGA remains multiple versions behind current
+has proved untenable: SVGA remains multiple versions  behind current
 frameworks~\cite{vmware_version,svga_guest}.
 
 \subsubsection{API Remoting}
@@ -249,7 +302,7 @@ unfairness pathologies that cannot be changed.
 Hardware designers tend to favor simple resource management policy
 implementations, easily leading to pathologies. To illustrate the problem, we
 measured compression throughput when three VMs contend on an Intel
-QuickAssist~\cite{QAT} (with SR-IOV). The three VMs configured the accelerator
+QuickAssist~\cite{qat} (with SR-IOV). The three VMs configured the accelerator
 to compress at different chunk sizes. Figure~\ref{fig:qat-unfairness} shows
 the results of this experiment, with and without contention. Each VM was
 assigned a PCIe Virtual Function (VF) exposed by the same Physical Function
@@ -265,7 +318,21 @@ none of the TPUs we evaluate support it; and SR-IOV \emph{interface} IP blocks
 from FPGA vendors (used by~\cite{vu2014enabling,zazo2015pcie,vfpgamanager,
 huang2009fpgavirt}) do not implement resource management.
 
+\section{Summary}
+
+Interposing opaque, frequently-changing interfaces communicating with memory
+mapped command rings is \emph{impractical} because it requires inefficient
+techniques and yields solutions that sacrifice compatibility.
+Accelerator stacks are effectively \emph{silos} (Figure~\ref{fig:silo}), whose
+intermediate layers \emph{cannot be practically separated} to virtualize the
+device. Most current hardware accelerators feature some hardware support for
+virtualization: primarily for process-level address-space separation, and in a
+small handful of cases, SR-IOV. A central premise of this dissertation is that
+hardware support for process-level isolation \emph{could} suffice to support
+hypervisor-level virtualization as well, but the silo-ed structure of current
+accelerator stacks prevents it.
 While hardware support for virtualization is the desired end game, we do not
 expect a better standard for such support to emerge soon: incentives for
 investing in the significant engineering effort required for such a standard
-are scarce. This dissertation focuses on virtualization schemes that can be purely implemented in software so as to sidestep this challenge.
+are scarce. This dissertation focuses on virtualization schemes that can be
+purely implemented in software so as to sidestep this challenge.

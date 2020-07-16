@@ -184,29 +184,8 @@ the SVGA model of GPU virtualization to virtualize GPGPUs. We find that the
 tight coupling between ISA virtualization and device  virtualization in SVGA
 leads to poor performance for GPGPU compute. Eliding ISA virtualization
 enables the resulting prototype, Trillium~\cite{trillium}, to outperform all
-other traditional virtualization schemes that retaining hypervisor
-interposition. However, Trillium is still 2---3$\times$ slower than RPC-style
-API forwarding.
-
-Domain Specific Accelerators (e.g., Google TPU, Intel QAT, etc.) are
-typically exposed to developers via a user-space API. The API is typically
-implemented by proprietary software that interacts with the hardware through
-opaque interfaces.
-Chapters 4, 5 and 6 generalize the lessons learned for GPGPUs to all
-API-controlled domain specific accelerators by interposing their user-space
-APIs.
-Chapter 4 presents an overview of AvA, a framework that enables automated
-virtualization of accelerator APIs. AvA combines on a novel virtualization
-scheme called Hypervisor Interposed Remote Acceleration (HIRA), with
-automation based on a Domain Specific Language, LAPIS, which is used to
-capture semantic information of the interposed APIs. This dissertation is
-primarily concerned with the HIRA virtualization scheme.
-Chapter 5 focuses on the performance implications of API-remoting based
-virtualization of a single specialized accelerator.
-Chapters 4 and 5 draw on material that appeared in a HotOS workshop
-paper~\cite{ava-hotos} and an ASPLOS'20 paper~\cite{ava-asplos}.
-Chapter 6 explores performance issues that arise when an application uses
-multiple API-remoted virtual accelerators in a pipelined fashion.
+other traditional virtualization schemes that retain hypervisor interposition.
+However, Trillium is still 2---3$\times$ slower than RPC-style API forwarding.
 
 Virtualization schemes are traditionally taxonomized according to the core
 techniques employed (e.g. emulation, full- or para-virtualization, API
@@ -222,6 +201,25 @@ unnecessarily intertwined in much of the literature. By focusing on the
 interposed operations between the guest and the host, and the mechanism used
 to \textbf{S}ynthesize the interposed interface, \texttt{IEMTS} enables a
 clearer understanding of trade-offs in prior designs and provides a model for
-comparison of alternative designs. \texttt{IEMTS} will be presented in Chapter
-7 of the proposed dissertation, along with analysis of traditional
-virtualization techniques in the context of GPGPUs.
+comparison of alternative designs. Chapter 4 presents \texttt{IEMTS}, along
+with analysis of traditional virtualization techniques in the context of
+GPGPUs.
+
+Domain Specific Accelerators (e.g., Google TPU, Intel QAT, etc.) are
+typically exposed to developers via a user-space API. The API is typically
+implemented by proprietary software that interacts with the hardware through
+opaque interfaces.
+Chapters 5 and 6 generalize the lessons learned for GPGPUs to all
+API-controlled domain specific accelerators by interposing user-space APIs.
+Chapter 5 presents an overview of AvA, a framework that enables automated
+virtualization of accelerator APIs. AvA combines on a novel virtualization
+scheme called Hypervisor Interposed Remote Acceleration (HIRA), with
+automation based on a Domain Specific Language, LAPIS, which is used to
+capture semantic information of the interposed APIs. This dissertation is
+primarily concerned with the HIRA virtualization scheme.
+Chapters 5 draw on material that appeared in a HotOS workshop
+paper~\cite{ava-hotos} and an ASPLOS'20 paper~\cite{ava-asplos}.
+While chapter 5 focuses on the performance implications of API-remoting based
+virtualization of a single specialized accelerator, Chapter 6 explores
+performance issues that arise when an application uses multiple API-remoted
+virtual accelerators in a pipelined fashion.
