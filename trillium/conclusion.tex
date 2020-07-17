@@ -2,7 +2,22 @@
 \section{Conclusion}
 \label{sec_con}
 
-Virtualizing GPGPUs is a balancing act: there are multiple design points each offering a different trade-off of key virtualization properties. This chapter provides the first (to our knowledge) comprehensive empirical and qualitative comparison of a wide range of fundamental virtualization techniques from the literature.
-We implemented GPGPU support for an SVGA-like design in the Xen hypervisor, by completing a long-missing element---the TGSI compiler---in order to leverage OpenCL support provided by the Mesa/Gallium graphics stack for Linux, via the Clover~\cite{GalliumCompute-web} project.
-We proposed an improved design called \Trillium that removes the necessity for the vISA defined by SVGA resulting in dramatic performance improvements.
-\Trillium represents a local optima in the GPGPU virtualization space---by decoupling device virtualization from GPU ISA virtualization, it maintains the virtualization benefits of a para-virtual system, while exhibiting the performance of a user-space remoting system. While \Trillium exhibits greater overhead than the API-remoting scheme, it is existence proof of a hypervisor-mediated API-remoting.
+Virtualizing GPGPUs is a balancing act: there are multiple design points each
+offering a different trade-off of key virtualization properties. This chapter
+provides the first (to our knowledge) comprehensive empirical and qualitative
+comparison of a wide range of fundamental virtualization techniques from the
+literature.
+We implemented GPGPU support for an SVGA-like design in the Xen hypervisor, by
+completing a long-missing element---the TGSI compiler---in order to leverage
+OpenCL support provided by the Mesa/Gallium graphics stack for Linux, via the
+Clover~\cite{GalliumCompute-web} project.
+We proposed an improved design called \Trillium that removes the necessity for
+the vISA defined by SVGA resulting in dramatic performance improvements.
+\Trillium represents a local optima in the GPGPU virtualization space---by
+decoupling device virtualization from GPU ISA virtualization, it maintains the
+virtualization benefits of a para-virtual system, while exhibiting the
+performance of a user-space remoting system.
+
+While \Trillium exhibits greater overhead than the API-remoting schemes
+evaluated, it presents existence proof of a an unexplored point in the DSA
+virtualization design space: hypervisor-interposed API-remoting.
