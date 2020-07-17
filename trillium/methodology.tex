@@ -23,16 +23,16 @@ Experiments to control for hardware versions are reported in \ref{sec:control}.
 % more current hardware.
 
 \subsection{Benchmarks}
-% \trxd and \trxc depend on the Mesa3D using the Clover OpenCL runtime.least
-\trxc depends on the TGSI back-end compiler that we implemented to leverage
+% \Trillium and \XenSVGA depend on the Mesa3D using the Clover OpenCL runtime.least
+\XenSVGA depends on the TGSI back-end compiler that we implemented to leverage
 the Clover OpenCL runtime in Mesa3D.
 % The compiler back-end can produce correct
 % TGSI output for 10 of the Rodinia benchmarks at the time of submission, all of
-% which we could execute on \trxc.
+% which we could execute on \XenSVGA.
 \apigpu and \apicpu leverage the NVIDIA and Intel OpenCL library respectively
 and support all of the Rodinia benchmarks.
 GPUvm is built on top of the GDev CUDA runtime.
-% , and can correctly execute at least the same 10 benchmarks that run on \trxc.
+% , and can correctly execute at least the same 10 benchmarks that run on \XenSVGA.
 Care was taken to ensure that the CUDA and OpenCL versions of the benchmarks use the same
 parameters, datasets, memory barriers, sync points, etc. Experiments to
 control for the programming framework are reported in \ref{sec:control}.

@@ -1,7 +1,7 @@
 % !TeX root = ../dissertation.tex
 
 \section{Evaluation}
-\label{sec:eval}
+\label{sec:trilliumeval}
 
 % \begin{figure*}[!ht!!]
 % 	\centering
@@ -9,7 +9,7 @@
 % 	\caption{{\footnotesize Runtime breakdown of GPU benchmarks on virtualization prototypes.}}
 % 	\label{fig_all_breakdown} \end{figure*}
 
-We are interested in understanding the impact of a vISA on end-to-end performance, the effect of interposition frequency on performance, and the effectiveness of our proposed design, \trillium.
+We are interested in understanding the impact of a vISA on end-to-end performance, the effect of interposition frequency on performance, and the effectiveness of our proposed design, \Trillium.
 
 \subsection{The impact of vISA choice}
 
@@ -71,14 +71,14 @@ We are interested in understanding the impact of a vISA on end-to-end performanc
 	% \includegraphics[width=.9\linewidth,trim={2cm 7.5cm 2cm 7cm},clip]{data/cross_product_overhead_noRPC_OptInit.pdf}
 	\includegraphics[width=.9\linewidth,clip]{trillium/data/cross_product_overhead_noRPC_OptInit.pdf}
 	\caption{{\footnotesize End-to-end execution times of benchmarks on virtualization prototypes, relative to end-to-end execution time on the NVIDIA CUDA runtime in a native setting.
-			The gRPC transport overhead is removed from the reported measurements, which is up to 10\% of the total execution time for API remoting, and 40\% for \trillium.}}
+			The gRPC transport overhead is removed from the reported measurements, which is up to 10\% of the total execution time for API remoting, and 40\% for \Trillium.}}
 	\label{fig_all_overhead} \end{figure*}
 
 \begin{figure}[!ht]
 	\centering
 	% ,trim={2.2cm 5cm 2.2cm 5.5cm},clip
 	\includegraphics[width=.9\linewidth,trim={2cm 4.5cm 2cm 5cm},clip]{trillium/data/trillium/trillium_kernel.pdf}
-	\caption{{\footnotesize Kernel execution slowdown due to virtual ISAs. TGSI: the LLVM TGSI back-end compiler used in \trxc. LLVM: LLVM NVIDIA PTX (NVPTX) back-end used in \trxd. No IR: native NVIDIA compiler.}}
+	\caption{{\footnotesize Kernel execution slowdown due to virtual ISAs. TGSI: the LLVM TGSI back-end compiler used in \XenSVGA. LLVM: LLVM NVIDIA PTX (NVPTX) back-end used in \Trillium. No IR: native NVIDIA compiler.}}
 	\label{fig_trillium_kernel}
 \end{figure}
 
@@ -105,7 +105,7 @@ and c) using the native NVIDIA OpenCL compiler (OpenCL$\rightarrow{}$SASS).
 These measurements are reported in Figure~\ref{fig_trillium_kernel}
 relative to kernel execution time in a native setting.
 % The Mesa3D OpenCL stack (Clover$+$Nouveau), which uses the TGSI
-% ISA internally, is used to examine \trxc and \trxd.
+% ISA internally, is used to examine \XenSVGA and \Trillium.
 %and by executing OpenCL code natively using the NVIDIA OpenCL framework.
 %We were unable to to separate the execution/compilation framework
 %from the ISA used, due their extremely tight coupling.
@@ -123,7 +123,7 @@ LLVM NVPTX compiler to be comparable to native, at least in terms of execution
 time. This is unsurprising given recent efforts~\cite{gpucc} to optimize the
 LLVM tool-chain for NVIDIA GPUs.
 
-The \trillium design uses LLVM IR as the common virtual ISA for GPGPU applications,
+The \Trillium design uses LLVM IR as the common virtual ISA for GPGPU applications,
 where necessary: OpenCL code is compiled to PTX using the LLVM NVPTX back-end in the guest,
 and then finalized and executed in the host using the NVIDIA CUDA framework.
 
@@ -140,9 +140,9 @@ and then finalized and executed in the host using the NVIDIA CUDA framework.
 \subsection{End-to-End}
 
 
-We compare \trillium against full-virtual (\gpuvmdef and \gpuvmopt),
-API remoting (\apigpu and \apicpu) and para-virtual (\trxc) systems.
-\trxc approximates an SVGA-like design in Xen (Mesa3D with TGSI). \trxd
+We compare \Trillium against full-virtual (\gpuvmdef and \gpuvmopt),
+API remoting (\apigpu and \apicpu) and para-virtual (\XenSVGA) systems.
+\XenSVGA approximates an SVGA-like design in Xen (Mesa3D with TGSI). \Trillium
 % is very similar, other than that it
 bypasses translation from OpenCL to TGSI.
 To characterize the behavior a full-virtual\-ization design, we measure
@@ -161,8 +161,8 @@ Figure~\ref{fig_all_overhead} shows the end-to-end execution time (relative to
 native GPU execution) for the six chosen benchmarks for all the systems evaluated. As
 expected, traditional API remoting designs incur the lowest overhead, which is
 achieved by giving up hypervisor interposition.
-\trillium fares well with best case performance
-of just 1.1$\times$ over native, and within 3.6$\times$ at worst. \trxc is
+\Trillium fares well with best case performance
+of just 1.1$\times$ over native, and within 3.6$\times$ at worst. \XenSVGA is
 sensitive to the performance lost in GPU kernel code resulting from redundant
 compilation through TGSI (which adds significant overheads as previously shown in
 Figure~\ref{fig_trillium_kernel}). \gpuvmopt exhibits about 9.1$\times$ slowdown for
@@ -189,19 +189,19 @@ GPU with CPU if they can detect when it is profitable to do so.
 % Application types can impact performance greatly.
 % Note that for GPUvm, GPU kernel execution time did not differ significantly from other systems before ported to newer Ubuntu and Xen platform;
 % The dramatic overheads on GPUvm are mostly attributable to the use of trap-based interposition on communication through memory-mapped command queues and/or MMIO.
-%\trxc delivers similar performance in general to the best-case full virtualization system.
+%\XenSVGA delivers similar performance in general to the best-case full virtualization system.
 
 % \subsection{Runtime Breakdown} \label{sec:breakdown}
 
 % Benchmark applications operate in several different phases:
 % initialization, data transfer, GPU kernel execution, and close/ teardown, each of responds differently to the different virtualization mechanisms. To illustrate this, we present the percentage of time spent in initialization, data transfer, GPU kernel execution, and close/teardown for each benchmark and system in Figure~\ref{fig_all_breakdown}.
 % \aak{What is the point we're trying to make here? Too tired...}
-% As noted earlier, the benchmarks can be classified into three categories: \textit{interposition-dominant} benchmarks (e.g. gaussian and nn) that see lower overheads from \trillium
+% As noted earlier, the benchmarks can be classified into three categories: \textit{interposition-dominant} benchmarks (e.g. gaussian and nn) that see lower overheads from \Trillium
 % \textit{interposition-rare} applications (e.g. backprop and pathfinder) which run a small number of long-running kernels, thereby suffering very little API-interposition overhead, and additionally benefit from the speedup in \texttt{Init} time (pre-initialized by remote server).
 % \textit{moderate-interposition} applications (e.g. lud, nw) which invoke a
 % moderate number of API calls, and therefore bear some interposition induced
 % overhead.
-% For interposition-dominant benchmarks, \trxc performs really poorly because of the . \trxd is efficient because that layer is bypassed and interposed APIs are batched.
+% For interposition-dominant benchmarks, \XenSVGA performs really poorly because of the . \Trillium is efficient because that layer is bypassed and interposed APIs are batched.
 
 % \subsection{Miscellanea}
 

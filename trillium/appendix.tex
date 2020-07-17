@@ -21,7 +21,7 @@ There is also (fluctuating) small difference in \texttt{Memcpy} time.
 	\caption{{\footnotesize Runtime of GPGPU applications using CUDA and OpenCL APIs (milliseconds).\cjr{move to methodology, potentially aggregate.}}}
 	\label{fig_graphics_api} \end{figure}
 
-	\subsection{Back-end hardware}
+\subsection{Back-end hardware}
 GPU virtualization causes some overheads, while some workloads run even faster on CPU than GPU.
 Therefore, by utilizing the OpenCL support of Intel CPU, forwarding API calls to run on CPU
 may lead to benefits. Figure~\ref{fig_hardware} shows the performance of same benchmarks on
@@ -75,25 +75,3 @@ a 6x slowdown using Xen PCIe bus compared with the physical one.
 	\hspace*{-0.25cm}\includegraphics[width=1.1\linewidth,trim={2.2cm 4.8cm 2.1cm 5cm},clip]{data/api_remote/api_remote_breakdown.pdf}
 	\caption{{\footnotesize Runtime breakdown of the GPU benchmarks with API remoting.}}
 	\label{fig_api_remote_breakdown} \end{figure}
-
-\subsection{Guarantees}
-
-To the extent possible, we'd like to be able to measure any impacts
-a design decision has on:
-
-\begin{compactitem}
-\item ability to support fairness or QoS,
-\item interposition (related to above)
-\item compatibility (can the design deal with unmod binaries, etc)
-\item isolation (e.g. GPUvm hard-partitions memory, which enables memory protection but not performance isolation.)
-\item complexity. Not sure what the right metric is but SLoC is a good start. An ideal set of
-	metrics would also somehow measure manageability from an administrator's perspective, and
-	programmability (what does support of additional features entail).
-\end{compactitem}
-
-
-\begin{figure}[!ht]
-	\centering
-	\includegraphics[width=\linewidth,trim={2cm 5cm 2cm 5.5cm},clip]{data/trillium/clover.pdf}
-	\caption{{\footnotesize \hyu{Overhead} (seconds). \hyu{Remove me (this figure) please. Check Figure~\ref{fig_trillium_kernel}}}}
-	\label{fig_clover_overhead} \end{figure}
