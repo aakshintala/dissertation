@@ -179,31 +179,50 @@ that it's only stable and publicly available interfaces are at the top and the
 bottom. Later chapters build on this notion of silo-ed DSA software stacks to
 design an effective virtualization scheme.
 
-Chapter 3 of this dissertation presents our findings from attempting to extend
-the SVGA model of GPU virtualization to virtualize GPGPUs. We find that the
-tight coupling between ISA virtualization and device  virtualization in SVGA
-leads to poor performance for GPGPU compute. Eliding ISA virtualization
-enables the resulting prototype, Trillium~\cite{trillium}, to outperform all
-other traditional virtualization schemes that retain hypervisor interposition.
-However, Trillium is still 2---3$\times$ slower than RPC-style API forwarding.
+GPGPUs embody the hardware interface and software stack design that are
+commonly used when building DSAs, and are at the most widely adopted DSA.
+GPGPU virtualization has concretely been studied for the last decade, and yet
+a viable virtualization technique has not emerged. While the drawbacks of
+these previously considered virtualization techniques are presented in Chapter
+2~\ref{chapter:background}, Chapter 3~\ref{chapter:trillium} presents
+empirical analysis of representatives of each of the canonical techniques
+previously considered. Chapter 3 also contains the findings from our attempt
+to extend VMware's SVGA model of GPU virtualization to virtualize GPGPUs. We
+prototyped this extension of the SVGA design for the Xen Hypervisor (as that
+was the common platform that the rest of the systems evaluated ran on), and
+hence call this prototype \XenSVGA. Briefly, we find that while SVGA
+worked really well for graphical rendering workloads, a naive extension of the
+same model performs poorly for GPU compute workloads. There are two sources of
+inefficiencies in this design. This chapter highlights the first: the tight
+coupling between ISA virtualization and device virtualization.
 
-Virtualization schemes are traditionally taxonomized according to the core
-techniques employed (e.g. emulation, full- or para-virtualization, API
-remoting, etc.), and evaluated in a property trade-off space comprising
-performance, compatibility, interposition, and isolation. We argue that both
-the de facto taxonomy and the property trade-off space are illustrative but
-not informative for GPGPU virtualization: there is a large body of research
-that has had little influence on practice. We suggest an alternative framework
-called \texttt{IEMTS} that teases apart design axes that are implicitly and
-unnecessarily intertwined in much of the literature. By focusing on the
-\textbf{I}nterface interposed, the interposition \textbf{E}ndpoints, the
-\textbf{M}echanism of interposition, the \textbf{T}ransport used to move the
-interposed operations between the guest and the host, and the mechanism used
-to \textbf{S}ynthesize the interposed interface, \texttt{IEMTS} enables a
-clearer understanding of trade-offs in prior designs and provides a model for
-comparison of alternative designs. Chapter 4 presents \texttt{IEMTS}, along
-with analysis of traditional virtualization techniques in the context of
-GPGPUs.
+Eliding ISA virtualization in the \XenSVGA design, enables the
+resulting prototype, \Trillium~\cite{trillium}, to outperform all
+other traditional virtualization schemes that retain hypervisor interposition.
+However, \Trillium remains 2---3$\times$ slower than user-space API
+remoting. This overhead was found to result from our choice of interposition
+point in \Trillium: our implementation of \Trillium interposed the
+``pipe-driver'', the interface between the front and back ends of the GNU/
+Linux graphics driver system. Interposing this interface meant that a single
+user-space API call made by the compute application in the VM resulted in
+multiple interposition events, each of which contributed a fixed remoting
+overhead. On the other hand, only one such interposition event (with no
+hypervisor involvement) occurs in a user-space API remoting, leading to the
+vastly lower overhead observed.
+
+Our desire to find a virtualization design that involved hypervisor based
+interposition at an upper layer in the software stack, preferably of the
+user-space API exposed by the DSA led to a alternative analysis framework
+called \iemts (presented in Chapter 4~\ref{chapter:iemts}) that teases
+apart design axes that are implicitly and unnecessarily intertwined in much of
+the literature. Analyzing a virtualization design using \iemts
+involves focusing on the \textbf{I}nterface the design interposes, the
+interposition \textbf{E}ndpoints, the \textbf{M}echanism of interposition, the
+\textbf{T}ransport used to move the interposed operations between the guest
+and the host, and the mechanism used to \textbf{S}ynthesize the interposed
+interface. We argue that \iemts enables a clearer understanding of
+trade-offs in prior designs and provides a model for comparison of alternative
+designs.
 
 Domain Specific Accelerators (e.g., Google TPU, Intel QAT, etc.) are
 typically exposed to developers via a user-space API. The API is typically
