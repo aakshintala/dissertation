@@ -19,7 +19,7 @@ to understand those internal APIs and data structures.
 Additional utilities are needed to support some of the APIs:
 for example, the kernel launch APIs (e.g., \lstinline|cudaLaunchKernel|)
 requires the kernel's argument information to transport the argument list from the guest library to the \worker.
-\Model calls the external \lstinline|cuobjdump| tool to parse the extracted CUDA binary,
+\AvA calls the external \lstinline|cuobjdump| tool to parse the extracted CUDA binary,
 which can be done by embedding a PTX parser alternatively.
 
 \hyu{Detailed process:
@@ -36,7 +36,7 @@ avoiding \worker from executing the external \lstinline|cuobjdump| program.
 
 \subsection{TensorFlow}
 
-We explored two solutions to support TensorFlow Python API with \model:
+We explored two solutions to support TensorFlow Python API with \AvA:
 virtualizing the topmost TensorFlow classes,
 or virtualizing the underlying CUDA runtime and driver APIs.
 Table~\ref{tab:tensorflow_cmp} summarizes these methods' properties,
@@ -73,48 +73,48 @@ enabling the \worker to load and register the functions without remoting any \ls
 
 \subsection{Old Development Effort}
 
-A key benefit of \model's para-virtual API-remoting approach is that the development effort required to support new APIs or devices is trivial.
-A developer using \model need only be familiar with the high-level user-facing APIs,
+A key benefit of \AvA's para-virtual API-remoting approach is that the development effort required to support new APIs or devices is trivial.
+A developer using \AvA need only be familiar with the high-level user-facing APIs,
 and is spared the trouble of dealing with low-level hardware drivers or the device ISA.
 
 The authors' experience in building several API remoting systems demonstrates that
-\model is able to shorten the development cycle of virtualizing an API from scratch from several developer-months to a number of developer-days:
+\AvA is able to shorten the development cycle of virtualizing an API from scratch from several developer-months to a number of developer-days:
 
 \paragraphbe{Lines of code.}
 The authors built an API remoting system for a core set of OpenCL manually with X LOC in total,
-though the system was much less mature compared with \model.
-We rebuilt the OpenCL virtualization of the same set of APIs with \model with 850 LOC of the API specification,
+though the system was much less mature compared with \AvA.
+We rebuilt the OpenCL virtualization of the same set of APIs with \AvA with 850 LOC of the API specification,
 and 20,000 LOC were generated automatically for the API-specific components.
-We virtualized a core set of TensorFlow API manually on top of the \model's API-agnostic components,
+We virtualized a core set of TensorFlow API manually on top of the \AvA's API-agnostic components,
 requiring 2,000 lines of Python code for TensorFlow class wrappers and dynamic member remoting.
 
 \paragraphbe{Development time.}
 The manually built OpenCL virtualization exposed tens of bugs in the API argument marshaling, data transport, and resource management during the development.
 Overall, the handiwork took the authors more than three months to build and test.
-However, rebuilding the system with \model cost a single developer slightly over a week,
+However, rebuilding the system with \AvA cost a single developer slightly over a week,
 while most code bugs were found in the specification \hyu{I left a confusing sentence here. Bugs mean the error in the source of spec. @AA please help fix it}.
 The development time was saved significantly for the TensorFlow support as well:
 writing API wrappers and Python object marshaling took about two developer weeks,
 and most were only engineering efforts.
 
-%OpenCL was the first API that we tried to virtualize from the \compiler-generated guidance,
-%and it exposed tens of bugs in \compiler and \model system.
+%OpenCL was the first API that we tried to virtualize from the \CAvA-generated guidance,
+%and it exposed tens of bugs in \CAvA and \AvA system.
 %These led us to refine the specification for near twenty times,
-%and improve \compiler as well as the annotation language.
-We optimized \compiler and introduced new features when we supported new APIs and accelerators with \model.
-\Model has been increasingly mature in the iterations,
+%and improve \CAvA as well as the annotation language.
+We optimized \CAvA and introduced new features when we supported new APIs and accelerators with \AvA.
+\AvA has been increasingly mature in the iterations,
 and the annotation syntax has become more like C language's.
-According to multiple \model users' feedbacks,
-minimal developer intervention is now needed to virtualize an API framework with the current \model prototype,
-even if they are new to \model and \compiler language:
+According to multiple \AvA users' feedbacks,
+minimal developer intervention is now needed to virtualize an API framework with the current \AvA prototype,
+even if they are new to \AvA and \CAvA language:
 one virtualized a core set of HIP API in about ten days.
 
-%\Model also supports incremental change to the specification when the API is updated.
-%\Compiler is able to warn any mismatches between the annotated API and latest version,
+%\AvA also supports incremental change to the specification when the API is updated.
+%\CAvA is able to warn any mismatches between the annotated API and latest version,
 %and developers only need to update a few lines of specifications empirically.
 
-\Model can be ported to other hypervisors and operating systems easily.
-For example, \model was initially developed on Linux kernel 4.9 LTS and NVIDIA Pascal GPU cards.
+\AvA can be ported to other hypervisors and operating systems easily.
+For example, \AvA was initially developed on Linux kernel 4.9 LTS and NVIDIA Pascal GPU cards.
 Porting it to Linux kernel 4.14 required changing fewer than 10~LOC.
 %We ran the aforementioned OpenCl benchmarks on AMD Radeon RX 580 and Vega via ROCm~1.7 OpenCL,
 %and found the overheads to be in line with the results obtained on NVIDIA hardware.
@@ -136,7 +136,7 @@ Porting it to Linux kernel 4.14 required changing fewer than 10~LOC.
 			FPGA application API     &                     &                                      &                     &                            & \\ \hline
 		\end{tabular}
 	}
-	\caption{API virtualization effort during \model development iterations. \hyu{Add it back for Chris to have a look}}
+	\caption{API virtualization effort during \AvA development iterations. \hyu{Add it back for Chris to have a look}}
 	\label{table:effort}
 \end{table*}
 

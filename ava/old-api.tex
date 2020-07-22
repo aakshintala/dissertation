@@ -9,7 +9,7 @@
 
 \graphicspath{{images/}}
 
-\section{\Compiler}
+\section{\CAvA}
 \label{s:api}
 \label{s:compiler}
 
@@ -17,16 +17,16 @@
 
 % \reviewer{D}{I find the middle sections, especially Section 5, are hard to understand. The key problem is that the authors do not describe the high-level ideas/design but often directly zoom into the details.}
 
-\Compiler implements \speclang (Low-level API Semantics), a specification language for API semantics and policy, and generates C source code to implement API remoting components.
-\Speclang reuses the C syntax to declaratively specify the semantics of the functions in the API.
-%\cjr{And BPF for policy}\amp{I don't think the policy is part of \speclang. Let's discuss.}\cjr{I'll just take your position for granted at this point.}
-This section will introduce a representative subset of \speclang and describe its semantics.
-% All \model semantics may be conditional, to support dynamic semantics.
-Most of the annotations in \speclang apply to values, including arguments and return values.
+\CAvA implements \Lapis (Low-level API Semantics), a specification language for API semantics and policy, and generates C source code to implement API remoting components.
+\Lapis reuses the C syntax to declaratively specify the semantics of the functions in the API.
+%\cjr{And BPF for policy}\amp{I don't think the policy is part of \Lapis. Let's discuss.}\cjr{I'll just take your position for granted at this point.}
+This section will introduce a representative subset of \Lapis and describe its semantics.
+% All \AvA semantics may be conditional, to support dynamic semantics.
+Most of the annotations in \Lapis apply to values, including arguments and return values.
 % , annotated using \spec@argument(|\txt{arg}|) { |\txt{arg annotations}| }@, and return values, annotated with \spec@return_value { |\txt{return value annotations}| }@.
-\Compiler supports nesting, allowing \speclang to describe any data structure, including arrays and structures
+\CAvA supports nesting, allowing \Lapis to describe any data structure, including arrays and structures
 %~\cjr{example needed? e.g. OCL images? not sure if its necessary...}\hyu{may not be necessary as no one will care about this detail.}.\cjr{ok}
-\Compiler supports annotations on functions to specify if they are synchronous or asynchronous, which API objects (e.g. buffers)
+\CAvA supports annotations on functions to specify if they are synchronous or asynchronous, which API objects (e.g. buffers)
 %\hyu{explain or change?}\hyu{explain in \S\ref{s:migration}}
 are modified by function calls to enable VM migration (see \S\ref{s:migration}).
 
@@ -44,10 +44,10 @@ are modified by function calls to enable VM migration (see \S\ref{s:migration}).
 %   Annotate \txt{member}.
 % \end{compactitem}
 
-Each value in \compiler has a \emph{kind} describing how it can be transferred.
+Each value in \CAvA has a \emph{kind} describing how it can be transferred.
 An \spec@opaque@ value that can be copied bit-for-bit without any special handling (e.g., \lstinline|int|).
 % A \spec@handle@ which is a number or pointer used to identify an abstract API object and which is never manipulated directly by user code.
-% (\compiler also provides the \spec@allocates@ and \spec@deallocates@ annotations to specify when API objects are created and destroyed.)
+% (\CAvA also provides the \spec@allocates@ and \spec@deallocates@ annotations to specify when API objects are created and destroyed.)
 % \spec@callback@s References to application functions.
 % \spec@userdata@ Opaque ``tag'' values that are combined with a callback function to form a closure.
 A \spec@buffer(|\txt{size}|)@ that is a pointer to a buffer with the specified \txt{size}.
@@ -55,13 +55,13 @@ Buffers can be \spec@in@, \spec@out@,
 %~\cjr{AMP: commas don't play well with line breaks here!}
 or both to specify whether the buffer is input, output, or both for a call.
 Buffers are copied from the caller to the callee before the call if the buffer is an input, and from the callee to the caller after the call if the buffer is an output.
-\Compiler also provides kinds of values to support other API features (e.g., callbacks) and to specify cases where optimizations (e.g., buffer reuse) can be applied.
+\CAvA also provides kinds of values to support other API features (e.g., callbacks) and to specify cases where optimizations (e.g., buffer reuse) can be applied.
 These \emph{kind}s are applied to values,
 %\hyu{This sentence looks a duplicate}
 %\cjr{looks ok to me}
 e.g., \spec@argument(ptr) { out; buffer(size); }@ specifies that the argument \spec@ptr@ is a pointer to a buffer with size \spec@size@ (another argument) and is an input.
 
-% \Model also accepts specialized allocation functions for buffers with special memory requirements.
+% \AvA also accepts specialized allocation functions for buffers with special memory requirements.
 % For buffers that outlive a single function call, their lifetime can be explicitly denoted: a buffer's lifetime may be coupled to another object's lifetime, it may be valid until explicitly deallocated by another API, or a buffer may be considered static (never deallocated).
 % Structures containing only simple types do not need to be annotated.
 
@@ -71,13 +71,13 @@ e.g., \spec@argument(ptr) { out; buffer(size); }@ specifies that the argument \s
 % \amp{Unless I totally misunderstand the PTask paper \S{}4.1.2, then there isn't much to say beyond the below and I don't think it's that important.}
 % In AvA, unlike PTask~\citep{ptask}, buffer sizes can always be computed ahead of time in the host, because the guest application will already contain explicit buffer allocations.
 
-% \Compiler allows the specification developer to embed C code in the specification to perform actions before or after a function is called.
+% \CAvA allows the specification developer to embed C code in the specification to perform actions before or after a function is called.
 % The embedded code can also store information between API calls.
-% This provides the ability to perform guest-side or server-side computation to handle values that \model does not directly support.~\cjr{clarify relationship to eBPF!}
+% This provides the ability to perform guest-side or server-side computation to handle values that \AvA does not directly support.~\cjr{clarify relationship to eBPF!}
 
-% \Compiler supports most C functions directly without the need for manual wrappers in either the guest application or the \worker.
-These features allow \model to remote unmodified C APIs.
-Additionally, \speclang natively supports virtualization specific features: resource consumption tracking and enforcement; record and replay of commands
+% \CAvA supports most C functions directly without the need for manual wrappers in either the guest application or the \worker.
+These features allow \AvA to remote unmodified C APIs.
+Additionally, \Lapis natively supports virtualization specific features: resource consumption tracking and enforcement; record and replay of commands
 %\hyu{what's command?}\hyu{ok to explan it in \S\ref{s:design_transport}?}
 for VM migration (\S\ref{s:migration}).
 Previous RPC compilers only support a restricted set of data types (often to enable cross-language compatibility), forcing developers to manually translate arguments and return values.%
@@ -86,19 +86,19 @@ Previous RPC compilers only support a restricted set of data types (often to ena
 % The details of how to remote these unrestricted C APIs will be the subject of a future paper.~\cjr{We probably need a better way to say this. It's important to leave the impression that this paper contains enough detail to understand/evaluate the work.}
 
 
-\Compiler can infer the semantics of functions and arguments in simple cases and provides safe defaults when possible (e.g., functions are by default synchronous and numeric types are by default opaque).
+\CAvA can infer the semantics of functions and arguments in simple cases and provides safe defaults when possible (e.g., functions are by default synchronous and numeric types are by default opaque).
 %~\cjr{is it possible to always have safe defaults by using defaults that are undeployable when we can't figure out everything? I'd like to say the defaults are always safe.}
 Defaults are always safe in that they will not crash the hypervisor. The default buffer size (1) may be wrong and result in crashes in the application or \worker. It would be easy to replace the default buffer size with an error, as is already done for ``direction'' (in/out parameters).
 \cjr{Last 2 sentences can cut in a pinch.}
 % (e.g., a pointer to an incomplete type is assumed to be a handle).
-\Compiler generates a skeletal default specification for all functions from an API header file, which the developer can modify as needed.
-% Generated functions are marked ``unsupported''. The programmer must verify and fix the auto-generated annotations for all functions they wish to support before \compiler will generate code for them.
-% To simplify maintenance when an API changes, \compiler emits errors if the unmodified header and the specifications disagree on the declarations of the API functions.
+\CAvA generates a skeletal default specification for all functions from an API header file, which the developer can modify as needed.
+% Generated functions are marked ``unsupported''. The programmer must verify and fix the auto-generated annotations for all functions they wish to support before \CAvA will generate code for them.
+% To simplify maintenance when an API changes, \CAvA emits errors if the unmodified header and the specifications disagree on the declarations of the API functions.
 
 %\hyu{Shall we separate the paragraphs into subsections?}
 %\cjr{no, too tight already.}
-\Compiler also supports resource accounting via annotations to specify the type and quantity of resources each API function consumes.
-\Compiler generates code to report this utilization to the hypervisor.
+\CAvA also supports resource accounting via annotations to specify the type and quantity of resources each API function consumes.
+\CAvA generates code to report this utilization to the hypervisor.
 The developer also provides an eBPF program which, when needed, schedules API calls from different VMs.
 The program processes all of resource usage reports and decides which VMs may execute API calls and which VMs must wait.
 The eBPF program is stored in a separate file and referenced from the API specification using \spec@policy("policy_kern.c")@ at the top level.
@@ -119,7 +119,7 @@ cl_int clEnqueueTask(
     consumes_resource(commands_res, 1);|\label{line:consume_resource}|
     |...| }
 \end{lstlisting}
-	\vspace*{-5pt}\caption{An example of \speclang. The file \spec{policy_kern.c} is shown in Figure~\ref{fig:scheduler_example}.}
+	\vspace*{-5pt}\caption{An example of \Lapis. The file \spec{policy_kern.c} is shown in Figure~\ref{fig:scheduler_example}.}
 	\label{fig:spec_example}
 \end{figure}
 
@@ -168,7 +168,7 @@ int schedule(__sk_buff *skb) {
 	\label{fig:scheduler_example}
 \end{figure}
 
-Figure~\ref{fig:spec_example} shows an example \compiler OpenCL specification.
+Figure~\ref{fig:spec_example} shows an example \CAvA OpenCL specification.
 Line~\ref{line:include_cl} imports the unmodified OpenCL header
 Line~\ref{line:declare_resource} declares a resource representing function invocation rate.
 Line~\ref{line:scheduler_code} specifies the eBPF code used to schedule function invocations.
@@ -181,7 +181,7 @@ Line~\ref{line:sync_async} specifies that it is synchronous when \lstinline|bloc
 % Line~\ref{line:type_success} specifies that the return value from asynchronous calls is \lstinline|CL_SUCCESS|.
 Line~\ref{line:consume_resource} specifies that a call to this function counts as one unit of the \spec{commands} resource for scheduling purposes.
 Some argument annotations which specify how argument should be transferred are elided.
-\hyu{I feel this paragraph can be shortened as ``Figure~\ref{fig:spec_example} shows an example \compiler OpenCL specification for \lstinline[breaklines=true,escapechar=|]@clEnqueue||Task@,\linebreak{} which launches a compute kernel on the device.'' The previous paragraphs explain the semantics well.}
+\hyu{I feel this paragraph can be shortened as ``Figure~\ref{fig:spec_example} shows an example \CAvA OpenCL specification for \lstinline[breaklines=true,escapechar=|]@clEnqueue||Task@,\linebreak{} which launches a compute kernel on the device.'' The previous paragraphs explain the semantics well.}
 \cjr{I like it but if we get stuck for space, it can go.}
 
 Figure~\ref{fig:scheduler_example} shows an outline of an eBPF based scheduler.
@@ -193,8 +193,8 @@ The router dispatches commands in priority order (highest to lowest).
 % \hyu{This is allowed as long as the device supports time sharing.}\amp{This would break policy enforcement because ALL outstanding commands could be dispatched at the same time.}
 % \hyu{We can always schedule only one or some of the most prioritized commands. BTW that won't break the policy enforcement even if the hardware's time multiplexing is unfair if we only consider the ``end2end'' device execution time.}
 % \amp{I think we are talking across each other. Let's talk after submission}
-The \model policy functions take an \spec@__sk_buff@ argument containing the \model command information.
-This allows \model to use the existing eBPF infrastructure directly.
+The \AvA policy functions take an \spec@__sk_buff@ argument containing the \AvA command information.
+This allows \AvA to use the existing eBPF infrastructure directly.
 
 The algorithm in Figure~\ref{fig:scheduler_example} is simplified for clarity.
 It counts the number of commands each VM sends (\spec@consume@, lines~\ref{line:bpf_count_begin}--\ref{line:bpf_count_end}) and prioritizes VMs which have have sent less than their share of the total commands (\spec@schedule@, lines~\ref{line:bpf_prio_begin}--\ref{line:bpf_prio_end}).
@@ -202,7 +202,7 @@ A real policy would periodically reset or slowly reduce the counts and use addit
 
 % \reviewer{A}{Annotating the API seems to require significant knowledge about the hardware (e.g., specifying the type and quantity of resources each call consumes, specifying which objects are modified). These annotations also seem to assume that the side effect of API calls are uniform across different hardware versions, etc.}
 
-Writing a \speclang specification requires a user-level knowledge of the API.
+Writing a \Lapis specification requires a user-level knowledge of the API.
 The developer needs to understand the API function semantics, but only from the perspective of the API user, they do not need to know how to implement the API.
 %However, if the API truly abstracts the underlying hardware\hyu{this sentence is abstract}, the developer should not need a deep understanding of the underlying hardware and the API annotations will be usable with any hardware which supports the API.
 Our experience is that all APIs (e.g., OpenCL~\cite{opencl}) provide documentation sufficient to achieve this.
@@ -214,27 +214,27 @@ Our experience is that all APIs (e.g., OpenCL~\cite{opencl}) provide documentati
 % \subsection{Specification Guidance\amp{Locked}}
 
 % The API specification annotates the APIs and the accelerator resources,
-% providing a \emph{documentation} for \compiler to generate the virtualization stack.
+% providing a \emph{documentation} for \CAvA to generate the virtualization stack.
 % The documentation is required because C function declarations in the original API header provide little or no semantic information about functions or arguments,
 % and no information about device resources or policies.
-% \Model eases the writing of the specification by designing a C-like IDL language,
+% \AvA eases the writing of the specification by designing a C-like IDL language,
 % and also generates a rude specification automatically by inferring limited semantic information from the API header.
-% For example, the \model prototype uses argument types and names to infer the relations and dependencies between API arguments.
-% We envision \model will be able to leverage natural language processing to
+% For example, the \AvA prototype uses argument types and names to infer the relations and dependencies between API arguments.
+% We envision \AvA will be able to leverage natural language processing to
 % extract richer semantic information from the documentation and comments for API definitions~\cite{nie2018natural,hotcomments,icomment,acomment}.
 
 \subsection{Code Generation}
 \label{s:code_gen}
 
-% \Compiler generates C source code from the API specification using templating.
-% \Compiler builds simplified intermediate representation of the specification, \compiler-IR.
-% \compiler-IR is similar to \speclang, but it applies a fixed set of annotations to every value (e.g., argument) and combines all conditionals into expressions which compute specification values (e.g., the boolean representing that a function is synchronous).\amp{Is this clear?}\cjr{DISCUSS}
+% \CAvA generates C source code from the API specification using templating.
+% \CAvA builds simplified intermediate representation of the specification, \CAvA-IR.
+% \CAvA-IR is similar to \Lapis, but it applies a fixed set of annotations to every value (e.g., argument) and combines all conditionals into expressions which compute specification values (e.g., the boolean representing that a function is synchronous).\amp{Is this clear?}\cjr{DISCUSS}
 
-\Compiler generates several separate components for each API function, including a stub function, a call handler, a return handler, and a replay handler for VM migration.
+\CAvA generates several separate components for each API function, including a stub function, a call handler, a return handler, and a replay handler for VM migration.
 The stub functions and return handlers are in the guest library, while call handlers are in the \worker, except in the case of callbacks, for which the placement is reversed.
 Replay handlers are always in the \worker.
 
-For each component and API function, \compiler traverses the parsed \speclang recursively, using string templates to generate C source code from each element of the IR\amp{Check}.
+For each component and API function, \CAvA traverses the parsed \Lapis recursively, using string templates to generate C source code from each element of the IR\amp{Check}.
 Consider the \txt{function-stub} and \txt{attach-value} templates, for example (other templates follow similar patterns):
 \txt{function-stub} takes the specification of an API function and returns the stub for that API function.
 It uses \txt{attach-value} to attach values to the command for transport.
@@ -282,7 +282,7 @@ if (|\txt{src}| != NULL && |\txt{argument is input}|){|\label{line:guest_buffer_
         }
       }|\label{line:guest_buffer_end}|
 \end{lstlisting}
-	\caption{\compiler generated guest library API stubs. \amp{Code can be syntactically compressed later}}
+	\caption{\CAvA generated guest library API stubs. \amp{Code can be syntactically compressed later}}
 	\label{fig:guest_code_stub_template}
 \end{figure}
 \end{comment}
@@ -310,7 +310,7 @@ if (|\txt{src}| != NULL && |\txt{argument is input}|){|\label{line:guest_buffer_
   }
 }
 \end{lstlisting}
-	\caption{\compiler generated guest library code to handle replies from the \worker.}
+	\caption{\CAvA generated guest library code to handle replies from the \worker.}
 	\label{fig:guest_code_handler_template}
 \end{figure}
 
@@ -332,12 +332,12 @@ if (|\txt{src}| != NULL && |\txt{argument is input}|){|\label{line:guest_buffer_
     break;
   |\txt{Other API commands}| |\ldots| } }
 \end{lstlisting}
-	\caption{\compiler generated API server (C-like pseudo-code).}
+	\caption{\CAvA generated API server (C-like pseudo-code).}
 	\label{fig:worker_code_template}
 \end{figure}
 
 
-Figures~\ref{fig:guest_code_stub_template}--\ref{fig:worker_code_template} show the structure of the guest library and \worker code, resp., generated by \compiler.
+Figures~\ref{fig:guest_code_stub_template}--\ref{fig:worker_code_template} show the structure of the guest library and \worker code, resp., generated by \CAvA.
 %The code generated for the example specification in Figure~\ref{fig:spec_example} can be found at\break \url{https://github.com/ava-virt/specification-example-output}\footnote{The referenced repository and the code in it are anonymized.}.
 The guest library contains a stub function for each API function as shown in Figure~\ref{fig:guest_code_stub_template}.
 The stubs take the same arguments as the original API function.
@@ -345,7 +345,7 @@ Lines~\ref{line:guest_cmd_start}--\ref{line:guest_cmd_end} create a command (an 
 Any buffer arguments have their data attached to the command as in lines~\ref{line:guest_buffer_start}--\ref{line:guest_buffer_end}.
 More complex data structures (e.g., buffers containing buffers) will produce nested handling code.
 Conditional annotations result in conditionals in the generated code.
-Lines~\ref{line:register_call_start} and \ref{line:register_call_end} register the call and argument with the \model runtime for use during reply handling.
+Lines~\ref{line:register_call_start} and \ref{line:register_call_end} register the call and argument with the \AvA runtime for use during reply handling.
 Line~\ref{line:send_call} sends the call command.
 Lines~\ref{line:wait_for_reply}--\ref{line:return_ret} wait for the reply and return the remote return value.
 
@@ -371,21 +371,21 @@ Line~\ref{line:send_reply} sends the reply message to the guest.
 \subsection{Limitations}
 %\cjr{[mis, over sub]}\amp{Huh?}\cjr{this is resolved.}
 
-% While \compiler targets frameworks with C exports~\cjr{ok?}, \model is implementable in most general programming languages.
+% While \CAvA targets frameworks with C exports~\cjr{ok?}, \AvA is implementable in most general programming languages.
 % Some of its features are not needed in all languages, for instance ???
-The only features \model requires are function calls and the ability to get the identity of an object (e.g., its address).
+The only features \AvA requires are function calls and the ability to get the identity of an object (e.g., its address).
 % Implementing callback functions \emph{with} \texttt{userdata} (a tag) only requires function pointers or objects.
 % However, supporting callback functions \emph{without} \texttt{userdata} requires support for either closures (as provided by Python) or run-time code generation (as allowed in C).
-Supporting C++ and Python will require few changes to \model.
-We manually virtualized the Python TensorFlow and TensorFlow Lite APIs using \model's communication components (\S\ref{s:eval_effort}).
+Supporting C++ and Python will require few changes to \AvA.
+We manually virtualized the Python TensorFlow and TensorFlow Lite APIs using \AvA's communication components (\S\ref{s:eval_effort}).
 % Some libraries use esoteric (and often non-portable) features of the language and architecture.
 % For instance, the AMD HIP framework performs binary introspection at load time to associate function pointers with GPU kernels.
 % The developer was able to duplicate the binary introspection code into the guest library and then transport the resulting GPU kernel information to the \worker.
-% \Compiler could provide explicit support for this pattern.
+% \CAvA could provide explicit support for this pattern.
 
 % \cjr{our experience suggest guidelines for API design. Is this?}
 \begin{comment}
-Our experiences with \model suggest several principles for designing APIs with virtualization in mind:
+Our experiences with \AvA suggest several principles for designing APIs with virtualization in mind:
 \begin{compactitem}
 \item Make inputs and outputs explicit. E.g., any call that reads or writes a buffer should receive it as a part of an argument.
 \item If an argument to a function can take multiple different types (e.g., a pointer to device \emph{or} host buffer), provide a way to query the expected type.

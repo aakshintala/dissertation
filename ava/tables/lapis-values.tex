@@ -11,7 +11,7 @@
   \spec|type_cast(ty)| & type \spec|ty| and should be cast in the generated code. \\
   \spec|handle| & an API object handle. \\
   \spec|buffer(size)| & a buffer of \spec|size| elements. \\
-%  \spec|zerocopy| & an \model zero-copy buffer allocated using \spec|zerocopy_alloc|. \\
+%  \spec|zerocopy| & an \AvA zero-copy buffer allocated using \spec|zerocopy_alloc|. \\
   \spec|in| & an input and should be copied from the application to the \worker before the call. \\
   \spec|out| & an output and should be copied from the \worker to the application after the call. \\
   \spec|no_copy| & a buffer which should not be copied. Useful when combined with lifetimes. \\
@@ -34,7 +34,7 @@
   \bottomrule
   \end{tabular}
   }
-  \caption{\speclang descriptors for specifying values and objects.}
+  \caption{\Lapis descriptors for specifying values and objects.}
   \label{tab:lapis-values}
 %  \vspace*{-1em}
 \end{table}

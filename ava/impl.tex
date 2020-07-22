@@ -4,10 +4,10 @@
 \section{Implementation}
 \label{s:impl}
 
-We prototyped \model on Linux kernel~4.14.0 with QEMU~3.1.0 and LLVM~7.0.
+We prototyped \AvA on Linux kernel~4.14.0 with QEMU~3.1.0 and LLVM~7.0.
 Our resource management modifications to the KVM hypervisor took 1,500~LoC.
 We modified the QEMU \emph{virtio-vsock} device and the corresponding \emph{vhost-vsock} host driver to enable interposition (\S\ref{s:impl_mediation}).
-The para-\vdev, which is used for both interposition and transport, was built as a QEMU display adapter (500~LoC). The guest driver is 500~LoC long, each transport channel is about 400~LoC on average, the \compiler was implemented in 3,200~LoC of Python code. Other libraries accounted for 2,000~LoC.
+The para-\vdev, which is used for both interposition and transport, was built as a QEMU display adapter (500~LoC). The guest driver is 500~LoC long, each transport channel is about 400~LoC on average, the \CAvA was implemented in 3,200~LoC of Python code. Other libraries accounted for 2,000~LoC.
 
 \subsection{Transport}
 
@@ -22,9 +22,9 @@ The para-\vdev, which is used for both interposition and transport, was built as
 \end{figure}
 \end{comment}
 
-\model supports several interchangeable transports, allowing it to support disaggregated hardware via \emph{sockets}, as well as local execution via guest-\worker \emph{shared memory}.
+\AvA supports several interchangeable transports, allowing it to support disaggregated hardware via \emph{sockets}, as well as local execution via guest-\worker \emph{shared memory}.
 % The transport handles two types of payloads: commands which contain opaque arguments and metadata for calls (e.g., thread ID and function ID) and data which contains buffers referenced from the arguments (e.g., bulk data).
-% The \model prototype implements two types of transports.
+% The \AvA prototype implements two types of transports.
 The \emph{socket} transport uses either a TCP/IP network socket or an inter-VM socket (VSOCK) to transport commands and data.
 The socket layer copies data multiple times, and incurs queuing delays.
 %This transport is currently only used to connect different computers.
@@ -38,7 +38,7 @@ The guest para-virtual driver manages the virtual BAR and assigns a partition to
 % AMP: speculation
 % More advanced memory management could be used in the future.
 % for example, the parameter blocks may be relocated in the BAR to reduce the external fragmentation.
-\Model uses the shared buffer to transport buffers to the \worker,
+\AvA uses the shared buffer to transport buffers to the \worker,
 but still uses a socket (currently VSOCK) to transport commands to retain hypervisor interposition.
 % Because the buffers are virtual memory they do not consume physical memory until they are used and thus can be over allocated without significant waste.
 
@@ -49,27 +49,27 @@ However, Spinning on a memory location to implement a doorbell costs more CPU re
 VSOCK performance can be improved to nearly match memory performance~\cite{vsock-mergeable-rx},
 but it would still increase the number of data copies and increasing performance would require modifications to the hypervisor and the guest and host kernels.
 In this trade-off space,
-the shared memory channel in \model combines socket channel for doorbell notifications and uses shared memory for bulk data transport.
+the shared memory channel in \AvA combines socket channel for doorbell notifications and uses shared memory for bulk data transport.
 \end{comment}
 
 % AMP: This really isn't important. It's just a variant of the socket transport.
 % \paragraphbe{Netlink} socket channel~\cite{netlink} is established for communications between hypervisor and services (manager and \workers).
 % The hypervisor offers interfaces to receive invocations' execution statistics from \workers and provide scheduling information,
 % enforcing resource policies (\S\ref{s:policy}).
-% The commands sent from either manager or \workers are usually forged automatically by \compiler (\S\ref{s:compiler}),
-% and flagged as \model internal commands.
+% The commands sent from either manager or \workers are usually forged automatically by \CAvA (\S\ref{s:compiler}),
+% and flagged as \AvA internal commands.
 
 % AMP: This may be worth using in the record-and-replay implementation section.
 % \paragraphbe{Recording} channel is used for log-and-replay migration support (\S\ref{s:migration}).
-% To support object-level migration, the original \worker in \model must be able to record a selected set of invocations and capture the states of API objects.
+% To support object-level migration, the original \worker in \AvA must be able to record a selected set of invocations and capture the states of API objects.
 % The destination \worker must be able to read the recorded invocation logs and object states to restore the context.
-% \Model eases the difficulty in writing such a log-and-replay channel,
+% \AvA eases the difficulty in writing such a log-and-replay channel,
 % where the source worker writes the record to a disk file or socket channel, and the destination reads the file or socket to retrieve the log.
 
 \subsection{Hypervisor Interposition and Mediation}
 \label{s:impl_mediation}
 
-\Model enables hypervisor mediation by interposing the transport channel.
+\AvA enables hypervisor mediation by interposing the transport channel.
  % to be mediated by the (local) hypervisor.
 % We achieve this mediation with a para-\vdev exposed to the VM.
 We extended QEMU \emph{virtio-vsock}~\cite{virtio,virtio_vsock} (a
@@ -90,17 +90,17 @@ The \worker and guest application have unfettered access to the shared memory, b
 \subsubsection{Policies in eBPF}
 \label{s:bpf}
 
-\Model supports policies written as eBPF (Extended Berkeley Packet Filter~\cite{bpf}) programs.
+\AvA supports policies written as eBPF (Extended Berkeley Packet Filter~\cite{bpf}) programs.
 We defined a new eBPF program type
 % \lstinline|BPF_PROG_TYPE_AVX_POLICY|
 that can be loaded into KVM via \lstinline|ioctl|.
 % In the prototype, the command doorbells are sent via VSOCK and resource reports are sent via Netlink, and in the disaggregated scenario, both are sent via TCP or RDMA,
-\model reuses the same eBPF instruction set as socket filtering,
+\AvA reuses the same eBPF instruction set as socket filtering,
 and leverages the unmodified LLVM compiler to compile the eBPF program.
 The eBPF verifier had to be modified to verify the memory accesses of the new type of program.
-We provide helper functions for \model eBPF programs.
+We provide helper functions for \AvA eBPF programs.
 % As running in the BPF VM,
-Leveraging eBPF allows \model to take advantage of eBPF program verification at a very low cost (4.3\% of \model's internal overhead).
+Leveraging eBPF allows \AvA to take advantage of eBPF program verification at a very low cost (4.3\% of \AvA's internal overhead).
 % benefit from the  for the security purpose.
 % \hyu{The overhead of BPF program execution is negligible compared with the whole API execution time. It does take long time compared with the native code: The schedule program takes 2~us on average, consume program takes 300~ns (for every 20 invocations in a batch). For comparison, the overhead of forwarding an invocation without arguments is about 47~us (marshal 5us, unmarshal 9us, scheduling <1us, memcpy 200 bytes * 4 => 6us, vsock 8us, others 12us). So it increases the total overhead by (2+0.3/20)/47=4.3\%.}
 
@@ -117,18 +117,18 @@ This simplifies the implementation somewhat, but will be changed in the future s
 
 % The design can be ported to other OS and platforms easily with the flexible disaggregated components.
 \aak{does this belong in a section on hypervisor mediation?}\cjr{I think it goes here, but I think maybe it also gets deleted.}
-The \model developer can develop new mediated channels into the \model transport,
+The \AvA developer can develop new mediated channels into the \AvA transport,
 and the design generalizes well to other hypervisors.
-For example, our first prototype of \model was built on Xen hypervisor where virtio-vsock was introduced in version 4.9.
+For example, our first prototype of \AvA was built on Xen hypervisor where virtio-vsock was introduced in version 4.9.
 On VMware ESXi, the mediated VSOCK channel can be replaced with VMCI Sockets (vmw-sock).
 \end{comment}
 
 \subsubsection{Scheduling}
 \label{sub:scheduling}
-\Model provides a weighted fair queuing (WFQ) scheduler, with two rate control algorithms.
+\AvA provides a weighted fair queuing (WFQ) scheduler, with two rate control algorithms.
 %, as an individual Linux kernel module.
 % and instructs the router to trigger the defined functions at the scheduling points.
-% \Model implements .
+% \AvA implements .
 Each VM $v$ sharing the device is configured with one share $s_v$.
 $v$'s average device time usage is $L_v=s_v/\sum_{v\in V} s_v$, where $V$ is the set of running VMs.
 VM~$v$'s device utilization time is accumulated into $T_v(t)$ in the time window $[t, t+1)$.
@@ -137,7 +137,7 @@ If a VM's device usage time exceeds its share $s_v$,
 API calls from $v$ will be postponed until its utilization proportion becomes lower than the threshold.
 The scheduling window is 500~ms (or the interval between two adjacent calls),
 and device utilization is updated upon every API completion.
-\Model supports the following algorithms:
+\AvA supports the following algorithms:
 
 \paragraphbe{Fixed-rate polling} where the delay is a fixed interval $d$ (usually longer than the time window).
 
@@ -161,14 +161,14 @@ i.e., $$d_v(k) = b\sum_{t=1}^nl_v(k-t).$$ $b$ is a coherence for which $0<b\le 1
 \label{s:multi_thread}
 \label{s:shadow_buffer}
 
-\Model supports threading and long-lived buffers by shadowing them in the \worker.
+\AvA supports threading and long-lived buffers by shadowing them in the \worker.
 The \worker spawns a shadow thread when a new guest thread makes its first API call, and reuses it for all future calls from that thread.
 %All commands sent to the worker are tagged with their thread ID and dispatched to the appropriate shadow thread in the \worker.
 For synchronous calls, the guest thread will be blocked while the shadow thread executes the call.
 Shadow threads are destroyed when the original thread is destroyed or when the guest application exits.
 %For buffers,
 Similarly, the worker allocates a new shadow buffer when it is first notified of a buffer annotated with a long lifetime and
-% The annotations cause \model to use shadow buffers in the \worker which correspond to guest application buffers.
+% The annotations cause \AvA to use shadow buffers in the \worker which correspond to guest application buffers.
 deallocates it when the application calls a function annotated with \lstinline@deallocates@.
 Reverse shadows, guest library buffers, and threads which shadow an \worker resource, are supported in the same way.
 % \cjr{I want to delete this paragraph, but I can't even convince myself I understand the first sentence. Let's discuss.}
@@ -181,13 +181,13 @@ This buffer is then supplied as the \texttt{userdata} argument to the \worker.
 The \worker registers a generated stub function with the accelerator API.
 When the API framework calls the stub in the \worker, a callback is made to the guest library with the guest library buffer as the \texttt{userdata} argument.
 The guest library finally extracts the original application \texttt{userdata} value and function pointer and performs the call back into application code.
-The call to the guest library uses the same protocol as calls to the \worker, so all features of \model apply to callbacks.
+The call to the guest library uses the same protocol as calls to the \worker, so all features of \AvA apply to callbacks.
 For example, callbacks block the \worker thread that called them if the callback is synchronous.
 
 
 % AMP: We never did this, and it's pretty well known coherence tricks.
 % \subsection{Memory mapping}
-% \Model supports mapped memory by maintaining a shadow memory copy in the \worker.
+% \AvA supports mapped memory by maintaining a shadow memory copy in the \worker.
 % Both original and shadow memory are write-protected and associated with a dirty bit when allocated.
 % The dirty bit is set when any change is made to the memory region;
 % the dirty memory is transferred back to the guest application when the invocation is completed,

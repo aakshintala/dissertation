@@ -18,10 +18,10 @@ utility $\txt{C declaration}$;
   Function & The function ... \\
   \midrule
   \spec|sync| & is synchronous: application calls wait for completion in the \worker. \\
-  \spec|async| & can be asynchronous: calls will return immediately after call dispatch. \\  
+  \spec|async| & can be asynchronous: calls will return immediately after call dispatch. \\
   \spec|success(v)| & should return \spec|v| when called with \spec|async|. \\
-  \spec|contextual_argument| & has additional context that should be transported along with the normal arguments. This is used to copy values or buffers which are not explicitly arguments to the call, e.g., \spec|errno|. 
-%  Contextual arguments can be annotated as usual. 
+  \spec|contextual_argument| & has additional context that should be transported along with the normal arguments. This is used to copy values or buffers which are not explicitly arguments to the call, e.g., \spec|errno|.
+%  Contextual arguments can be annotated as usual.
   \\
   \spec|allocates_rc(r, x)| & allocates \spec|x| units of the continuous resource \spec|r|. \\
   \spec|deallocates_rc(r, x)| & deallocates \spec|x| units of the continuous resource \spec|r|. \\
@@ -32,11 +32,11 @@ utility $\txt{C declaration}$;
   \spec|continuous_rc r;| & a continuous resource \spec|r|. \\
   \spec|instantaneous_rc r;| & an instantaneous resource \spec|r|. \\
   \usebox{\boxutilitysyntax} & a global utility function or variable that is not part of the API, but is used in the specification. \\
-%  \usebox{\boxreplacesyntax} & a replacement for an API function that should be used within the guest application instead of forwarding the call to the \worker.  \\  
+%  \usebox{\boxreplacesyntax} & a replacement for an API function that should be used within the guest application instead of forwarding the call to the \worker.  \\
   \bottomrule
-  \end{tabular}  
+  \end{tabular}
   }
-  \caption{\Speclang descriptors for functions.
+  \caption{\Lapis descriptors for functions.
 %  \amp{CJR, you have opinions on where these tables should be. Tell me what you want and I'll make it happen. I think the tables are close to stable.}
 %  \amp{Use ``rc'' as a contraction for ``resource''?}\hyu{Make sure Figure 9 uses the same short form.}
   }

@@ -42,44 +42,44 @@ The remaining interposable interfaces leave designers with untenable
 alternatives that sacrifice critical virtualization properties such as
 interposition and compatibility.
 
-This chapter describes \Model, which addresses the fundamental limitations of
+This chapter describes \AvA, which addresses the fundamental limitations of
 existing accelerator virtualization techniques.
-\Model combines API-agnostic para-virtual stack components with a DSL
+\AvA combines API-agnostic para-virtual stack components with a DSL
 (Domain-Specific Language) and a compiler to automate construction and
 deployment of guest libraries, hypervisor-level resource management, and
-\workers. \Model uses an abstract para-virtual device to serve as a transport
+\workers. \AvA uses an abstract para-virtual device to serve as a transport
 endpoint for forwarding the public APIs of vendor-provided frameworks
 (e.g. CUDA or TensorFlow). Unlike currently popular user-space API remoting
-solutions~\cite{bitfusion,xaas,vmCUDA,rCUDA,cu2rcu}, \model preserves hypervisor-level resource management and strong isolation using a novel
-technique called \emph{\noveltechnique (\novtechabbrv)}.
-\novtechabbrv forwards API calls over hypervisor-managed communication
+solutions~\cite{bitfusion,xaas,vmCUDA,rCUDA,cu2rcu}, \AvA preserves hypervisor-level resource management and strong isolation using a novel
+technique called \emph{\hirafull (\hira)}.
+\hira forwards API calls over hypervisor-managed communication
 channels, inserting au\-to\-ma\-tically-generated resource management
 components at the transport layer to enforce policies from the DSL
-specification. Critically, \emph{automation} from \Model enables hypervisors
+specification. Critically, \emph{automation} from \AvA enables hypervisors
 to keep up with fast accelerator evolution: automatic generation of components
 dramatically shortens the development cycle. As Figure~\ref{fig:trends}
 suggests, a solution that tracks API framework evolution can track hardware
 evolution as well.
 
-\Model supports a broad range of currently-shipping compute offload
+\AvA supports a broad range of currently-shipping compute offload
 accelerators. We virtualized \numaccelerators accelerators including NVIDIA
 and AMD GPUs, Google TPUs, and Intel QuickAssist. Virtualizing an API
-framework using \model requires modest developer effort: a single developer
+framework using \AvA requires modest developer effort: a single developer
 virtualized OpenCL in a handful of days, a stark contrast to the person-years
 of developer effort for VMware's SVGA II~\cite{dowty2009gpu} or BitFusion's
-FlexDirect~\cite{bitfusion}. \Model provides near-native performance
+FlexDirect~\cite{bitfusion}. \AvA provides near-native performance
 (e.g., 2.4\% slowdown for TensorFlow and 5.6\% for CUDA), enforces isolation
 and fair sharing (\S\ref{s:properties}) across guests, and supports live
-migration. \Model is available on GitHub \mbox{\href{https://github.com/utcs-scea/ava}{utcs-scea/ava}}.
+migration. \AvA is available on GitHub \mbox{\href{https://github.com/utcs-scea/ava}{utcs-scea/ava}}.
 
 % Concretely, this chapter makes the following contributions:
 
 % \begin{itemize}[nosep,leftmargin=1em,labelwidth=*,align=left]
 % \item We demonstrate feasibility of automatically constructed virtual accelerator support, using a single technique to support many architectures, APIs, versions, and policies.
-% \item We introduce \noveltechnique (\novtechabbrv) to enable
+% \item We introduce \hirafull (\hira) to enable
 % hypervisor-enforced isolation and sharing policies unachievable with current
 % SR-IOV and API remoting systems (\S\ref{s:motivation}).
-% \item We describe a novel DSL, \speclang, for describing API functions, resources, and policies to enable automatic construction of virtual stacks starting from native API header files.
-% \item We evaluate \model on \numaccelerators accelerators showing low effort, strong properties, and good performance (\S\ref{s:eval}).
+% \item We describe a novel DSL, \Lapis, for describing API functions, resources, and policies to enable automatic construction of virtual stacks starting from native API header files.
+% \item We evaluate \AvA on \numaccelerators accelerators showing low effort, strong properties, and good performance (\S\ref{s:eval}).
 % \item We identify fundamental challenges in the accelerator virtualization design space (\S\ref{s:background}).
 % \end{itemize}

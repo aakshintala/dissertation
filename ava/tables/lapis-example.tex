@@ -3,7 +3,7 @@
 
 \begin{figure}
 %@@cuMemcpyHtoDAsync(CUdeviceptr dst, void *src,|\label{line:cuMemcpyHtoDAsync}|
-%           size_t size, CUstream stream)@@ { 
+%           size_t size, CUstream stream)@@ {
 %  async; success(CUDA_SUCCESS);
 %  argument(src) { in;|\label{line:src-in}| buffer(size); lifetime_manual; }
 %  register_buf(async_HtoD, stream, src, size); }
@@ -20,10 +20,10 @@ struct fn_arg_info {
 declare_metadata(struct fn_arg_info);
 buf_registry async_DtoH;
 type(CUdeviceptr) { handle; }|\label{line:cudeviceptr-handle}|
-@@cuMemAlloc(CUdeviceptr *pp, size_t size)@@ { 
+@@cuMemAlloc(CUdeviceptr *pp, size_t size)@@ {
   allocates_rc(device_memory, size);|\label{line:allocates_rc}|
   argument(pp) { out; element { obj_record; allocate; } } }
-@@cuMemcpyDtoHAsync(void* dst, CUdeviceptr src,|\label{line:cuMemcpyDtoHAsync}| 
+@@cuMemcpyDtoHAsync(void* dst, CUdeviceptr src,|\label{line:cuMemcpyDtoHAsync}|
                     size_t size, CUstream stream)@@ {
   async; success(CUDA_SUCCESS);|\label{line:success}|
   argument(dst) { no_copy;|\label{line:dst-nocopy}| buffer(size); lifetime_manual; }
@@ -47,18 +47,18 @@ type(CUdeviceptr) { handle; }|\label{line:cudeviceptr-handle}|
   contextual_argument void** bufs =|\label{line:sync-bufs-1}| get_bufs(async_DtoH, stream);|\label{line:sync-bufs-2}|
   argument(bufs) {
     in; buffer(get_n_bufs(async_DtoH, stream));
-    element { 
+    element {
       buffer(get_buf_size(async_DtoH, stream, index));
       out; deallocate; } } }|\label{line:dst-buf-out}|
 \end{lstlisting}
 % no_copy; buffer(get_async_free_buf_size(stream, index));
 \caption{
-An example \speclang description for the CUDA driver API.
-Code elements in {\lapiskeywordstyle bold blue} are \speclang keywords, elements in {\lapisstdlibstyle italic green} are runtime library calls, 
-elements in {\lapisprototypestyle gray} are function prototypes incorporated by \compiler from the original CUDA header file,
-and the remaining code is programmer-provided \speclang.
-The variable \spec|index| is a \speclang builtin which provides the index of the current element of a buffer.
-The specification of the argument \spec|extra| to \spec|cuLaunchKernel| is complex due to alignment and padding, and is elided from this example for clarity. 
+An example \Lapis description for the CUDA driver API.
+Code elements in {\lapiskeywordstyle bold blue} are \Lapis keywords, elements in {\lapisstdlibstyle italic green} are runtime library calls,
+elements in {\lapisprototypestyle gray} are function prototypes incorporated by \CAvA from the original CUDA header file,
+and the remaining code is programmer-provided \Lapis.
+The variable \spec|index| is a \Lapis builtin which provides the index of the current element of a buffer.
+The specification of the argument \spec|extra| to \spec|cuLaunchKernel| is complex due to alignment and padding, and is elided from this example for clarity.
 %The specification of \spec|extra| is overall very similar to the specification of \spec|kernelParams|.
 The file \spec|policy_kern.c| is shown in Figure~\ref{fig:scheduler_example}.
 }

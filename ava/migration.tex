@@ -5,23 +5,23 @@
 \subsection{VM Migration}
 \label{s:migration}
 
-\Model supports VM migration using \emph{record-and-replay}~\cite{migration_survey}, augmented with explicit serialization to reduce the number of calls that must be replayed.
-%\Model splits object state into two categories based on the description from the \model programmer:
+\AvA supports VM migration using \emph{record-and-replay}~\cite{migration_survey}, augmented with explicit serialization to reduce the number of calls that must be replayed.
+%\AvA splits object state into two categories based on the description from the \AvA programmer:
 %explicitly serialized and implicitly captured with record-and-replay.
 Recreating explicitly managed state is more efficient and predictable because the developer has full control over it, making tracking of mutations unnecessary.
 In many cases, the programmer-defined serialization functions are thin wrappers around API functions.
 For example, for CUDA device buffers, serialization functions wrap \lstinline|cuMemcpyDtoH| and \lstinline|cuMemcpyHtoD|.
 %---it eliminates the need to store every command, since any command whose effect is fully captured by explicit state can be omitted (e.g., kernel invocations).
 Implicit state requires less developer effort and can capture state that cannot be obtained through the API (e.g., the size of a buffer).
-\Compiler automatically generates all the record and replay code required to migrate objects that have been annotated.
-\Compiler also provides the \lstinline|obj_depends_on| descriptor to specify dependencies between API objects (e.g., a memory object may depend on a configuration object used to set its attributes).
+\CAvA automatically generates all the record and replay code required to migrate objects that have been annotated.
+\CAvA also provides the \lstinline|obj_depends_on| descriptor to specify dependencies between API objects (e.g., a memory object may depend on a configuration object used to set its attributes).
 % Even implicit state is only captured for calls which are annotated, so that calls which involve the object, but do not affect its implicit state, do not need to be recorded or replayed.
-\Model remaps resource handles that change due to replay.
+\AvA remaps resource handles that change due to replay.
 
 %\reviewer{B}{AvA uses the record-and-reply approach to recovering the device states in the target host during migration. However, AvA only records the high-level APIs invoked by the guest. Replying all high-level APIs on the target host may produce a different device state, how does AvA handle this situation?}
 %\cjr{dispatched with added paragraph below.}
 
-% \Model records high-level APIs invoked by a guest.
+% \AvA records high-level APIs invoked by a guest.
 % Replaying high-level APIs on the target host may produce a different device state in the presence of non-determinism (e.g. when an API generates random numbers internally).
 % In our experience, such non-determinism is rare, and even when it occurs,
 % different non-deterministic results are often not distinguished by the application.
@@ -29,7 +29,7 @@ Implicit state requires less developer effort and can capture state that cannot 
 When a migration is triggered, the router invalidates the transport channel to the guest so that no new API calls are transmitted. Once all in-flight API calls have been completed, the router quiesces the device, invoking API synchronization functions (e.g., \lstinline|clFinish|), and begins transferring and recreating device state on the target device.
 Explicit state is recreated by invoking developer-provided code; implicit state is recreated by replaying recorded API invocations.
 %The communication transport abstract in \S\ref{s:design_transport} eases the difficulty in writing the record transfer channel between the source and the target worker,
-%for example, \model implements a TCP channel for cross-machine migration.
+%for example, \AvA implements a TCP channel for cross-machine migration.
 
 %\reviewer{B}{During the migration, the hypervisor waits all in-fight API invocations to be completed. What if an invocation takes a long time, e.g., a large task on GPU. Will AvA provide a method to interrupt these invocations or just wait them to be finished?}
 %\cjr{dispatched with additions below:}
@@ -37,9 +37,9 @@ Explicit state is recreated by invoking developer-provided code; implicit state 
 \begin{comment}
 \aak{commented this out because it's an important limitation but too in the weeds}
 Because the hypervisor waits for in-fight API invocations to be completed before migration, a potential challenge arises for invocations that take a long time (e.g., an application using persistent threads~\cite{persistent-threads}).
-\Model could provide a method to abort such invocations, which, combined with \model's record-replay approach, ensures that device state can be restored to match the state before the invocation.
-However, rolling host application state back to match that pre-invocation GPU state requires frequent checkpointing that \model does not yet implement.
-We leave this challenge for future work, but observe that compared to current solutions which provide \emph{no} support for VM migration for GPGPU applications, \model provides a compelling level of support.
+\AvA could provide a method to abort such invocations, which, combined with \AvA's record-replay approach, ensures that device state can be restored to match the state before the invocation.
+However, rolling host application state back to match that pre-invocation GPU state requires frequent checkpointing that \AvA does not yet implement.
+We leave this challenge for future work, but observe that compared to current solutions which provide \emph{no} support for VM migration for GPGPU applications, \AvA provides a compelling level of support.
 \end{comment}
 
 
@@ -47,9 +47,9 @@ We leave this challenge for future work, but observe that compared to current so
 %\hyu{Actually you got all points!}
 
 % \paragraphbe{Recording} channel is used for log-and-replay migration support (\S\ref{s:migration}).
-% To support object-level migration, the original \worker in \model must be able to record a selected set of invocations and capture the states of API objects.
+% To support object-level migration, the original \worker in \AvA must be able to record a selected set of invocations and capture the states of API objects.
 % The destination \worker must be able to read the recorded invocation logs and object states to restore the context.
-% \Model
+% \AvA
 % where the source worker writes the record to a disk file or socket channel, and the destination reads the file or socket to retrieve the log.
 
 % API objects can also depend on other objects .
@@ -68,7 +68,7 @@ We leave this challenge for future work, but observe that compared to current so
 % \paragraphbe{Replay.} The target \worker replays the extracted calls -- mapping new objects to their original handles -- and then replaces the explicit state.
 
 % The guest application in the VM being migrated is quiesced and then reconnected to the target \worker when the \worker migration is completed.
-% For non-preemptive devices and APIs, \model needs to wait for the on-going invocation to finish, which leads to unavoidable latency.
+% For non-preemptive devices and APIs, \AvA needs to wait for the on-going invocation to finish, which leads to unavoidable latency.
 % But the latency is mitigated by the simultaneous extract and transfer steps.
 
 \subsection{Memory Over-subscription}

@@ -35,7 +35,7 @@ well, but the siloed structure of current accelerator stacks prevents it.
 \begin{figure*}[!!thp!]
     \centering
     \includegraphics[width=\textwidth]{ava/images/overview.pdf}
-    \caption{Overview of \model.}
+    \caption{Overview of \AvA.}
     \label{fig:overview}
     \vspace*{-1em}
 \end{figure*}
@@ -47,17 +47,17 @@ we focus on techniques to recover or compensate virtualization properties lost b
 API remoting: interposition and compatibility.
 Interposition can be recovered by using hypervisor-managed forwarding transport,
 creating a central interface at which to enforce resource management policies.
-\Model uses a novel technique called \emph{\noveltechnique (\novtechabbrv)} to achieve this.
-\novtechabbrv presents guest VMs with an abstract virtual device with MMIO Base Address Registers (BAR), but this device is \emph{not a virtual accelerator}, but an endpoint that
+\AvA uses a novel technique called \emph{\hirafull (\hira)} to achieve this.
+\hira presents guest VMs with an abstract virtual device with MMIO Base Address Registers (BAR), but this device is \emph{not a virtual accelerator}, but an endpoint that
 routes communication through the hypervisor.
 
 Using hypervisor-managed transport recovers interposition, but complicates compatibility and introduces engineering effort:
-\novtechabbrv requires custom guest libraries, guest drivers, and API servers for each OS and API, and API-specific resource-management code in the hypervisor.
-\model mitigates this with automated construction (\S\ref{s:api}).
-Automatically generating code to implement \novtechabbrv components presents several challenges which
+\hira requires custom guest libraries, guest drivers, and API servers for each OS and API, and API-specific resource-management code in the hypervisor.
+\AvA mitigates this with automated construction (\S\ref{s:api}).
+Automatically generating code to implement \hira components presents several challenges which
 follow from the need to specify API semantics and policies for which
 existing Interface Description Languages (IDLs)~\cite{Lamb1987,MSIDL} are not applicable.
-\Model uses a new DSL called \speclang, a compiler called \compiler, and device-agnostic transport components to address these challenges.
+\AvA uses a new DSL called \Lapis, a compiler called \CAvA, and device-agnostic transport components to address these challenges.
 
 % because semantic information %and resource management
 %specifications required for virtualization are beyond the scope of existing IDLs.

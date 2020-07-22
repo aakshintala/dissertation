@@ -25,45 +25,34 @@ empirical analysis of \Trillium, and a novel taxonomy: \iemts.
 \section{Understanding the sources of overhead in \Trillium}
 The empirical results presented in Chapter~\ref{chapter:trillium},
 show that \Trillium is 2---3$\times$ slower than \apigpu,
-the user-space API remoting system. The analysis presented in \S~\ref{
-sec:trilliumeval}, however, doesn't provide any insight into the source of
-this overhead. While \Trillium eliminates one source of overhead in the
-\XenSVGA design, it appears that there is at least one other design decision
-that is of questionable merit. Let us revisit the \Trillium design in order to
-identify this questionable design decision.
+the user-space API remoting system. The analysis presented in earlier,
+however, doesn't offer any insight into the source of this overhead. While
+\Trillium eliminates one source of overhead in the \XenSVGA design, it appears
+that there is at least one other design decision that is of questionable
+merit. Let us revisit the \Trillium design in order to identify this
+questionable design decision.
 
-Figure~\ref{fig_trillium_direct} (reproduced in this chapter as Figure~\ref{
-fig_trillium_direct2} for convenience) presents a block diagram overview of
+Figure~\ref{fig_trillium_direct} presents a block diagram overview of
 \Trillium as prototyped on the Xen hypervisor. Notice the ``shadow pipe'' that
 acts as a connection point between the driver in Dom1 (Application VM) and the
 driver in Dom2 (service VM). The pipe driver is the back-end of the GNU/Linux
 Gallium3D graphics driver framework. We chose to interpose on all calls
 between the front- and back-ends of the Gallium3D framework primarily because
 this split-driver design is how many prior systems (including SVGA) are
-implemented and
+implemented.
 
-\begin{figure*}[!th]
-	\centering
-		\includegraphics[width=.5\linewidth,trim={0.6cm 0 0 0},clip]{trillium/images/design/trillium.pdf}
-		\caption{The design of \Trillium with shadow pipe.}
-		\label{fig_trillium_direct2}
-\end{figure*}
+Our decision to keep the split-driver design, i.e., to interpose on the
+interaction between the front and back-ends of the GNU/Linux kernel graphics
+driver, led to a simple performance pitfall: The design of the Gallium3D
+driver is such that each CUDA or OpenCL API call made by the user program gets
+decomposed into multiple pipe-driver (Gallium3D back-end API) calls. This is
+commensurate with the general idea of abstraction: lower level APIs tend to be
+more granular and less expressive, whereas higher level APIs (such as OpenCL)
+tend to be more expressive. Anecdotally, we found that most OpenCL calls were
+being decomposed into at least 3 pipe-driver calls, which is commensurate with
+the performance difference we observed in our empirical analysis.
 
-\section{\iemts: A new analysis framework}
-
-Traditionally, virtualization designs have been taxonomized
-according to the core techniques employed (e.g. emulation, full- or
-para-virtualization, API remoting, etc.), and evaluated
-in a property trade-off space comprising performance,
-compatibility, interposition, and isolation. \emph{Isolation} ensures that
-mutually distrustful guests cannot access each other's data or harm each
-other's performance. \emph{Compatibility}, characterizes how well a design
-preserves the freedom of hardware and software components to evolve
-independently: e.g. changes in the hypervisor should not force changes to
-guest software. Virtualization provides an indirection layer between
-logical and physical resources by \emph{interposing} a well-defined interface.
-The quality of interposition determines the nature of benefits (e.g. extent of
-consolidation) afforded by a virtualized system~\cite{waldspurger12cacm}.
+\section{Where to interpose?}
 
 \begin{figure}[!tt]
 	\centering
@@ -72,39 +61,54 @@ consolidation) afforded by a virtualized system~\cite{waldspurger12cacm}.
 	\label{fig_interposition}
 \end{figure}
 
-A key limiting concern for GPU virtualization is the absence of interposable
-interfaces. GPUs are controlled through vendor-specific programming frameworks
-(often more than one), key parts of which are often proprietary.Research
-to-date on first-class OS abstractions for GPUs~\cite{ptask, dandelion,
+GPGPUs (and generally DSAs) are controlled through vendor-specific programming
+frameworks (often more than one), key parts of which are often proprietary.
+Research to-date on first-class OS abstractions for GPUs~\cite{ptask,dandelion,
 silberstein2013gpufs,timegraph, gdev, gpunet} has not impacted practice, and
-GPU software stacks actively avoid or bypasss system software. Consequently,
-hypervisors are left without clean interfaces to virtualize. Moreover, in
+GPU software stacks actively avoid or bypass system software. Moreover, in
 contrast to many other common devices, GPUs have \emph{multiple} interfaces,
-such as MMIO and ISA, that may require virtualization.
-Figure~\ref{fig_interposition} shows potential interposition points in an GPU
-virtualization system: the user-space library, the syscall/ioctl interface
-the user-space API operates on, or the hardware interface. Additionally the
-GPU's ISA may also be virtualized. Typically, lower layers present finer
-granularity of interposition for the hypervisor, but also sacrifice
-performance.
+that may require virtualization: Figure~\ref{fig_interposition} shows
+potential interposition points in a GPGPU's software stack: the user-space
+library, the syscall/ioctl interface the user-space API operates on, within
+the kernel driver, and the hardware interface. Typically, lower layers present
+finer granularity of interposition for the hypervisor, but also sacrifice
+performance. What then is the right level of abstraction to interpose?
+
+\section{\iemts: A new analysis framework}
+
+Traditionally, virtualization designs have been taxonomized according to the
+core techniques employed (e.g. emulation, full- or para-virtualization, API
+remoting, etc.), and evaluated in a property trade-off space comprising
+performance, compatibility, interposition, and isolation. \emph{Isolation}
+ensures that mutually distrustful guests cannot access each other's data or
+harm each other's performance. \emph{Compatibility}, characterizes how well a
+design preserves the freedom of hardware and software components to evolve
+independently: e.g. changes in the hypervisor should not force changes to
+guest software. Virtualization provides an indirection layer between
+logical and physical resources by \emph{interposing} a well-defined interface.
+The quality of interposition determines the nature of benefits (e.g. extent of
+consolidation) afforded by a virtualized system~\cite{waldspurger12cacm}.
+In order to select the level of abstraction to interposition for virtualizing
+a GPGPU, we need a framework to characterize the nature of interposition in
+canonical techniques.
 
 We posit that the current \emph{de facto} taxonomy and property trade-off
-space are illustrative but not informative for DSAs.
-First, Classifying virtualization designs as API-remoting vs. full vs.
-para-virtual captures important concepts, and emergent properties compactly,
-but doesn't explain their correlation to properties like performance.
-Second, virtualization properties such as compatibility, isolation, and
-interposition have highly context-dependent meaning and their relative value
-to system designers can be hard to quantify.
-Consider compatibility: there are many dimensions to compatibility (library,
-hardware, OS, etc.), and each of those are commonly achieved by separate
-technical, and non-technical means (e.g., TGSI is the common vISA for both the
-VMware and GNU/Linux graphics stacks; this is \emph{not a lucky coincidence}).
-It is common to see systems compared to other systems intended as exemplars
-for a technique or design pattern. Ironically, the end-to-end comparison
-presented in the prior chapter on \Trillium is guilty of exactly this: we
-compared \Trillium against other systems intended to represent ``full
-virtualization'', ''API remoting'', and so on.
+space are illustrative but not informative for indentifying the right
+abstraction to interpose for DSA virtualization. First, lassifying
+virtualization designs as API-remoting vs. full vs. para-virtual captures
+important concepts, and emergent properties compactly, but doesn't explain
+their correlation to properties like performance. Second, virtualization
+properties such as compatibility, isolation, and interposition have highly
+context-dependent meaning and their relative value to system designers can be
+hard to quantify. Consider compatibility: there are many dimensions to
+compatibility (library, hardware, OS, etc.), and each of those are commonly
+achieved by separate technical, and non-technical means (e.g., TGSI is the
+common vISA for both the VMware and GNU/Linux graphics stacks; this is \emph{
+not a lucky coincidence}). It is common to see systems compared to other
+systems intended as exemplars for a technique or design pattern. Ironically,
+the end-to-end comparison presented in the prior chapter on \Trillium is
+guilty of exactly this: we compared \Trillium against other systems intended
+to represent ``full virtualization'', ''API remoting'', and so on.
 Methodologically, such a comparison is laudable: evaluating a design
 exhaustively against plausible alternatives in an end-to-end setting is
 fundamental to good science. However, its value for drawing out fundamental
@@ -114,20 +118,20 @@ are really about the particular API in question. ``Para-virtualization'' is
 often cast as a design dimension, ultimately grouping designs that share no
 core techniques, such as SVGA and GPUvm. As a framework within which to seek
 higher-level insights about design, a rough taxonomy that fails to cleanly
-separate most concerns is in unacceptable.
+separate most concerns is in unacceptable. Further, production systems
+typically compose multiple virtualization techniques in order to leverage the
+best properties of each technique, especially in the presence of multiple
+interfaces (e.g., VMware SVGA~\cite{dowty2009gpu} exposes a para-virtual
+device abstraction, which it then uses to ``remote'' DirectX calls from the VM
+to the host. SVGA also features ISA virtualization.). We argue that practical
+design goals, such as providing a virtualization layer with specific
+characteristics, get obscured when these properties are considered as a set of
+constraints that must be preserved, without first refining for context.
 
-We argue that practical design goals, such as providing a virtualization layer
-with specific characteristics, get obscured when these properties are
-considered as a set of constraints that must be preserved, without first
-refining for context.
-Further, production systems, such as VMware SVGA~\cite{dowty2009gpu},
-compose multiple virtualization techniques in order to leverage the best
-properties of each technique, especially in the presence of multiple
-interfaces.
+In order to determine the right layer of abstraction to interpose for DSA
+virtualization, it is instructive to consider prior art through the following
+interposition related properties, collectively known as the \textbf{\iemts} framework:
 
-To enable a cleaner separation of concerns, we draw on the observation that
-\textit{all} virtualization relies on encapsulation and interposition, and
-note that a design can be clearly understood by identifying:
 \begin{itemize}[nosep, topsep=0em, leftmargin=1em,labelwidth=*,align=left]
 \item the \textbf{I}nterface that is interposed,
 \item the \textbf{E}nd-points (source and destination) the interposed event is
@@ -135,16 +139,16 @@ transported between,
 \item the \textbf{M}echanism used to interpose,
 \item the \textbf{T}ransport mechanism used to communicate between endpoints,
 \item the mechanisms used to \textbf{S}ynthesize or implement the desired
-functionality at the destination. We call this the \textbf{\iemts} framework.
+functionality at the destination.
 \end{itemize}
 
 \begin{table*}[tt!]
 \centering
 \footnotesize
 \resizebox{\textwidth}{!}{%
-\begin{tabular}{@{}p{0.25\linewidth}|p{0.18\linewidth}|p{0.18\linewidth}|p{0.2\linewidth}|p{0.2\linewidth}@{}}
+\begin{tabular}{@{}p{0.25\linewidth}p{0.18\linewidth}p{0.18\linewidth}p{0.2\linewidth}p{0.2\linewidth}@{}}
 \toprule
-\multirow{2}{*}{}         & \multirow{2}{*}{GPUvm} & \multicolumn{2}{c|}{VMware SVGA}         & \multirow{2}{*}{rCUDA} \\
+\multirow{2}{*}{}         & \multirow{2}{*}{GPUvm} & \multicolumn{2}{c}{VMware SVGA}          & \multirow{2}{*}{rCUDA} \\
                           &                        & Control Interface  & GPU ABI             &                        \\ \midrule
 Interposed Interface      & MMIO/BAR               & DirectX APIs       & Device ISA          & Userspace API          \\
 Interposition Source      & Trap handler           & Guest driver/libs  & Guest Driver        & Guest Library          \\
@@ -159,50 +163,56 @@ Synthesis                 & Emulation              & Call host API      & Binary
 \end{table*}
 
 Table~\ref{tab:new-dims} presents analysis of three prior GPU virtualization
-systems under the \iemts framework. A quick glance at the table
-tells us that GPUvm's~\cite{suzuki2014gpuvm} performance woes arise from its
-reliance on trapping and emulating the guest's MMIO accesses. VMware's SVGA
-has two entries in the table because there are two interfaces being
-virtualized: the control interface (the DirectX/OpenGL API) and the shader ISA.
-Explicitly separating the two interfaces helped us realize that
-ISA-virtualization is not necessary for accelerator virtualization in the
-Trillium project. Further, it became obvious to us that the control interface
-virtualization in SVGA and the API-remoting in rCUDA look almost the same
-under IEMTS with the exception of the transport. This observation led us
-to design AvA's hypervisor-mediated API-remoting scheme, and shift our
-attention to solving the compatibility effort via automation.
-
-
-% ==================
-
-We found that analysing designs using the IEMTS framework facilitated a number
-of key insights that should inform future designers of GPGPU virtualization.
-Table~\ref{tab:new-dims} illustrates how three prior systems are represented under this framework.
-GPUvm\cite{GPUvm}, a full-virtual\-ization research system,
-uses costly trap-based interposition.
-%modern GPUs rely on communication
-%through MMIO/PCIe BARs, leaving few alternatives for interposing between the
-%driver and the device.
-SVGA~\cite{dowty2009gpu} is a para-virtual device, and thus is free to use any interface for
-driver-device communication. It is represented  in the table by two columns, one for
-each interface it virtualizes: the control interface and the ISA.
-The table clearly illustrates that SVGA uses API-remoting, but other dimensions
-enable insight into why the design is attractive despite the compatibility and
-interposition conventionally thought be lost by the technique.
-While SVGA and rCUDA~\cite{vmCUDA, rCUDA}
-% of DirectX graphics libraries
-% share a striking and informative similarity:
-are both forwarding framework APIs,
-they do so over different transports:
-SVGA implements the transport layer over hypervisor-managed FIFO queues,
-enabling hypervisor interposition that is impossible with the RPC transport used by rCUDA.
+systems under the \iemts framework. The \iemts framework readily offers a
+number of key insights into the pros and cons of each interposition interface:
+GPUvm's~\cite{suzuki2014gpuvm} performance woes arise from its reliance on
+\textit{trapping-and-emulation} of guest MMIO accesses. VMware's SVGA has two
+entries in the table because there are two interfaces being virtualized: the
+control interface (the DirectX/OpenGL API) and the shader ISA. Explicitly
+separating the two interfaces shows that our earlier observation about
+ISA-virtualization being unnecessary for accelerator virtualization is exactly
+on point. Further, this separation also makes obvious that control interface
+virtualization in SVGA and the API-remoting in rCUDA are very similar with
+two key differences: the source endpoints, and the transport used. SVGA (and
+in turn \Trillium) and rCUDA~\cite{vmCUDA, rCUDA} are both forwarding
+framework APIs. However, they do so over different transports: SVGA implements
+the transport layer over hypervisor-managed FIFO queues, enabling hypervisor
+interposition that is impossible with the RPC transport used by rCUDA.
 SVGA's design mandates modifications to guest libraries and drivers.
-However, this lost compatibility is retrieved through non-technical means:
-VMware's SVGA driver is integrated into commodity OSes.
-VMware also maintains the Linux graphics stack, enabling it to ensure compatibility.
+This lost compatibility is retrieved through non-technical means: VMware's
+SVGA driver is integrated into commodity OSes. VMware also maintains the Linux
+graphics stack, enabling it to ensure compatibility.
 
-As we observed earlier, the use of para-virtual techniques based on a guest virtual device
-is essential for recovering interposition in the absence of clean intermediate stack layers.
-The need for that interface to export a full-featured virtual device abstraction
-is less evident, especially given the high overheads from having to rely on trap-based
-interposition.
+
+\begin{table*}[tt!]
+\centering
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{@{}p{0.25\linewidth}p{0.25\linewidth}p{0.25\linewidth}p{0.25\linewidth}@{}}
+\toprule
+                          & \Trillium                 & rCUDA                       & \hira              \\
+\midrule
+Interposed Interface      & Pipe-Driver API           & \textbf{User-space API}     & User-space API     \\
+Interposition Source      & Guest driver (front-end)  & \textbf{Guest Library}      & Guest Library      \\
+Interposition Destination & Host driver (back-end)    & \textbf{Host/Server Daemon} & Host/Server Daemon \\
+Interposition Mechanism   & Custom Guest Driver       & \textbf{Guest Library Shim} & Guest Library Shim \\
+Transport                 & \textbf{Hypervisor FIFOs} & RPC                         & Hypervisor FIFOs   \\
+Synthesis                 & Call host driver API      & \textbf{Invoke API on host} & Invoke API on host \\
+\bottomrule
+\end{tabular}
+} %resizebox
+\caption{A possible ``sweet spot'' in the GPGPU virtualization design space?}
+\label{tab:sweet-spot}
+\end{table*}
+
+\section{Conclusion}
+We posit that a ``sweet spot'' might exist in
+the DSA virtualization design space. Table~\ref{tab:sweet-spot} presents this
+novel technique, \hirafull (\hira), in terms of the \iemts framework and
+compares it to \Trillium and rCUDA. \hira combines properties of both of these
+designs: \hira interposes the user-space API as in a user-space API-remoting
+system like rCUDA, thereby enabling low-overhead interposition; \hira forwards
+interposed API calls to the daemon on the host through a hypervisor controlled
+channel (like the FIFO used in SVGA and \Trillium), thereby preserving
+hypervisor control over the DSA. Chapter~\ref{chapter:ava} considers this
+design in detail.

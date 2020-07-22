@@ -30,7 +30,7 @@ type(ty) {
 \newsavebox{\boxifsyntax}
 \begin{lrbox}{\boxifsyntax}
 \begin{lstlisting}[language=C,style=nwspecc,columns=fullflexible,numbers=none]
-if (pred) { 
+if (pred) {
   descriptors1
 } else {
   descriptors2 }
@@ -43,7 +43,7 @@ if (pred) {
   \begin{tabular}{@{}p{1in} p{3in}@{}}
   \toprule
   Scope & \spec|descriptors| in this scope apply to ...  \\
-  \midrule 
+  \midrule
   \raisebox{-0.5em}{\usebox{\boxargumentsyntax}}  & the argument \spec|x|, called the described argument. \\
   \raisebox{-0.5em}{\usebox{\boxelementsyntax}} & the referenced value, called the described value; e.g., if applied to an argument \spec|x|, the descriptors inside apply to \spec|*x|. \\
   \raisebox{-0.5em}{\usebox{\boxtypesyntax}} & all values of type \spec|ty|. \\
@@ -51,7 +51,7 @@ if (pred) {
   \bottomrule
   \end{tabular}
   }
-  \caption{\speclang syntax which values descriptors apply to and when those descriptors apply.
+  \caption{\Lapis syntax which values descriptors apply to and when those descriptors apply.
   %\cjr{maybe we can refactor this   whole thing into the sentence that says descriptors are flexibly scoped.}
   }
   \label{tab:lapis-scope}
