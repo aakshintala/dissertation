@@ -22,14 +22,14 @@ API-servers, one per framework.
 \captionsetup{justification=centering,width=\linewidth}
 \includegraphics[width=\linewidth]{figures/vtask-overview.pdf}
 \caption{Data processed by two API stacks must pass through the guest application}
-\label{fig:overview}
+\label{fig:vtask_overview}
 \end{figure}
 
 Under a typical API-remoting system, applications that pipeline disparate
 accelerator frameworks are burdened with redundant data movement. All
 inter-accelerator data movement must take place in the guest application as
 that is where the accelerators are in the same logical address space.
-Figure~\ref{fig:overview} illustrates this scenario: when an \emph{API-1}
+Figure~\ref{fig:vtask_overview} illustrates this scenario: when an \emph{API-1}
 function is invoked, associated data is copied from the
 \emph{guest application} to \emph{API-server-1}, and then to \emph{Device-1}’s
 memory. Once the function finishes executing on \emph{Device-1}, the result is

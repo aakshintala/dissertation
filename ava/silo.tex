@@ -1,66 +1,42 @@
 % -*- fill-column: 85; -*-
 %!TEX root = ../dissertation.tex
 \section{Accelerator Silos}
-\label{s:silo}
 
-\begin{figure}[!t]
-	\centering
-	\includegraphics[width=.78\linewidth]{ava/images/silo.pdf}
-	\caption{An accelerator silo.
-		The public API and the interfaces with striped backgrounds are interposition candidates.
-		All interfaces with backgrounds are proprietary and subject to change.
-        }
-	\label{fig:silo}
-\end{figure}
-
-Accelerator stacks
-compose layered components that include a user-mode library to support an
-API framework and a driver to manage the device.
-Vendors are incentived to use proprietary interfaces and protocols between layers to preserve forward compatibility,
-and to use kernel-bypass communication techniques to eliminate OS overheads.
-However, interposing opaque, frequently-changing interfaces communicating with memory
-mapped command rings is \emph{impractical} because it requires inefficient techniques and
-yields solutions that sacrifice compatibility.
-Consequently, accelerator stacks are effectively \emph{silos}
-(Figure~\ref{fig:silo}), whose intermediate layers
+Domain Specific Accelerator software stacks are effectively \emph{silos},
+interposable only at the top (user-space API) and at the bottom (hardware
+support for virtualization). Intermediate layers of DSA software stacks
 \emph{cannot be practically separated} to virtualize the device.
+The software stacks of Domain Specific Accelerators are typically composed of
+a library that exposes a user-space API, and a runtime and a kernel driver
+that manage and orchestrate computation on the DSA. These components typically
+communicate via explicitly unstable (and often undocumented) interfaces and
+protocols, which enables the vendor to preserve forward compatibility easily.
+Where possible, DSA software also typically uses kernel-bypass communication
+techniques to eliminate overheads from the kernel. Scheduling and resource
+allocation for DSAs are typically under the control of a combination of the
+proprietary CPU-based runtime (user-space and kernel), and the controller on
+the DSA itself, not the CPU-based Operating System. DSAs typically contain an
+entire software stack on the hardware module, which is hidden from the
+programmer. This software is used to implement a command-based programming
+interface that enables the vendor’s CPU-based control software for scheduling
+and resource allocation. End users work with the DSA almost entirely in higher
+level languages, typically the language the DSL is embedded in (e.g., Python
+for Google’s TPU, C/C++ for Nvidia and AMD GPGPUs). The DSL/API is supported
+by a compiler (which converts the user’s program to the the ISA of the
+computation units on the DSA), a user-space runtime and a kernel module (which
+work together to implement the user-space API, and control the DSA).
 
-\paragraphbe{Current support.} Most current hardware accelerators feature some
-hardware support for virtualization: primarily for process-level address-space
-separation, and in a small handful of cases, SR-IOV.
-A central premise of this paper is that hardware support for process-level
-isolation \emph{could} suffice to support hypervisor-level virtualization as
-well, but the siloed structure of current accelerator stacks prevents it.
+Chapter~\ref{chapter:trillium} showed that virtualization
+designs that interpose these opaque and frequently-changing interfaces are
+\emph{impractical}: these design depend on inefficient interposition
+techniques and yield solutions that sacrifice \emph{compatibility}.
 
-\begin{figure*}[!!thp!]
-    \centering
-    \includegraphics[width=\textwidth]{ava/images/overview.pdf}
-    \caption{Overview of \AvA.}
-    \label{fig:overview}
-    \vspace*{-1em}
-\end{figure*}
-
-
-For accelerator silos, the \emph{only} stable and
-efficiently interposable interface is the framework API, so
-we focus on techniques to recover or compensate virtualization properties lost by
-API remoting: interposition and compatibility.
-Interposition can be recovered by using hypervisor-managed forwarding transport,
-creating a central interface at which to enforce resource management policies.
-\AvA uses a novel technique called \emph{\hirafull (\hira)} to achieve this.
-\hira presents guest VMs with an abstract virtual device with MMIO Base Address Registers (BAR), but this device is \emph{not a virtual accelerator}, but an endpoint that
-routes communication through the hypervisor.
-
-Using hypervisor-managed transport recovers interposition, but complicates compatibility and introduces engineering effort:
-\hira requires custom guest libraries, guest drivers, and API servers for each OS and API, and API-specific resource-management code in the hypervisor.
-\AvA mitigates this with automated construction (\S\ref{s:api}).
-Automatically generating code to implement \hira components presents several challenges which
-follow from the need to specify API semantics and policies for which
-existing Interface Description Languages (IDLs)~\cite{Lamb1987,MSIDL} are not applicable.
-\AvA uses a new DSL called \Lapis, a compiler called \CAvA, and device-agnostic transport components to address these challenges.
-
-% because semantic information %and resource management
-%specifications required for virtualization are beyond the scope of existing IDLs.
-%sharing policy specifications that are beyond the scope of IDLs.
-%Designing efficient and flexible transport layers, and enforcing resource-sharing policies at the transport layer where semantic %information about the underlying device resources is not readily available are additional challenges.
-% In subsequent sections, we show how
+The user-space API is the \emph{only} stable and efficiently interposable
+software interface for DSA \textit{silos}. From our analysis of the design
+space using the \iemts framework in Chapter~\ref{chapter:iemts}, we also
+identified an opportunity to recover or compensate for interposition and
+compatibility, virtualization properties that are traditionally sacrificed by
+user-space API remoting. Interposition can be recovered by using a
+hypervisor-managed transport, instead of a user-space RPC channel. The
+hypervisor-managed channel also represents a central interface at which to
+enforce resource management policies.

@@ -1,0 +1,104 @@
+%!TEX root = ../dissertation.tex
+\section{\CAvA and \Lapis}
+\label{s:api}
+\label{s:compiler}
+
+The \AvA toolchain comprises a language, \textbf{L}ow-level \textbf{API}
+\textbf{S}pecification language (\Lapis), a compiler (\CAvA), and a runtime
+library. \CAvA accepts API specifications written in \Lapis, and generates C
+source for an API-specific remoting stack that implements the \hira design.
+\Lapis extends C declarations with descriptors to express a broad range of
+semantic information necessary to generate that stack. This includes
+information captured by traditional IDLs (e.g., function parameter semantics
+and data layout), as well as information required for accelerator
+virtualization that is not expressible in existing IDLs.
+
+To understand how \AvA relates to other IDL-based API-remoting techniques,
+it is useful to compare it to the Sun Network File System~\cite{Sandberg:1988}.
+NFS supports remote access to the the file system using an IDL to specify API
+semantics and a compiler to automate code generation. NFS and \AvA share a
+number of key challenges. Both must marshal and transfer function calls and
+arguments, handle asynchrony, refactor functionality and (potentially
+implicit) state across newly decoupled components. Both must preserve the
+resource management and sharing support expected for a resource managed by
+system software.
+
+However, key differences between \AvA and NFS arise around additional
+virtualization requirements and limitations in the design space. For example,
+DSA virtualization requires that \AvA be able to capture of sufficient
+API-level state to enable features like live VM migration. Key techniques used
+by NFS to deal with implicit state and resource management are impractical for
+\AvA. NFS mostly \emph{eliminates} implicit state by altering the API, e.g.
+replacing functions using implicit seek pointers with stateless read/write
+functions and offset parameters. To deal with resource management, sharing,
+and compatibility challenges, NFS \emph{introduced} the VFS layer, providing
+an application-transparent interposition point at which to centralize or
+delegate that functionality using code written to run at that layer. \AvA
+cannot alter APIs, so it exposes language-level features for dealing with
+implicit state. \AvA cannot introduce new abstraction layers due to vendor
+opacity and API diversity: so the resource management and sharing policy must
+be expressed at the language layer as well. This dissertation elides most
+details of the \lapis language and the corresponding runtime. The discussion
+below only presents topics that are important to understand our implementation
+of \hira. For detailed treatment of these topics, please refer to the
+published papers on \AvA~\cite{ava-hotos,ava-asplos}.
+
+\subsection{Resource Management and Policy.}
+\Lapis supports descriptors to express the resources consumed by API functions.
+Resources may be either \emph{instantaneous} or \emph{continuous}.
+Instantaneous resources are typically consumed by an API function only while
+executing. Continuous resources are typically assigned to a client for a
+period of time (e.g., Memory allocated using CudaMalloc). Instantaneous
+resource accounting can be implemented by measuring resources used at each
+function  invocation, while accounting of continuous resources requires
+tracking of resource assignment to each client/VM across API functions. The
+resource descriptors provided by \lapis allow the hypervisor to perform book
+keeping for resources at an API function granularity and enforce fairness and
+sharing policies.
+
+To specify policies, developers provide functions that schedule API calls from
+different VMs based on the recorded resource usage of those VMs. In our
+current implementation, policy functions are specified as eBPF programs stored
+in a separate file and referenced from the \Lapis source. We currently use
+eBPF because it enables unprivileged code to run safely in the hypervisor and
+is available today, enabling \AvA to be used without modifying the hypervisor
+and without trusting the developer.
+
+To enforce resource sharing requirements, the code generator changes how API
+calls are handled by inserting accounting code in the router and hooks to call
+programmer-provided policy functions. For continuous resources, the generated
+code may need to generate an artificial failure in response to an allocation
+request. This requires that the compiler know how to fake a failure by
+constructing return values and/or executing specific code to change the
+library state. For instantaneous resources, enforcement is implemented by
+delaying certain calls until other VMs have a chance to perform their
+instantaneous operations.
+
+\subsection{Shadow Buffering}
+
+The \AvA API-agnostic components provide shadow buffer management primitives
+that the generated code uses to maintain \worker-side shadows of application
+buffers. \AvA's shadow buffers function as a caching layer that can buffer
+updates and apply them in batch. In most cases, copy operations to synchronize
+shadow and application buffers are required only at API call boundaries, so
+\AvA-controlled buffers are transparent to the guest, work without true shared
+memory between the guest and \worker, and are faster than page-granularity
+software shared memory. In cases where updates must be made visible in the
+guest without an API call to serve as a synchronization point, true shared
+memory between the guest lib and the \worker can be specified using \Lapis's
+zerocopy support.
+
+\subsection{Mapped memory}
+
+\AvA does not currently map \worker host memory into guest application space
+by default. However, \AvA still supports applications that use device-mapped
+memory by copying data between the guest and \worker. The implementation uses
+\Lapis descriptors to track mapped buffers and ensure they are always passed
+as contextual arguments to synchronization functions, e.g.,
+\texttt{cuSynchronizeStream}. Importantly, the technique respects the
+semantics of the API: even without \AvA the only way an application can
+\emph{guarantee} that device writes are visible to the application is to call
+a synchronization function. However, some GPUs do make writes visible between
+synchronization functions and research systems rely on it to implement
+accelerator-driven communication (e.g. GPUfs~\cite{silberstein2013gpufs}), but will not
+function correctly with \AvA.

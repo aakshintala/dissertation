@@ -145,7 +145,7 @@ Excluding \texttt{myocyte}, the Rodinia OpenCL benchmarks on NVIDIA GTX 1080
 GPU slowed down by 7\% on average.
 The outlier, \texttt{myocyte} has over 2$\times$ overhead because it is extremely \textbf{call-intensive}---it makes over 200,000 calls in \SI{18.5}{\second}; most others make between 30 and 3,000 calls.
 For comparison, FlexDirect sees 3.3$\times$ slowdown for \texttt{myocyte};
-GPUvm sees 100$\times$ or more for call-intensive workloads~\cite{yufull}.
+GPUvm sees 100$\times$ or more for call-intensive workloads~\cite{yu2017fullvirt}.
 \texttt{Myocyte} experienced lower overhead on the AMD Radeon RX
 580 GPU, as the kernels executed 3$\times$ slower, allowing more of
 \AvA's overheads to be amortized.

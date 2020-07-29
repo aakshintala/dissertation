@@ -1640,19 +1640,6 @@ year={2008},
 }
 
 @Inproceedings {ptask,
-abstract     = {<p>We propose a new set of OS abstractions to support GPUs and other accelerator
-                devices as first class computing resources. These new abstractions, collectively
-                called the PTask API, support a dataflow programming model. Because a PTask graph
-                consists of OS-managed objects, the kernel has sufficient visibility and control
-                to provide system-wide guarantees like fairness and performance isolation, and
-                can streamline data movement in ways that are impossible under current GPU
-                programming models.</p>
-
-                <p>Our experience developing the PTask API, along with a gestural interface on
-                Windows 7 and a FUSE-based encrypted file system on Linux show that the PTask API
-                can provide important systemwide guarantees where there were previously none, and
-                can enable significant performance improvements, for example gaining a
-                5{\times}improvement in maximum throughput for the gestural interface.</p>},
 author       = {Christopher J. Rossbach and Jon Currey and Mark Silberstein and Baishakhi Ray and
                 Emmett Witchel},
 month        = {October},
@@ -1663,27 +1650,6 @@ year         = {2011},
 }
 
 @Inproceedings {dandelion,
-abstract     = {<p>Computer systems increasingly rely on heterogeneity to achieve greater
-                performance, scalability and energy efficiency. Because heterogeneous systems
-                typically comprise multiple execution contexts with different programming
-                abstractions and runtimes, programming them remains extremely challenging.
-                Dandelion is a system designed to address this programmability challenge for
-                data-parallel applications. Dandelion provides a unified programming model for
-                heterogeneous systems that span diverse execution contexts including CPUs, GPUs,
-                FPGAs, and the cloud. It adopts the .NET LINQ (Language INtegrated Query)
-                approach, integrating data-parallel operators into general purpose programming
-                languages such as C{\#} and F{\#}. It therefore provides an expressive data model and
-                native language integration for user-defined functions, enabling programmers to
-                write applications using standard high-level languages and development tools.</p>
-
-                <p>Dandelion automatically and transparently distributes data-parallel portions
-                of a program to available computing resources, including compute clusters for
-                distributed execution and CPU and GPU cores of individual nodes for parallel
-                execution. To enable automatic execution of .NET code on GPUs, Dandelion
-                cross-compiles .NET code to CUDA kernels and uses the PTask runtime to manage GPU
-                execution. This paper discusses the design and implementation of Dandelion,
-                focusing on the distributed CPU and GPU implementation. We evaluate the system
-                using a diverse set of workloads.</p>},
 author       = {Christopher J. Rossbach and Yuan Yu and Jon Currey and Jean-Philippe Martin and
                 Dennis Fetterly},
 month        = {November},
@@ -2396,23 +2362,6 @@ language={English}
 	publisher = {ACM},
 	address = {New York, NY, USA},
 	keywords = {CPU-GPU heterogeneous computing, GPU scheduling methods, GPU virtualization, cloud computing},
-}
-
-@inproceedings{omnix-hotos,
- author = {Silberstein, Mark},
- title = {OmniX: An Accelerator-centric OS for Omni-programmable Systems},
- booktitle = {Proceedings of the 16th Workshop on Hot Topics in Operating Systems},
- series = {HotOS '17},
- year = {2017},
- isbn = {978-1-4503-5068-6},
- location = {Whistler, BC, Canada},
- pages = {69--75},
- numpages = {7},
- url = {http://doi.acm.org/10.1145/3102980.3102992},
- doi = {10.1145/3102980.3102992},
- acmid = {3102992},
- publisher = {ACM},
- address = {New York, NY, USA},
 }
 
 
@@ -5123,24 +5072,6 @@ language={English}
   url       = "http://dl.acm.org/citation.cfm?id=2741969&CFID=685991679&CFTOKEN=48362827",
   isbn      = "9781450332385",
   doi       = "10.1145/2741948.2741969"
-}
-
-@ARTICLE{Silberstein2013-zc,
-  title     = "{GPUfs: Integrating a File System with GPUs}",
-  author    = "Silberstein, Mark and Ford, Bryan and Keidar, Idit and Witchel,
-               Emmett",
-  journal   = "SIGARCH Comput. Archit. News",
-  publisher = "ACM",
-  volume    =  41,
-  number    =  1,
-  pages     = "485--498",
-  month     =  mar,
-  year      =  2013,
-  url       = "http://doi.acm.org/10.1145/2490301.2451169",
-  address   = "New York, NY, USA",
-  keywords  = "accelerators, file systems, gpgpus, operating systems design",
-  issn      = "0163-5964",
-  doi       = "10.1145/2490301.2451169"
 }
 
 @ARTICLE{Lyons2012-oi,
@@ -8505,4 +8436,374 @@ address = {USA}
   title = "{Intel QuickAssist Technology}",
   howpublished = {\url{https://01.org/intel-quickassist-technology}},
   note = "Accessed: 2019-04"
+}
+
+@article{Lamb1987,
+  author =        {Lamb, David Alex and Alex, David},
+  journal =       {ACM Transactions on Programming Languages and
+                   Systems},
+  month =         {jul},
+  number =        {3},
+  pages =         {297--318},
+  publisher =     {ACM},
+  title =         {{IDL}: Sharing Intermediate Representations},
+  volume =        {9},
+  year =          {1987},
+  doi =           {10.1145/24039.24040},
+  issn =          {01640925},
+}
+
+@misc{MSIDL,
+  author =        {Microsoft},
+  howpublished =
+  {\url{https://docs.microsoft.com/en-us/windows/win32/com/midl-compiler}},
+  note =          {Accessed: 2019-08},
+  title =         {{MIDL Compiler}},
+}
+
+@incollection{Sandberg:1988,
+address = {Norwood, MA, USA},
+author = {Sandberg, R and Golgberg, D and Kleiman, S and Walsh, D and Lyon, B},
+booktitle = {Innovations in Internetworking},
+chapter = {Design and},
+editor = {Partridge, C},
+isbn = {0-89006-337-0},
+pages = {379--390},
+publisher = {Artech House, Inc.},
+title = {Design and implementation of the {Sun} network filesystem},
+url = {http://dl.acm.org/citation.cfm?id=59309.59338},
+year = {1988}
+}
+
+@inproceedings{inceptionv3,
+  author =        {Szegedy, Christian and Vanhoucke, Vincent and
+                   Ioffe, Sergey and Shlens, Jon and Wojna, Zbigniew},
+  booktitle =     {Proceedings of the IEEE conference on computer vision
+                   and pattern recognition},
+  pages =         {2818--2826},
+  title =         {Rethinking the Inception Architecture for Computer
+                   Vision},
+  year =          {2016},
+}
+
+@article{vggnet,
+  author =        {Simonyan, Karen and Zisserman, Andrew},
+  journal =       {arXiv preprint arXiv:1409.1556},
+  title =         {Very Deep Convolutional Networks for Large-scale
+                   Image Recognition},
+  year =          {2014},
+}
+
+@article{virtio,
+  author =        {Russell, Rusty},
+  journal =       {ACM SIGOPS Operating Systems Review},
+  number =        {5},
+  pages =         {95--103},
+  publisher =     {ACM},
+  title =         {{virtio}: Towards a De-facto Standard for Virtual I/O
+                   Devices},
+  volume =        {42},
+  year =          {2008},
+}
+
+@misc{virtio_vsock,
+  author =        {Hajnoczi, Stefan},
+  booktitle =     {KVM Forum 2015},
+  howpublished =
+  {\url{https://vmsplice.net/~stefan/stefanha-kvm-forum-2015.pdf}},
+  note =          {Accessed: 2019-04},
+  title =         {Virtio-vsock, Zero-configuration Host/Guest
+                   Communication},
+}
+
+@inproceedings{bpf,
+  author =        {McCanne, Steven and Jacobson, Van},
+  booktitle =     {USENIX winter},
+  title =         {The BSD Packet Filter: A New Architecture for
+                   User-level Packet Capture.},
+  volume =        {46},
+  year =          {1993},
+}
+
+@inproceedings{amorphos,
+  author =        {Khawaja, Ahmed and Landgraf, Joshua and
+                   Prakash, Rohith and Wei, Michael and Schkufza, Eric and
+                   Rossbach, Christopher J},
+  booktitle =     {13th {USENIX} Symposium on Operating Systems Design
+                   and Implementation ({OSDI}'18)},
+  pages =         {107--127},
+  title =         {Sharing, Protection, and Compatibility for
+                   Reconfigurable Fabric with {AmorphOS}},
+  year =          {2018},
+}
+
+@inproceedings{tao,
+  author =        {Pingali, Keshav and Nguyen, Donald and
+                   Kulkarni, Milind and Burtscher, Martin and
+                   Hassaan, M Amber and Kaleem, Rashid and
+                   Lee, Tsung-Hsien and Lenharth, Andrew and
+                   Manevich, Roman and M{\'e}ndez-Lojo, Mario and
+                   others},
+  booktitle =     {ACM Sigplan Notices},
+  number =        {6},
+  organization =  {ACM},
+  pages =         {12--25},
+  title =         {The {TAO} of Parallelism in Algorithms},
+  volume =        {46},
+  year =          {2011},
+}
+
+@phdthesis{silesia,
+  author =        {Deorowicz, Sebastian},
+  editor =        {{dr Hab Inz Zbigniew}},
+  school =        {Silesian University of Technology},
+  title =         {{Universal Lossless Data Compression Algorithms}},
+  year =          {2003},
+  url =           {http://sun.aei.polsl.pl/~sdeor/pub/deo03.pdf},
+}
+
+@misc{aimd,
+  howpublished =
+  {\url{https://en.wikipedia.org/wiki/Additive_increase/multiplicative_decrease}},
+  note =          {Accessed: 2019-08},
+  title =         {{Additive Increase/Multiplicative Decrease}},
+}
+
+@inproceedings{codezero,
+  author =        {K. Dang Pham and A. K. Jain and J. Cui and
+                   S. A. Fahmy and D. L. Maskell},
+  booktitle =     {Application-Specific Systems, Architectures and
+                   Processors (ASAP), 2013 IEEE 24th International
+                   Conference on},
+  month =         {June},
+  pages =         {219-226},
+  title =         {{Microkernel Hypervisor for a Hybrid ARM-FPGA
+                   Platform}},
+  year =          {2013},
+  doi =           {10.1109/ASAP.2013.6567578},
+  issn =          {2160-0511},
+}
+
+@inproceedings{plessl2005zippy,
+  author =        {Plessl, Christian and Platzner, Marco},
+  booktitle =     {null},
+  organization =  {IEEE},
+  pages =         {213--218},
+  title =         {Zippy-A Coarse-grained Reconfigurable Array with
+                   Support for Hardware Virtualization},
+  year =          {2005},
+}
+
+@article{score,
+  author =        {Andr{\'{e}} DeHon and Yury Markovsky and Eylon Caspi and
+                   Michael Chu and Randy Huang and Stylianos Perissakis and
+                   Laura Pozzi and Joseph Yeh and John Wawrzynek},
+  journal =       {Microprocessors and Microsystems},
+  number =        {6},
+  pages =         {334--354},
+  title =         {Stream Computations Organized for Reconfigurable
+                   Execution},
+  volume =        {30},
+  year =          {2006},
+  biburl =        {http://dblp.uni-trier.de/rec/bib/journals/mam/
+                  DeHonMCCHPPYW06},
+  doi =           {10.1016/j.micpro.2006.02.009},
+  url =           {http://dx.doi.org/10.1016/j.micpro.2006.02.009},
+}
+
+@article{tartan06asplos,
+  address =       {New York, NY, USA},
+  author =        {Mishra, Mahim and Callahan, Timothy J. and
+                   Chelcea, Tiberiu and Venkataramani, Girish and
+                   Goldstein, Seth C. and Budiu, Mihai},
+  journal =       {SIGOPS Oper. Syst. Rev.},
+  month =         oct,
+  number =        {5},
+  pages =         {163--174},
+  publisher =     {ACM},
+  title =         {{Tartan: Evaluating Spatial Computation for Whole
+                   Program Execution}},
+  volume =        {40},
+  year =          {2006},
+  doi =           {10.1145/1168917.1168878},
+  issn =          {0163-5980},
+  url =           {http://doi.acm.org/10.1145/1168917.1168878},
+}
+
+@inproceedings{virtualRC,
+  author =        {Kirchgessner, Robert and Stitt, Greg and George, Alan and
+                   Lam, Herman},
+  booktitle =     {Proceedings of the ACM/SIGDA international symposium
+                   on Field Programmable Gate Arrays},
+  organization =  {ACM},
+  pages =         {205--208},
+  title =         {VirtualRC: A Virtual FPGA Platform for Applications
+                   and Tools Portability},
+  year =          {2012},
+}
+
+@article{huang09fpgavirt,
+  address =       {Piscataway, NJ, USA},
+  author =        {Huang, Chun-Hsian and Hsiung, Pao-Ann},
+  journal =       {IEEE Embed. Syst. Lett.},
+  month =         may,
+  number =        {1},
+  pages =         {19--23},
+  publisher =     {IEEE Press},
+  title =         {{Hardware Resource Virtualization for Dynamically
+                   Partially Reconfigurable Systems}},
+  volume =        {1},
+  year =          {2009},
+  doi =           {10.1109/LES.2009.2028039},
+  issn =          {1943-0663},
+  url =           {http://dx.doi.org/10.1109/LES.2009.2028039},
+}
+
+@inproceedings{brant2012zuma,
+  author =        {Brant, Alexander and Lemieux, Guy GF},
+  booktitle =     {Field-Programmable Custom Computing Machines (FCCM),
+                   2012 IEEE 20th Annual International Symposium on},
+  organization =  {IEEE},
+  pages =         {93--96},
+  title =         {ZUMA: An Open FPGA Overlay Architecture},
+  year =          {2012},
+}
+
+@article{rcmw,
+  address =       {New York, NY, USA},
+  author =        {Kirchgessner, Robert and George, Alan D. and
+                   Stitt, Greg},
+  journal =       {ACM Trans. Reconfigurable Technol. Syst.},
+  month =         sep,
+  number =        {4},
+  pages =         {21:1--21:22},
+  publisher =     {ACM},
+  title =         {{Low-Overhead FPGA Middleware for Application
+                   Portability and Productivity}},
+  volume =        {8},
+  year =          {2015},
+  doi =           {10.1145/2746404},
+  issn =          {1936-7406},
+  url =           {http://doi.acm.org/10.1145/2746404},
+}
+
+@article{intermediate-fabrics,
+  author =        {Stitt, Greg and Coole, James},
+  journal =       {IEEE Embedded Systems Letters},
+  number =        {3},
+  pages =         {81--84},
+  publisher =     {IEEE},
+  title =         {Intermediate Fabrics: Virtual Architectures for
+                   Near-instant FPGA Compilation},
+  volume =        {3},
+  year =          {2011},
+}
+
+@misc{grpc,
+  author =        {{The gRPC Authors}},
+  howpublished =  {\url{https://grpc.io}},
+  note =          {Accessed: 2019-04},
+  title =         {{gRPC}},
+}
+
+@misc{thrift,
+  author =        {{Apache Software Foundation}},
+  howpublished =  {\url{https://thrift.apache.org}},
+  note =          {Accessed: 2019-04},
+  title =         {Apache Thrift},
+}
+
+@misc{corba,
+  author =        {{Object Management Group}},
+  howpublished =  {\url{https://www.omg.org/spec/CCM/4.0/PDF}},
+  month =         mar,
+  note =          {Accessed: 2019-04},
+  title =         {{CORBA Component Model}},
+  year =          {2006},
+}
+
+@article{Yang1996,
+  address =       {New York, NY, USA},
+  author =        {Yang, Zhonghua and Duddy, Keith},
+  journal =       {SIGOPS Oper. Syst. Rev.},
+  month =         apr,
+  number =        {2},
+  pages =         {4--31},
+  publisher =     {ACM},
+  title =         {{CORBA}: A Platform for Distributed Object Computing},
+  volume =        {30},
+  year =          {1996},
+  doi =           {10.1145/232302.232303},
+  issn =          {0163-5980},
+  url =           {http://doi.acm.org/10.1145/232302.232303},
+}
+
+@misc{mssal,
+  author =        {Inc., Microsoft},
+  howpublished =
+  {\url{https://docs.microsoft.com/en-us/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects}},
+  month =         nov,
+  note =          {Accessed: 2019-11},
+  title =         {Using {SAL} Annotations to Reduce {C/C++} Code
+                   Defects},
+  year =          {2016},
+}
+
+@misc{swig,
+  howpublished =  {\url{http://www.swig.org}},
+  note =          {Accessed: 2019-08},
+  title =         {{SWIG}: {Simplified Wrapper and Interface Generator}},
+}
+
+@misc{cython,
+  howpublished =  {\url{https://cython.org/}},
+  note =          {Accessed: 2019-08},
+  title =         {{Cython}: C-Extensions for {Python}},
+}
+
+@misc{jna,
+  howpublished =  {\url{https://github.com/java-native-access/jna}},
+  note =          {Accessed: 2019-08},
+  title =         {{Java Native Access} ({JNA})},
+}
+
+@inproceedings{cascade,
+  author    = {Eric Schkufza and
+               Michael Wei and
+               Christopher J. Rossbach},
+  title     = {Just-In-Time Compilation for Verilog: {A} New Technique for Improving
+               the {FPGA} Programming Experience},
+  booktitle = {Proceedings of the Twenty-Fourth International Conference on Architectural
+               Support for Programming Languages and Operating Systems, {ASPLOS}
+               2019, Providence, RI, USA, April 13-17, 2019},
+  pages     = {271--286},
+  year      = {2019},
+  url       = {https://doi.org/10.1145/3297858.3304010},
+  doi       = {10.1145/3297858.3304010},
+  timestamp = {Sun, 07 Apr 2019 16:16:15 +0200},
+  biburl    = {https://dblp.org/rec/bib/conf/asplos/SchkufzaWR19},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
+@Misc{      protobuf,
+  author  = {{Google Inc.}},
+  title   = {Protocol Buffers},
+  howpublished = {\url{https://developers.google.com/protocol-buffers/}},
+  note = {Accessed: 2019-04}
+}
+
+@Misc{      msgpack,
+  author  = {Furuhashi, Sadayuki},
+  title   = {MessagePack},
+  howpublished = {\url{https://msgpack.org/}},
+  note = {Accessed: 2019-04}
+}
+
+@misc{ecma404,
+  author = {ECMA},
+  note = {ECMA Standard 404, 2nd Edition},
+  title = {The {JSON} Data Interchange Syntax},
+  url = {http://www.ecma-international.org/publications/files/ecma-st/ECMA-262.pdf},
+  year = 2017,
+  month = dec
 }

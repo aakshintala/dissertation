@@ -1,65 +1,42 @@
 % -*- fill-column: 85; -*-
 %!TEX root = ../dissertation.tex
 
-\section{Introduction}
-\label{s:intro}
-
-\begin{figure}[!htp]
-	\centering
-	\includegraphics[width=0.7\linewidth]{ava/data/technology_trend/technology_trend.pdf}%
-	\caption{The number of accelerators (discrete GPUs and AI
-      accelerators) and APIs released since 2010 compared to the number of accelerators officially supported by production hypervisors (VMware ESX, Citrix XenServer, and Microsoft Hyper-V).
-      % \ref{l:api_revisions} API major revisions; \ref{l:accelerator_arch} accelerator architectures; \ref{l:hypervisor_arch_support} accelerator architectures supported by hypervisors.
-      This data was drawn from release notes and specification sheets.
-      % TODO: \amp{This figure has been squished vertically. Regenerate with new aspect-ratio so as to avoid ugly squished text.}
-  %\reviewer{F}{I don't think Fig 1 is of much use, your work is a case in point: A single automated approach can deal with many architectures and API revisions, so what is to be read from this?}
-  %\cjr{F is pointing out our contribution, but somehow missing it. Dispatched by adding a bullet to the contribution list that claims exactly this.}
-  }
-	\label{fig:trends}
-\end{figure}
-
-Hypervisors have not kept pace with accelerator innovation. Figure~\ref{
-fig:trends} shows the evolution of accelerator framework APIs, accelerator
-architectures, and hypervisor support for them over the last decade.
-Specialized hardware and frameworks emerge far faster than hypervisors support
-them and the gap is widening. Many factors contribute to this trend, but lack
-of demand is \emph{not} among them, evinced by the wide variety of
-accelerators currently available from cloud providers~\cite{amazon_ec2,
-google-gpu,google-cmle,gpucloud,amazon_f1,olympus,cloud-tpu}.
-The challenge is technical: hypervisor-level accelerator virtualization
-requires substantial engineering effort and the design space features multiple
-fundamental trade-offs for which a ``sweet spot'' has remained elusive.
-
-Practical virtualization must support sharing and isolation under flexible
+Practical DSA virtualization must support sharing and isolation under flexible
 policy with minimal overhead. The structure of current accelerator stacks
 makes this combination extremely difficult to achieve.
-Accelerator stacks are \emph{silos} (Figure~\ref{fig:silo}) comprising
+Accelerator stacks are \emph{silos} (see \S~\ref{section:silos}) comprising
 proprietary layers communicating through memory mapped interfaces.
 This opaque organization makes it \emph{impractical} to interpose intermediate
 layers to form an efficient and compatible virtualization boundary
-(\S\ref{s:properties}).
-The remaining interposable interfaces leave designers with untenable
-alternatives that sacrifice critical virtualization properties such as
-interposition and compatibility.
+(\S\ref{s:properties}). The remaining interposable interfaces leave designers
+with untenable alternatives that sacrifice critical virtualization properties
+such as interposition and compatibility, as we saw in prior chapters.
 
-This chapter describes \AvA, which addresses the fundamental limitations of
-existing accelerator virtualization techniques.
-\AvA combines API-agnostic para-virtual stack components with a DSL
-(Domain-Specific Language) and a compiler to automate construction and
-deployment of guest libraries, hypervisor-level resource management, and
-\workers. \AvA uses an abstract para-virtual device to serve as a transport
-endpoint for forwarding the public APIs of vendor-provided frameworks
-(e.g. CUDA or TensorFlow). Unlike currently popular user-space API remoting
-solutions~\cite{bitfusion,xaas,vmCUDA,rCUDA,cu2rcu}, \AvA preserves hypervisor-level resource management and strong isolation using a novel
-technique called \emph{\hirafull (\hira)}.
-\hira forwards API calls over hypervisor-managed communication
+This chapter explores a novel hypervisor virtualization design, \hirafull
+(\hira), which we argued represents a ``sweet-spot'' in the DSA virtualization
+design space in the previous chapter (\S~\ref{chapter:iemts}). We explore how
+the silo-ization of DSA software and hardware stacks leaves only one viable
+software interface for interposition: the user-space API (this dissertation is
+focused on software virtualization techniques for DSAs, and doesn't explore
+hardware support for virtualization). We describe how \hira enables us to
+combine the low overhead and ease-of-evolution of API-remoting with the
+isolation, and effective policy enforcement of hypervisor interposition.
+
+The API-agnostic para-virtual stack, API-specific \workers, and
+hypervisor-level resource management espoused by \hira, are combined with
+\lapis (a Domain-Specific Language used to capture semantic information of the
+APIs interposed), and a compiler for \lapis to automate construction and
+deployment of guest libraries in our prototype: \AvA. \AvA uses the abstract
+para-virtual device to serve as a transport endpoint for forwarding the public
+APIs of vendor-provided frameworks (e.g. CUDA or TensorFlow). Unlike currently
+popular user-space API remoting solutions~\cite{bitfusion,xaas,vmCUDA,rCUDA,
+cu2rcu}, \AvA preserves hypervisor-level resource management and strong
+isolation by forwarding API calls over hypervisor-managed communication
 channels, inserting au\-to\-ma\-tically-generated resource management
-components at the transport layer to enforce policies from the DSL
+components at the transport layer to enforce policies from a DSL
 specification. Critically, \emph{automation} from \AvA enables hypervisors
 to keep up with fast accelerator evolution: automatic generation of components
-dramatically shortens the development cycle. As Figure~\ref{fig:trends}
-suggests, a solution that tracks API framework evolution can track hardware
-evolution as well.
+dramatically shortens the development cycle.
 
 \AvA supports a broad range of currently-shipping compute offload
 accelerators. We virtualized \numaccelerators accelerators including NVIDIA
@@ -72,14 +49,11 @@ FlexDirect~\cite{bitfusion}. \AvA provides near-native performance
 and fair sharing (\S\ref{s:properties}) across guests, and supports live
 migration. \AvA is available on GitHub \mbox{\href{https://github.com/utcs-scea/ava}{utcs-scea/ava}}.
 
-% Concretely, this chapter makes the following contributions:
-
-% \begin{itemize}[nosep,leftmargin=1em,labelwidth=*,align=left]
-% \item We demonstrate feasibility of automatically constructed virtual accelerator support, using a single technique to support many architectures, APIs, versions, and policies.
-% \item We introduce \hirafull (\hira) to enable
-% hypervisor-enforced isolation and sharing policies unachievable with current
-% SR-IOV and API remoting systems (\S\ref{s:motivation}).
-% \item We describe a novel DSL, \Lapis, for describing API functions, resources, and policies to enable automatic construction of virtual stacks starting from native API header files.
-% \item We evaluate \AvA on \numaccelerators accelerators showing low effort, strong properties, and good performance (\S\ref{s:eval}).
-% \item We identify fundamental challenges in the accelerator virtualization design space (\S\ref{s:background}).
-% \end{itemize}
+This dissertation describes the core virtualization technique, \hira, and
+provides a brief overview of the design, implementation, and evaluation of
+\AvA, as necessary, to discuss the efficacy of \hira as a virtualization
+technique. This document elides detailed discussion of \AvA's DSL, \lapis, and
+various other automation techniques used to recover compatibility in \AvA. For
+detailed treatment of these topics, please refer to the published papers on
+\AvA~\cite{ava-hotos,ava-asplos}, and Hangchen Yu and Arthur Peters'
+dissertations.
