@@ -63,7 +63,9 @@ $T_v(t)$ in the time window $[t, t+1)$. If a VM's device usage time exceeds its 
 
 \paragraphbe{Fixed-rate polling} where the delay is a fixed interval $d$ (usually longer than the time window).
 
-\paragraphbe{Feedback control} where the adaptive delay, $d_v(t)$, is computed by the additive-increase multiplicative-decrease (AIMD) algorithm~\cite{aimd} below ($a=1$~ms and $b=1/2$; see \S\ref{s:eval_rate_limit}).
+\paragraphbe{Feedback control} where the adaptive delay, $d_v(t)$, is computed
+by the additive-increase multiplicative-decrease (AIMD) algorithm~\cite{aimd}
+below ($a=1$~ms and $b=1/2$; see \S\ref{s:eval_rate_limit}).
 
 \[
 d_v\left(t+1\right)=\begin{cases}

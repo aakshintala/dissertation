@@ -3,8 +3,16 @@
 
 \section{Conclusion}
 \label{sec:concluion}
-Virtualization techniques that rely on clean separation of software layers are
-untenable for accelerator \emph{silos}.
-\AvA is an alternative approach that interposes compute-offload APIs,
-uses automation to provide agility, recover hypervisor
-interposition, and shorten development cycles.
+The \emph{silo}-ed nature of DSA software stacks means that the user-space API
+is the only viable interface for a virtualization scheme to interpose. While
+most prior work that interposes this interface have been user-space only,
+i.e., they elide all hypervisor involvement, analysis of prior techniques
+using the \iemts framework showed that it is possible to build a
+virtualization scheme that interposes the user-space API but maintains
+hypervisor involvement by utilizing a hypervisor-mediated transport. \hirafull
+enables the hypervisor to enforce fairness guarantees and perform resource
+control, while introducing low overhead on the virtualized workload.
+\AvA, our implementation of the \hira technique, represents a viable DSA
+virtualization approach that interposes compute-offload APIs, uses automation
+to provide agility, retains hypervisor interposition, and shortens development
+cycles.

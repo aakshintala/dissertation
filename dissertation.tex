@@ -285,8 +285,8 @@
 \begin{document}
 
 % Title page, TOC, etc.
-\input{frontmatter/pages}
 \input{frontmatter/definitions}
+\input{frontmatter/pages}
 \input{intro}
 \input{background}
 \input{trillium}
@@ -310,17 +310,17 @@
 \phantomsection
 
 {
-\def\chapter*#1{} % suppress bibliograph header.
-\begin{singlespace}
-\addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
-\begin{center}
-\normalfont \textbf{BIBLIOGRAPHY}
-\vspace{17pt}
-\end{center}
+    \def\chapter*#1{} % suppress bibliograph header.
+    \begin{singlespace}
+        \addcontentsline{toc}{chapter}{BIBLIOGRAPHY}
+        \begin{center}
+            \normalfont \textbf{BIBLIOGRAPHY}
+            \vspace{17pt}
+        \end{center}
 
-\bibliographystyle{plain}
-\bibliography{ref}
-\end{singlespace}
+        \bibliographystyle{plain}
+        \bibliography{ref}
+    \end{singlespace}
 }
 
 \end{document}

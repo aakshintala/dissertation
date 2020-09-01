@@ -4,29 +4,28 @@
 \label{s:related}
 
 Chapter~\ref{sec:related} provides detailed related work; this section
-addresses related work not covered there.
+addresses related work not covered there that are closely related to this
+chapter.
 
-\paragraphbe{FPGA virtualization}
-has a long history~\cite{codezero,plessl2005zippy,
-score,tartan06asplos,virtualRC,huang09fpgavirt,brant2012zuma,rcmw,
-intermediate-fabrics}. Most prior work relies on hardware-specific features,
-focuses on sharing in a single protection domain~\cite{amorphos}, or
-virtualization primitives~\cite{cascade}. \AvA can be combined with any of
-these techniques to virtualize FPGA accelerators.
+\paragraphbe{FPGA virtualization} has a long history~\cite{codezero,
+plessl2005zippy, score,tartan06asplos,virtualRC,huang09fpgavirt,brant2012zuma,
+rcmw, intermediate-fabrics}. Most prior work relies on hardware-specific
+features, focuses on sharing in a single protection domain~\cite{amorphos}, or
+virtualization primitives~\cite{cascade}. \hira can be combined with any of
+these techniques to virtualize FPGA accelerators. Our implementation
+virtualizes a bitcoin workload on an FPGA with AmorphOS~\cite{amorphos}.
 
-\paragraphbe{Nooks}~\cite{nooks} uses kernel-level interposition
-mechanisms that are similar in spirit to \AvA. \AvA's compiler generates
-components that, like the wrappers and XPC in Nooks, provide transparent
-control across address space and machine boundaries. Object tracking and
-shadow copies in Nooks' \emph{NIM} are similar to the object tracking and
-shadow buffers in \AvA.
+\paragraphbe{Nooks}~\cite{nooks} uses kernel-level interposition mechanisms
+that are similar in spirit to \AvA. \AvA's compiler generates components that,
+like the wrappers and XPC in Nooks, provide transparent control across address
+space and machine boundaries. Object tracking and shadow copies in Nooks'
+\emph{NIM} are similar to the object tracking and shadow buffers in \AvA.
 
 \paragraphbe{RPC frameworks}~\cite{grpc,thrift,corba,Yang1996} provide an
 interface description language (IDL) and tools to easily implement those
-interfaces. Unlike the \CAvA language, these IDLs do not capture all the
-semantics of \emph{existing} C interfaces required to implement a \hira
-API remoting design. \CAvA also generates code for controlling remote
-resources.
+interfaces. Unlike \lapis, these IDLs do not capture all the semantics of
+\emph{existing} C interfaces required to implement a \hira API remoting design.
+\CAvA also generates code for controlling remote resources.
 
 \paragraphbe{Program specification languages}~\cite{mssal} allow programmers
 to specify properties of functions and their behavior, and are generally used
@@ -39,13 +38,11 @@ features like state tracking. \Lapis is optimized to allow easy and
 specific descriptions of APIs and how calls should be performed.
 
 \paragraphbe{Foreign Function Interface} tools allow one language to call
-functions written in another, such as C.
-Some~\cite{swig} make use of C headers, but require manual annotations in many
-common cases. Unlike \AvA, language specific DSLs~\cite{cython,jna},
-do not support marshalling data structures and encapsulate rather than export
-the C API.
-Cross-language serialization standards and frameworks~\cite{protobuf, msgpack,
-ecma404}, only provide serialization for a set of primitives and supported
-constructs. The user must write code to translate their data structure into
-the language of the framework and provide their own transport for the
-serialized data.
+functions written in another, such as C. Some~\cite{swig} make use of C
+headers, but require manual annotations in many common cases. Unlike \AvA,
+language specific DSLs~\cite{cython,jna}, do not support marshalling data
+structures and encapsulate, rather than export, the C API. Cross-language
+serialization standards and frameworks~\cite{protobuf, msgpack, ecma404}, only
+provide serialization for a set of primitives and supported constructs. The
+user must write code to translate their data structure into the language of
+the framework and provide their own transport for the serialized data.

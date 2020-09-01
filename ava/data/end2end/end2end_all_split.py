@@ -33,7 +33,7 @@ groups = len(data)/3
 pos = 0
 x_ind = []
 x_labels = []
-for group_id in range(5):
+for group_id in range(4):
     num_bench = sum(x is not np.nan for x in list(data[group_id*3]))
     x = [t + group_gap + pos for t in range(num_bench)]
     pos = pos + num_bench + group_gap
@@ -63,7 +63,7 @@ fig, ax = plt.subplots()
 pos = 0
 x_ind = []
 x_labels = []
-for group_id in range(5, groups):
+for group_id in range(4, groups):
     num_bench = sum(x is not np.nan for x in list(data[group_id*3]))
     x = [t + group_gap + pos for t in range(num_bench)]
     pos = pos + num_bench + group_gap
