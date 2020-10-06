@@ -10,35 +10,41 @@ Amogh Akshintala: Toward Efficient and Realizable Virtualization of Compute Acce
 \end{center}
 
 This dissertation is concerned with software techniques for fair, efficient
-and isolated sharing of Domain Specific Accelerators (DSAs) (GPUs, TPUs, etc.)
-that are programmed through an API (CUDA, Tensorflow, etc.).
-The main takeaway from this dissertation is that unlike with CPUs, where the
-ISA is the canonical interface exposed to the programmer, the vendor-provided
-user-space API is the right interface to interpose in order to virtualize
-DSAs. In order to support this hypothesis, we first quantify the inefficacy of
-canonical techniques from prior work that interpose on other interfaces in the
-DSA software stack through empirical analysis. We find that the only canonical
-technique that is able to provide low-overhead virtualization (any technique
-that introduces high overhead is a non-starter for DSAs; Accelerators should
-accelerate, after all) interposes the user-space API, but does so in a manner
-that precludes hypervisor-interposition. Precluding hypervisor interposition
-results in the inability to enforce key virtualization properties like
-fairness, and isolation. In order to arrive at a virtualization technique that
-satisfies the needs of DSA virtualization, we develop a novel analysis
-framework (\iemts). \iemts characterizes virtualization designs based on how
-the \textbf{I}nterface they perform interposition, the \textbf{E}nd-points
-(in the guest and the host) involved, the \textbf{M}echanism of interposition,
-the \textbf{T}ransport used to connect the endpoints, and the way the
-interposed functionality is \textbf{S}ynthesized in the guest. Insights from
-analyzing prior techniques using the \iemts framework enable a novel
-virtualization scheme specifically designed for API-controlled Domain Specific
-Accelerators, \hirafull (\hira). \hira interposes the user-space API,
-transports the interposed API calls to the host via a hypervisor managed
-transport (thereby enabling the hypervisor to exercise control over the DSA's
-resource), and then synthesizes the interposed functionality in the host by
-calling the vendor framework for the given API. Empirical analysis of \AvA, a
-DSA virtualization system prototyped on KVM that realizes \hira, shows that
-\hira introduces low overhead while also enabling the hypervisor to enforce
-fairness, and isolation.
+and isolated sharing of Domain Specific Accelerators (DSAs), such as GPUs and
+TPUs, that are programmed through an API, e.g., CUDA, Tensorflow.
+Specifically, we explore the following hypothesis: the vendor-provided
+userspace API is akin to the ISA for CPU virtualization, and is, therefore, the
+right interface to interpose to virtualize DSAs.
+
+We first present empirical analysis of canonical virtualization techniques, in
+order to understand their inefficacies. We find that most canonical techniques
+introduce high performance overhead, which is a non-starter for DSA
+virtualization: Accelerators should accelerate, after all.
+The only canonical technique that is able to provide low-overhead
+virtualization interposes the user-space API, but does so in a manner that
+precludes hypervisor interposition. Precluding hypervisor interposition results
+in the inability to enforce key virtualization properties like fairness and
+isolation.
+
+In order to arrive at a virtualization technique that satisfies the needs of
+DSA virtualization, we develop a novel analysis framework: \iemts. \iemts
+characterizes virtualization designs based on the \textbf{I}nterface
+interposed, the \textbf{E}nd-points (in the guest and the host) involved in the
+interposition, the \textbf{M}echanism of interposition, the \textbf{T}ransport
+used to connect the endpoints, and the way the interposed functionality is
+\textbf{S}ynthesized in the guest.
+
+Insights from analyzing prior techniques using the \iemts framework enable a novel virtualization scheme specifically designed for API-controlled DSAs: \hirafull (\hira). \hira interposes the user-space API, and transports the
+interposed API calls to the host via a hypervisor managed transport. Use of a
+hypervisor managed channel, coupled with semantic information of the interposed
+API, enables the hypervisor to exercise control over the DSA's resources. Once
+the access has been checked and schedulec by the hypervisor, the interposed
+functionality is synthesized in the host by calling the vendor framework for
+the given API.
+
+Empirical analysis of \AvA, a prototype realization of \hira for KVM, shows
+that \hira introduces low overhead (~15\% on average) while also enabling the
+hypervisor to enforce fairness and isolation. We wrap up by characterizing
+adverse scenarios for \hira, and propose solutions for the common case.
 
 \clearpage
